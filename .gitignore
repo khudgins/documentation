@@ -1,10 +1,4 @@
 *.swp
-makeAll
-syncAll
-openAllCSS
-openAllLayouts
-makeAgent
-sync
 _build/
 *.html
 !layout.html
