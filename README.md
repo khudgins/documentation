@@ -7,8 +7,8 @@ How to use this documentation site
 	- Install python setup tools ( sudo port install py26-setuptools )
 	- easy_install -U Sphinx 
 
-1. Clone the repository
-2. cd documentation/
-3. make clean
-4. make html
-5. open _build/html/index.html in your browser
+2. Clone the repository
+3. cd documentation/
+4. make clean
+5. make html
+6. open _build/html/index.html in your browser
