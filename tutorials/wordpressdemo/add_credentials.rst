@@ -1,3 +1,5 @@
+.. _add_db_credentials:
+
 Credentials
 -----------
 
@@ -28,6 +30,8 @@ You need to fill MySQL credential configuration properly to initialize MySQL dat
    :alt: MySQL: Credentials
    :align: center
 
+|
+
 .. list-table::
    :widths: 30 22 90
    :header-rows: 1
@@ -44,6 +48,8 @@ You need to fill MySQL credential configuration properly to initialize MySQL dat
    * - Private Key Part
      - (password)
      - Any password you want.
+
+|
 
 After configuring credential, you will see the credential on the list.
 

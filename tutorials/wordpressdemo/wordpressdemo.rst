@@ -22,6 +22,7 @@ Wordpress Demo
    launch_configuration
    scaling_rules
    launch
+   advanced/advanceddemo
 
 .. figure:: ./images/demoLanding.png
    :height: 600px
