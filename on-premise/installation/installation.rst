@@ -6,9 +6,10 @@ Installation
 enStratus engineers are working hard to simplify the enStratus cloud management software
 process for proof-of-concept environments.
 
-Here is reference material for installing enStratus in a 1, 2, and 4 server model.
+Here is reference material for installing enStratus in a vagrant instance and in single-
+and two-node configurations.
 
-.. warning:: Installation in a multi-node environment cannot resolve "external" issues
+.. warning:: Installation in a multi-node environment cannot automatically resolve "external" issues
    such as firewalls that may separate nodes and DNS. If in doubt of your DNS situation or
    your ability to edit /etc/hosts files, please use IP Addresses in lieu of hosts names
    where applicable.

@@ -5,7 +5,6 @@ Help
 
 .. toctree::
    :maxdepth: 1
-   :hidden:
 
    registration
    cloud_credentials

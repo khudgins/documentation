@@ -29,6 +29,5 @@ Please follow the Wordpress tutorial, you'll be scaling in no time.
    :hidden:
    :glob:
     
-   introduction/introduction
    quickstart/quickstart
    wordpressdemo/wordpressdemo

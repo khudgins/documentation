@@ -4,9 +4,9 @@ Two Node
 --------
 
 .. figure:: ./images/two_node.png
-   :height: 400px
-   :width: 600 px
-   :scale: 75 %
+   :height: 335 px
+   :width: 555 px
+   :scale: 85 %
    :alt: enStratus Two Node Architecture
    :align: center
 

@@ -108,9 +108,9 @@ Logging
 
 Logging for the km service is done to:
 
-``/services/dispatcher/logs/YYYY_MM_DD.request.log``
+``/services/km/logs/YYYY_MM_DD.request.log``
 
-``/services/dispatcher/logs/km.log``
+``/services/km/logs/km.log``
 
 Monitoring
 ----------
