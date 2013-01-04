@@ -30,3 +30,4 @@ Agent
    downloads/downloads
    installation/installation
    linux/linux
+   proxy/proxy
