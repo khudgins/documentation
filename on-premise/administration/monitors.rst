@@ -119,7 +119,7 @@ occurred. The monitors are stateless, and can be stopped and started at any time
 Logging
 -------
 
-Logging for the dispatcher service is done to:
+Logging for the monitors is done to:
 
 ``/services/monitor/logs/assign.log``
 

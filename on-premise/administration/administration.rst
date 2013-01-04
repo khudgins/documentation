@@ -198,3 +198,4 @@ become active.
    rabbit_mq
    certificates
    init
+   logging

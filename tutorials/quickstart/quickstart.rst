@@ -54,17 +54,18 @@ Default Budget Code.
 
 **2. Users**
 
-Users provide your team access to the enStratus console. To add new users follow the steps
-for adding users :ref:`saas_users_manage`
+Users provide your team access to the enStratus console. To add new users follow 
+:ref:`these steps <saas_users_manage>`
+for adding users. 
 
 **3. Roles**
 
 Roles define the access controls that groups are given and are used to restrict components
-of the enStratus Console. To add new Roles follow the steps for adding roles :ref:`saas_roles`
+of the enStratus Console. To add new Roles follow :ref:`these steps <saas_roles>` for adding roles. 
 
 **4. Groups**
 
-Groups provide a mapping between Users and Roles and provide a logical grouping for Cloud Object. Learn how to add roles on `this page <http://docs.enstratus.com/users/groups.html>`_
+Groups provide a mapping between Users and Roles and provide a logical grouping for Cloud Object. Learn how to add groups on `this page <saas_groups>`. 
 
 **5. The enStratus Agent**
 
