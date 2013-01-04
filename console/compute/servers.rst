@@ -23,14 +23,12 @@ must be installed are indicated with an asterisk(*).
 .. figure:: ./images/actMenuWOagent.png
    :alt: Actions Menu without Agent
    :align: center
-   :scale: 90 %
 
    Actions Menu without Agent, Paused
 
 .. figure:: ./images/actMenuWagent.png
    :alt: Actions Menu without Agent
    :align: center
-   :scale: 90 %
 
    Actions Menu with Agent, Running
 
@@ -84,8 +82,8 @@ made to the operating system (e.g. patches or updates).
 
 See :ref:`Machine Images <saas_machine_images>` for more information about using machine images effectively.
 
-Make Snapshot*
-~~~~~~~~~~~~~~
+Make Snapshot\*
+~~~~~~~~~~~~~~~
 
 .. figure:: ./images/actMenuMakeSnap.png
    :alt: Make Snapshot

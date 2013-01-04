@@ -465,7 +465,6 @@ it believes has the agent installed. Let's use the following screen shots as a g
 .. figure:: ./images/public-ami-search.png
    :alt: Public AMI Search Menu
    :align: center
-   :scale: 10 %
 
 The image we'll be using for this document is ``ami-bd3c8ad4`` in AWS US-East and is
 called ``enStratus17-Ubuntu1004-64-2012090502``. It is an Ubuntu 10.04 64-bit image. It
@@ -478,7 +477,6 @@ Click on the "action" menu for the image and select "Launch"
 .. figure:: ./images/launch-image.png
    :alt: Launch Menu
    :align: center
-   :scale: 10 %
 
 
 You'll need to fill in the information as appropriate. For now, do NOT set anything in the
@@ -488,7 +486,6 @@ imaging, you'll want to launch it with an SSH key-pair configured.
 .. figure:: ./images/base-launch.png
    :alt: Launch Screen
    :align: center
-   :scale: 10 %
 
 
 * Customize and make a new image
@@ -500,7 +497,7 @@ Once the instance is fully online (``Running`` in the server list)
    :width: 3300 px
    :alt: Running Base Image
    :align: left
-   :scale: 25%
+   :scale: 25 %
 
 |
 
@@ -510,7 +507,6 @@ from the instance's "actions" menu:
 .. figure:: ./images/make-image-menu.png
    :alt: Make Image
    :align: center
-   :scale: 10 %
 
 
 * Make note of the name you give the new image:
@@ -518,7 +514,6 @@ from the instance's "actions" menu:
 .. figure:: ./images/create-image-screen.png
    :alt: Create Image Screen
    :align: center
-   :scale: 10 %
 
 As this is an instance store instance, the appropriate ``ec2-bundle-*`` and
 ``ec2-upload-*`` will be run, via the Agent, on the instance. If this were an EBS volume,
@@ -561,7 +556,6 @@ You can set any options you'd like but we're going to focus on the "Configuratio
 .. figure:: ./images/puppet-cm-tab.png
    :alt: CM Launch Tab
    :align: center
-   :scale: 10 %
 
 You can see from this screen that the server has been assigned the group (``compliance_only``) and a few things have been added to the run list:
 
@@ -594,7 +588,6 @@ You can track the progress of this via the "Logs" menu option:
 .. figure:: ./images/puppet-launch-logs-first.png
    :alt: Initial logging
    :align: center
-   :scale: 10 %
 
 As you can see, enStratus is populating the hosts file and copying some other things around that were passed down via the agent.
 
@@ -604,7 +597,6 @@ When the Puppet run is complete, it will send the full log of the run back to th
 .. figure:: ./images/puppet-launch-logs-second.png
    :alt: Later logging
    :align: center
-   :scale: 10 %
 
 At this point your instance has launched and should be working as defined by your Puppet modules (assuming those work). You can see from the report in the PE2.5 Console that there is some work to do with these modules.
 
