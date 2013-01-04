@@ -3,6 +3,9 @@
 Vagrant
 -------
 
+.. note::
+ An enStratus engineer will provide you with the necessary files to install an enStratus Vagrant instance.
+
 Quick Start
 ~~~~~~~~~~~
 
