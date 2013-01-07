@@ -190,12 +190,13 @@
             {{ relbar() }}
             <div class="clearer_right"></div>
             {% block body %} {% endblock %}
+            {%- include "sourcelink.html" %}
           </div>
       {%- if render_sidebar %}
         </div>
       {%- endif %}
       </div>
-  {%- endblock %}
+{%- endblock %}
 
   {%- block sidebar2 %}{# {{ sidebar() }} #}{% endblock %}
       <div class="clearer"></div>
@@ -206,6 +207,7 @@
 
 {%- block footer %}
     <div class="footer">
+    
     {%- if show_copyright %}
       {%- if hasdoc('copyright') %}
         {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
