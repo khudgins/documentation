@@ -17,9 +17,9 @@ Developers
 ----------
 
 .. figure:: ./images/developers.png
-   :height: 350px
-   :width: 1150 px
-   :scale: 55 %
+   :height: 232 px
+   :width: 922 px
+   :scale: 85 %
    :alt: Developers
    :align: center
 
@@ -33,9 +33,9 @@ POC
 ---
 
 .. figure:: ./images/poc.png
-   :height: 350px
-   :width: 1150 px
-   :scale: 55 %
+   :height: 190 px
+   :width: 869 px
+   :scale: 85 %
    :alt: Customers
    :align: center
 
@@ -48,8 +48,8 @@ Production
 ----------
 
 .. figure:: ./images/ha_enstratus.png
-   :height: 500px
-   :width: 800 px
+   :height: 588 px
+   :width: 931 px
    :scale: 85 %
    :alt: High-Availability enStratus Architecture
    :align: center
@@ -62,8 +62,8 @@ hundreds of users and cloud accounts.
    :hidden:
    :glob:
 
+   architecture/architecture
    requirements/requirements
    installation/installation
-   architecture/architecture
    administration/administration
    help/help

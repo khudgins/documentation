@@ -31,7 +31,7 @@ by the installing engineers.
 
 Example
 ^^^^^^^
-Let's assume that the enStratus installation is using the 4-server model shown above. The worker and
+Let's assume that the enStratus installation is using a 4-server model. The worker and
 dispatcher servers and their associated services can be moved as necessary to a separate network provided the
 communication paths between remain. This principle holds for any of the enstratus components.
 

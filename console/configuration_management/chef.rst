@@ -286,7 +286,6 @@ it believes has the agent installed. Let's use the following screen shots as a g
 .. figure:: ./images/public-ami-search.png
    :alt: Public AMI Search Menu
    :align: center
-   :scale: 10 %
 
 The image we'll be using for this document is ``ami-bd3c8ad4`` in AWS US-East and is
 called ``enStratus17-Ubuntu1004-64-2012090502``. It is an Ubuntu 10.04 64-bit image. It
@@ -299,7 +298,6 @@ Click on the "action" menu for the image and select "Launch"
 .. figure:: ./images/launch-image.png
    :alt: Launch Menu
    :align: center
-   :scale: 10 %
 
 
 You'll need to fill in the information as appropriate. For now, do NOT set anything in the "Configuration Management" tab. If you plan on customizing the instance at all before imaging, you'll want to launch it with an SSH key-pair configured.
@@ -307,7 +305,6 @@ You'll need to fill in the information as appropriate. For now, do NOT set anyth
 .. figure:: ./images/base-launch.png
    :alt: Launch Screen
    :align: center
-   :scale: 10 %
 
 
 * Customize and make a new image
@@ -329,7 +326,6 @@ from the instance's "actions" menu:
 .. figure:: ./images/make-image-menu.png
    :alt: Make Image
    :align: center
-   :scale: 10 %
 
 
 * Make note of the name you give the new image:
@@ -337,7 +333,6 @@ from the instance's "actions" menu:
 .. figure:: ./images/create-image-screen.png
    :alt: Create Image Screen
    :align: center
-   :scale: 10 %
 
 As this is an instance store instance, the appropriate ``ec2-bundle-*`` and
 ``ec2-upload-*`` will be run, via the Agent, on the instance. If this were an EBS volume,
@@ -381,7 +376,6 @@ Management" tab here:
 .. figure:: ./images/chef-cm-tab.png
    :alt: CM Launch Tab
    :align: center
-   :scale: 10 %
 
 You can see from this screen that the server was assigned the ``demo`` environment and a few things have been added to the runlist:
 
@@ -403,7 +397,6 @@ configuration process. You can track the progress of this via the "Logs" menu op
 .. figure:: ./images/chef-launch-logs-first.png
    :alt: Initial logging
    :align: center
-   :scale: 10 %
 
 As you can see, we're building the ``client.rb`` and copying some other things around that
 were passed down via the agent.

@@ -6,14 +6,8 @@ Installation
 Installing and using the enStratus agent is easier than ever. Use this quick start
 information to hit the ground running.
 
-Quick Start
-~~~~~~~~~~~
-
-To get started quickly using the enStratus agent on Linux or Windows, use these
-instructions:
-
-Linux
-^^^^^
+Linux - Quick Start
+~~~~~~~~~~~~~~~~~~~
 
 As root:
 
@@ -27,8 +21,8 @@ As root:
 
 :ref:`RHEL/CentOS <rhel_agent_install>`
 
-Windows
-^^^^^^^
+Windows - Quick Start
+~~~~~~~~~~~~~~~~~~~~~
 
 Windows has an `MSI <http://es-download.s3.amazonaws.com/enstratus-agent-windows-generic.exe>`_ for installing the agent. 
 

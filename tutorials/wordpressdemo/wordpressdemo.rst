@@ -1,3 +1,5 @@
+.. _wordpress_demo:
+
 Wordpress Demo
 ==============
 
