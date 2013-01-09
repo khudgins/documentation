@@ -13,13 +13,12 @@ documentation, in particular you have installed an agent proxy following the
 
 There are two different ways to register agent proxies:
 
-1. Selecting a server because the agent proxy is running on a node that has been detected or launched by enStratus.
-2. Entering an arbitrary IP:port to handshake with.
+1. Selecting a server because the agent proxy is running on a node that has been detected or launched by enStratus. See `Registering via managed resource`_ below.
+2. Entering an arbitrary IP:port to handshake with. See `Registering via external resource`_ below.
 
-After you do one of those things (see the corresponding section below), the
-same final step must occur (covered in the `ID validation`_ section below).
+At the end of this page is also `Deregistering`_ information.
 
-Registering via enStratus server
+Registering via managed resource
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use this method if the agent proxy is running on a node that has been detected
@@ -42,10 +41,23 @@ server.
 
 When you are ready to proceed, click the ``Begin Registration`` button.
 
-Now move on to the `ID validation`_ section in the documentation below.
+enStratus will now contact the agent proxy service. It will call on a special
+operation for handshaking and then the enStratus UI will display the ID that
+the agent proxy was configured with (or give you an error such as "connection
+refused").
 
-Registering via IP:port
-~~~~~~~~~~~~~~~~~~~~~~~
+If this ID is accurate, click ``Confirm`` and the agent proxy will be registered.
+You will now see a status message ``Agent proxy has been associated``. Traffic
+relayed from this proxy will now be accepted by enStratus.
+
+You may need to click the ``Reload`` button on the ``Agent Proxies`` screen before
+the new proxy is listed in the table.
+
+Proceed from here with an end to end test (see the end of the
+:ref:`Installation <agent_proxy_installation>` section).
+
+Registering via external resource
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use this method if the agent proxy is running on a node that has not been
 detected or launched by enStratus. Or if the IP:port coordinates are manually
@@ -69,18 +81,18 @@ look like ``4.3.2.1:1234``.
 
 When you are ready to proceed, click the ``Begin Registration`` button.
 
-Now move on to the `ID validation`_ section in the documentation below.
-
-ID validation
-~~~~~~~~~~~~~
-
-After you finish one of the above steps that selects the target for handshaking,
 enStratus will contact the agent proxy service. It will call on a special
 operation for handshaking and then the enStratus UI will display the ID that
 the agent proxy was configured with (or give you an error such as "connection
 refused").
 
-If this ID is accurate, click ``Confirm`` and the agent proxy will be registered.
+At this point you can also choose to associate the proxy with a specific
+region and network. In complex situations like overlapping subnet address
+ranges, selecting the particular network is criticial.
+
+If this ID and region/network is all accurate, click ``Confirm`` and the agent
+proxy will be registered.
+
 You will now see a status message ``Agent proxy has been associated``. Traffic
 relayed from this proxy will now be accepted by enStratus.
 

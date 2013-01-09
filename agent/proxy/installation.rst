@@ -33,7 +33,8 @@ use the host:port combination given to you.
 
 Also in this file is ``agentProxyId``. For this configuration, pick a unique ID
 for every agent proxy you install. A random string like ``45BCEBB32AA9`` works
-well for this value.
+well for this value. When working over the public internet, an even longer
+random string is better.
 
 Also in this file is ``disableUpstreamValidation``. You will want to change this
 to ``true`` for initial setup and testing. If left with its default value
