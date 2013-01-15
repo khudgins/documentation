@@ -121,7 +121,7 @@ runit
 
 Instead of writing and maintaining three distinct startup scripts (upstart on Ubuntu,
 sysvinit on RHEL5 and systemd on RHEL6), all the enstratus-specific process supervision is
-done by runit. This is similar to daemontools if you've ever used that.
+done by runit. 
 
 The "startup script" for each component is in /etc/service/enstratus-<service name>
 
@@ -139,6 +139,26 @@ it will restart it.
 You can stop and start services the traditional way (service foo stop, service foo start,
 /etc/init.d/service [stop|start]) and restart also works for all applications since runit
 just kills the process if it doesn't stop cleanly and starts it back up for a restart.
+
+To check the status of an enStratus process being managed by runit, issue the command:
+
+.. code-block:: bash
+
+   sv status enstratus-${service}
+
+where ``${service}`` evaluates to one of the following:
+
+#. dispatcher
+#. km
+#. console
+#. api
+
+Here is sample output for the dispatcher service:
+
+.. code-block:: bash
+
+   # sv status enstratus-dispatcher
+   run: enstratus-dispatcher: (pid 962) 29075s; run: log: (pid 901) 29075s
 
 There are no default packages for runit under RHEL5 clones (either in main repo or in
 EPEL). We have packaged a version of runit for both RHEL6 clones and RHEL5 clones.
