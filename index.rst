@@ -32,3 +32,4 @@ keyword.
    security/security
    downloads/downloads
    about/about
+   kb/kb
