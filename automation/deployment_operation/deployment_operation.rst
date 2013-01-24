@@ -6,3 +6,5 @@ Deployment Operation
    :hidden:
 
    launch
+   auto_recovery
+   scaling

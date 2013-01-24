@@ -81,6 +81,8 @@ Scaling rules are where the parameters that govern the scaling of tier resources
    If the demand on the tier is such that additional server resources are required, enStratus
    will scale up to, but not exceed, this value.
 
+.. _scaling_methods:
+
 #. **Scaling Rules**
 
 There are three options for scaling rules:
