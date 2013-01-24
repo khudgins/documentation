@@ -30,16 +30,17 @@ This section assumes you have not already generated any keys.
 Start the putty key generator and choose SSH-2 RSA for the key type.
 
 .. image:: ./images/putty1.png
-
    :align: center
 
 Click the generate button to generate your keypair. 
 
 .. image:: ./images/putty2.png
+   :align: center
 
 This will take a short amount of time. Once complete, you will see the following screen:
 
 .. image:: ./images/putty3.png
+   :align: center
 
 Copy the text shown in the window labeled Public key for pasting into OpenSSH
 authorized_keys file. enStratus will add this key into your authorized_keys file when you
@@ -48,6 +49,7 @@ upload it, which is what we’ll do next.
 First, create a text file and paste the key text into it:
 
 .. image:: ./images/putty4.png
+   :align: center
 
 I called my file auth_keys, but you may name it anything you wish. It is important to use
 a simple text editor to create this file so that no weird meta-characters are in the file.
@@ -58,6 +60,7 @@ Save the file.
 Next, go to the enStratus console and upload your key.
 
 .. image:: ./images/putty5.png
+   :align: center
 
 Click Save profile. Your key has been uploaded. Next give yourself shell access to the
 instance through enStratus.
@@ -86,11 +89,13 @@ in putty, it must be converted into a format that putty recognizes.
 To do this, first open puttygen:
 
 .. image:: ./images/putty6.png
+   :align: center
 
 Next, load your private key into puttygen and enter the passphrase for the key, if
 necessary.
 
 .. image:: ./images/putty7.png
+   :align: center
 
 Next, choose Save private key. The converted key is saved as ``id_rsa.ppk`` and can be used to
 access running instances.
