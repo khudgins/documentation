@@ -14,18 +14,18 @@ revokeDatabaseAccess SERVICE_ID CONFIG_FILE
 Description
 ~~~~~~~~~~~
 
-It invokes the script /mnt/services/$SERVICE_ID/bin/enstratus-dbrevoke, if existent, to remove access to a database from another server.
+Invokes the script /mnt/services/$SERVICE_ID/bin/enstratus-dbrevoke, if existent, to remove access to a database from another server.
 
 
 Options
 ~~~~~~~
 
 SERVICE_ID
-	ID of the service. It's provided by enstratus. Service images are stored in /mnt/services/$SERVICE_ID
+	ID of the service. It's provided by enStratus. Service images are stored in /mnt/services/$SERVICE_ID
 
 
 CONFIG_FILE
-	Configuration file provided by enstratus. It contains information required to revoke access to a data source, like the remote server IP, database name and credentials .
+	Configuration file provided by enStratus. It contains information required to revoke access to a data source, like the remote server IP, database name and credentials .
 
 
 Examples
@@ -37,7 +37,7 @@ revokeDatabaseAccess a123 /enstratus/ws/tomcat/temp/database6625343243682788319.
 Invocation
 ~~~~~~~~~~
 
-This script is called automatically by enstratus during a deployment when a server that had been granted access to a datasource no longer exists.
+This script is called automatically by enStratus during a deployment when a server that had been granted access to a datasource no longer exists.
 
 
 Dependencies

@@ -14,7 +14,7 @@ uploadImage BUNDLE MANIFEST ACCESS_KEY SECRET_KEY
 DESCRIPTION
 ~~~~~~~~~~~
 
-It uploads the selected AMI bundle to Amazon S3 for creating a S3-storage based AMI, using EC2 AMI tools
+Uploads the selected AMI bundle to Amazon S3 for creating a S3-storage based AMI using EC2 AMI tools
 
 OPTIONS
 ~~~~~~~

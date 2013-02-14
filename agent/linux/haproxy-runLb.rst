@@ -4,7 +4,7 @@ haproxy-runLb
 NAME
 ~~~~
 
-haproxy-runLb - It configures the HAProxy service to start automatically on server restart.
+haproxy-runLb - Configures the HAProxy service to start automatically on server restart.
 
 
 SYNOPSIS
@@ -25,7 +25,7 @@ None.
 INVOCATION
 ~~~~~~~~~~
 
-This script is called by the haproxy-startProxy as a part of the HAProxy configuration.
+This script is called by haproxy-startProxy as part of the HAProxy configuration.
 
 DEPENDENCIES
 ~~~~~~~~~~~~
@@ -35,7 +35,7 @@ DEPENDENCIES
 PERMISSIONS
 ~~~~~~~~~~~
 
-It is launched by the enStratus user. It uses sudo to edit the file /etc/default/haproxy configuration file.
+It is launched by the enStratus user. It uses sudo to edit the /etc/default/haproxy configuration file.
 
 
 OVERRIDES

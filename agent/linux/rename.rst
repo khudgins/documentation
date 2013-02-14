@@ -9,7 +9,7 @@ rename - Renames the server.
 DESCRIPTION
 ~~~~~~~~~~~
 
-It updates the hostname for the server. Additionally may re-configure other services that rely on the hostname for their proper operation.
+Updates the hostname for the server. Additionally may re-configure other services that rely on the hostname for their proper operation.
 
 
 OPTIONS
@@ -31,12 +31,12 @@ This script is called automatically on server start to set the hostname, or manu
 DEPENDENCIES
 ~~~~~~~~~~~~
 
-* sudo
+sudo
 
 PERMISSIONS
 ~~~~~~~~~~~
 
-It is launched by the enStratus user. It needs sudo authority for updating the hostname.
+Launched by the enStratus user. Needs sudo authority for updating the hostname.
 
 
 OVERRIDES

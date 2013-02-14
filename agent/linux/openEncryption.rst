@@ -15,7 +15,7 @@ openEncryption RAW_DEVICE ENCRYPTED_DEVICE KEY_FILE
 DESCRIPTION
 ~~~~~~~~~~~
 
-It opens a LUKS (Linux Unified Key Setup) encrypted volume.
+Opens a LUKS (Linux Unified Key Setup) encrypted volume.
 
 OPTIONS
 ~~~~~~~
@@ -32,7 +32,9 @@ KEY_FILE
 INVOCATION
 ~~~~~~~~~~
 
-This script is called by enStratus when starting a server that has been configured to use volume encryption (it can be stand-alone servers launched from the Machine Image list or servers in a deployment when Use Encryption is selected in the Launch Configuration).
+This script is called by enStratus when starting a server that has been configured to use volume encryption 
+(it can be stand-alone servers launched from the Machine Image list or servers in a deployment when 
+Use Encryption is selected in the Launch Configuration).
 
 openEncryption is called after the volume has been successfully initialized by setupEncryption.
 

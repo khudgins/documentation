@@ -9,7 +9,9 @@ secureDelete - Secure removal of sensitive files.
 DESCRIPTION
 ~~~~~~~~~~~
 
-It invokes the Secure Removal tool (http://srm.sourceforge.net/) to securely remove temporary files containing sensitive information, such an encryption keys and services passwords, to make sure they cannot be recovered using forensic techniques.
+Invokes the Secure Removal tool (http://srm.sourceforge.net/) to securely remove temporary files 
+containing sensitive information (such an encryption keys and services passwords) to make sure 
+they cannot be recovered using forensic techniques.
 
 OPTIONS
 ~~~~~~~

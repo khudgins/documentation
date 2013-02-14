@@ -13,7 +13,7 @@ startService SERVICE_ID
 Description
 ~~~~~~~~~~~
 
-It starts the selected service by invoking the /mnt/services/$SERVICE_ID/bin/enstratus-start custom script included in the service image.
+Starts the selected service by invoking the /mnt/services/$SERVICE_ID/bin/enstratus-start custom script included in the service image.
 
 Options
 ~~~~~~~~
@@ -30,7 +30,7 @@ startService a123
 Invocation
 ~~~~~~~~~~
 
-This script is called automatically by enstratus during the deployment start for services with a service image.
+This script is called automatically by enStratus during the deployment start for services with a service image.
 
 
 Dependencies
@@ -41,7 +41,7 @@ Dependencies
 Permission
 ~~~~~~~~~~
 
-It is called by the enstratus user.
+It is called by the enStratus user.
 
 
 Overrides

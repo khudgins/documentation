@@ -11,7 +11,7 @@ unlockFileSystems
 
 Description
 ~~~~~~~~~~~
-It unlocks previously frozen XFS partitions to enable back read-write access, after volume snapshots.
+It unlocks previously frozen XFS partitions to re-enable read-write access after volume snapshots.
 
 Options
 ~~~~~~~~
@@ -28,7 +28,7 @@ Examples
 Invocation
 ~~~~~~~~~~
 
-It is called a volume snapshot has ended successfully.
+It is called after a volume snapshot operation has ended successfully.
 
 Dependencies
 ~~~~~~~~~~~~
@@ -38,7 +38,7 @@ Dependencies
 Permission
 ~~~~~~~~~~
 
-Run by the enstratus user. It needs sudo to run the xfs_freeze command.
+Run by the enStratus user. It needs sudo to run the xfs_freeze command.
 
 Overrides
 ~~~~~~~~~

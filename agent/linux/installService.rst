@@ -13,14 +13,14 @@ installService SERVICE_ID CUSTOMER_ID USER_ID RESTORE_FILE
 Description
 ~~~~~~~~~~~
 
-It uncompresses the service image file to /mnt/services/$SERVICE_ID, and assigns the proper
+Uncompresses the service image file to /mnt/services/$SERVICE_ID, and assigns the proper
 ownership and permission to its content.
 
 Options
 ~~~~~~~~
 
 SERVICE_ID
-  ID of the service to be installed. It's provided by enstratus. Service images are stored
+  ID of the service to be installed. It's provided by enStratus. Service images are stored
   in /mnt/services/$SERVICE_ID
 
 CUST_ID
@@ -41,13 +41,13 @@ installService a123 c100 c200 /mnt/tmp/service-YYYYMMDD~ID.zip
 Invocation
 ~~~~~~~~~~
 
-This script is called automatically by enstratus during the  deployment start for services with a service image.
+This script is called automatically by enStratus during the deployment start for services with a service image.
 
 
 Dependencies
 ~~~~~~~~~~~~
 
-* The server requires support for uncompressing the service image file (ie unzip/gzip/bzip2)
+The server requires support for uncompressing the service image file (ie unzip/gzip/bzip2)
 
 Permission
 ~~~~~~~~~~

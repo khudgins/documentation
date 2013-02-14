@@ -14,7 +14,9 @@ haproxy-startProxy SERVICE PRIMARY_NAME SECONDARY_NAME IP_ADDRESS REMOTE_ADDRESS
 DESCRIPTION
 ~~~~~~~~~~~
 
-Initially configures HAProxy for its use as a http load balancer, if not already configured, and adds the selected server to the list of active nodes. Additionally, if the load balancer has been selected to act as SSL terminator it configures Apache to unencrypt https requests and forward them to HAProxy.
+Initially configures HAProxy for use as an http load balancer (if not already configured) and adds the selected server to the 
+list of active nodes. Additionally, if the load balancer has been selected to act as an SSL terminator it configures Apache to 
+unencrypt https requests and forward them to HAProxy.
 
 OPTIONS
 ~~~~~~~

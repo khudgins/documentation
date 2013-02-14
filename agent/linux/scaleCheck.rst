@@ -40,7 +40,7 @@ This script is called periodically by enStratus in servers within a tier set to 
 DEPENDENCIES
 ~~~~~~~~~~~~
 
-* None
+None
 
 PERMISSIONS
 ~~~~~~~~~~~

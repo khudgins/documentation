@@ -14,7 +14,7 @@ terminate
 DESCRIPTION
 ~~~~~~~~~~~
 
-It orderly terminates existing services in /mnt/services, and the enStratus agent.
+Triggers orderly termination of existing services in /mnt/services and the enStratus agent.
 
 OPTIONS
 ~~~~~~~
@@ -35,7 +35,7 @@ DEPENDENCIES
 PERMISSIONS
 ~~~~~~~~~~~
 
-It is launched by the enStratus user. It needs sudo authority for creating the user.
+Launched by the enStratus user. It needs sudo authority for creating the user.
 
 
 OVERRIDES
