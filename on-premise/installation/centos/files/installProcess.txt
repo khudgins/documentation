@@ -1,0 +1,1017 @@
+Ready to run : chef-solo -j local_settings//tmp/tmp.rIDQKfpg6f/single_node.json -c solo.rb
+[root@localhost ~]# chef-solo -j local_settings//tmp/tmp.rIDQKfpg6f/single_node.json -c solo.rb
+[2013-02-19T05:38:42-06:00] INFO: *** Chef 10.14.4 ***
+[2013-02-19T05:38:42-06:00] INFO: Setting the run_list to ["role[single_node]"] from JSON
+[2013-02-19T05:38:42-06:00] INFO: Run List is [role[single_node]]
+[2013-02-19T05:38:42-06:00] INFO: Run List expands to [enstratus::preflight, build-essential, java, enstratus, enstratus::limits, enstratus::rabbit_mq, enstratus::riak, MySQL, MySQL::server, enstratus::credentials_db, enstratus::provisioning_db, enstratus::analytics_db, enstratus::console_db, enstratus::enstratus_console_db, enstratus::km, enstratus::dispatcher, enstratus::console, enstratus::monitor, enstratus::worker, enstratus::api, enstratus::cwrkr]
+[2013-02-19T05:38:42-06:00] INFO: Starting Chef Run for solo
+[2013-02-19T05:38:42-06:00] INFO: Running start handlers
+[2013-02-19T05:38:42-06:00] INFO: Start handlers complete.
+[2013-02-19T05:38:43-06:00] WARN: Missing gem 'right_aws'
+[2013-02-19T05:38:43-06:00] INFO: Processing package[gcc] action install (build-essential::default line 51)
+[2013-02-19T05:38:44-06:00] INFO: package[gcc] installing gcc-4.4.6-4.el6 from base repository
+[2013-02-19T05:40:01-06:00] INFO: Processing package[gcc-c++] action install (build-essential::default line 51)
+[2013-02-19T05:40:02-06:00] INFO: package[gcc-c++] installing gcc-c++-4.4.6-4.el6 from base repository
+[2013-02-19T05:40:13-06:00] INFO: Processing package[kernel-devel] action install (build-essential::default line 51)
+[2013-02-19T05:40:13-06:00] INFO: package[kernel-devel] installing kernel-devel-2.6.32-279.22.1.el6 from updates repository
+[2013-02-19T05:40:33-06:00] INFO: Processing package[make] action install (build-essential::default line 51)
+[2013-02-19T05:40:33-06:00] INFO: package[make] installing make-3.81-20.el6 from base repository
+[2013-02-19T05:40:35-06:00] INFO: Processing package[autoconf] action install (build-essential::default line 58)
+[2013-02-19T05:40:35-06:00] INFO: package[autoconf] installing autoconf-2.63-5.1.el6 from base repository
+[2013-02-19T05:41:06-06:00] INFO: Processing package[flex] action install (build-essential::default line 58)
+[2013-02-19T05:41:06-06:00] INFO: package[flex] installing flex-2.5.35-8.el6 from base repository
+[2013-02-19T05:41:08-06:00] INFO: Processing package[bison] action install (build-essential::default line 58)
+[2013-02-19T05:41:08-06:00] INFO: package[bison] installing bison-2.4.1-5.el6 from base repository
+[2013-02-19T05:41:11-06:00] INFO: Executing RHEL
+[2013-02-19T05:41:11-06:00] INFO: Processing execute[iptables -F] action run (enstratus::centos line 31)
+[2013-02-19T05:41:11-06:00] INFO: execute[iptables -F] ran successfully
+[2013-02-19T05:41:11-06:00] INFO: Processing execute[setenforce 0] action run (enstratus::centos line 32)
+[2013-02-19T05:41:11-06:00] INFO: execute[setenforce 0] ran successfully
+[2013-02-19T05:41:11-06:00] INFO: Processing package[MySQL] action install (MySQL::client line 46)
+[2013-02-19T05:41:11-06:00] INFO: package[MySQL] installing MySQL-5.1.67-1.el6_3 from updates repository
+[2013-02-19T05:41:17-06:00] INFO: Processing package[MySQL-devel] action install (MySQL::client line 46)
+[2013-02-19T05:41:17-06:00] INFO: package[MySQL-devel] installing MySQL-devel-5.1.67-1.el6_3 from updates repository
+[2013-02-19T05:41:38-06:00] INFO: Processing chef_gem[MySQL] action install (MySQL::ruby line 36)
+[2013-02-19T05:41:43-06:00] INFO: Could not find previously defined grants.sql resource
+[2013-02-19T05:41:43-06:00] INFO: Processing chef_gem[MySQL] action install (enstratus::credentials_db line 9)
+[2013-02-19T05:41:43-06:00] INFO: Processing chef_gem[MySQL] action install (enstratus::provisioning_db line 10)
+[2013-02-19T05:41:43-06:00] INFO: Processing chef_gem[MySQL] action install (enstratus::analytics_db line 10)
+[2013-02-19T05:41:43-06:00] INFO: Processing chef_gem[MySQL] action install (enstratus::console_db line 9)
+[2013-02-19T05:41:43-06:00] INFO: Processing chef_gem[MySQL] action install (enstratus::enstratus_console_db line 10)
+[2013-02-19T05:41:43-06:00] INFO: Processing package[gcc] action nothing (build-essential::default line 51)
+[2013-02-19T05:41:43-06:00] INFO: Processing package[gcc-c++] action nothing (build-essential::default line 51)
+[2013-02-19T05:41:43-06:00] INFO: Processing package[kernel-devel] action nothing (build-essential::default line 51)
+[2013-02-19T05:41:43-06:00] INFO: Processing package[make] action nothing (build-essential::default line 51)
+[2013-02-19T05:41:43-06:00] INFO: Processing package[autoconf] action nothing (build-essential::default line 58)
+[2013-02-19T05:41:43-06:00] INFO: Processing package[flex] action nothing (build-essential::default line 58)
+[2013-02-19T05:41:43-06:00] INFO: Processing package[bison] action nothing (build-essential::default line 58)
+[2013-02-19T05:41:43-06:00] INFO: Processing ruby_block[set-env-java-home] action create (java::openjdk line 36)
+[2013-02-19T05:41:43-06:00] INFO: ruby_block[set-env-java-home] called
+[2013-02-19T05:41:43-06:00] INFO: Processing file[/etc/profile.d/jdk.sh] action create (java::openjdk line 42)
+[2013-02-19T05:41:43-06:00] INFO: file[/etc/profile.d/jdk.sh] mode changed to 755
+[2013-02-19T05:41:43-06:00] INFO: file[/etc/profile.d/jdk.sh] created file /etc/profile.d/jdk.sh
+[2013-02-19T05:41:43-06:00] INFO: Processing ruby_block[update-java-alternatives] action nothing (java::openjdk line 51)
+[2013-02-19T05:41:43-06:00] INFO: Processing package[java-1.6.0-openjdk] action install (java::openjdk line 90)
+[2013-02-19T05:41:43-06:00] INFO: Processing package[java-1.6.0-openjdk-devel] action install (java::openjdk line 90)
+[2013-02-19T05:41:43-06:00] INFO: package[java-1.6.0-openjdk-devel] installing java-1.6.0-openjdk-devel-1.6.0.0-1.54.1.11.6.el6_3 from updates repository
+[2013-02-19T05:41:59-06:00] INFO: package[java-1.6.0-openjdk-devel] sending create action to ruby_block[update-java-alternatives] (immediate)
+[2013-02-19T05:41:59-06:00] INFO: Processing ruby_block[update-java-alternatives] action create (java::openjdk line 51)
+[2013-02-19T05:41:59-06:00] INFO: ruby_block[update-java-alternatives] called
+[2013-02-19T05:41:59-06:00] INFO: Processing package[sun-java6-jdk] action purge (java::default line 25)
+[2013-02-19T05:41:59-06:00] INFO: Processing package[sun-java6-bin] action purge (java::default line 25)
+[2013-02-19T05:41:59-06:00] INFO: Processing package[sun-java6-jre] action purge (java::default line 25)
+[2013-02-19T05:41:59-06:00] INFO: Processing user[enstratus] action create (enstratus::default line 14)
+[2013-02-19T05:41:59-06:00] INFO: user[enstratus] created
+[2013-02-19T05:41:59-06:00] INFO: Processing group[enstratus] action create (enstratus::default line 23)
+[2013-02-19T05:41:59-06:00] INFO: group[enstratus] altered
+[2013-02-19T05:41:59-06:00] INFO: Processing cookbook_file[/etc/tmux.conf] action create (enstratus::default line 29)
+[2013-02-19T05:41:59-06:00] INFO: cookbook_file[/etc/tmux.conf] owner changed to 0
+[2013-02-19T05:41:59-06:00] INFO: cookbook_file[/etc/tmux.conf] group changed to 0
+[2013-02-19T05:41:59-06:00] INFO: cookbook_file[/etc/tmux.conf] mode changed to 644
+[2013-02-19T05:41:59-06:00] INFO: cookbook_file[/etc/tmux.conf] created file /etc/tmux.conf
+[2013-02-19T05:41:59-06:00] INFO: Processing cookbook_file[/etc/security/limits.d/enstratus-limits.conf] action create (enstratus::default line 36)
+[2013-02-19T05:41:59-06:00] INFO: cookbook_file[/etc/security/limits.d/enstratus-limits.conf] owner changed to 0
+[2013-02-19T05:41:59-06:00] INFO: cookbook_file[/etc/security/limits.d/enstratus-limits.conf] group changed to 0
+[2013-02-19T05:41:59-06:00] INFO: cookbook_file[/etc/security/limits.d/enstratus-limits.conf] mode changed to 644
+[2013-02-19T05:41:59-06:00] INFO: cookbook_file[/etc/security/limits.d/enstratus-limits.conf] created file /etc/security/limits.d/enstratus-limits.conf
+[2013-02-19T05:41:59-06:00] INFO: Processing package[sudo] action install (enstratus::sudo line 1)
+[2013-02-19T05:41:59-06:00] INFO: Processing package[sudo] action upgrade (enstratus::sudo line 1)
+[2013-02-19T05:41:59-06:00] INFO: package[sudo] installing sudo-1.7.4p5-13.el6_3 from updates repository
+[2013-02-19T05:42:01-06:00] INFO: package[sudo] upgraded from 1.7.4p5-11.el6 to 1.7.4p5-13.el6_3
+[2013-02-19T05:42:01-06:00] INFO: Processing execute[add-sudoers-d-include] action run (enstratus::sudo line 30)
+[2013-02-19T05:42:01-06:00] INFO: Processing cookbook_file[/etc/sudoers.d/enstratus] action create (enstratus::sudo line 34)
+[2013-02-19T05:42:01-06:00] INFO: cookbook_file[/etc/sudoers.d/enstratus] owner changed to 0
+[2013-02-19T05:42:01-06:00] INFO: cookbook_file[/etc/sudoers.d/enstratus] group changed to 0
+[2013-02-19T05:42:01-06:00] INFO: cookbook_file[/etc/sudoers.d/enstratus] mode changed to 440
+[2013-02-19T05:42:01-06:00] INFO: cookbook_file[/etc/sudoers.d/enstratus] created file /etc/sudoers.d/enstratus
+[2013-02-19T05:42:01-06:00] INFO: Processing service[runit] action nothing (runit::default line 20)
+[2013-02-19T05:42:01-06:00] INFO: Processing execute[start-runsvdir] action nothing (runit::default line 24)
+[2013-02-19T05:42:01-06:00] INFO: Processing execute[runit-hup-init] action nothing (runit::default line 33)
+[2013-02-19T05:42:01-06:00] INFO: Processing directory[/etc/sv] action create (runit::default line 42)
+[2013-02-19T05:42:01-06:00] INFO: directory[/etc/sv] created directory /etc/sv
+[2013-02-19T05:42:01-06:00] INFO: directory[/etc/sv] owner changed to 0
+[2013-02-19T05:42:01-06:00] INFO: directory[/etc/sv] group changed to 0
+[2013-02-19T05:42:01-06:00] INFO: directory[/etc/sv] mode changed to 750
+[2013-02-19T05:42:01-06:00] INFO: Processing remote_file[/root/cache/runit-2.1.1-6.el6.enstratus.x86_64.rpm] action create_if_missing (runit::default line 49)
+[2013-02-19T05:42:04-06:00] INFO: remote_file[/root/cache/runit-2.1.1-6.el6.enstratus.x86_64.rpm] updated
+[2013-02-19T05:42:04-06:00] INFO: Processing yum_package[runit] action install (runit::default line 56)
+[2013-02-19T05:42:14-06:00] INFO: Processing cookbook_file[/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6] action create (enstratus::centos line 19)
+[2013-02-19T05:42:14-06:00] INFO: cookbook_file[/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6] created file /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+[2013-02-19T05:42:14-06:00] INFO: Processing yum_key[RPM-GPG-KEY-EPEL-6] action add (yum::epel line 22)
+[2013-02-19T05:42:14-06:00] INFO: Processing yum_repository[epel] action add (yum::epel line 27)
+[2013-02-19T05:42:14-06:00] INFO: Adding epel repository to /etc/yum.repos.d/epel.repo
+[2013-02-19T05:42:14-06:00] INFO: Processing yum_key[RPM-GPG-KEY-EPEL-6] action add (/root/cookbooks/yum/providers/repository.rb line 85)
+[2013-02-19T05:42:14-06:00] INFO: Processing execute[yum -q makecache] action nothing (/root/cookbooks/yum/providers/repository.rb line 88)
+[2013-02-19T05:42:14-06:00] INFO: Processing ruby_block[reload-internal-yum-cache] action nothing (/root/cookbooks/yum/providers/repository.rb line 92)
+[2013-02-19T05:42:14-06:00] INFO: Processing template[/etc/yum.repos.d/epel.repo] action create (/root/cookbooks/yum/providers/repository.rb line 99)
+[2013-02-19T05:42:14-06:00] INFO: template[/etc/yum.repos.d/epel.repo] updated content
+[2013-02-19T05:42:14-06:00] INFO: template[/etc/yum.repos.d/epel.repo] mode changed to 644
+[2013-02-19T05:42:14-06:00] INFO: template[/etc/yum.repos.d/epel.repo] sending run action to execute[yum -q makecache] (immediate)
+[2013-02-19T05:42:14-06:00] INFO: Processing execute[yum -q makecache] action run (/root/cookbooks/yum/providers/repository.rb line 88)
+[2013-02-19T05:42:56-06:00] INFO: execute[yum -q makecache] ran successfully
+[2013-02-19T05:42:56-06:00] INFO: template[/etc/yum.repos.d/epel.repo] sending create action to ruby_block[reload-internal-yum-cache] (immediate)
+[2013-02-19T05:42:56-06:00] INFO: Processing ruby_block[reload-internal-yum-cache] action create (/root/cookbooks/yum/providers/repository.rb line 92)
+[2013-02-19T05:42:56-06:00] INFO: ruby_block[reload-internal-yum-cache] called
+[2013-02-19T05:42:56-06:00] INFO: Processing execute[iptables -F] action run (enstratus::centos line 31)
+[2013-02-19T05:42:56-06:00] INFO: execute[iptables -F] ran successfully
+[2013-02-19T05:42:56-06:00] INFO: Processing execute[setenforce 0] action run (enstratus::centos line 32)
+[2013-02-19T05:42:56-06:00] INFO: execute[setenforce 0] ran successfully
+[2013-02-19T05:42:56-06:00] INFO: Processing cookbook_file[/etc/selinux/config] action create (enstratus::centos line 35)
+[2013-02-19T05:42:56-06:00] INFO: cookbook_file[/etc/selinux/config] owner changed to 0
+[2013-02-19T05:42:56-06:00] INFO: cookbook_file[/etc/selinux/config] group changed to 0
+[2013-02-19T05:42:56-06:00] INFO: cookbook_file[/etc/selinux/config] mode changed to 644
+[2013-02-19T05:42:56-06:00] INFO: cookbook_file[/etc/selinux/config] created file /etc/selinux/config
+[2013-02-19T05:42:56-06:00] INFO: Processing service[iptables] action stop (enstratus::centos line 43)
+[2013-02-19T05:42:56-06:00] INFO: service[iptables] stopped
+[2013-02-19T05:42:56-06:00] INFO: Processing service[iptables] action disable (enstratus::centos line 43)
+[2013-02-19T05:42:56-06:00] INFO: service[iptables] disabled
+[2013-02-19T05:42:56-06:00] INFO: Processing service[ip6tables] action stop (enstratus::centos line 47)
+[2013-02-19T05:42:56-06:00] INFO: service[ip6tables] stopped
+[2013-02-19T05:42:56-06:00] INFO: Processing service[ip6tables] action disable (enstratus::centos line 47)
+[2013-02-19T05:42:56-06:00] INFO: service[ip6tables] disabled
+[2013-02-19T05:42:56-06:00] INFO: Processing package[openssl098e] action install (enstratus::centos line 57)
+[2013-02-19T05:43:00-06:00] INFO: package[openssl098e] installing openssl098e-0.9.8e-17.el6.centos.2 from base repository
+[2013-02-19T05:43:05-06:00] INFO: Processing package[tmux] action install (enstratus::centos line 63)
+[2013-02-19T05:43:06-06:00] INFO: package[tmux] installing tmux-1.5-1.el6 from epel repository
+[2013-02-19T05:43:11-06:00] INFO: Processing package[wget] action install (enstratus::centos line 63)
+[2013-02-19T05:43:11-06:00] INFO: package[wget] installing wget-1.12-1.4.el6 from base repository
+[2013-02-19T05:43:16-06:00] INFO: Processing package[curl] action install (enstratus::centos line 63)
+[2013-02-19T05:43:16-06:00] INFO: Processing package[openssl] action install (enstratus::centos line 63)
+[2013-02-19T05:43:16-06:00] INFO: Processing package[tar] action install (enstratus::centos line 63)
+[2013-02-19T05:43:16-06:00] INFO: Processing package[zip] action install (enstratus::centos line 63)
+[2013-02-19T05:43:16-06:00] INFO: package[zip] installing zip-3.0-1.el6 from base repository
+[2013-02-19T05:43:24-06:00] INFO: Processing package[unzip] action install (enstratus::centos line 63)
+[2013-02-19T05:43:24-06:00] INFO: package[unzip] installing unzip-6.0-1.el6 from base repository
+[2013-02-19T05:43:28-06:00] INFO: Processing package[curl] action install (enstratus::centos line 71)
+[2013-02-19T05:43:28-06:00] INFO: Processing package[vim-enhanced] action install (enstratus::centos line 71)
+[2013-02-19T05:43:28-06:00] INFO: package[vim-enhanced] installing vim-enhanced-7.2.411-1.8.el6 from base repository
+[2013-02-19T05:43:45-06:00] INFO: Processing package[postfix] action install (enstratus::centos line 71)
+[2013-02-19T05:43:45-06:00] INFO: Processing package[postfix] action install (enstratus::centos line 80)
+[2013-02-19T05:43:45-06:00] INFO: Processing cookbook_file[/root/.bashrc] action create (enstratus::centos line 87)
+[2013-02-19T05:43:45-06:00] INFO: cookbook_file[/root/.bashrc] backed up to /root/backup/root/.bashrc.chef-20130219054345
+[2013-02-19T05:43:45-06:00] INFO: cookbook_file[/root/.bashrc] owner changed to 0
+[2013-02-19T05:43:45-06:00] INFO: cookbook_file[/root/.bashrc] group changed to 0
+[2013-02-19T05:43:45-06:00] INFO: cookbook_file[/root/.bashrc] mode changed to 644
+[2013-02-19T05:43:45-06:00] INFO: cookbook_file[/root/.bashrc] created file /root/.bashrc
+[2013-02-19T05:43:45-06:00] INFO: Processing service[apache2] action stop (enstratus::centos line 96)
+[2013-02-19T05:43:45-06:00] INFO: Processing service[apache2] action disable (enstratus::centos line 96)
+[2013-02-19T05:43:45-06:00] INFO: Processing service[tomcat6] action stop (enstratus::centos line 96)
+[2013-02-19T05:43:45-06:00] INFO: Processing service[tomcat6] action disable (enstratus::centos line 96)
+[2013-02-19T05:43:45-06:00] INFO: Processing service[avahi-daemon] action stop (enstratus::centos line 96)
+[2013-02-19T05:43:45-06:00] INFO: Processing service[avahi-daemon] action disable (enstratus::centos line 96)
+[2013-02-19T05:43:45-06:00] INFO: Processing service[cups] action stop (enstratus::centos line 96)
+[2013-02-19T05:43:45-06:00] INFO: Processing service[cups] action disable (enstratus::centos line 96)
+[2013-02-19T05:43:45-06:00] INFO: Processing package[avahi-daemon] action purge (enstratus::centos line 104)
+[2013-02-19T05:43:45-06:00] INFO: Processing package[apparmor] action purge (enstratus::centos line 104)
+[2013-02-19T05:43:45-06:00] INFO: Processing directory[/tmp] action create (enstratus::centos line 111)
+[2013-02-19T05:43:45-06:00] INFO: Processing package[MySQL] action install (MySQL::client line 46)
+[2013-02-19T05:43:45-06:00] INFO: Processing package[MySQL-devel] action install (MySQL::client line 46)
+[2013-02-19T05:43:45-06:00] INFO: Processing chef_gem[MySQL] action install (MySQL::ruby line 36)
+[2013-02-19T05:43:45-06:00] INFO: Processing template[/etc/security/limits.conf] action create (enstratus::limits line 10)
+[2013-02-19T05:43:45-06:00] INFO: template[/etc/security/limits.conf] backed up to /root/backup/etc/security/limits.conf.chef-20130219054345
+[2013-02-19T05:43:45-06:00] INFO: template[/etc/security/limits.conf] updated content
+[2013-02-19T05:43:45-06:00] INFO: template[/etc/security/limits.conf] owner changed to 0
+[2013-02-19T05:43:45-06:00] INFO: template[/etc/security/limits.conf] group changed to 0
+[2013-02-19T05:43:45-06:00] INFO: template[/etc/security/limits.conf] mode changed to 644
+[2013-02-19T05:43:45-06:00] INFO: Processing yum_repository[EPELErlangrepo] action add (erlang::default line 29)
+[2013-02-19T05:43:45-06:00] INFO: Processing package[erlang] action install (erlang::default line 36)
+[2013-02-19T05:43:45-06:00] INFO: package[erlang] installing erlang-R14B-04.1.el6 from epel repository
+[2013-02-19T05:51:38-06:00] INFO: Processing remote_file[/root/cache/rabbitmq-server-2.7.9-1.noarch.rpm] action create_if_missing (rabbitmq::enstratus line 40)
+[2013-02-19T05:51:48-06:00] INFO: remote_file[/root/cache/rabbitmq-server-2.7.9-1.noarch.rpm] updated
+[2013-02-19T05:51:48-06:00] INFO: Processing rpm_package[/root/cache/rabbitmq-server-2.7.9-1.noarch.rpm] action install (rabbitmq::enstratus line 45)
+[2013-02-19T05:51:48-06:00] INFO: Processing template[/etc/rabbitmq/rabbitmq-env.conf] action create (rabbitmq::enstratus line 51)
+[2013-02-19T05:51:48-06:00] INFO: template[/etc/rabbitmq/rabbitmq-env.conf] updated content
+[2013-02-19T05:51:48-06:00] INFO: template[/etc/rabbitmq/rabbitmq-env.conf] owner changed to 0
+[2013-02-19T05:51:48-06:00] INFO: template[/etc/rabbitmq/rabbitmq-env.conf] group changed to 0
+[2013-02-19T05:51:48-06:00] INFO: template[/etc/rabbitmq/rabbitmq-env.conf] mode changed to 644
+[2013-02-19T05:51:48-06:00] INFO: template[/etc/rabbitmq/rabbitmq-env.conf] sending restart action to service[rabbitmq-server] (immediate)
+[2013-02-19T05:51:48-06:00] INFO: Processing service[rabbitmq-server] action restart (rabbitmq::enstratus line 95)
+[2013-02-19T05:51:50-06:00] INFO: service[rabbitmq-server] restarted
+[2013-02-19T05:51:50-06:00] INFO: Processing template[/etc/rabbitmq/rabbitmq.config] action create (rabbitmq::enstratus line 59)
+[2013-02-19T05:51:50-06:00] INFO: template[/etc/rabbitmq/rabbitmq.config] updated content
+[2013-02-19T05:51:50-06:00] INFO: template[/etc/rabbitmq/rabbitmq.config] owner changed to 0
+[2013-02-19T05:51:50-06:00] INFO: template[/etc/rabbitmq/rabbitmq.config] group changed to 0
+[2013-02-19T05:51:50-06:00] INFO: template[/etc/rabbitmq/rabbitmq.config] mode changed to 644
+[2013-02-19T05:51:50-06:00] INFO: template[/etc/rabbitmq/rabbitmq.config] sending restart action to service[rabbitmq-server] (immediate)
+[2013-02-19T05:51:50-06:00] INFO: Processing service[rabbitmq-server] action restart (rabbitmq::enstratus line 95)
+[2013-02-19T05:51:54-06:00] INFO: service[rabbitmq-server] restarted
+[2013-02-19T05:51:54-06:00] INFO: Processing service[rabbitmq-server] action enable (rabbitmq::enstratus line 95)
+[2013-02-19T05:51:54-06:00] INFO: service[rabbitmq-server] enabled
+[2013-02-19T05:51:54-06:00] INFO: Processing service[rabbitmq-server] action start (rabbitmq::enstratus line 95)
+[2013-02-19T05:51:54-06:00] INFO: Processing rabbitmq_user[qsmq] action add (enstratus::rabbit_mq line 14)
+[2013-02-19T05:51:54-06:00] INFO: Adding RabbitMQ user 'qsmq'.
+[2013-02-19T05:51:54-06:00] INFO: Processing execute[rabbitmqctl add_user qsmq enstratus] action run (/root/cookbooks/rabbitmq/providers/user.rb line 21)
+Creating user "qsmq" ...
+...done.
+[2013-02-19T05:51:54-06:00] INFO: execute[rabbitmqctl add_user qsmq enstratus] ran successfully
+[2013-02-19T05:51:54-06:00] INFO: Processing rabbitmq_user[qsmq] action set_permissions (enstratus::rabbit_mq line 19)
+[2013-02-19T05:51:54-06:00] INFO: Setting RabbitMQ user permissions for 'qsmq' on vhost /.
+[2013-02-19T05:51:54-06:00] INFO: Processing execute[rabbitmqctl set_permissions -p / qsmq ".*" ".*" ".*"] action run (/root/cookbooks/rabbitmq/providers/user.rb line 38)
+Setting permissions for user "qsmq" in vhost "/" ...
+...done.
+[2013-02-19T05:51:55-06:00] INFO: execute[rabbitmqctl set_permissions -p / qsmq ".*" ".*" ".*"] ran successfully
+[2013-02-19T05:51:55-06:00] INFO: Processing rabbitmq_plugin[rabbitmq_management] action enable (enstratus::rabbit_mq line 28)
+[2013-02-19T05:51:55-06:00] INFO: Enabling RabbitMQ plugin 'rabbitmq_management'.
+[2013-02-19T05:51:55-06:00] INFO: rabbitmq_plugin[rabbitmq_management] sending restart action to service[rabbitmq-server] (immediate)
+[2013-02-19T05:51:55-06:00] INFO: Processing service[rabbitmq-server] action restart (rabbitmq::enstratus line 95)
+[2013-02-19T05:51:58-06:00] INFO: service[rabbitmq-server] restarted
+[2013-02-19T05:51:58-06:00] INFO: Processing execute[rabbitmq-plugins enable rabbitmq_management] action run (/root/cookbooks/rabbitmq/providers/plugin.rb line 22)
+The following plugins have been enabled:
+  mochiweb
+  webmachine
+  rabbitmq_mochiweb
+  amqp_client
+  rabbitmq_management_agent
+  rabbitmq_management
+Plugin configuration has changed. Restart RabbitMQ for changes to take effect.
+[2013-02-19T05:51:59-06:00] INFO: execute[rabbitmq-plugins enable rabbitmq_management] ran successfully
+[2013-02-19T05:51:59-06:00] INFO: Processing rabbitmq_plugin[rabbitmq_management_visualiser] action enable (enstratus::rabbit_mq line 28)
+[2013-02-19T05:51:59-06:00] INFO: Enabling RabbitMQ plugin 'rabbitmq_management_visualiser'.
+[2013-02-19T05:51:59-06:00] INFO: rabbitmq_plugin[rabbitmq_management_visualiser] sending restart action to service[rabbitmq-server] (immediate)
+[2013-02-19T05:51:59-06:00] INFO: Processing service[rabbitmq-server] action restart (rabbitmq::enstratus line 95)
+[2013-02-19T05:52:03-06:00] INFO: service[rabbitmq-server] restarted
+[2013-02-19T05:52:03-06:00] INFO: Processing execute[rabbitmq-plugins enable rabbitmq_management_visualiser] action run (/root/cookbooks/rabbitmq/providers/plugin.rb line 22)
+The following plugins have been enabled:
+  rabbitmq_management_visualiser
+Plugin configuration has changed. Restart RabbitMQ for changes to take effect.
+[2013-02-19T05:52:03-06:00] INFO: execute[rabbitmq-plugins enable rabbitmq_management_visualiser] ran successfully
+[2013-02-19T05:52:03-06:00] INFO: Processing remote_file[/root/cache/riak-1.2.0-1.el6.x86_64.rpm] action create (enstratus::riak line 11)
+[2013-02-19T05:52:32-06:00] INFO: remote_file[/root/cache/riak-1.2.0-1.el6.x86_64.rpm] updated
+[2013-02-19T05:52:32-06:00] INFO: Processing rpm_package[/root/cache/riak-1.2.0-1.el6.x86_64.rpm] action install (enstratus::riak line 19)
+[2013-02-19T05:52:36-06:00] INFO: Processing template[/etc/riak/app.config] action create (enstratus::riak line 26)
+[2013-02-19T05:52:36-06:00] INFO: template[/etc/riak/app.config] backed up to /root/backup/etc/riak/app.config.chef-20130219055236
+[2013-02-19T05:52:36-06:00] INFO: template[/etc/riak/app.config] updated content
+[2013-02-19T05:52:36-06:00] INFO: template[/etc/riak/app.config] owner changed to 0
+[2013-02-19T05:52:36-06:00] INFO: template[/etc/riak/app.config] group changed to 0
+[2013-02-19T05:52:36-06:00] INFO: template[/etc/riak/app.config] mode changed to 644
+[2013-02-19T05:52:36-06:00] INFO: Processing template[/etc/riak/vm.args] action create (enstratus::riak line 33)
+[2013-02-19T05:52:37-06:00] INFO: template[/etc/riak/vm.args] backed up to /root/backup/etc/riak/vm.args.chef-20130219055237
+[2013-02-19T05:52:37-06:00] INFO: template[/etc/riak/vm.args] updated content
+[2013-02-19T05:52:37-06:00] INFO: template[/etc/riak/vm.args] owner changed to 0
+[2013-02-19T05:52:37-06:00] INFO: template[/etc/riak/vm.args] group changed to 0
+[2013-02-19T05:52:37-06:00] INFO: template[/etc/riak/vm.args] mode changed to 644
+[2013-02-19T05:52:37-06:00] INFO: Processing service[riak] action start (enstratus::riak line 42)
+[2013-02-19T05:52:39-06:00] INFO: service[riak] started
+[2013-02-19T05:52:39-06:00] INFO: Processing service[riak] action enable (enstratus::riak line 42)
+[2013-02-19T05:52:39-06:00] INFO: service[riak] enabled
+[2013-02-19T05:52:39-06:00] INFO: Processing cookbook_file[/root/cache/chef-cm.json] action create (enstratus::riak line 59)
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/chef-cm.json] owner changed to 0
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/chef-cm.json] group changed to 0
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/chef-cm.json] mode changed to 644
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/chef-cm.json] created file /root/cache/chef-cm.json
+[2013-02-19T05:52:39-06:00] INFO: Processing script[load-chef] action nothing (enstratus::riak line 68)
+[2013-02-19T05:52:39-06:00] INFO: Processing cookbook_file[/root/cache/puppet-cm.json] action create (enstratus::riak line 59)
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/puppet-cm.json] owner changed to 0
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/puppet-cm.json] group changed to 0
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/puppet-cm.json] mode changed to 644
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/puppet-cm.json] created file /root/cache/puppet-cm.json
+[2013-02-19T05:52:39-06:00] INFO: Processing script[load-puppet] action nothing (enstratus::riak line 68)
+[2013-02-19T05:52:39-06:00] INFO: Processing cookbook_file[/root/cache/enstratus-cm.json] action create (enstratus::riak line 59)
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/enstratus-cm.json] owner changed to 0
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/enstratus-cm.json] group changed to 0
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/enstratus-cm.json] mode changed to 644
+[2013-02-19T05:52:39-06:00] INFO: cookbook_file[/root/cache/enstratus-cm.json] created file /root/cache/enstratus-cm.json
+[2013-02-19T05:52:39-06:00] INFO: Processing script[load-enstratus] action nothing (enstratus::riak line 68)
+[2013-02-19T05:52:39-06:00] INFO: Processing package[MySQL-server] action install (MySQL::server line 78)
+[2013-02-19T05:52:40-06:00] INFO: package[MySQL-server] installing MySQL-server-5.1.67-1.el6_3 from updates repository
+[2013-02-19T05:53:12-06:00] INFO: Processing directory[/etc/MySQL/conf.d] action create (MySQL::server line 85)
+[2013-02-19T05:53:12-06:00] INFO: directory[/etc/MySQL/conf.d] created directory /etc/MySQL/conf.d
+[2013-02-19T05:53:12-06:00] INFO: directory[/etc/MySQL/conf.d] owner changed to 27
+[2013-02-19T05:53:12-06:00] INFO: directory[/etc/MySQL/conf.d] group changed to 27
+[2013-02-19T05:53:12-06:00] INFO: Processing service[MySQL] action nothing (MySQL::server line 105)
+[2013-02-19T05:53:13-06:00] INFO: Processing template[/etc/my.cnf] action create (MySQL::server line 125)
+[2013-02-19T05:53:13-06:00] INFO: template[/etc/my.cnf] backed up to /root/backup/etc/my.cnf.chef-20130219055313
+[2013-02-19T05:53:13-06:00] INFO: template[/etc/my.cnf] updated content
+[2013-02-19T05:53:13-06:00] INFO: template[/etc/my.cnf] owner changed to 0
+[2013-02-19T05:53:13-06:00] INFO: template[/etc/my.cnf] group changed to 0
+[2013-02-19T05:53:13-06:00] INFO: template[/etc/my.cnf] mode changed to 644
+[2013-02-19T05:53:13-06:00] INFO: template[/etc/my.cnf] sending restart action to service[MySQL] (immediate)
+[2013-02-19T05:53:13-06:00] INFO: Processing service[MySQL] action restart (MySQL::server line 105)
+[2013-02-19T05:53:14-06:00] INFO: service[MySQL] restarted
+[2013-02-19T05:53:14-06:00] INFO: Processing execute[assign-root-password] action run (MySQL::server line 155)
+[2013-02-19T05:53:14-06:00] INFO: execute[assign-root-password] ran successfully
+[2013-02-19T05:53:14-06:00] INFO: Processing template[/etc/mysql_grants.sql] action create (MySQL::server line 179)
+[2013-02-19T05:53:14-06:00] INFO: template[/etc/mysql_grants.sql] updated content
+[2013-02-19T05:53:14-06:00] INFO: template[/etc/mysql_grants.sql] owner changed to 0
+[2013-02-19T05:53:14-06:00] INFO: template[/etc/mysql_grants.sql] group changed to 0
+[2013-02-19T05:53:14-06:00] INFO: template[/etc/mysql_grants.sql] mode changed to 600
+[2013-02-19T05:53:14-06:00] INFO: template[/etc/mysql_grants.sql] sending run action to execute[MySQL-install-privileges] (immediate)
+[2013-02-19T05:53:14-06:00] INFO: Processing execute[MySQL-install-privileges] action run (MySQL::server line 195)
+[2013-02-19T05:53:15-06:00] INFO: execute[MySQL-install-privileges] ran successfully
+[2013-02-19T05:53:15-06:00] INFO: Processing execute[MySQL-install-privileges] action nothing (MySQL::server line 195)
+[2013-02-19T05:53:15-06:00] INFO: Processing chef_gem[MySQL] action install (enstratus::credentials_db line 9)
+[2013-02-19T05:53:15-06:00] INFO: Processing file[/etc/.es-credentials.lock] action nothing (enstratus::credentials_db line 13)
+[2013-02-19T05:53:15-06:00] INFO: Processing mysql_database[credentials] action create (enstratus::credentials_db line 22)
+[2013-02-19T05:53:15-06:00] INFO: Processing mysql_database_user[credentials] action grant (enstratus::credentials_db line 28)
+[2013-02-19T05:53:15-06:00] INFO: mysql_database_user[credentials]: granting access with statement [GRANT all ON credentials.* TO 'credentials'@'127.0.0.1' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:15-06:00] INFO: Processing mysql_database_user[credentials] action grant (enstratus::credentials_db line 28)
+[2013-02-19T05:53:15-06:00] INFO: mysql_database_user[credentials]: granting access with statement [GRANT all ON credentials.* TO 'credentials'@'localhost' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:15-06:00] INFO: Processing mysql_database_user[credentials] action grant (enstratus::credentials_db line 28)
+[2013-02-19T05:53:15-06:00] INFO: mysql_database_user[credentials]: granting access with statement [GRANT all ON credentials.* TO 'credentials'@'127.0.0.1' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:15-06:00] INFO: Processing mysql_database[flush the privileges] action query (enstratus::credentials_db line 38)
+[2013-02-19T05:53:15-06:00] INFO: Processing remote_file[/root/cache/credentials.sql] action create (enstratus::credentials_db line 44)
+[2013-02-19T05:53:15-06:00] INFO: remote_file[/root/cache/credentials.sql] updated
+[2013-02-19T05:53:15-06:00] INFO: remote_file[/root/cache/credentials.sql] mode changed to 640
+[2013-02-19T05:53:15-06:00] INFO: remote_file[/root/cache/credentials.sql] sending delete action to file[/etc/.es-credentials.lock] (immediate)
+[2013-02-19T05:53:15-06:00] INFO: Processing file[/etc/.es-credentials.lock] action delete (enstratus::credentials_db line 13)
+[2013-02-19T05:53:15-06:00] INFO: Processing script[load credentials schema] action run (enstratus::credentials_db line 52)
+[2013-02-19T05:53:15-06:00] INFO: script[load credentials schema] ran successfully
+[2013-02-19T05:53:15-06:00] INFO: script[load credentials schema] sending create action to file[/etc/.es-credentials.lock] (immediate)
+[2013-02-19T05:53:15-06:00] INFO: Processing file[/etc/.es-credentials.lock] action create (enstratus::credentials_db line 13)
+[2013-02-19T05:53:15-06:00] INFO: file[/etc/.es-credentials.lock] owner changed to 0
+[2013-02-19T05:53:15-06:00] INFO: file[/etc/.es-credentials.lock] group changed to 0
+[2013-02-19T05:53:15-06:00] INFO: file[/etc/.es-credentials.lock] created file /etc/.es-credentials.lock
+[2013-02-19T05:53:15-06:00] INFO: Processing chef_gem[MySQL] action install (enstratus::provisioning_db line 10)
+[2013-02-19T05:53:15-06:00] INFO: Processing file[/etc/.es-provisioning-schema.lock] action nothing (enstratus::provisioning_db line 16)
+[2013-02-19T05:53:15-06:00] INFO: Processing file[/etc/.es-provisioning-backend.lock] action nothing (enstratus::provisioning_db line 16)
+[2013-02-19T05:53:15-06:00] INFO: Processing mysql_database[provisioning] action create (enstratus::provisioning_db line 26)
+[2013-02-19T05:53:15-06:00] INFO: Processing mysql_database_user[provisioning] action grant (enstratus::provisioning_db line 32)
+[2013-02-19T05:53:15-06:00] INFO: mysql_database_user[provisioning]: granting access with statement [GRANT all ON provisioning.* TO 'provisioning'@'127.0.0.1' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:15-06:00] INFO: Processing mysql_database_user[provisioning] action grant (enstratus::provisioning_db line 32)
+[2013-02-19T05:53:15-06:00] INFO: mysql_database_user[provisioning]: granting access with statement [GRANT all ON provisioning.* TO 'provisioning'@'localhost' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:15-06:00] INFO: Processing mysql_database_user[provisioning] action grant (enstratus::provisioning_db line 32)
+[2013-02-19T05:53:15-06:00] INFO: mysql_database_user[provisioning]: granting access with statement [GRANT all ON provisioning.* TO 'provisioning'@'127.0.0.1' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:15-06:00] INFO: Processing mysql_database[flush the privileges] action query (enstratus::provisioning_db line 42)
+[2013-02-19T05:53:15-06:00] INFO: Processing template[/root/cache/backend_setup.sql] action create (enstratus::provisioning_db line 48)
+[2013-02-19T05:53:15-06:00] INFO: template[/root/cache/backend_setup.sql] updated content
+[2013-02-19T05:53:15-06:00] INFO: template[/root/cache/backend_setup.sql] mode changed to 640
+[2013-02-19T05:53:15-06:00] INFO: template[/root/cache/backend_setup.sql] sending delete action to file[/etc/.es-provisioning-backend.lock] (immediate)
+[2013-02-19T05:53:15-06:00] INFO: Processing file[/etc/.es-provisioning-backend.lock] action delete (enstratus::provisioning_db line 16)
+[2013-02-19T05:53:15-06:00] INFO: Processing remote_file[/root/cache/provisioning.sql] action create (enstratus::provisioning_db line 55)
+[2013-02-19T05:53:16-06:00] INFO: remote_file[/root/cache/provisioning.sql] updated
+[2013-02-19T05:53:16-06:00] INFO: remote_file[/root/cache/provisioning.sql] mode changed to 640
+[2013-02-19T05:53:16-06:00] INFO: remote_file[/root/cache/provisioning.sql] sending delete action to file[/etc/.es-provisioning-schema.lock] (immediate)
+[2013-02-19T05:53:16-06:00] INFO: Processing file[/etc/.es-provisioning-schema.lock] action delete (enstratus::provisioning_db line 16)
+[2013-02-19T05:53:16-06:00] INFO: Processing script[load provisioning schema] action run (enstratus::provisioning_db line 63)
+[2013-02-19T05:53:17-06:00] INFO: script[load provisioning schema] ran successfully
+[2013-02-19T05:53:17-06:00] INFO: script[load provisioning schema] sending create action to file[/etc/.es-provisioning-schema.lock] (immediate)
+[2013-02-19T05:53:17-06:00] INFO: Processing file[/etc/.es-provisioning-schema.lock] action create (enstratus::provisioning_db line 16)
+[2013-02-19T05:53:17-06:00] INFO: file[/etc/.es-provisioning-schema.lock] owner changed to 0
+[2013-02-19T05:53:17-06:00] INFO: file[/etc/.es-provisioning-schema.lock] group changed to 0
+[2013-02-19T05:53:17-06:00] INFO: file[/etc/.es-provisioning-schema.lock] created file /etc/.es-provisioning-schema.lock
+[2013-02-19T05:53:17-06:00] INFO: Processing script[load backend setup] action run (enstratus::provisioning_db line 74)
+[2013-02-19T05:53:17-06:00] INFO: script[load backend setup] ran successfully
+[2013-02-19T05:53:17-06:00] INFO: script[load backend setup] sending create action to file[/etc/.es-provisioning-backend.lock] (immediate)
+[2013-02-19T05:53:17-06:00] INFO: Processing file[/etc/.es-provisioning-backend.lock] action create (enstratus::provisioning_db line 16)
+[2013-02-19T05:53:17-06:00] INFO: file[/etc/.es-provisioning-backend.lock] owner changed to 0
+[2013-02-19T05:53:17-06:00] INFO: file[/etc/.es-provisioning-backend.lock] group changed to 0
+[2013-02-19T05:53:17-06:00] INFO: file[/etc/.es-provisioning-backend.lock] created file /etc/.es-provisioning-backend.lock
+[2013-02-19T05:53:17-06:00] INFO: Processing chef_gem[MySQL] action install (enstratus::analytics_db line 10)
+[2013-02-19T05:53:17-06:00] INFO: Processing file[/etc/.es-analytics.lock] action nothing (enstratus::analytics_db line 14)
+[2013-02-19T05:53:17-06:00] INFO: Processing mysql_database[analytics] action create (enstratus::analytics_db line 23)
+[2013-02-19T05:53:17-06:00] INFO: Processing mysql_database_user[analytics] action grant (enstratus::analytics_db line 30)
+[2013-02-19T05:53:17-06:00] INFO: mysql_database_user[analytics]: granting access with statement [GRANT all ON analytics.* TO 'analytics'@'127.0.0.1' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:17-06:00] INFO: Processing mysql_database_user[analytics] action grant (enstratus::analytics_db line 30)
+[2013-02-19T05:53:17-06:00] INFO: mysql_database_user[analytics]: granting access with statement [GRANT all ON analytics.* TO 'analytics'@'localhost' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:17-06:00] INFO: Processing mysql_database_user[analytics] action grant (enstratus::analytics_db line 30)
+[2013-02-19T05:53:17-06:00] INFO: mysql_database_user[analytics]: granting access with statement [GRANT all ON analytics.* TO 'analytics'@'127.0.0.1' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:17-06:00] INFO: Processing mysql_database[flush the privileges] action query (enstratus::analytics_db line 40)
+[2013-02-19T05:53:17-06:00] INFO: Processing remote_file[/root/cache/analytics_schema.sql] action create (enstratus::analytics_db line 46)
+[2013-02-19T05:53:18-06:00] INFO: remote_file[/root/cache/analytics_schema.sql] updated
+[2013-02-19T05:53:18-06:00] INFO: remote_file[/root/cache/analytics_schema.sql] mode changed to 640
+[2013-02-19T05:53:18-06:00] INFO: remote_file[/root/cache/analytics_schema.sql] sending delete action to file[/etc/.es-analytics.lock] (immediate)
+[2013-02-19T05:53:18-06:00] INFO: Processing file[/etc/.es-analytics.lock] action delete (enstratus::analytics_db line 14)
+[2013-02-19T05:53:18-06:00] INFO: Processing script[load analytics schema] action run (enstratus::analytics_db line 54)
+[2013-02-19T05:53:18-06:00] INFO: script[load analytics schema] ran successfully
+[2013-02-19T05:53:18-06:00] INFO: script[load analytics schema] sending create action to file[/etc/.es-analytics.lock] (immediate)
+[2013-02-19T05:53:18-06:00] INFO: Processing file[/etc/.es-analytics.lock] action create (enstratus::analytics_db line 14)
+[2013-02-19T05:53:18-06:00] INFO: file[/etc/.es-analytics.lock] owner changed to 0
+[2013-02-19T05:53:18-06:00] INFO: file[/etc/.es-analytics.lock] group changed to 0
+[2013-02-19T05:53:18-06:00] INFO: file[/etc/.es-analytics.lock] created file /etc/.es-analytics.lock
+[2013-02-19T05:53:18-06:00] INFO: Processing chef_gem[MySQL] action install (enstratus::console_db line 9)
+[2013-02-19T05:53:18-06:00] INFO: Processing file[/etc/.es-console.lock] action nothing (enstratus::console_db line 15)
+[2013-02-19T05:53:18-06:00] INFO: Processing file[/etc/.es-console-setup.lock] action nothing (enstratus::console_db line 15)
+[2013-02-19T05:53:18-06:00] INFO: Processing mysql_database[console] action create (enstratus::console_db line 25)
+[2013-02-19T05:53:18-06:00] INFO: Processing mysql_database_user[console] action grant (enstratus::console_db line 31)
+[2013-02-19T05:53:18-06:00] INFO: mysql_database_user[console]: granting access with statement [GRANT all ON console.* TO 'console'@'127.0.0.1' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:18-06:00] INFO: Processing mysql_database_user[console] action grant (enstratus::console_db line 31)
+[2013-02-19T05:53:18-06:00] INFO: mysql_database_user[console]: granting access with statement [GRANT all ON console.* TO 'console'@'localhost' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:18-06:00] INFO: Processing mysql_database_user[console] action grant (enstratus::console_db line 31)
+[2013-02-19T05:53:18-06:00] INFO: mysql_database_user[console]: granting access with statement [GRANT all ON console.* TO 'console'@'127.0.0.1' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:53:18-06:00] INFO: Processing mysql_database[flush the privileges] action query (enstratus::console_db line 41)
+[2013-02-19T05:53:18-06:00] INFO: Processing template[/root/cache/console_setup.sql] action create (enstratus::console_db line 47)
+[2013-02-19T05:53:18-06:00] INFO: template[/root/cache/console_setup.sql] updated content
+[2013-02-19T05:53:18-06:00] INFO: template[/root/cache/console_setup.sql] mode changed to 640
+[2013-02-19T05:53:18-06:00] INFO: template[/root/cache/console_setup.sql] sending delete action to file[/etc/.es-console-setup.lock] (immediate)
+[2013-02-19T05:53:18-06:00] INFO: Processing file[/etc/.es-console-setup.lock] action delete (enstratus::console_db line 15)
+[2013-02-19T05:53:18-06:00] INFO: Processing remote_file[/root/cache/console.sql] action create (enstratus::console_db line 54)
+[2013-02-19T05:54:33-06:00] INFO: remote_file[/root/cache/console.sql] updated
+[2013-02-19T05:54:33-06:00] INFO: remote_file[/root/cache/console.sql] mode changed to 640
+[2013-02-19T05:54:33-06:00] INFO: remote_file[/root/cache/console.sql] sending delete action to file[/etc/.es-console.lock] (immediate)
+[2013-02-19T05:54:33-06:00] INFO: Processing file[/etc/.es-console.lock] action delete (enstratus::console_db line 15)
+[2013-02-19T05:54:33-06:00] INFO: Processing script[load console schema] action run (enstratus::console_db line 63)
+[2013-02-19T05:54:37-06:00] INFO: script[load console schema] ran successfully
+[2013-02-19T05:54:37-06:00] INFO: script[load console schema] sending create action to file[/etc/.es-console.lock] (immediate)
+[2013-02-19T05:54:37-06:00] INFO: Processing file[/etc/.es-console.lock] action create (enstratus::console_db line 15)
+[2013-02-19T05:54:37-06:00] INFO: file[/etc/.es-console.lock] owner changed to 0
+[2013-02-19T05:54:37-06:00] INFO: file[/etc/.es-console.lock] group changed to 0
+[2013-02-19T05:54:37-06:00] INFO: file[/etc/.es-console.lock] created file /etc/.es-console.lock
+[2013-02-19T05:54:37-06:00] INFO: Processing script[load console setup] action run (enstratus::console_db line 74)
+[2013-02-19T05:54:37-06:00] INFO: script[load console setup] ran successfully
+[2013-02-19T05:54:37-06:00] INFO: script[load console setup] sending create action to file[/etc/.es-console-setup.lock] (immediate)
+[2013-02-19T05:54:37-06:00] INFO: Processing file[/etc/.es-console-setup.lock] action create (enstratus::console_db line 15)
+[2013-02-19T05:54:37-06:00] INFO: file[/etc/.es-console-setup.lock] owner changed to 0
+[2013-02-19T05:54:37-06:00] INFO: file[/etc/.es-console-setup.lock] group changed to 0
+[2013-02-19T05:54:37-06:00] INFO: file[/etc/.es-console-setup.lock] created file /etc/.es-console-setup.lock
+[2013-02-19T05:54:37-06:00] INFO: Processing chef_gem[MySQL] action install (enstratus::enstratus_console_db line 10)
+[2013-02-19T05:54:37-06:00] INFO: Processing file[/etc/.es-enstratus_console.lock] action nothing (enstratus::enstratus_console_db line 14)
+[2013-02-19T05:54:37-06:00] INFO: Processing mysql_database[enstratus_console] action create (enstratus::enstratus_console_db line 23)
+[2013-02-19T05:54:37-06:00] INFO: Processing mysql_database_user[es_console] action grant (enstratus::enstratus_console_db line 29)
+[2013-02-19T05:54:37-06:00] INFO: mysql_database_user[es_console]: granting access with statement [GRANT all ON enstratus_console.* TO 'es_console'@'127.0.0.1' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:54:37-06:00] INFO: Processing mysql_database_user[es_console] action grant (enstratus::enstratus_console_db line 29)
+[2013-02-19T05:54:37-06:00] INFO: mysql_database_user[es_console]: granting access with statement [GRANT all ON enstratus_console.* TO 'es_console'@'localhost' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:54:37-06:00] INFO: Processing mysql_database_user[es_console] action grant (enstratus::enstratus_console_db line 29)
+[2013-02-19T05:54:37-06:00] INFO: mysql_database_user[es_console]: granting access with statement [GRANT all ON enstratus_console.* TO 'es_console'@'127.0.0.1' IDENTIFIED BY '40af67c66f0ffb17a8bf81f64572c470a3fd6']
+[2013-02-19T05:54:37-06:00] INFO: Processing mysql_database[flush the privileges] action query (enstratus::enstratus_console_db line 39)
+[2013-02-19T05:54:37-06:00] INFO: Processing remote_file[/root/cache/enstratus_console.sql] action create (enstratus::enstratus_console_db line 45)
+[2013-02-19T05:54:39-06:00] INFO: remote_file[/root/cache/enstratus_console.sql] updated
+[2013-02-19T05:54:39-06:00] INFO: remote_file[/root/cache/enstratus_console.sql] mode changed to 640
+[2013-02-19T05:54:39-06:00] INFO: remote_file[/root/cache/enstratus_console.sql] sending delete action to file[/etc/.es-enstratus_console.lock] (immediate)
+[2013-02-19T05:54:39-06:00] INFO: Processing file[/etc/.es-enstratus_console.lock] action delete (enstratus::enstratus_console_db line 14)
+[2013-02-19T05:54:39-06:00] INFO: Processing script[load enstratus_console schema] action run (enstratus::enstratus_console_db line 53)
+[2013-02-19T05:54:39-06:00] INFO: script[load enstratus_console schema] ran successfully
+[2013-02-19T05:54:39-06:00] INFO: script[load enstratus_console schema] sending create action to file[/etc/.es-enstratus_console.lock] (immediate)
+[2013-02-19T05:54:39-06:00] INFO: Processing file[/etc/.es-enstratus_console.lock] action create (enstratus::enstratus_console_db line 14)
+[2013-02-19T05:54:39-06:00] INFO: file[/etc/.es-enstratus_console.lock] owner changed to 0
+[2013-02-19T05:54:39-06:00] INFO: file[/etc/.es-enstratus_console.lock] group changed to 0
+[2013-02-19T05:54:39-06:00] INFO: file[/etc/.es-enstratus_console.lock] created file /etc/.es-enstratus_console.lock
+[2013-02-19T05:54:39-06:00] INFO: Processing directory[/services/km] action create (enstratus::km line 15)
+[2013-02-19T05:54:39-06:00] INFO: directory[/services/km] created directory /services/km
+[2013-02-19T05:54:39-06:00] INFO: directory[/services/km] owner changed to 498
+[2013-02-19T05:54:39-06:00] INFO: directory[/services/km] group changed to 498
+[2013-02-19T05:54:39-06:00] INFO: directory[/services/km] mode changed to 750
+[2013-02-19T05:54:39-06:00] INFO: Processing remote_file[/root/cache/enstratus-km-webapp-2012.2.1.tar.gz] action create (enstratus::km line 22)
+[2013-02-19T05:55:35-06:00] INFO: remote_file[/root/cache/enstratus-km-webapp-2012.2.1.tar.gz] updated
+[2013-02-19T05:55:35-06:00] INFO: remote_file[/root/cache/enstratus-km-webapp-2012.2.1.tar.gz] owner changed to 0
+[2013-02-19T05:55:35-06:00] INFO: remote_file[/root/cache/enstratus-km-webapp-2012.2.1.tar.gz] group changed to 0
+[2013-02-19T05:55:35-06:00] INFO: remote_file[/root/cache/enstratus-km-webapp-2012.2.1.tar.gz] mode changed to 644
+[2013-02-19T05:55:35-06:00] INFO: Processing script[extract km] action run (enstratus::km line 32)
+[2013-02-19T05:55:35-06:00] INFO: script[extract km] ran successfully
+[2013-02-19T05:55:35-06:00] INFO: Processing link[/services/km/start.ini] action create (enstratus::km line 48)
+[2013-02-19T05:55:35-06:00] INFO: link[/services/km/start.ini] created
+[2013-02-19T05:55:35-06:00] INFO: Processing link[/services/km/etc/enstratus-config.xml] action create (enstratus::km line 52)
+[2013-02-19T05:55:35-06:00] INFO: link[/services/km/etc/enstratus-config.xml] created
+[2013-02-19T05:55:35-06:00] INFO: Processing cookbook_file[/services/km/lib/ext/json-smart-1.1.1.jar] action create (enstratus::km line 57)
+[2013-02-19T05:55:35-06:00] INFO: cookbook_file[/services/km/lib/ext/json-smart-1.1.1.jar] owner changed to 498
+[2013-02-19T05:55:35-06:00] INFO: cookbook_file[/services/km/lib/ext/json-smart-1.1.1.jar] group changed to 498
+[2013-02-19T05:55:35-06:00] INFO: cookbook_file[/services/km/lib/ext/json-smart-1.1.1.jar] mode changed to 644
+[2013-02-19T05:55:35-06:00] INFO: cookbook_file[/services/km/lib/ext/json-smart-1.1.1.jar] created file /services/km/lib/ext/json-smart-1.1.1.jar
+[2013-02-19T05:55:35-06:00] INFO: Processing cookbook_file[/services/km/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] action create (enstratus::km line 57)
+[2013-02-19T05:55:35-06:00] INFO: cookbook_file[/services/km/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] owner changed to 498
+[2013-02-19T05:55:35-06:00] INFO: cookbook_file[/services/km/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] group changed to 498
+[2013-02-19T05:55:35-06:00] INFO: cookbook_file[/services/km/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] mode changed to 644
+[2013-02-19T05:55:35-06:00] INFO: cookbook_file[/services/km/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] created file /services/km/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar
+[2013-02-19T05:55:35-06:00] INFO: Processing template[/services/km/resources/log4j.properties] action create (enstratus::km line 65)
+[2013-02-19T05:55:35-06:00] INFO: template[/services/km/resources/log4j.properties] updated content
+[2013-02-19T05:55:35-06:00] INFO: template[/services/km/resources/log4j.properties] owner changed to 498
+[2013-02-19T05:55:35-06:00] INFO: template[/services/km/resources/log4j.properties] group changed to 498
+[2013-02-19T05:55:35-06:00] INFO: template[/services/km/resources/log4j.properties] mode changed to 644
+[2013-02-19T05:55:35-06:00] INFO: Processing link[/services/km/resources/dasein-persistence.properties] action create (enstratus::km line 72)
+[2013-02-19T05:55:35-06:00] INFO: link[/services/km/resources/dasein-persistence.properties] created
+[2013-02-19T05:55:35-06:00] INFO: Processing template[/services/km/contexts/enstratus-context.xml] action create (enstratus::km line 76)
+[2013-02-19T05:55:36-06:00] INFO: template[/services/km/contexts/enstratus-context.xml] updated content
+[2013-02-19T05:55:36-06:00] INFO: template[/services/km/contexts/enstratus-context.xml] owner changed to 498
+[2013-02-19T05:55:36-06:00] INFO: template[/services/km/contexts/enstratus-context.xml] group changed to 498
+[2013-02-19T05:55:36-06:00] INFO: template[/services/km/contexts/enstratus-context.xml] mode changed to 640
+[2013-02-19T05:55:36-06:00] INFO: Processing service[enstratus-km] action nothing (dynamically defined)
+[2013-02-19T05:55:36-06:00] INFO: Processing runit_service[enstratus-km] action enable (enstratus::km line 83)
+[2013-02-19T05:55:36-06:00] INFO: Processing directory[/etc/sv/enstratus-km] action create (dynamically defined)
+[2013-02-19T05:55:36-06:00] INFO: directory[/etc/sv/enstratus-km] created directory /etc/sv/enstratus-km
+[2013-02-19T05:55:36-06:00] INFO: directory[/etc/sv/enstratus-km] mode changed to 755
+[2013-02-19T05:55:36-06:00] INFO: Processing template[/etc/sv/enstratus-km/run] action create (dynamically defined)
+[2013-02-19T05:55:36-06:00] INFO: template[/etc/sv/enstratus-km/run] updated content
+[2013-02-19T05:55:36-06:00] INFO: template[/etc/sv/enstratus-km/run] mode changed to 755
+[2013-02-19T05:55:36-06:00] INFO: Processing directory[/etc/sv/enstratus-km/log] action create (dynamically defined)
+[2013-02-19T05:55:36-06:00] INFO: directory[/etc/sv/enstratus-km/log] created directory /etc/sv/enstratus-km/log
+[2013-02-19T05:55:36-06:00] INFO: directory[/etc/sv/enstratus-km/log] mode changed to 755
+[2013-02-19T05:55:36-06:00] INFO: Processing directory[/etc/sv/enstratus-km/log/main] action create (dynamically defined)
+[2013-02-19T05:55:36-06:00] INFO: directory[/etc/sv/enstratus-km/log/main] created directory /etc/sv/enstratus-km/log/main
+[2013-02-19T05:55:36-06:00] INFO: directory[/etc/sv/enstratus-km/log/main] mode changed to 755
+[2013-02-19T05:55:36-06:00] INFO: Processing template[/etc/sv/enstratus-km/log/run] action create (dynamically defined)
+[2013-02-19T05:55:36-06:00] INFO: template[/etc/sv/enstratus-km/log/run] updated content
+[2013-02-19T05:55:36-06:00] INFO: template[/etc/sv/enstratus-km/log/run] mode changed to 755
+[2013-02-19T05:55:36-06:00] INFO: Processing link[/etc/init.d/enstratus-km] action create (dynamically defined)
+[2013-02-19T05:55:36-06:00] INFO: link[/etc/init.d/enstratus-km] created
+[2013-02-19T05:55:36-06:00] INFO: Processing link[/etc/service/enstratus-km] action create (dynamically defined)
+[2013-02-19T05:55:36-06:00] INFO: link[/etc/service/enstratus-km] created
+[2013-02-19T05:55:39-06:00] INFO: runit_service[enstratus-km] enabled
+[2013-02-19T05:55:39-06:00] INFO: Processing directory[/services/dispatcher] action create (enstratus::dispatcher line 13)
+[2013-02-19T05:55:39-06:00] INFO: directory[/services/dispatcher] created directory /services/dispatcher
+[2013-02-19T05:55:39-06:00] INFO: directory[/services/dispatcher] owner changed to 498
+[2013-02-19T05:55:39-06:00] INFO: directory[/services/dispatcher] group changed to 498
+[2013-02-19T05:55:39-06:00] INFO: directory[/services/dispatcher] mode changed to 750
+[2013-02-19T05:55:39-06:00] INFO: Processing remote_file[/root/cache/enstratus-provisioning-webapp-2012.2.1.tar.gz] action create (enstratus::dispatcher line 20)
+[2013-02-19T05:58:35-06:00] INFO: remote_file[/root/cache/enstratus-provisioning-webapp-2012.2.1.tar.gz] updated
+[2013-02-19T05:58:35-06:00] INFO: remote_file[/root/cache/enstratus-provisioning-webapp-2012.2.1.tar.gz] owner changed to 0
+[2013-02-19T05:58:35-06:00] INFO: remote_file[/root/cache/enstratus-provisioning-webapp-2012.2.1.tar.gz] group changed to 0
+[2013-02-19T05:58:35-06:00] INFO: remote_file[/root/cache/enstratus-provisioning-webapp-2012.2.1.tar.gz] mode changed to 644
+[2013-02-19T05:58:35-06:00] INFO: Processing script[extract dispatcher] action run (enstratus::dispatcher line 29)
+[2013-02-19T05:58:36-06:00] INFO: script[extract dispatcher] ran successfully
+[2013-02-19T05:58:36-06:00] INFO: Processing link[/services/dispatcher/start.ini] action create (enstratus::dispatcher line 45)
+[2013-02-19T05:58:36-06:00] INFO: link[/services/dispatcher/start.ini] created
+[2013-02-19T05:58:36-06:00] INFO: Processing link[/services/dispatcher/etc/enstratus-config.xml] action create (enstratus::dispatcher line 49)
+[2013-02-19T05:58:36-06:00] INFO: link[/services/dispatcher/etc/enstratus-config.xml] created
+[2013-02-19T05:58:36-06:00] INFO: Processing cookbook_file[/services/dispatcher/lib/ext/json-smart-1.1.1.jar] action create (enstratus::dispatcher line 54)
+[2013-02-19T05:58:36-06:00] INFO: cookbook_file[/services/dispatcher/lib/ext/json-smart-1.1.1.jar] owner changed to 498
+[2013-02-19T05:58:36-06:00] INFO: cookbook_file[/services/dispatcher/lib/ext/json-smart-1.1.1.jar] group changed to 498
+[2013-02-19T05:58:36-06:00] INFO: cookbook_file[/services/dispatcher/lib/ext/json-smart-1.1.1.jar] mode changed to 644
+[2013-02-19T05:58:36-06:00] INFO: cookbook_file[/services/dispatcher/lib/ext/json-smart-1.1.1.jar] created file /services/dispatcher/lib/ext/json-smart-1.1.1.jar
+[2013-02-19T05:58:36-06:00] INFO: Processing cookbook_file[/services/dispatcher/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] action create (enstratus::dispatcher line 54)
+[2013-02-19T05:58:36-06:00] INFO: cookbook_file[/services/dispatcher/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] owner changed to 498
+[2013-02-19T05:58:36-06:00] INFO: cookbook_file[/services/dispatcher/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] group changed to 498
+[2013-02-19T05:58:36-06:00] INFO: cookbook_file[/services/dispatcher/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] mode changed to 644
+[2013-02-19T05:58:36-06:00] INFO: cookbook_file[/services/dispatcher/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] created file /services/dispatcher/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar
+[2013-02-19T05:58:36-06:00] INFO: Processing template[/services/dispatcher/resources/log4j.properties] action create (enstratus::dispatcher line 62)
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/log4j.properties] updated content
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/log4j.properties] owner changed to 498
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/log4j.properties] group changed to 498
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/log4j.properties] mode changed to 644
+[2013-02-19T05:58:36-06:00] INFO: Processing link[/services/dispatcher/resources/enstratus-billing.cfg] action create (enstratus::dispatcher line 69)
+[2013-02-19T05:58:36-06:00] INFO: link[/services/dispatcher/resources/enstratus-billing.cfg] created
+[2013-02-19T05:58:36-06:00] INFO: Processing template[/services/dispatcher/contexts/enstratus-context.xml] action create (enstratus::dispatcher line 73)
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/contexts/enstratus-context.xml] updated content
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/contexts/enstratus-context.xml] owner changed to 498
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/contexts/enstratus-context.xml] group changed to 498
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/contexts/enstratus-context.xml] mode changed to 640
+[2013-02-19T05:58:36-06:00] INFO: Processing template[/services/dispatcher/resources/dasein-persistence.properties] action create (enstratus::dispatcher line 80)
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/dasein-persistence.properties] updated content
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/dasein-persistence.properties] owner changed to 498
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/dasein-persistence.properties] group changed to 498
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/dasein-persistence.properties] mode changed to 640
+[2013-02-19T05:58:36-06:00] INFO: Processing template[/services/dispatcher/resources/enstratus-km-client.cfg] action create (enstratus::dispatcher line 87)
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/enstratus-km-client.cfg] updated content
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/enstratus-km-client.cfg] owner changed to 498
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/enstratus-km-client.cfg] group changed to 498
+[2013-02-19T05:58:36-06:00] INFO: template[/services/dispatcher/resources/enstratus-km-client.cfg] mode changed to 640
+[2013-02-19T05:58:36-06:00] INFO: Processing template[/services/dispatcher/resources/enstratus-provisioning.cfg] action create (enstratus::dispatcher line 95)
+[2013-02-19T05:58:37-06:00] INFO: template[/services/dispatcher/resources/enstratus-provisioning.cfg] updated content
+[2013-02-19T05:58:37-06:00] INFO: template[/services/dispatcher/resources/enstratus-provisioning.cfg] owner changed to 498
+[2013-02-19T05:58:37-06:00] INFO: template[/services/dispatcher/resources/enstratus-provisioning.cfg] group changed to 498
+[2013-02-19T05:58:37-06:00] INFO: template[/services/dispatcher/resources/enstratus-provisioning.cfg] mode changed to 640
+[2013-02-19T05:58:37-06:00] INFO: Processing template[/services/dispatcher/resources/mq.cfg] action create (enstratus::dispatcher line 102)
+[2013-02-19T05:58:37-06:00] INFO: template[/services/dispatcher/resources/mq.cfg] updated content
+[2013-02-19T05:58:37-06:00] INFO: template[/services/dispatcher/resources/mq.cfg] owner changed to 498
+[2013-02-19T05:58:37-06:00] INFO: template[/services/dispatcher/resources/mq.cfg] group changed to 498
+[2013-02-19T05:58:37-06:00] INFO: template[/services/dispatcher/resources/mq.cfg] mode changed to 640
+[2013-02-19T05:58:37-06:00] INFO: Processing service[enstratus-dispatcher] action nothing (dynamically defined)
+[2013-02-19T05:58:37-06:00] INFO: Processing runit_service[enstratus-dispatcher] action enable (enstratus::dispatcher line 109)
+[2013-02-19T05:58:37-06:00] INFO: Processing directory[/etc/sv/enstratus-dispatcher] action create (dynamically defined)
+[2013-02-19T05:58:37-06:00] INFO: directory[/etc/sv/enstratus-dispatcher] created directory /etc/sv/enstratus-dispatcher
+[2013-02-19T05:58:37-06:00] INFO: directory[/etc/sv/enstratus-dispatcher] mode changed to 755
+[2013-02-19T05:58:37-06:00] INFO: Processing template[/etc/sv/enstratus-dispatcher/run] action create (dynamically defined)
+[2013-02-19T05:58:37-06:00] INFO: template[/etc/sv/enstratus-dispatcher/run] updated content
+[2013-02-19T05:58:37-06:00] INFO: template[/etc/sv/enstratus-dispatcher/run] mode changed to 755
+[2013-02-19T05:58:37-06:00] INFO: Processing directory[/etc/sv/enstratus-dispatcher/log] action create (dynamically defined)
+[2013-02-19T05:58:37-06:00] INFO: directory[/etc/sv/enstratus-dispatcher/log] created directory /etc/sv/enstratus-dispatcher/log
+[2013-02-19T05:58:37-06:00] INFO: directory[/etc/sv/enstratus-dispatcher/log] mode changed to 755
+[2013-02-19T05:58:37-06:00] INFO: Processing directory[/etc/sv/enstratus-dispatcher/log/main] action create (dynamically defined)
+[2013-02-19T05:58:37-06:00] INFO: directory[/etc/sv/enstratus-dispatcher/log/main] created directory /etc/sv/enstratus-dispatcher/log/main
+[2013-02-19T05:58:37-06:00] INFO: directory[/etc/sv/enstratus-dispatcher/log/main] mode changed to 755
+[2013-02-19T05:58:37-06:00] INFO: Processing template[/etc/sv/enstratus-dispatcher/log/run] action create (dynamically defined)
+[2013-02-19T05:58:37-06:00] INFO: template[/etc/sv/enstratus-dispatcher/log/run] updated content
+[2013-02-19T05:58:37-06:00] INFO: template[/etc/sv/enstratus-dispatcher/log/run] mode changed to 755
+[2013-02-19T05:58:37-06:00] INFO: Processing link[/etc/init.d/enstratus-dispatcher] action create (dynamically defined)
+[2013-02-19T05:58:37-06:00] INFO: link[/etc/init.d/enstratus-dispatcher] created
+[2013-02-19T05:58:37-06:00] INFO: Processing link[/etc/service/enstratus-dispatcher] action create (dynamically defined)
+[2013-02-19T05:58:37-06:00] INFO: link[/etc/service/enstratus-dispatcher] created
+[2013-02-19T05:58:41-06:00] INFO: runit_service[enstratus-dispatcher] enabled
+[2013-02-19T05:58:41-06:00] INFO: Processing script[iptables-forward-443] action run (enstratus::console_iptables line 10)
+[2013-02-19T05:58:41-06:00] INFO: script[iptables-forward-443] ran successfully
+[2013-02-19T05:58:41-06:00] INFO: Processing directory[/services/console] action create (enstratus::console line 33)
+[2013-02-19T05:58:41-06:00] INFO: directory[/services/console] created directory /services/console
+[2013-02-19T05:58:41-06:00] INFO: directory[/services/console] owner changed to 498
+[2013-02-19T05:58:41-06:00] INFO: directory[/services/console] group changed to 498
+[2013-02-19T05:58:41-06:00] INFO: directory[/services/console] mode changed to 750
+[2013-02-19T05:58:41-06:00] INFO: Processing remote_file[/root/cache/enstratus-console-webapp-2012.2.1-default.tar.gz] action create (enstratus::console line 40)
+[2013-02-19T06:00:37-06:00] INFO: remote_file[/root/cache/enstratus-console-webapp-2012.2.1-default.tar.gz] updated
+[2013-02-19T06:00:37-06:00] INFO: remote_file[/root/cache/enstratus-console-webapp-2012.2.1-default.tar.gz] mode changed to 644
+[2013-02-19T06:00:37-06:00] INFO: Processing script[extract console] action run (enstratus::console line 48)
+[2013-02-19T06:00:38-06:00] INFO: script[extract console] ran successfully
+[2013-02-19T06:00:38-06:00] INFO: Processing cookbook_file[/services/console/start.ini] action create (enstratus::console line 68)
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/start.ini] owner changed to 498
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/start.ini] group changed to 498
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/start.ini] mode changed to 644
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/start.ini] created file /services/console/start.ini
+[2013-02-19T06:00:38-06:00] INFO: Processing cookbook_file[/services/console/etc/enstratus-rewrite.xml] action create (enstratus::console line 75)
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/etc/enstratus-rewrite.xml] owner changed to 498
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/etc/enstratus-rewrite.xml] group changed to 498
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/etc/enstratus-rewrite.xml] mode changed to 644
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/etc/enstratus-rewrite.xml] created file /services/console/etc/enstratus-rewrite.xml
+[2013-02-19T06:00:38-06:00] INFO: Processing directory[/services/console/webapps/ROOT/content] action create (enstratus::console line 84)
+[2013-02-19T06:00:38-06:00] INFO: directory[/services/console/webapps/ROOT/content] created directory /services/console/webapps/ROOT/content
+[2013-02-19T06:00:38-06:00] INFO: directory[/services/console/webapps/ROOT/content] owner changed to 498
+[2013-02-19T06:00:38-06:00] INFO: directory[/services/console/webapps/ROOT/content] group changed to 498
+[2013-02-19T06:00:38-06:00] INFO: Processing cookbook_file[/services/console/webapps/ROOT/content/1364_text_html_en_US.jsp] action create (enstratus::console line 89)
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/webapps/ROOT/content/1364_text_html_en_US.jsp] owner changed to 0
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/webapps/ROOT/content/1364_text_html_en_US.jsp] group changed to 0
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/webapps/ROOT/content/1364_text_html_en_US.jsp] mode changed to 644
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/webapps/ROOT/content/1364_text_html_en_US.jsp] created file /services/console/webapps/ROOT/content/1364_text_html_en_US.jsp
+[2013-02-19T06:00:38-06:00] INFO: Processing link[/services/console/etc/enstratus-config.xml] action create (enstratus::console line 97)
+[2013-02-19T06:00:38-06:00] INFO: link[/services/console/etc/enstratus-config.xml] created
+[2013-02-19T06:00:38-06:00] INFO: Processing cookbook_file[/services/console/lib/ext/json-smart-1.1.1.jar] action create (enstratus::console line 102)
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/lib/ext/json-smart-1.1.1.jar] owner changed to 498
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/lib/ext/json-smart-1.1.1.jar] group changed to 498
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/lib/ext/json-smart-1.1.1.jar] mode changed to 644
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/lib/ext/json-smart-1.1.1.jar] created file /services/console/lib/ext/json-smart-1.1.1.jar
+[2013-02-19T06:00:38-06:00] INFO: Processing cookbook_file[/services/console/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] action create (enstratus::console line 102)
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] owner changed to 498
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] group changed to 498
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] mode changed to 644
+[2013-02-19T06:00:38-06:00] INFO: cookbook_file[/services/console/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] created file /services/console/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar
+[2013-02-19T06:00:38-06:00] INFO: Processing template[/services/console/resources/log4j.properties] action create (enstratus::console line 110)
+[2013-02-19T06:00:38-06:00] INFO: template[/services/console/resources/log4j.properties] updated content
+[2013-02-19T06:00:38-06:00] INFO: template[/services/console/resources/log4j.properties] owner changed to 498
+[2013-02-19T06:00:38-06:00] INFO: template[/services/console/resources/log4j.properties] group changed to 498
+[2013-02-19T06:00:38-06:00] INFO: template[/services/console/resources/log4j.properties] mode changed to 644
+[2013-02-19T06:00:38-06:00] INFO: Processing link[/services/console/content] action create (enstratus::console line 117)
+[2013-02-19T06:00:38-06:00] INFO: link[/services/console/content] created
+[2013-02-19T06:00:38-06:00] INFO: Processing template[/services/console/resources/directory.properties] action create (enstratus::console line 121)
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/directory.properties] updated content
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/directory.properties] owner changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/directory.properties] group changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/directory.properties] mode changed to 640
+[2013-02-19T06:00:39-06:00] INFO: Processing template[/services/console/bin/dirsync] action create (enstratus::console line 128)
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/bin/dirsync] updated content
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/bin/dirsync] owner changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/bin/dirsync] group changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/bin/dirsync] mode changed to 750
+[2013-02-19T06:00:39-06:00] INFO: Processing template[/services/console/contexts/enstratus-context.xml] action create (enstratus::console line 135)
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/contexts/enstratus-context.xml] updated content
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/contexts/enstratus-context.xml] owner changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/contexts/enstratus-context.xml] group changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/contexts/enstratus-context.xml] mode changed to 640
+[2013-02-19T06:00:39-06:00] INFO: Processing template[/services/console/resources/dasein-persistence.properties] action create (enstratus::console line 142)
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/dasein-persistence.properties] updated content
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/dasein-persistence.properties] owner changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/dasein-persistence.properties] group changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/dasein-persistence.properties] mode changed to 640
+[2013-02-19T06:00:39-06:00] INFO: Processing template[/services/console/resources/enstratus-console.cfg] action create (enstratus::console line 149)
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/enstratus-console.cfg] updated content
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/enstratus-console.cfg] owner changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/enstratus-console.cfg] group changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/enstratus-console.cfg] mode changed to 640
+[2013-02-19T06:00:39-06:00] INFO: Processing template[/services/console/resources/enstratus-webservices.cfg] action create (enstratus::console line 157)
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/enstratus-webservices.cfg] updated content
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/enstratus-webservices.cfg] owner changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/enstratus-webservices.cfg] group changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/enstratus-webservices.cfg] mode changed to 640
+[2013-02-19T06:00:39-06:00] INFO: Processing template[/services/console/resources/custom/networks.cfg] action create (enstratus::console line 164)
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/custom/networks.cfg] updated content
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/custom/networks.cfg] owner changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/custom/networks.cfg] group changed to 498
+[2013-02-19T06:00:39-06:00] INFO: template[/services/console/resources/custom/networks.cfg] mode changed to 640
+[2013-02-19T06:00:39-06:00] INFO: Processing service[enstratus-console] action nothing (dynamically defined)
+[2013-02-19T06:00:39-06:00] INFO: Processing runit_service[enstratus-console] action enable (enstratus::console line 171)
+[2013-02-19T06:00:39-06:00] INFO: Processing directory[/etc/sv/enstratus-console] action create (dynamically defined)
+[2013-02-19T06:00:39-06:00] INFO: directory[/etc/sv/enstratus-console] created directory /etc/sv/enstratus-console
+[2013-02-19T06:00:39-06:00] INFO: directory[/etc/sv/enstratus-console] mode changed to 755
+[2013-02-19T06:00:39-06:00] INFO: Processing template[/etc/sv/enstratus-console/run] action create (dynamically defined)
+[2013-02-19T06:00:39-06:00] INFO: template[/etc/sv/enstratus-console/run] updated content
+[2013-02-19T06:00:39-06:00] INFO: template[/etc/sv/enstratus-console/run] mode changed to 755
+[2013-02-19T06:00:39-06:00] INFO: Processing directory[/etc/sv/enstratus-console/log] action create (dynamically defined)
+[2013-02-19T06:00:39-06:00] INFO: directory[/etc/sv/enstratus-console/log] created directory /etc/sv/enstratus-console/log
+[2013-02-19T06:00:39-06:00] INFO: directory[/etc/sv/enstratus-console/log] mode changed to 755
+[2013-02-19T06:00:39-06:00] INFO: Processing directory[/etc/sv/enstratus-console/log/main] action create (dynamically defined)
+[2013-02-19T06:00:39-06:00] INFO: directory[/etc/sv/enstratus-console/log/main] created directory /etc/sv/enstratus-console/log/main
+[2013-02-19T06:00:39-06:00] INFO: directory[/etc/sv/enstratus-console/log/main] mode changed to 755
+[2013-02-19T06:00:39-06:00] INFO: Processing template[/etc/sv/enstratus-console/log/run] action create (dynamically defined)
+[2013-02-19T06:00:39-06:00] INFO: template[/etc/sv/enstratus-console/log/run] updated content
+[2013-02-19T06:00:39-06:00] INFO: template[/etc/sv/enstratus-console/log/run] mode changed to 755
+[2013-02-19T06:00:39-06:00] INFO: Processing link[/etc/init.d/enstratus-console] action create (dynamically defined)
+[2013-02-19T06:00:39-06:00] INFO: link[/etc/init.d/enstratus-console] created
+[2013-02-19T06:00:39-06:00] INFO: Processing link[/etc/service/enstratus-console] action create (dynamically defined)
+[2013-02-19T06:00:39-06:00] INFO: link[/etc/service/enstratus-console] created
+[2013-02-19T06:00:42-06:00] INFO: runit_service[enstratus-console] enabled
+[2013-02-19T06:00:42-06:00] INFO: Processing directory[/services/monitor] action create (enstratus::monitor line 13)
+[2013-02-19T06:00:42-06:00] INFO: directory[/services/monitor] created directory /services/monitor
+[2013-02-19T06:00:42-06:00] INFO: directory[/services/monitor] owner changed to 498
+[2013-02-19T06:00:42-06:00] INFO: directory[/services/monitor] group changed to 498
+[2013-02-19T06:00:42-06:00] INFO: directory[/services/monitor] mode changed to 750
+[2013-02-19T06:00:42-06:00] INFO: Processing remote_file[/root/cache/enstratus-monitor-app-2012.2.1.tar.gz] action create (enstratus::monitor line 20)
+[2013-02-19T06:04:08-06:00] INFO: remote_file[/root/cache/enstratus-monitor-app-2012.2.1.tar.gz] updated
+[2013-02-19T06:04:08-06:00] INFO: remote_file[/root/cache/enstratus-monitor-app-2012.2.1.tar.gz] owner changed to 0
+[2013-02-19T06:04:08-06:00] INFO: remote_file[/root/cache/enstratus-monitor-app-2012.2.1.tar.gz] group changed to 0
+[2013-02-19T06:04:08-06:00] INFO: remote_file[/root/cache/enstratus-monitor-app-2012.2.1.tar.gz] mode changed to 644
+[2013-02-19T06:04:08-06:00] INFO: Processing script[extract monitor] action run (enstratus::monitor line 29)
+[2013-02-19T06:04:09-06:00] INFO: script[extract monitor] ran successfully
+[2013-02-19T06:04:09-06:00] INFO: Processing cookbook_file[/services/monitor/lib/json-smart-1.1.1.jar] action create (enstratus::monitor line 46)
+[2013-02-19T06:04:09-06:00] INFO: cookbook_file[/services/monitor/lib/json-smart-1.1.1.jar] owner changed to 498
+[2013-02-19T06:04:09-06:00] INFO: cookbook_file[/services/monitor/lib/json-smart-1.1.1.jar] group changed to 498
+[2013-02-19T06:04:09-06:00] INFO: cookbook_file[/services/monitor/lib/json-smart-1.1.1.jar] mode changed to 644
+[2013-02-19T06:04:09-06:00] INFO: cookbook_file[/services/monitor/lib/json-smart-1.1.1.jar] created file /services/monitor/lib/json-smart-1.1.1.jar
+[2013-02-19T06:04:09-06:00] INFO: Processing cookbook_file[/services/monitor/lib/jsonevent-layout-1.0-SNAPSHOT.jar] action create (enstratus::monitor line 46)
+[2013-02-19T06:04:09-06:00] INFO: cookbook_file[/services/monitor/lib/jsonevent-layout-1.0-SNAPSHOT.jar] owner changed to 498
+[2013-02-19T06:04:09-06:00] INFO: cookbook_file[/services/monitor/lib/jsonevent-layout-1.0-SNAPSHOT.jar] group changed to 498
+[2013-02-19T06:04:09-06:00] INFO: cookbook_file[/services/monitor/lib/jsonevent-layout-1.0-SNAPSHOT.jar] mode changed to 644
+[2013-02-19T06:04:09-06:00] INFO: cookbook_file[/services/monitor/lib/jsonevent-layout-1.0-SNAPSHOT.jar] created file /services/monitor/lib/jsonevent-layout-1.0-SNAPSHOT.jar
+[2013-02-19T06:04:09-06:00] INFO: Processing template[/services/monitor/resources/log4j.properties] action create (enstratus::monitor line 54)
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/log4j.properties] updated content
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/log4j.properties] owner changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/log4j.properties] group changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/log4j.properties] mode changed to 644
+[2013-02-19T06:04:09-06:00] INFO: Processing link[/services/monitor/resources/monitors.cfg] action create (enstratus::monitor line 61)
+[2013-02-19T06:04:09-06:00] INFO: link[/services/monitor/resources/monitors.cfg] created
+[2013-02-19T06:04:09-06:00] INFO: Processing link[/services/monitor/resources/enstratus-billing.cfg] action create (enstratus::monitor line 65)
+[2013-02-19T06:04:09-06:00] INFO: link[/services/monitor/resources/enstratus-billing.cfg] created
+[2013-02-19T06:04:09-06:00] INFO: Processing template[/services/monitor/resources/cloud.properties] action create (enstratus::monitor line 69)
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/cloud.properties] updated content
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/cloud.properties] owner changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/cloud.properties] group changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/cloud.properties] mode changed to 640
+[2013-02-19T06:04:09-06:00] INFO: Processing template[/services/monitor/resources/dasein-persistence.properties] action create (enstratus::monitor line 76)
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/dasein-persistence.properties] updated content
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/dasein-persistence.properties] owner changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/dasein-persistence.properties] group changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/dasein-persistence.properties] mode changed to 640
+[2013-02-19T06:04:09-06:00] INFO: Processing template[/services/monitor/resources/enstratus-km-client.cfg] action create (enstratus::monitor line 83)
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/enstratus-km-client.cfg] updated content
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/enstratus-km-client.cfg] owner changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/enstratus-km-client.cfg] group changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/enstratus-km-client.cfg] mode changed to 640
+[2013-02-19T06:04:09-06:00] INFO: Processing template[/services/monitor/resources/enstratus-provisioning.cfg] action create (enstratus::monitor line 90)
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/enstratus-provisioning.cfg] updated content
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/enstratus-provisioning.cfg] owner changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/enstratus-provisioning.cfg] group changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/enstratus-provisioning.cfg] mode changed to 640
+[2013-02-19T06:04:09-06:00] INFO: Processing template[/services/monitor/resources/mq.cfg] action create (enstratus::monitor line 97)
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/mq.cfg] updated content
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/mq.cfg] owner changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/mq.cfg] group changed to 498
+[2013-02-19T06:04:09-06:00] INFO: template[/services/monitor/resources/mq.cfg] mode changed to 640
+[2013-02-19T06:04:09-06:00] INFO: Processing service[enstratus-assign] action nothing (dynamically defined)
+[2013-02-19T06:04:09-06:00] INFO: Processing runit_service[enstratus-assign] action enable (enstratus::monitor line 104)
+[2013-02-19T06:04:09-06:00] INFO: Processing directory[/etc/sv/enstratus-assign] action create (dynamically defined)
+[2013-02-19T06:04:09-06:00] INFO: directory[/etc/sv/enstratus-assign] created directory /etc/sv/enstratus-assign
+[2013-02-19T06:04:09-06:00] INFO: directory[/etc/sv/enstratus-assign] mode changed to 755
+[2013-02-19T06:04:09-06:00] INFO: Processing template[/etc/sv/enstratus-assign/run] action create (dynamically defined)
+[2013-02-19T06:04:10-06:00] INFO: template[/etc/sv/enstratus-assign/run] updated content
+[2013-02-19T06:04:10-06:00] INFO: template[/etc/sv/enstratus-assign/run] mode changed to 755
+[2013-02-19T06:04:10-06:00] INFO: Processing directory[/etc/sv/enstratus-assign/log] action create (dynamically defined)
+[2013-02-19T06:04:10-06:00] INFO: directory[/etc/sv/enstratus-assign/log] created directory /etc/sv/enstratus-assign/log
+[2013-02-19T06:04:10-06:00] INFO: directory[/etc/sv/enstratus-assign/log] mode changed to 755
+[2013-02-19T06:04:10-06:00] INFO: Processing directory[/etc/sv/enstratus-assign/log/main] action create (dynamically defined)
+[2013-02-19T06:04:10-06:00] INFO: directory[/etc/sv/enstratus-assign/log/main] created directory /etc/sv/enstratus-assign/log/main
+[2013-02-19T06:04:10-06:00] INFO: directory[/etc/sv/enstratus-assign/log/main] mode changed to 755
+[2013-02-19T06:04:10-06:00] INFO: Processing template[/etc/sv/enstratus-assign/log/run] action create (dynamically defined)
+[2013-02-19T06:04:10-06:00] INFO: template[/etc/sv/enstratus-assign/log/run] updated content
+[2013-02-19T06:04:10-06:00] INFO: template[/etc/sv/enstratus-assign/log/run] mode changed to 755
+[2013-02-19T06:04:10-06:00] INFO: Processing link[/etc/init.d/enstratus-assign] action create (dynamically defined)
+[2013-02-19T06:04:10-06:00] INFO: link[/etc/init.d/enstratus-assign] created
+[2013-02-19T06:04:10-06:00] INFO: Processing link[/etc/service/enstratus-assign] action create (dynamically defined)
+[2013-02-19T06:04:10-06:00] INFO: link[/etc/service/enstratus-assign] created
+[2013-02-19T06:04:15-06:00] INFO: runit_service[enstratus-assign] enabled
+[2013-02-19T06:04:15-06:00] INFO: Processing service[enstratus-monitor] action nothing (dynamically defined)
+[2013-02-19T06:04:15-06:00] INFO: Processing runit_service[enstratus-monitor] action enable (enstratus::monitor line 106)
+[2013-02-19T06:04:15-06:00] INFO: Processing directory[/etc/sv/enstratus-monitor] action create (dynamically defined)
+[2013-02-19T06:04:15-06:00] INFO: directory[/etc/sv/enstratus-monitor] created directory /etc/sv/enstratus-monitor
+[2013-02-19T06:04:15-06:00] INFO: directory[/etc/sv/enstratus-monitor] mode changed to 755
+[2013-02-19T06:04:15-06:00] INFO: Processing template[/etc/sv/enstratus-monitor/run] action create (dynamically defined)
+[2013-02-19T06:04:15-06:00] INFO: template[/etc/sv/enstratus-monitor/run] updated content
+[2013-02-19T06:04:15-06:00] INFO: template[/etc/sv/enstratus-monitor/run] mode changed to 755
+[2013-02-19T06:04:15-06:00] INFO: Processing directory[/etc/sv/enstratus-monitor/log] action create (dynamically defined)
+[2013-02-19T06:04:15-06:00] INFO: directory[/etc/sv/enstratus-monitor/log] created directory /etc/sv/enstratus-monitor/log
+[2013-02-19T06:04:15-06:00] INFO: directory[/etc/sv/enstratus-monitor/log] mode changed to 755
+[2013-02-19T06:04:15-06:00] INFO: Processing directory[/etc/sv/enstratus-monitor/log/main] action create (dynamically defined)
+[2013-02-19T06:04:15-06:00] INFO: directory[/etc/sv/enstratus-monitor/log/main] created directory /etc/sv/enstratus-monitor/log/main
+[2013-02-19T06:04:15-06:00] INFO: directory[/etc/sv/enstratus-monitor/log/main] mode changed to 755
+[2013-02-19T06:04:15-06:00] INFO: Processing template[/etc/sv/enstratus-monitor/log/run] action create (dynamically defined)
+[2013-02-19T06:04:15-06:00] INFO: template[/etc/sv/enstratus-monitor/log/run] updated content
+[2013-02-19T06:04:15-06:00] INFO: template[/etc/sv/enstratus-monitor/log/run] mode changed to 755
+[2013-02-19T06:04:15-06:00] INFO: Processing link[/etc/init.d/enstratus-monitor] action create (dynamically defined)
+[2013-02-19T06:04:15-06:00] INFO: link[/etc/init.d/enstratus-monitor] created
+[2013-02-19T06:04:15-06:00] INFO: Processing link[/etc/service/enstratus-monitor] action create (dynamically defined)
+[2013-02-19T06:04:15-06:00] INFO: link[/etc/service/enstratus-monitor] created
+[2013-02-19T06:04:17-06:00] INFO: runit_service[enstratus-monitor] enabled
+[2013-02-19T06:04:17-06:00] INFO: Processing directory[/services/worker] action create (enstratus::worker line 13)
+[2013-02-19T06:04:17-06:00] INFO: directory[/services/worker] created directory /services/worker
+[2013-02-19T06:04:17-06:00] INFO: directory[/services/worker] owner changed to 498
+[2013-02-19T06:04:17-06:00] INFO: directory[/services/worker] group changed to 498
+[2013-02-19T06:04:17-06:00] INFO: directory[/services/worker] mode changed to 750
+[2013-02-19T06:04:17-06:00] INFO: Processing remote_file[/root/cache/enstratus-worker-app-2012.2.1.tar.gz] action create (enstratus::worker line 20)
+[2013-02-19T06:06:38-06:00] INFO: remote_file[/root/cache/enstratus-worker-app-2012.2.1.tar.gz] updated
+[2013-02-19T06:06:38-06:00] INFO: remote_file[/root/cache/enstratus-worker-app-2012.2.1.tar.gz] owner changed to 0
+[2013-02-19T06:06:38-06:00] INFO: remote_file[/root/cache/enstratus-worker-app-2012.2.1.tar.gz] group changed to 0
+[2013-02-19T06:06:38-06:00] INFO: remote_file[/root/cache/enstratus-worker-app-2012.2.1.tar.gz] mode changed to 644
+[2013-02-19T06:06:38-06:00] INFO: Processing script[extract worker] action run (enstratus::worker line 30)
+[2013-02-19T06:06:38-06:00] INFO: script[extract worker] ran successfully
+[2013-02-19T06:06:38-06:00] INFO: Processing cookbook_file[/services/worker/lib/json-smart-1.1.1.jar] action create (enstratus::worker line 47)
+[2013-02-19T06:06:38-06:00] INFO: cookbook_file[/services/worker/lib/json-smart-1.1.1.jar] owner changed to 498
+[2013-02-19T06:06:38-06:00] INFO: cookbook_file[/services/worker/lib/json-smart-1.1.1.jar] group changed to 498
+[2013-02-19T06:06:38-06:00] INFO: cookbook_file[/services/worker/lib/json-smart-1.1.1.jar] mode changed to 644
+[2013-02-19T06:06:38-06:00] INFO: cookbook_file[/services/worker/lib/json-smart-1.1.1.jar] created file /services/worker/lib/json-smart-1.1.1.jar
+[2013-02-19T06:06:38-06:00] INFO: Processing cookbook_file[/services/worker/lib/jsonevent-layout-1.0-SNAPSHOT.jar] action create (enstratus::worker line 47)
+[2013-02-19T06:06:38-06:00] INFO: cookbook_file[/services/worker/lib/jsonevent-layout-1.0-SNAPSHOT.jar] owner changed to 498
+[2013-02-19T06:06:38-06:00] INFO: cookbook_file[/services/worker/lib/jsonevent-layout-1.0-SNAPSHOT.jar] group changed to 498
+[2013-02-19T06:06:38-06:00] INFO: cookbook_file[/services/worker/lib/jsonevent-layout-1.0-SNAPSHOT.jar] mode changed to 644
+[2013-02-19T06:06:38-06:00] INFO: cookbook_file[/services/worker/lib/jsonevent-layout-1.0-SNAPSHOT.jar] created file /services/worker/lib/jsonevent-layout-1.0-SNAPSHOT.jar
+[2013-02-19T06:06:38-06:00] INFO: Processing template[/services/worker/resources/log4j.properties] action create (enstratus::worker line 55)
+[2013-02-19T06:06:38-06:00] INFO: template[/services/worker/resources/log4j.properties] updated content
+[2013-02-19T06:06:38-06:00] INFO: template[/services/worker/resources/log4j.properties] owner changed to 498
+[2013-02-19T06:06:38-06:00] INFO: template[/services/worker/resources/log4j.properties] group changed to 498
+[2013-02-19T06:06:38-06:00] INFO: template[/services/worker/resources/log4j.properties] mode changed to 644
+[2013-02-19T06:06:38-06:00] INFO: Processing link[/services/worker/resources/enstratus-billing.cfg] action create (enstratus::worker line 62)
+[2013-02-19T06:06:38-06:00] INFO: link[/services/worker/resources/enstratus-billing.cfg] created
+[2013-02-19T06:06:38-06:00] INFO: Processing template[/services/worker/resources/dasein-persistence.properties] action create (enstratus::worker line 66)
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/dasein-persistence.properties] updated content
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/dasein-persistence.properties] owner changed to 498
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/dasein-persistence.properties] group changed to 498
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/dasein-persistence.properties] mode changed to 640
+[2013-02-19T06:06:39-06:00] INFO: Processing template[/services/worker/resources/enstratus-km-client.cfg] action create (enstratus::worker line 73)
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/enstratus-km-client.cfg] updated content
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/enstratus-km-client.cfg] owner changed to 498
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/enstratus-km-client.cfg] group changed to 498
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/enstratus-km-client.cfg] mode changed to 640
+[2013-02-19T06:06:39-06:00] INFO: Processing template[/services/worker/resources/enstratus-provisioning.cfg] action create (enstratus::worker line 80)
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/enstratus-provisioning.cfg] updated content
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/enstratus-provisioning.cfg] owner changed to 498
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/enstratus-provisioning.cfg] group changed to 498
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/enstratus-provisioning.cfg] mode changed to 640
+[2013-02-19T06:06:39-06:00] INFO: Processing template[/services/worker/resources/mq.cfg] action create (enstratus::worker line 87)
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/mq.cfg] updated content
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/mq.cfg] owner changed to 498
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/mq.cfg] group changed to 498
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/mq.cfg] mode changed to 640
+[2013-02-19T06:06:39-06:00] INFO: Processing template[/services/worker/resources/worker.properties] action create (enstratus::worker line 94)
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/worker.properties] updated content
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/worker.properties] owner changed to 498
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/worker.properties] group changed to 498
+[2013-02-19T06:06:39-06:00] INFO: template[/services/worker/resources/worker.properties] mode changed to 640
+[2013-02-19T06:06:39-06:00] INFO: Processing service[enstratus-worker] action nothing (dynamically defined)
+[2013-02-19T06:06:39-06:00] INFO: Processing runit_service[enstratus-worker] action enable (enstratus::worker line 101)
+[2013-02-19T06:06:39-06:00] INFO: Processing directory[/etc/sv/enstratus-worker] action create (dynamically defined)
+[2013-02-19T06:06:39-06:00] INFO: directory[/etc/sv/enstratus-worker] created directory /etc/sv/enstratus-worker
+[2013-02-19T06:06:39-06:00] INFO: directory[/etc/sv/enstratus-worker] mode changed to 755
+[2013-02-19T06:06:39-06:00] INFO: Processing template[/etc/sv/enstratus-worker/run] action create (dynamically defined)
+[2013-02-19T06:06:39-06:00] INFO: template[/etc/sv/enstratus-worker/run] updated content
+[2013-02-19T06:06:39-06:00] INFO: template[/etc/sv/enstratus-worker/run] mode changed to 755
+[2013-02-19T06:06:39-06:00] INFO: Processing directory[/etc/sv/enstratus-worker/log] action create (dynamically defined)
+[2013-02-19T06:06:39-06:00] INFO: directory[/etc/sv/enstratus-worker/log] created directory /etc/sv/enstratus-worker/log
+[2013-02-19T06:06:39-06:00] INFO: directory[/etc/sv/enstratus-worker/log] mode changed to 755
+[2013-02-19T06:06:39-06:00] INFO: Processing directory[/etc/sv/enstratus-worker/log/main] action create (dynamically defined)
+[2013-02-19T06:06:39-06:00] INFO: directory[/etc/sv/enstratus-worker/log/main] created directory /etc/sv/enstratus-worker/log/main
+[2013-02-19T06:06:39-06:00] INFO: directory[/etc/sv/enstratus-worker/log/main] mode changed to 755
+[2013-02-19T06:06:39-06:00] INFO: Processing template[/etc/sv/enstratus-worker/log/run] action create (dynamically defined)
+[2013-02-19T06:06:39-06:00] INFO: template[/etc/sv/enstratus-worker/log/run] updated content
+[2013-02-19T06:06:39-06:00] INFO: template[/etc/sv/enstratus-worker/log/run] mode changed to 755
+[2013-02-19T06:06:39-06:00] INFO: Processing link[/etc/init.d/enstratus-worker] action create (dynamically defined)
+[2013-02-19T06:06:39-06:00] INFO: link[/etc/init.d/enstratus-worker] created
+[2013-02-19T06:06:39-06:00] INFO: Processing link[/etc/service/enstratus-worker] action create (dynamically defined)
+[2013-02-19T06:06:39-06:00] INFO: link[/etc/service/enstratus-worker] created
+[2013-02-19T06:06:43-06:00] INFO: runit_service[enstratus-worker] enabled
+[2013-02-19T06:06:43-06:00] INFO: Processing service[enstratus-pinger] action nothing (dynamically defined)
+[2013-02-19T06:06:43-06:00] INFO: Processing runit_service[enstratus-pinger] action enable (enstratus::worker line 103)
+[2013-02-19T06:06:43-06:00] INFO: Processing directory[/etc/sv/enstratus-pinger] action create (dynamically defined)
+[2013-02-19T06:06:43-06:00] INFO: directory[/etc/sv/enstratus-pinger] created directory /etc/sv/enstratus-pinger
+[2013-02-19T06:06:43-06:00] INFO: directory[/etc/sv/enstratus-pinger] mode changed to 755
+[2013-02-19T06:06:43-06:00] INFO: Processing template[/etc/sv/enstratus-pinger/run] action create (dynamically defined)
+[2013-02-19T06:06:43-06:00] INFO: template[/etc/sv/enstratus-pinger/run] updated content
+[2013-02-19T06:06:43-06:00] INFO: template[/etc/sv/enstratus-pinger/run] mode changed to 755
+[2013-02-19T06:06:43-06:00] INFO: Processing directory[/etc/sv/enstratus-pinger/log] action create (dynamically defined)
+[2013-02-19T06:06:43-06:00] INFO: directory[/etc/sv/enstratus-pinger/log] created directory /etc/sv/enstratus-pinger/log
+[2013-02-19T06:06:43-06:00] INFO: directory[/etc/sv/enstratus-pinger/log] mode changed to 755
+[2013-02-19T06:06:43-06:00] INFO: Processing directory[/etc/sv/enstratus-pinger/log/main] action create (dynamically defined)
+[2013-02-19T06:06:43-06:00] INFO: directory[/etc/sv/enstratus-pinger/log/main] created directory /etc/sv/enstratus-pinger/log/main
+[2013-02-19T06:06:43-06:00] INFO: directory[/etc/sv/enstratus-pinger/log/main] mode changed to 755
+[2013-02-19T06:06:43-06:00] INFO: Processing template[/etc/sv/enstratus-pinger/log/run] action create (dynamically defined)
+[2013-02-19T06:06:43-06:00] INFO: template[/etc/sv/enstratus-pinger/log/run] updated content
+[2013-02-19T06:06:43-06:00] INFO: template[/etc/sv/enstratus-pinger/log/run] mode changed to 755
+[2013-02-19T06:06:43-06:00] INFO: Processing link[/etc/init.d/enstratus-pinger] action create (dynamically defined)
+[2013-02-19T06:06:43-06:00] INFO: link[/etc/init.d/enstratus-pinger] created
+[2013-02-19T06:06:43-06:00] INFO: Processing link[/etc/service/enstratus-pinger] action create (dynamically defined)
+[2013-02-19T06:06:43-06:00] INFO: link[/etc/service/enstratus-pinger] created
+[2013-02-19T06:06:44-06:00] INFO: runit_service[enstratus-pinger] enabled
+[2013-02-19T06:06:44-06:00] INFO: Processing directory[/services/api] action create (enstratus::api line 13)
+[2013-02-19T06:06:44-06:00] INFO: directory[/services/api] created directory /services/api
+[2013-02-19T06:06:44-06:00] INFO: directory[/services/api] owner changed to 498
+[2013-02-19T06:06:44-06:00] INFO: directory[/services/api] group changed to 498
+[2013-02-19T06:06:44-06:00] INFO: directory[/services/api] mode changed to 750
+[2013-02-19T06:06:44-06:00] INFO: Processing remote_file[/root/cache/enstratus-api-webapp-2012.2.1.tar.gz] action create (enstratus::api line 20)
+[2013-02-19T06:08:09-06:00] INFO: remote_file[/root/cache/enstratus-api-webapp-2012.2.1.tar.gz] updated
+[2013-02-19T06:08:09-06:00] INFO: remote_file[/root/cache/enstratus-api-webapp-2012.2.1.tar.gz] owner changed to 0
+[2013-02-19T06:08:09-06:00] INFO: remote_file[/root/cache/enstratus-api-webapp-2012.2.1.tar.gz] group changed to 0
+[2013-02-19T06:08:09-06:00] INFO: remote_file[/root/cache/enstratus-api-webapp-2012.2.1.tar.gz] mode changed to 644
+[2013-02-19T06:08:09-06:00] INFO: Processing script[extract api] action run (enstratus::api line 29)
+[2013-02-19T06:08:10-06:00] INFO: script[extract api] ran successfully
+[2013-02-19T06:08:10-06:00] INFO: Processing cookbook_file[/services/api/lib/ext/json-smart-1.1.1.jar] action create (enstratus::api line 46)
+[2013-02-19T06:08:10-06:00] INFO: cookbook_file[/services/api/lib/ext/json-smart-1.1.1.jar] owner changed to 498
+[2013-02-19T06:08:10-06:00] INFO: cookbook_file[/services/api/lib/ext/json-smart-1.1.1.jar] group changed to 498
+[2013-02-19T06:08:10-06:00] INFO: cookbook_file[/services/api/lib/ext/json-smart-1.1.1.jar] mode changed to 644
+[2013-02-19T06:08:10-06:00] INFO: cookbook_file[/services/api/lib/ext/json-smart-1.1.1.jar] created file /services/api/lib/ext/json-smart-1.1.1.jar
+[2013-02-19T06:08:10-06:00] INFO: Processing cookbook_file[/services/api/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] action create (enstratus::api line 46)
+[2013-02-19T06:08:10-06:00] INFO: cookbook_file[/services/api/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] owner changed to 498
+[2013-02-19T06:08:10-06:00] INFO: cookbook_file[/services/api/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] group changed to 498
+[2013-02-19T06:08:10-06:00] INFO: cookbook_file[/services/api/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] mode changed to 644
+[2013-02-19T06:08:10-06:00] INFO: cookbook_file[/services/api/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar] created file /services/api/lib/ext/jsonevent-layout-1.0-SNAPSHOT.jar
+[2013-02-19T06:08:10-06:00] INFO: Processing link[/services/api/start.ini] action create (enstratus::api line 54)
+[2013-02-19T06:08:10-06:00] INFO: link[/services/api/start.ini] created
+[2013-02-19T06:08:10-06:00] INFO: Processing link[/services/api/etc/enstratus-config.xml] action create (enstratus::api line 58)
+[2013-02-19T06:08:10-06:00] INFO: link[/services/api/etc/enstratus-config.xml] created
+[2013-02-19T06:08:10-06:00] INFO: Processing template[/services/api/resources/log4j.properties] action create (enstratus::api line 62)
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/log4j.properties] updated content
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/log4j.properties] owner changed to 498
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/log4j.properties] group changed to 498
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/log4j.properties] mode changed to 644
+[2013-02-19T06:08:10-06:00] INFO: Processing template[/services/api/contexts/enstratus-context.xml] action create (enstratus::api line 69)
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/contexts/enstratus-context.xml] updated content
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/contexts/enstratus-context.xml] owner changed to 498
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/contexts/enstratus-context.xml] group changed to 498
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/contexts/enstratus-context.xml] mode changed to 640
+[2013-02-19T06:08:10-06:00] INFO: Processing template[/services/api/resources/custom/networks.cfg] action create (enstratus::api line 76)
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/custom/networks.cfg] updated content
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/custom/networks.cfg] owner changed to 498
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/custom/networks.cfg] group changed to 498
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/custom/networks.cfg] mode changed to 640
+[2013-02-19T06:08:10-06:00] INFO: Processing template[/services/api/resources/dasein-persistence.properties] action create (enstratus::api line 83)
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/dasein-persistence.properties] updated content
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/dasein-persistence.properties] owner changed to 498
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/dasein-persistence.properties] group changed to 498
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/dasein-persistence.properties] mode changed to 640
+[2013-02-19T06:08:10-06:00] INFO: Processing template[/services/api/resources/enstratus-webservices.cfg] action create (enstratus::api line 90)
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/enstratus-webservices.cfg] updated content
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/enstratus-webservices.cfg] owner changed to 498
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/enstratus-webservices.cfg] group changed to 498
+[2013-02-19T06:08:10-06:00] INFO: template[/services/api/resources/enstratus-webservices.cfg] mode changed to 640
+[2013-02-19T06:08:10-06:00] INFO: Processing service[enstratus-api] action nothing (dynamically defined)
+[2013-02-19T06:08:10-06:00] INFO: Processing runit_service[enstratus-api] action enable (enstratus::api line 97)
+[2013-02-19T06:08:10-06:00] INFO: Processing directory[/etc/sv/enstratus-api] action create (dynamically defined)
+[2013-02-19T06:08:10-06:00] INFO: directory[/etc/sv/enstratus-api] created directory /etc/sv/enstratus-api
+[2013-02-19T06:08:10-06:00] INFO: directory[/etc/sv/enstratus-api] mode changed to 755
+[2013-02-19T06:08:10-06:00] INFO: Processing template[/etc/sv/enstratus-api/run] action create (dynamically defined)
+[2013-02-19T06:08:10-06:00] INFO: template[/etc/sv/enstratus-api/run] updated content
+[2013-02-19T06:08:10-06:00] INFO: template[/etc/sv/enstratus-api/run] mode changed to 755
+[2013-02-19T06:08:10-06:00] INFO: Processing directory[/etc/sv/enstratus-api/log] action create (dynamically defined)
+[2013-02-19T06:08:10-06:00] INFO: directory[/etc/sv/enstratus-api/log] created directory /etc/sv/enstratus-api/log
+[2013-02-19T06:08:10-06:00] INFO: directory[/etc/sv/enstratus-api/log] mode changed to 755
+[2013-02-19T06:08:10-06:00] INFO: Processing directory[/etc/sv/enstratus-api/log/main] action create (dynamically defined)
+[2013-02-19T06:08:10-06:00] INFO: directory[/etc/sv/enstratus-api/log/main] created directory /etc/sv/enstratus-api/log/main
+[2013-02-19T06:08:10-06:00] INFO: directory[/etc/sv/enstratus-api/log/main] mode changed to 755
+[2013-02-19T06:08:10-06:00] INFO: Processing template[/etc/sv/enstratus-api/log/run] action create (dynamically defined)
+[2013-02-19T06:08:10-06:00] INFO: template[/etc/sv/enstratus-api/log/run] updated content
+[2013-02-19T06:08:10-06:00] INFO: template[/etc/sv/enstratus-api/log/run] mode changed to 755
+[2013-02-19T06:08:10-06:00] INFO: Processing link[/etc/init.d/enstratus-api] action create (dynamically defined)
+[2013-02-19T06:08:10-06:00] INFO: link[/etc/init.d/enstratus-api] created
+[2013-02-19T06:08:10-06:00] INFO: Processing link[/etc/service/enstratus-api] action create (dynamically defined)
+[2013-02-19T06:08:10-06:00] INFO: link[/etc/service/enstratus-api] created
+[2013-02-19T06:08:15-06:00] INFO: runit_service[enstratus-api] enabled
+[2013-02-19T06:08:15-06:00] INFO: Processing directory[/services/cwrkr] action create (enstratus::cwrkr line 15)
+[2013-02-19T06:08:16-06:00] INFO: directory[/services/cwrkr] created directory /services/cwrkr
+[2013-02-19T06:08:16-06:00] INFO: directory[/services/cwrkr] owner changed to 498
+[2013-02-19T06:08:16-06:00] INFO: directory[/services/cwrkr] group changed to 498
+[2013-02-19T06:08:16-06:00] INFO: directory[/services/cwrkr] mode changed to 750
+[2013-02-19T06:08:16-06:00] INFO: Processing remote_file[/root/cache/enstratus-cwrkr-app-2012.2.1.tar.gz] action create (enstratus::cwrkr line 22)
+[2013-02-19T06:09:23-06:00] INFO: remote_file[/root/cache/enstratus-cwrkr-app-2012.2.1.tar.gz] updated
+[2013-02-19T06:09:23-06:00] INFO: remote_file[/root/cache/enstratus-cwrkr-app-2012.2.1.tar.gz] mode changed to 644
+[2013-02-19T06:09:23-06:00] INFO: Processing script[extract cwrkr] action run (enstratus::cwrkr line 30)
+[2013-02-19T06:09:23-06:00] INFO: script[extract cwrkr] ran successfully
+[2013-02-19T06:09:23-06:00] INFO: Processing template[/services/cwrkr/resources/log4j.properties] action create (enstratus::cwrkr line 46)
+[2013-02-19T06:09:23-06:00] INFO: template[/services/cwrkr/resources/log4j.properties] updated content
+[2013-02-19T06:09:23-06:00] INFO: template[/services/cwrkr/resources/log4j.properties] owner changed to 498
+[2013-02-19T06:09:23-06:00] INFO: template[/services/cwrkr/resources/log4j.properties] group changed to 498
+[2013-02-19T06:09:23-06:00] INFO: template[/services/cwrkr/resources/log4j.properties] mode changed to 644
+[2013-02-19T06:09:23-06:00] INFO: Processing template[/services/cwrkr/resources/directory.properties] action create (enstratus::cwrkr line 53)
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/directory.properties] updated content
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/directory.properties] owner changed to 498
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/directory.properties] group changed to 498
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/directory.properties] mode changed to 640
+[2013-02-19T06:09:24-06:00] INFO: Processing template[/services/cwrkr/resources/dasein-persistence.properties] action create (enstratus::cwrkr line 60)
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/dasein-persistence.properties] updated content
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/dasein-persistence.properties] owner changed to 498
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/dasein-persistence.properties] group changed to 498
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/dasein-persistence.properties] mode changed to 640
+[2013-02-19T06:09:24-06:00] INFO: Processing template[/services/cwrkr/resources/enstratus-console.cfg] action create (enstratus::cwrkr line 67)
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/enstratus-console.cfg] updated content
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/enstratus-console.cfg] owner changed to 498
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/enstratus-console.cfg] group changed to 498
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/enstratus-console.cfg] mode changed to 640
+[2013-02-19T06:09:24-06:00] INFO: Processing template[/services/cwrkr/resources/enstratus-webservices.cfg] action create (enstratus::cwrkr line 75)
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/enstratus-webservices.cfg] updated content
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/enstratus-webservices.cfg] owner changed to 498
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/enstratus-webservices.cfg] group changed to 498
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/enstratus-webservices.cfg] mode changed to 640
+[2013-02-19T06:09:24-06:00] INFO: Processing template[/services/cwrkr/resources/custom/networks.cfg] action create (enstratus::cwrkr line 82)
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/custom/networks.cfg] updated content
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/custom/networks.cfg] owner changed to 498
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/custom/networks.cfg] group changed to 498
+[2013-02-19T06:09:24-06:00] INFO: template[/services/cwrkr/resources/custom/networks.cfg] mode changed to 640
+[2013-02-19T06:09:24-06:00] INFO: Processing cookbook_file[/services/cwrkr/customer_directory_service.sql.template] action create (enstratus::cwrkr line 89)
+[2013-02-19T06:09:24-06:00] INFO: cookbook_file[/services/cwrkr/customer_directory_service.sql.template] owner changed to 498
+[2013-02-19T06:09:24-06:00] INFO: cookbook_file[/services/cwrkr/customer_directory_service.sql.template] group changed to 498
+[2013-02-19T06:09:24-06:00] INFO: cookbook_file[/services/cwrkr/customer_directory_service.sql.template] mode changed to 640
+[2013-02-19T06:09:24-06:00] INFO: cookbook_file[/services/cwrkr/customer_directory_service.sql.template] created file /services/cwrkr/customer_directory_service.sql.template
+[2013-02-19T06:09:24-06:00] INFO: Processing cookbook_file[/services/cwrkr/customer_ldap_directory.sql.template] action create (enstratus::cwrkr line 96)
+[2013-02-19T06:09:24-06:00] INFO: cookbook_file[/services/cwrkr/customer_ldap_directory.sql.template] owner changed to 498
+[2013-02-19T06:09:24-06:00] INFO: cookbook_file[/services/cwrkr/customer_ldap_directory.sql.template] group changed to 498
+[2013-02-19T06:09:24-06:00] INFO: cookbook_file[/services/cwrkr/customer_ldap_directory.sql.template] mode changed to 640
+[2013-02-19T06:09:24-06:00] INFO: cookbook_file[/services/cwrkr/customer_ldap_directory.sql.template] created file /services/cwrkr/customer_ldap_directory.sql.template
+[2013-02-19T06:09:24-06:00] INFO: cookbook_file[/root/cache/chef-cm.json] sending run action to script[load-chef] (delayed)
+[2013-02-19T06:09:24-06:00] INFO: Processing script[load-chef] action run (enstratus::riak line 68)
+[2013-02-19T06:09:24-06:00] INFO: script[load-chef] ran successfully
+[2013-02-19T06:09:24-06:00] INFO: cookbook_file[/root/cache/puppet-cm.json] sending run action to script[load-puppet] (delayed)
+[2013-02-19T06:09:24-06:00] INFO: Processing script[load-puppet] action run (enstratus::riak line 68)
+[2013-02-19T06:09:24-06:00] INFO: script[load-puppet] ran successfully
+[2013-02-19T06:09:24-06:00] INFO: cookbook_file[/root/cache/enstratus-cm.json] sending run action to script[load-enstratus] (delayed)
+[2013-02-19T06:09:24-06:00] INFO: Processing script[load-enstratus] action run (enstratus::riak line 68)
+[2013-02-19T06:09:24-06:00] INFO: script[load-enstratus] ran successfully
+[2013-02-19T06:09:24-06:00] INFO: Chef Run complete in 1841.894694439 seconds
+[2013-02-19T06:09:24-06:00] INFO: Running report handlers
+[2013-02-19T06:09:24-06:00] INFO: Report handlers complete

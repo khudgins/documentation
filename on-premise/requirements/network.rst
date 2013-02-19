@@ -1,3 +1,5 @@
+.. _enstratus_communications:
+
 Networking
 ----------
 

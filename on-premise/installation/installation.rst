@@ -18,6 +18,7 @@ and two-node configurations.
    :maxdepth: 2
    :hidden:
 
+   centos/centos
    vagrant/vagrant
    single_node/single_node
    two_node/two_node

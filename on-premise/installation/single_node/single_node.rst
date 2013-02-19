@@ -130,6 +130,8 @@ The contents of the directory will be similar to:
    * setup.sh
    * solo.rb
 
+.. _running_setup:
+
 Running the setup
 ~~~~~~~~~~~~~~~~~
 
