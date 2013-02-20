@@ -12,6 +12,15 @@ environment.
    to the maximum extent possible these differences and result in a successful installation
    of the product.
 
+Kickstart
+~~~~~~~~~
+
+A kickstart file is provided below with an example of a 'minimal' install configuration.
+The most important part of this file is the packages section. Your environment may dictate
+changes to the installation volumes configuration.
+
+:download:`Centos 6.3 Kickstart File<./files/centos63-kickstart.txt>`
+
 Installation Media
 ~~~~~~~~~~~~~~~~~~
 
