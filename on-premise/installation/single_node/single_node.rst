@@ -14,6 +14,9 @@ This is the enStratus on-premise install built using Opscode chef-solo
    This installer **CAN** be used to install multi-node production installs but it
    requires more manual configuration.
 
+
+.. _install_quick_start:
+
 Quick Start
 ~~~~~~~~~~~
 

@@ -1,3 +1,5 @@
+.. _change_install_url:
+
 Changing Install URL
 --------------------
 
