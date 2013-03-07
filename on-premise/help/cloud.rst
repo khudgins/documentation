@@ -64,7 +64,7 @@ The line to edit from this file is here (cleaned up for clarity):
 	'http://aws.amazon.com',
 	'amazonaws.com');
 
-Let's say we're going to be connecting enStratus to a private OpenStack cloud, with the following properties:
+Let's say we're going to be connecting Enstratius to a private OpenStack cloud, with the following properties:
 
 #. Cloud API Endpoint: http://12.13.14.15:5000/v1
 #. Cloud Account/Tenant: DevOps
@@ -143,12 +143,12 @@ For the OpenStack cloud, we're going to change the parameters:
 
 #. The cloud id must be a unique value in the cloud table.
 #. Simply a name for your cloud.
-#. The delegate is the identifier enStratus uses to interact with the cloud.
-#. This field will cause enStratus to present a field labeled 'Account' when entering cloud credentials.
-#. This field will cause enStratus to present a field labeled 'User Name' when entering cloud credentials.
-#. This field will cause enStratus to present a field labeled 'Password' when entering cloud credentials.
+#. The delegate is the identifier Enstratius uses to interact with the cloud.
+#. This field will cause Enstratius to present a field labeled 'Account' when entering cloud credentials.
+#. This field will cause Enstratius to present a field labeled 'User Name' when entering cloud credentials.
+#. This field will cause Enstratius to present a field labeled 'Password' when entering cloud credentials.
 
-.. note:: Do **NOT** enter your credentials directly into the database. Enter them via the enStratus console.
+.. note:: Do **NOT** enter your credentials directly into the database. Enter them via the Enstratius console.
 
 With this information, we can now craft an insert statement for the cloud table:
 
@@ -204,6 +204,6 @@ Start the dispatcher service
 
 Enter the cloud credentials
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Create a new account and enter your cloud credentials. enStratus will validate the
+Create a new account and enter your cloud credentials. Enstratius will validate the
 credentials set against your cloud endpoint and begin auto-discovering your
 infrastructure.

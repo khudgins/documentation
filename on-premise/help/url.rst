@@ -1,7 +1,7 @@
 Changing Install URL
 --------------------
 
-To change the root url of your enStratus cloud endpoint, go to the host where the console
+To change the root url of your Enstratius cloud endpoint, go to the host where the console
 databases are installed.
 
 To view the settings for your current endpoint, issue the following commands:

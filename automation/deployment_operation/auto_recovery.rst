@@ -3,7 +3,7 @@
 Auto-Recovery
 -------------
 
-Here we'll walk through at a high level how automation works with enStratus. We'll use a
+Here we'll walk through at a high level how automation works with Enstratius. We'll use a
 block diagram to describe this at a high level. To start, picture a three-tier deployment
 like the one shown here:
 
@@ -16,7 +16,7 @@ application server and the volume that is attached. The website code lives on th
 volume and the server is configured to serve content from the directory where that volume
 is mounted.
 
-Next, let's simulate a failure of an application server and see how enStratus recovers
+Next, let's simulate a failure of an application server and see how Enstratius recovers
 from that problem. For this section, let's just zoom in to the application tier to follow
 the steps taken.
 
@@ -31,7 +31,7 @@ Next, a failure of application server 2 occurs.
    :align: center
 
 Because the number of servers is now less than the minimum required for this tier,
-enStratus starts another server from AppTemplate\ :sub:`1`. 
+Enstratius starts another server from AppTemplate\ :sub:`1`. 
 
 .. figure:: ./images/recovery4.png
    :align: center

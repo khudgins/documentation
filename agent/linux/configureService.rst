@@ -14,20 +14,20 @@ configureService USER_ID CUSTOMER_ID SERVICE_ID [[ SSL_ADDRESS CERT_FILE_PATH KE
 Description
 ~~~~~~~~~~~
 
-enStratus invokes the script /mnt/services/$SERVICE_ID/bin/enstratus-configure, if it exists, to run a service specific configuration script
+Enstratius invokes the script /mnt/services/$SERVICE_ID/bin/enstratus-configure, if it exists, to run a service specific configuration script
 
 
 Options
 ~~~~~~~
 
 USER_ID
-	User under whose authority the service configuration process will run. It can be set in the configuration of the service, otherwise enStratus will assign one.
+	User under whose authority the service configuration process will run. It can be set in the configuration of the service, otherwise Enstratius will assign one.
 
 CUSTOMER_ID
-	Customer id within enStratus. 
+	Customer id within Enstratius. 
 
 SERVICE_ID
-	ID of the service to be configured. It's provided by enStratus. Service images are stored in /mnt/services/$SERVICE_ID
+	ID of the service to be configured. It's provided by Enstratius. Service images are stored in /mnt/services/$SERVICE_ID
 
 SSL_ADDRESS
 	When using a SSL certificate, the fully qualified name associated to the certificate
@@ -50,7 +50,7 @@ configureService c100 c100 a12000
 Invocation
 ~~~~~~~~~~
 
-This script is called automatically by enStratus if the service needs to be configured in that server.
+This script is called automatically by Enstratius if the service needs to be configured in that server.
 
 
 Dependencies
@@ -61,7 +61,7 @@ Dependencies
 Permission
 ~~~~~~~~~~
 
-It is called by the enStratus user.
+It is called by the Enstratius user.
 
 
 Overrides

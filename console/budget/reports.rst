@@ -2,7 +2,7 @@
 
 Reports
 -------
-Using the enStratus console, it is also possible to view detailed reports of your account.
+Using the Enstratius console, it is also possible to view detailed reports of your account.
 
 For an even more granular view of how resources are being used in the account, navigate to
 Console > Reports. Several options are presented in a tabbed interface. Choose the tab
@@ -33,7 +33,7 @@ viewing
 
 Infrastructure > Budget Codes. In this view, however, costs are segregated into two main
 categories. First, the costs for usage based on the price charged by the cloud provider.
-Second, the costs charged by enStratus. 
+Second, the costs charged by Enstratius. 
 
 
 Resource

@@ -3,7 +3,7 @@
 Dispatcher
 ==========
 
-The enStratus Dispatcher service is a jetty service installed to /services/dispatcher.
+The Enstratius Dispatcher service is a jetty service installed to /services/dispatcher.
 
 .. figure:: ./images/dispatcher.png
    :height: 300 px
@@ -17,24 +17,24 @@ The enStratus Dispatcher service is a jetty service installed to /services/dispa
 Overview
 --------
 
-The enStratus dispatcher service is a jetty process that listens on port 3302,
-configurable. It accepts connections from enStratus components that have as an operational
+The Enstratius dispatcher service is a jetty process that listens on port 3302,
+configurable. It accepts connections from Enstratius components that have as an operational
 requirement to interact with cloud providers, and from guest virtual machines that have
-the enStratus agent installed.
+the Enstratius agent installed.
 
-The dispatcher service is in a sense the heart of the enStratus cloud management system.
-It is responsible for carrying out the actions initiated by end users via the enStratus
+The dispatcher service is in a sense the heart of the Enstratius cloud management system.
+It is responsible for carrying out the actions initiated by end users via the Enstratius
 console or via the API.
 
-When actions are taken by users, an enStratus job is created, and a message is pushed onto
-the message queue for action by the enStratus monitor and worker systems.
+When actions are taken by users, an Enstratius job is created, and a message is pushed onto
+the message queue for action by the Enstratius monitor and worker systems.
 
-The completion of a job is determined by the result discovered by the enStratus monitor or
+The completion of a job is determined by the result discovered by the Enstratius monitor or
 workers systems and depends on the type of job initiated.
 
 When actions that require accessing cloud or other credentials stored in the credentials
 database are initiated by users or triggered in an automated way, the dispatcher
-service contacts the enStratus Key Management (KM) service, which in turn access the
+service contacts the Enstratius Key Management (KM) service, which in turn access the
 information contained in the credentials database.
 
 Communication to and from the dispatcher service to the KM service is encrypted.
@@ -44,7 +44,7 @@ The dispatcher service interacts with two MySQL databases: provisioning and anal
 Provisioning Database
 ---------------------
 
-The provisioning database stores cloud-related information. As enStratus interacts with
+The provisioning database stores cloud-related information. As Enstratius interacts with
 cloud providers, information discovered about the clouds capabilities, user subscriptions,
 accounts, permissions, and infrastructure are stored in this database.
 
@@ -52,39 +52,39 @@ Some examples of the type of information stored in this database are:
 
 #. Cloud "subscriptions".
  
-   A cloud "subscription" is a mechanism enStratus uses to track the capabilities provided
-   by the cloud account being integrated into the enStratus cloud management system. It is
-   possible, for example, to connect an EC2 account to enStratus that has not yet signed up
-   for the Amazon S3 service. enStratus will not present the Platform > Files option to the
+   A cloud "subscription" is a mechanism Enstratius uses to track the capabilities provided
+   by the cloud account being integrated into the Enstratius cloud management system. It is
+   possible, for example, to connect an EC2 account to Enstratius that has not yet signed up
+   for the Amazon S3 service. Enstratius will not present the Platform > Files option to the
    end user in this case.
 
    Should the administrator of the Amazon account later subscribe to the S3 service, no
-   changes are required in enStratus. enStratus will automatically detect this change and
+   changes are required in Enstratius. Enstratius will automatically detect this change and
    present the Platform > Files option in the console. Please note that changes like this may
    take a few hours to be discovered.
 
 #. Accounts.
 
-   enStratus tracks cloud accounts in the provisioning database. Each cloud account 
-   connected to enStratus will carry with it unique information such as the cloud regions 
+   Enstratius tracks cloud accounts in the provisioning database. Each cloud account 
+   connected to Enstratius will carry with it unique information such as the cloud regions 
    visible for the credentials entered and the default budget code assigned to
    infrastructure discovered.
 
 #. Users, groups, roles.
 
-   enStratus stores information related to users that access the enStratus cloud
-   management system such as the user id, any groups of which the enStratus user is a part,
+   Enstratius stores information related to users that access the Enstratius cloud
+   management system such as the user id, any groups of which the Enstratius user is a part,
    and any budget codes to which the user has access.
 
-   The provisioning database is also where the mapping of an enStratus group to an
-   enStratus role is made
+   The provisioning database is also where the mapping of an Enstratius group to an
+   Enstratius role is made
 
 #. Budget Codes and their state.
 
    The provisioning database contains information about the costs being incurred as part
    of operating in cloud environments. For example, it is possible to assign a unique cost
    identifier to a cloud product such as a server and have the operational costs tracked
-   using the enStratus budget feature.
+   using the Enstratius budget feature.
 
 #. Clouds
 
@@ -93,30 +93,30 @@ Some examples of the type of information stored in this database are:
 
 There is no inherently sensitive information stored in the provisioning database. Account
 information discussed above does not include credentials. User information such as email
-addresses used to access enStratus are stored in the provisioning database.
+addresses used to access Enstratius are stored in the provisioning database.
 
 The provisioning database must allow access from the dispatcher service, and all monitor
 and worker servers.
 
 The provisioning database should be considered to be critical to the operation of the
-enStratus cloud management system. 
+Enstratius cloud management system. 
 
 Analytics Database
 ------------------
 
-The enStratus analytics database contains information gathered by enStratus to perform
+The Enstratius analytics database contains information gathered by Enstratius to perform
 analysis of server operations and other metrics.
 
 The analytics database must allow access from the dispatcher service, and all monitor
 and worker servers.
 
 The analytics database contains no sensitive information and should not be considered to
-be critical to the operation of the enStratus cloud management system.
+be critical to the operation of the Enstratius cloud management system.
 
 Installation
 ------------
 
-Installation of the enStratus dispatcher service is best handled by using a configuration
+Installation of the Enstratius dispatcher service is best handled by using a configuration
 management system such as Chef or Puppet.
 
 Software Requirements
@@ -128,30 +128,30 @@ Incoming Connections
 --------------------
 
 The dispatcher service is primarily responsible for carrying out the actions initiated by
-users via the console or the enStratus API.
+users via the console or the Enstratius API.
 
 #. Console
 
-   The enStratus console system connects to the dispatcher service via a webservices
+   The Enstratius console system connects to the dispatcher service via a webservices
    endpoint, defined on the console service in:
   
    /services/console/resources/enstratus-webservices.cfg
 
 #. API
 
-   The enStratus API system connects to the dispatcher service via a webservices
+   The Enstratius API system connects to the dispatcher service via a webservices
    endpoint, defined on the api service in:
   
    /services/api/resources/enstratus-webservices.cfg
 
-#. Guest VM running in a cloud that have the enStratus agent installed will attempt to
-   connect to the enStratus dispatcher service on port 3302. This connection is defined on
+#. Guest VM running in a cloud that have the Enstratius agent installed will attempt to
+   connect to the Enstratius dispatcher service on port 3302. This connection is defined on
    the guest VM in:
 
    /enstratus/ws/tomcat/webapps/ROOT/WEB-INF/classes/enstratus-webservices.cfg
 
    Although the communication is bi-directional, the only time a guest VM will initiate a
-   connection to the enStratus dispatcher service is upon agent start. The remainder of the
+   connection to the Enstratius dispatcher service is upon agent start. The remainder of the
    communications are from the dispatcher to the agent.
 
 Outgoing Connections
@@ -160,17 +160,17 @@ Outgoing Connections
 #. Cloud API
    
    The dispatcher service initiates communication to the cloud provider's API to take
-   actions on behalf of users utilizing the enStratus console or API.
+   actions on behalf of users utilizing the Enstratius console or API.
 
 #. Guest VM
 
-   The dispatcher service will initiates connections to the enStratus agent running on
+   The dispatcher service will initiates connections to the Enstratius agent running on
    guest VM in the cloud as necessary to trigger automated and user-initiated actions.
 
 #. KM
    
-   The dispatcher requires a connection to the enStratus KM system to perform actions that
-   require credentials. A webservices call is made to the enStratus KM service to retrieve
+   The dispatcher requires a connection to the Enstratius KM system to perform actions that
+   require credentials. A webservices call is made to the Enstratius KM service to retrieve
    the credentials. This communication is encrypted using industry standard AES-256
    encryption.
 
@@ -187,7 +187,7 @@ Outgoing Connections
 Customizing
 -----------
 
-The service port upon which the enStratus dispatcher service listens and the Java options it uses
+The service port upon which the Enstratius dispatcher service listens and the Java options it uses
 to start the jetty service can be modified.
 
 Service Port
@@ -217,7 +217,7 @@ Backups
 Service
 ~~~~~~~
 
-The enStratus dispatcher service files should be backed up before and after any changes, and
+The Enstratius dispatcher service files should be backed up before and after any changes, and
 once/day during steady-state operations. An example of a backup is shown here, excluding
 the log files in this case.
 
@@ -243,9 +243,9 @@ the log files in this case.
 Databases
 ~~~~~~~~~
 
-The frequency with which the enStratus provisioning database is backed up is determined
-primarily by the number of writes being made to the database. enStratus environments where
-there are many new accounts being joined to enStratus, many new users being added or
+The frequency with which the Enstratius provisioning database is backed up is determined
+primarily by the number of writes being made to the database. Enstratius environments where
+there are many new accounts being joined to Enstratius, many new users being added or
 modified should conduct backups more frequently than environments where these events are
 less frequent.
 
@@ -257,7 +257,7 @@ Backups should be encrypted and stored in a geographically unique location from 
 primary data source.
 
 The expected time to run a backup of the provisioning database can vary greatly. In
-enStratus deployments that have been running for a very long period of time, the backup
+Enstratius deployments that have been running for a very long period of time, the backup
 may take between 10 and 40 minutes.
 
 The expected time to restore the provisioning database can vary depending on the length of
@@ -298,7 +298,7 @@ here are some areas to consider when managing the dispatcher process.
 
 1. Restarting the Dispatcher
 
-.. note:: Stopping the dispatcher service will cause enStratus to be unusable. 
+.. note:: Stopping the dispatcher service will cause Enstratius to be unusable. 
 
 Here are some helpful commands to stop and start the dispatcher service, as well as
 tail the logs. Put these commands in your .bashrc as an alias or a function.
@@ -369,7 +369,7 @@ Path:
 
   ``/services/dispatcher/resources/dasein-persistence.properties``
 
-This file defines the connection to the dasein persistence layer of enStratus. It also
+This file defines the connection to the dasein persistence layer of Enstratius. It also
 specifies the connection point to the Riak database service.
 
 enstratus-km-client.cfg

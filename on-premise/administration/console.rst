@@ -1,7 +1,7 @@
 Console
 =======
 
-The enStratus console is a jetty service installed to /services/console.
+The Enstratius console is a jetty service installed to /services/console.
 
 .. figure:: ./images/console.png
    :height: 250 px
@@ -15,17 +15,17 @@ The enStratus console is a jetty service installed to /services/console.
 Console Overview
 ----------------
 
-The enStratus console service is a jetty service that provides the web front-end, or
-enStratus user console. The enStratus console is a content management system designed to
+The Enstratius console service is a jetty service that provides the web front-end, or
+Enstratius user console. The Enstratius console is a content management system designed to
 provide users with a means to interact with multiple clouds through a single interface.
 
-The enStratus console listens on port 443 for https connections and connects to the
-enStratus dispatcher service via a webservices call to initiate user actions.
+The Enstratius console listens on port 443 for https connections and connects to the
+Enstratius dispatcher service via a webservices call to initiate user actions.
 
-The jetty service providing the enStratus console can be load balanced by load balancing
+The jetty service providing the Enstratius console can be load balanced by load balancing
 software such as Apache, HA-Proxy, F5, nginx, among others.
 
-The enStratus console service currently depends on 3 databases:
+The Enstratius console service currently depends on 3 databases:
 
 #. console
 #. enstratus_console
@@ -36,8 +36,8 @@ In the near future, these three databases will be merged into one: Riak.
 console Database
 ----------------
 
-The enStratus console database contains the content for driving the web interface of the
-enStratus console. 
+The Enstratius console database contains the content for driving the web interface of the
+Enstratius console. 
 
 enstratus_console Database
 --------------------------
@@ -54,7 +54,7 @@ performed by the console and enstratus_console database.
 Installation
 ------------
 
-Installation of the enStratus console service is best handled by using a configuration
+Installation of the Enstratius console service is best handled by using a configuration
 management system such as Chef or Puppet.
 
 Software Requirements
@@ -67,8 +67,8 @@ Incoming Connections
 
 #. Users
 
-   The only incoming connections handled by the enStratus console service are those
-   initiated by users interacting with the enStratus console.
+   The only incoming connections handled by the Enstratius console service are those
+   initiated by users interacting with the Enstratius console.
 
 Outgoing Connections
 --------------------
@@ -126,7 +126,7 @@ Backups
 Service
 ~~~~~~~
 
-The enStratus console service files should be backed up before and after any changes, and
+The Enstratius console service files should be backed up before and after any changes, and
 once/day during steady-state operations. Backups should be performed on /services/console.
 An example of a backup is shown here, excluding the log files in this case.
 
@@ -152,9 +152,9 @@ An example of a backup is shown here, excluding the log files in this case.
 Databases
 ~~~~~~~~~
 
-The frequency with which the enStratus console database is backed up is determined
-primarily by the number of writes being made to the database. enStratus environments where
-there are many new accounts being joined to enStratus, many new users being added or
+The frequency with which the Enstratius console database is backed up is determined
+primarily by the number of writes being made to the database. Enstratius environments where
+there are many new accounts being joined to Enstratius, many new users being added or
 modified should conduct backups more frequently than environments where these events are
 less frequent.
 
@@ -166,7 +166,7 @@ Backups should be encrypted and stored in a geographically unique location from 
 primary data source.
 
 The expected time to run a backup of the console database can vary greatly. In
-enStratus deployments that have been running for a very long period of time, the backup
+Enstratius deployments that have been running for a very long period of time, the backup
 may take between 2 and 5 minutes.
 
 The expected time to restore the console database can vary depending on the length of
@@ -245,7 +245,7 @@ An example of how to run a backup of databases is shown in this script:
 Configuration Files
 -------------------
 
-The enStratus console service has 8 configuration files /services/console:
+The Enstratius console service has 8 configuration files /services/console:
 
 .. hlist::
    :columns: 3
@@ -305,7 +305,7 @@ Path:
 
   ``/services/console/resources/dasein-persistence.properties``
 
-This file defines the connection to the dasein persistence layer of enStratus. It also
+This file defines the connection to the dasein persistence layer of Enstratius. It also
 specifies the connection point to the Riak database service.
 
 enstratus-console.cfg
@@ -325,7 +325,7 @@ Path:
    ``/services/console/resources/enstratus-webservices.cfg``
 
 This file defines the webservices endpoints for the API service to connect to the
-enStratus dispatcher service.
+Enstratius dispatcher service.
 
 networks.cfg
 ~~~~~~~~~~~~

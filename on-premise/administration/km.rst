@@ -1,10 +1,10 @@
 Key Manager
 ===========
 
-The enStratus Key/Credentials Management service is a jetty service installed to
+The Enstratius Key/Credentials Management service is a jetty service installed to
 /services/km. 
 
-The enStratus KM service is very stable and will run for very long periods of time
+The Enstratius KM service is very stable and will run for very long periods of time
 without requiring attention.
 
 .. figure:: ./images/km.png
@@ -19,17 +19,17 @@ without requiring attention.
 Overview
 --------
 
-The enStratus KM service is a jetty process that listens on port 2013, configurable. It
-accepts connections from enStratus components that have as an operational requirement to
+The Enstratius KM service is a jetty process that listens on port 2013, configurable. It
+accepts connections from Enstratius components that have as an operational requirement to
 perform activities that require access to sensitive information.
 
 Sensitive information can be thought of as any information required to interact with
 cloud providers, for example, the credentials necessary to perform the action of
 initiating the start of a VM in a cloud provider.
 
-The KM system also handles information entered by users via the enStratus console or API.
+The KM system also handles information entered by users via the Enstratius console or API.
 An example of this type of information is a public ssh key that may be a part of an
-enStratus user profile or an SSL certificate that was loaded into enStratus for use in an
+Enstratius user profile or an SSL certificate that was loaded into Enstratius for use in an
 automation routine.
 
 The KM system stores this information in an encrypted, de-identified database called the
@@ -42,10 +42,10 @@ The credentials database stores the encrypted, de-identified information describ
 The credentials database is currently a MySQL database, but will be migrated to Riak in a
 future release.
 
-The enStratus KM system is the **only** enStratus component to interact with the
+The Enstratius KM system is the **only** Enstratius component to interact with the
 credentials database.
 
-The credentials database should be considered to be the only enStratus component that,
+The credentials database should be considered to be the only Enstratius component that,
 should it be compromised or destroyed, would constitute an irrecoverable failure. As such,
 care should be taken to ensure the data contained therein is backed up and safeguarded in
 accordance with industry standard procedures.
@@ -53,7 +53,7 @@ accordance with industry standard procedures.
 Installation
 ------------
 
-Installation of the enStratus KM service is best handled by using a configuration
+Installation of the Enstratius KM service is best handled by using a configuration
 management system such as Chef or Puppet.
 
 Software Requirements
@@ -66,21 +66,21 @@ Incoming Connections
 
 #. Dispatcher
 
-   The enStratus dispatcher component connects to the KM service via a webservices
+   The Enstratius dispatcher component connects to the KM service via a webservices
    endpoint, defined on the dispatcher service in:
   
    ``/services/dispatcher/resources/enstratus-km-client.cfg``
 
 #. Monitor
 
-   The enStratus monitor component connects to the KM service via a webservices
+   The Enstratius monitor component connects to the KM service via a webservices
    endpoint, defined on the monitor service in:
 
    ``/services/monitor/resources/enstratus-km-client.cfg``
 
 #. Worker
 
-   The enStratus worker component connects to the KM service via a webservices
+   The Enstratius worker component connects to the KM service via a webservices
    endpoint, defined on the worker service in:
 
    ``/services/worker/resources/enstratus-km-client.cfg``
@@ -93,7 +93,7 @@ None.
 Customizing
 -----------
 
-The service port upon which the enStratus KM service listens and the Java options it uses
+The service port upon which the Enstratius KM service listens and the Java options it uses
 to start the jetty service can be modified.
 
 Service Port
@@ -121,7 +121,7 @@ Backups
 Service
 ~~~~~~~
 
-The enStratus KM service files should be backed up before and after any changes, and
+The Enstratius KM service files should be backed up before and after any changes, and
 once/day during steady-state operations.
 
 .. code-block:: bash
@@ -147,9 +147,9 @@ once/day during steady-state operations.
 Database
 ~~~~~~~~
 
-The frequency with which the enStratus credentials database is backed up is determined
-primarily by the number of writes being made to the database. enStratus environments where
-there are many new accounts being joined to enStratus, many new users being added or
+The frequency with which the Enstratius credentials database is backed up is determined
+primarily by the number of writes being made to the database. Enstratius environments where
+there are many new accounts being joined to Enstratius, many new users being added or
 modified should conduct backups more frequently than environments where these events are
 less frequent.
 

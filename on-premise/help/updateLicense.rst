@@ -1,7 +1,7 @@
 Update License Key
 ------------------
 
-Updating your enStratus license key can be accomplished using the following steps.
+Updating your Enstratius license key can be accomplished using the following steps.
 
 Required Information
 ~~~~~~~~~~~~~~~~~~~~

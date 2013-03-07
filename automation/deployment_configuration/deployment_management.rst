@@ -16,7 +16,7 @@ above.
 #. **Name**
 
    The name of the deployment is simply the logical name that will be presented in the
-   enStratus console. 
+   Enstratius console. 
 
 #. **Label**
 
@@ -67,7 +67,7 @@ Backup/Maintenance
 
    Backup and Maintenance
 
-The backup options designate the times when enStratus will peform backups such as
+The backup options designate the times when Enstratius will peform backups such as
 snapshots of attached volumes or service level backups via the agent script
 /enstratus/bin/backupService.
 

@@ -3,7 +3,7 @@
 Summary
 -------
 
-enStratus has the concept of billing codes, which can have soft and hard quotas. A soft
+Enstratius has the concept of billing codes, which can have soft and hard quotas. A soft
 quota will alert when it has been reached, but the code is still allowed to have charges
 against it. A hard quota will also alert, but when it has been reached no more
 infrastructure or resources may be charged against that code.

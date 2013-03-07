@@ -3,12 +3,12 @@
 Administration
 ==============
 
-The enStratus cloud management software consists of several components, along with some
-supporting software. The purpose of this section is to give an administrator of enStratus
+The Enstratius cloud management software consists of several components, along with some
+supporting software. The purpose of this section is to give an administrator of Enstratius
 systems an overview of the installed components and how to manage them.
 
 +-------------------------------------+-------------------------+
-| **Core enStratus Software**         | **Supporting Software** |
+| **Core Software**                   | **Supporting Software** |
 +=====================================+=========================+
 | Key Manager (credentials subsystem) | MySQL                   |
 +-------------------------------------+-------------------------+
@@ -140,7 +140,7 @@ You can stop and start services the traditional way (service foo stop, service f
 /etc/init.d/service [stop|start]) and restart also works for all applications since runit
 just kills the process if it doesn't stop cleanly and starts it back up for a restart.
 
-To check the status of an enStratus process being managed by runit, issue the command:
+To check the status of an Enstratius process being managed by runit, issue the command:
 
 .. code-block:: bash
 

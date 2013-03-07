@@ -17,7 +17,7 @@ Overview
 *IP Addresses allow for reservation of static ip addresses which can then be assigned to running servers.*
 
 .. note:: IP address reservation is a feature not available in all clouds. If it's not a
-  feature supported by your cloud provider, enStratus will not present it in the console.
+  feature supported by your cloud provider, Enstratius will not present it in the console.
 
 To reserve an IP Address, click on +reserve address in the upper right and select Reserve
 IP Address. A new IP address will be added to the list of Active Addresses.

@@ -4,7 +4,7 @@ Vagrant
 -------
 
 .. note::
- An enStratus engineer will provide you with the necessary files to install an enStratus Vagrant instance.
+ An Enstratius engineer will provide you with the necessary files to install an Enstratius Vagrant instance.
 
 Quick Start
 ~~~~~~~~~~~
@@ -62,7 +62,7 @@ development environment. It natively understands various configuration managemen
 such as Chef and Puppet. It also has a basic shell script provisioner and it automatically
 mounts the directory containing its configuration file in the vm under /vagrant.
 
-Since we have a repeatable and idempotent installation method for enStratus via the solo
+Since we have a repeatable and idempotent installation method for Enstratius via the solo
 installer, it was very easy to "wrap" the installation process with the shell provisioner.
 By adding the Vagrantfile, the solo installer is immediately available inside the launched
 virtual machine.
@@ -81,8 +81,8 @@ There are a few options:
 * To test interaction of existing or new code running locally with services you might not
   have running locally (see port forwarding below)
 
-Training/Learning enStratus
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Training/Learning Enstratius
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Note that this will ONLY deploy the latest released code. If you need to deploy unreleased
 code, that process is up to you. However, hooks exist to help make the process a little

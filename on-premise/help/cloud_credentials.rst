@@ -3,7 +3,7 @@
 Cloud Credentials
 -----------------
 
-Upon login, if there are no cloud accounts tied to the enStratus management software, you
+Upon login, if there are no cloud accounts tied to the Enstratius management software, you
 will be directed to a screen that looks like this, to enter some cloud credentials:
 
 

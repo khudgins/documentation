@@ -18,8 +18,8 @@ that takes place on the load balancer.
 Overview
 ~~~~~~~~
 
-enStratus supports a wide range of load balancers. In the Amazon Cloud, Elastic Load
-Balancers are available for provisioning and use from within enStratus. Server-based load
+Enstratius supports a wide range of load balancers. In the Amazon Cloud, Elastic Load
+Balancers are available for provisioning and use from within Enstratius. Server-based load
 balancers can be started for use or an existing server can be purposed as a load balancer
 via HA-Proxy or ajp (mod_jk). Finally, third party load balancing solutions are available
 in the form of the Zeus load balancer.
@@ -28,11 +28,11 @@ Elastic Load Balancer
 ~~~~~~~~~~~~~~~~~~~~~
 
 Elastic load balancers (ELB) are an offering from Amazon Web Services that are well supported in
-enStratus. ELB are advantagous because they can be cheaper to operate than server based
+Enstratius. ELB are advantagous because they can be cheaper to operate than server based
 solutions. Additionally, the configuration requirements for ELB are often simpler than using server-based
 load balancing.
 
-To provision a new elastic load balancer using enStratus, navigate to Network > Load
+To provision a new elastic load balancer using Enstratius, navigate to Network > Load
 Balancers. Select +Create Load Balancer. A single dialog box will present the 
 configuration options for the load balancer.
 
@@ -60,10 +60,10 @@ to servers in east-1b. If no servers are provisioned in a data center, the traff
 manifest as an error.
 
 .. note:: It is possible to re-configure additional data centers after the load balancer has
-  been created. Additionally, in a clustered environment, enStratus knows not to start any
+  been created. Additionally, in a clustered environment, Enstratius knows not to start any
   servers in a data center that is unassociated with the load balancer.
 
-Budget code and user group are the budget code and user group attributes that enStratus
+Budget code and user group are the budget code and user group attributes that Enstratius
 will use to track billing charges and access rights.
 
 The last step in configuring an elastic load balancer is to configure the protocols that
@@ -129,9 +129,9 @@ mod-jk
 ~~~~~~
 
 A second popular method for load balancing applications is to use mod_jk. Using mod_jk is
-one of two types of virtual machine based load balancing currently supported by enStratus.
-enStratus manages mod_jk balanced applications via the 5 mod_jk scripts that are a part of
-the enStratus agent. These scripts are located in /enstratus/bin/
+one of two types of virtual machine based load balancing currently supported by Enstratius.
+Enstratius manages mod_jk balanced applications via the 5 mod_jk scripts that are a part of
+the Enstratius agent. These scripts are located in /enstratus/bin/
 
 modjk Agent Scripts
 ~~~~~~~~~~~~~~~~~~~
@@ -188,7 +188,7 @@ Zeus
 The final method of application load balancing for this discussion is the Zeus Load Balancer.
 
 Zeus is a very powerful solution for high-availability and high-performance load
-balancing. It is available for use with enStratus; a demonstration of the auto-scaling
+balancing. It is available for use with Enstratius; a demonstration of the auto-scaling
 and recovery behavior can be viewed here:
 
 `Zeus Load Balancing in Rackspace <http://www.youtube.com/watch?v=jRPNhQSPrws>`_

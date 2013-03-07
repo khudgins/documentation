@@ -3,7 +3,7 @@
 Budget
 ======
 
-enStratus financial controls allow for a useful feature for setting quotas and
+Enstratius financial controls allow for a useful feature for setting quotas and
 limiting/tracking costs incurred in the cloud.
 
 .. figure:: ./images/budget_splash.png

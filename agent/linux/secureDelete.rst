@@ -27,7 +27,7 @@ Examples
 INVOCATION
 ~~~~~~~~~~
 
-This script is called automatically by several enStratus agent scripts to enforce the secure deletion of temporary files.
+This script is called automatically by several Enstratius agent scripts to enforce the secure deletion of temporary files.
 
 DEPENDENCIES
 ~~~~~~~~~~~~
@@ -37,7 +37,7 @@ DEPENDENCIES
 PERMISSIONS
 ~~~~~~~~~~~
 
-It is launched by the enStratus user.
+It is launched by the Enstratius user.
 
 OVERRIDES
 ~~~~~~~~~

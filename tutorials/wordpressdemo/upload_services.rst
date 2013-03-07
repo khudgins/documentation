@@ -2,8 +2,8 @@ Upload Services
 ---------------
 
 Using Automation > Service Images, upload wordpress.tar.gz and mysql.tar.gz as service
-image files. enStratus stores these files in cloud files storage and will initiate a
-download of these files at launch time by the enStratus agent.
+image files. Enstratius stores these files in cloud files storage and will initiate a
+download of these files at launch time by the Enstratius agent.
 
 .. figure:: ./images/serviceUpload0.png
    :height: 300px

@@ -11,10 +11,10 @@ Servers
    :scale: 70 % 
 
 
-enStratus monitors all servers in your account. Select actions from the right-hand column to access
-server options. If the enStratus agent is not installed on the server, the options available
+Enstratius monitors all servers in your account. Select actions from the right-hand column to access
+server options. If the Enstratius agent is not installed on the server, the options available
 are limited to getting information, rebooting, pausing/starting, or terminating the
-server. If the enStratus agent is installed on a running server, additional functionality
+server. If the Enstratius agent is installed on a running server, additional functionality
 is included in the actions menu.  
 
 This section describes the options available in the actions menu; options for which the agent
@@ -46,7 +46,7 @@ Info
 
 Expanded information regarding server attributes, including agent version (under Guest tab). 
 
-.. note:: The Performance and Guest tabs are only visible with the enStratus agent installed.
+.. note:: The Performance and Guest tabs are only visible with the Enstratius agent installed.
 
 Logs
 ~~~~
@@ -102,11 +102,11 @@ Shell/Remote Access*
 ~~~~~~~~~~~~~~~~~~~~
 
 Shell (Linux) and remote (Windows) access refers to creating user accounts on running
-servers. Each user in enStratus is assigned a user code of the form p123. When remote
+servers. Each user in Enstratius is assigned a user code of the form p123. When remote
 access is granted on a Linux server, a home user account is created on that server and the
-public SSH credentials defined in the enStratus user profile are set for the user. On
+public SSH credentials defined in the Enstratius user profile are set for the user. On
 Windows, a home account is created and the user can access the running server using the
-RDP password set in the enStratus profile.
+RDP password set in the Enstratius profile.
 
 .. note:: Before granting shell/remote access to a server, the user must define their
   public SSH key and/or RDP password in their user profile. If the credentials change, the
@@ -124,7 +124,7 @@ Reboot the running server. Rebooting does not change the IP address of the serve
 Pause/Start
 ~~~~~~~~~~~
 
-Pause or start the running server. enStratus still monitors the server while it is paused. 
+Pause or start the running server. Enstratius still monitors the server while it is paused. 
 
 .. warning:: The server's IP address will change upon starting after a pause. 
 

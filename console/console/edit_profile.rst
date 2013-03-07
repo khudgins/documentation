@@ -10,7 +10,7 @@ Edit Profile
    :alt: User Profile
    :align: center
 
-In enStratus, user profiles contain both basic information and a user's security
+In Enstratius, user profiles contain both basic information and a user's security
 credentials.
 
 .. figure:: ./images/userProfileGeneral.png

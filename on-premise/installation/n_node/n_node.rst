@@ -3,15 +3,15 @@
 N-node Installation
 ===================
 
-So far we've demonstrated reference architectures for a 1- and 2-node enStratus cloud
+So far we've demonstrated reference architectures for a 1- and 2-node Enstratius cloud
 management installation. We've leveraged a configuration management engine to make the
 installation flexible by overriding installation parameters that changed due to the new
 architecture and incorporated them into installation files that performed the necessary
 installation actions.
 
-Extending this concept a bit further, let's explore how to install enStratus on any number
+Extending this concept a bit further, let's explore how to install Enstratius on any number
 of systems. To do this, we'll first map out the dependencies that exist between the
-enStratus services and supporting software. The following sections outline what services
+Enstratius services and supporting software. The following sections outline what services
 and configuration files are affected by changes to the architecture.
 
 The way to use these sections is to read them like this: If I make a change to the KM
@@ -338,5 +338,5 @@ To accommodate this type of change, you will need to add the following
                   "java_home":"/path/to/java"
                 }
 
-Keep in mind when changing the JDK, that enStratus only works with version 6 and is
+Keep in mind when changing the JDK, that Enstratius only works with version 6 and is
 dependent upon the Java Cryptographic Extensions.

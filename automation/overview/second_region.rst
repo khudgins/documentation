@@ -1,9 +1,9 @@
 Adding a Second Region
 ----------------------
 
-enStratus will prompt the user to add a launch configuration for the newly added region.
+Enstratius will prompt the user to add a launch configuration for the newly added region.
 
-No other conifguration changes need to be made since enStratus decouples the service
+No other conifguration changes need to be made since Enstratius decouples the service
 concept from the launch configuration. 
 
 .. figure:: ./images/deployment6.png

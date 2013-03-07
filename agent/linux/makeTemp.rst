@@ -3,7 +3,7 @@ makeTemp
 
 Name
 ~~~~
-makeTemp -  Shell script to setup the enStratus temp directory
+makeTemp -  Shell script to setup the Enstratius temp directory
 
 Synopsis
 ~~~~~~~~

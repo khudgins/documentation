@@ -21,7 +21,7 @@ OPTIONS
 ~~~~~~~
 
 CUSTOMER_ID
-	enStratus customer Id
+	Enstratius customer Id
 SERVER_ID
 	Identifier of the current server
 BUNDLE
@@ -57,7 +57,7 @@ DEPENDENCIES
 PERMISSIONS
 ~~~~~~~~~~~
 
-It is launched by the enStratus user. It needs sudo authority for invoking the ec2-bundle-vol command.
+It is launched by the Enstratius user. It needs sudo authority for invoking the ec2-bundle-vol command.
 
 OVERRIDES
 ~~~~~~~~~

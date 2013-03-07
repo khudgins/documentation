@@ -4,7 +4,7 @@ Launch Configuration
 A launch configuration is a definition that governs the resources provisioned to support a
 virtual machine. 
 
-An enStratus launch configuration includes attaching, raiding, and encrypting volumes,
+An Enstratius launch configuration includes attaching, raiding, and encrypting volumes,
 configuration management runs such as Chef, as well as the firewall into which the server
 is started.
 

@@ -30,7 +30,7 @@ startService a123
 Invocation
 ~~~~~~~~~~
 
-This script is called automatically by enStratus during the deployment start for services with a service image.
+This script is called automatically by Enstratius during the deployment start for services with a service image.
 
 
 Dependencies
@@ -41,7 +41,7 @@ Dependencies
 Permission
 ~~~~~~~~~~
 
-It is called by the enStratus user.
+It is called by the Enstratius user.
 
 
 Overrides

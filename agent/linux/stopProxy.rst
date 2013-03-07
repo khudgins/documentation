@@ -35,7 +35,7 @@ DEPENDENCIES
 PERMISSIONS
 ~~~~~~~~~~~
 
-It is launched by the enStratus user.
+It is launched by the Enstratius user.
 
 
 OVERRIDES

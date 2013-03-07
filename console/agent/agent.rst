@@ -9,7 +9,7 @@ Agent
    :scale: 75 %
    :align: center
 
-   enStratus Agent
+   Enstratius Agent
 
 .. figure:: ./images/agent_splash_log.png
    :width: 700 px
@@ -17,7 +17,7 @@ Agent
    :scale: 75 %
    :align: center
 
-   enStratus Agent Logging
+   Enstratius Agent Logging
 
 .. toctree::
    :maxdepth: 1

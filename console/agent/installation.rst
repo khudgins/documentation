@@ -3,13 +3,13 @@
 Installation
 ------------
 
-Installing and using the enStratus agent is easier than ever. Use this quick start
+Installing and using the Enstratius agent is easier than ever. Use this quick start
 information to hit the ground running.
 
 Quick Start
 ~~~~~~~~~~~
 
-To get started quickly using the enStratus agent on Linux or Windows, use these
+To get started quickly using the Enstratius agent on Linux or Windows, use these
 instructions:
 
 Linux

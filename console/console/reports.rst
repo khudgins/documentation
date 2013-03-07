@@ -13,7 +13,7 @@ Reports
 |
 
 To view reports, select Console > Reports. This selection will open a pane with four tabs.
-In the first tab, enStratus displays an Availability Report:
+In the first tab, Enstratius displays an Availability Report:
 
 .. figure:: ./images/systemStatus.png
    :width: 1147 px

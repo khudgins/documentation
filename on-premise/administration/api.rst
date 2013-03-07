@@ -1,7 +1,7 @@
 API
 ===
 
-The enStratus console is a jetty service installed to /services/api.
+The Enstratius console is a jetty service installed to /services/api.
 
 .. figure:: ./images/api.png
    :height: 250 px
@@ -89,7 +89,7 @@ Service
 Configuration Files
 -------------------
 
-The enStratus api service has 5 configuration files in /services/api
+The Enstratius api service has 5 configuration files in /services/api
 
 .. hlist::
    :columns: 1
@@ -125,7 +125,7 @@ Path:
   ``/services/api/resources/enstratus-webservices.cfg``
 
 This file defines the webservices endpoints for the API service to connect to the
-enStratus dispatcher service.
+Enstratius dispatcher service.
 
 dasein-persistence.properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -134,7 +134,7 @@ Path:
 
   ``/services/api/resources/dasein-persistence.properties``
 
-This file defines the connection to the dasein persistence layer of enStratus. It also
+This file defines the connection to the dasein persistence layer of Enstratius. It also
 specifies the connection point to the Riak database service.
 
 networks.cfg

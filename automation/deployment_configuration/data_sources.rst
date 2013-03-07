@@ -1,7 +1,7 @@
 Data Sources
 ------------
 
-To upload a data source into enStratus, navigate to Automation > Data Source Images and
+To upload a data source into Enstratius, navigate to Automation > Data Source Images and
 select add data source.
 
 A data source can be a database backup file. For example, for a MySQL database, the data

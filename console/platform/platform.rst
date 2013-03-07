@@ -5,7 +5,7 @@ Platform
 
 Many clouds support Platform-as-a-Service (PaaS) offerings such as cloud files/object
 storage, databases, and content distribution systems. Accessing PaaS offerings using
-enStratus is done via the Platform menu.
+Enstratius is done via the Platform menu.
 
 .. figure:: ./images/platform.png
    :width: 1172 px

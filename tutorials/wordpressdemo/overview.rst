@@ -1,10 +1,10 @@
 Overview
 --------
 
-Wordpress is sufficiently complex to demonstrate the full suite of enStratus automation
+Wordpress is sufficiently complex to demonstrate the full suite of Enstratius automation
 capabilities, including the orchestration of a two dependent tiers of scalable servers.
 
-LAMP application stacks are simple to deploy and scale, and enStratus gives you the
+LAMP application stacks are simple to deploy and scale, and Enstratius gives you the
 framework to scale and provide for very high-availability applications.
 
 Please follow the Wordpress tutorial at left, you'll be scaling in no time.
@@ -25,5 +25,5 @@ Please follow the Wordpress tutorial at left, you'll be scaling in no time.
 Purpose
 -------
 
-The purpose of this document is to start from scratch and build a deployable enStratus
+The purpose of this document is to start from scratch and build a deployable Enstratius
 application architecture including a Wordpress web application backed by a MySQL database.

@@ -30,7 +30,7 @@ stopService a123
 Invocation
 ~~~~~~~~~~
 
-This script is called automatically by enStratus when the server stops beings assoiated to the service, for instance when the deployment or server is terminated.
+This script is called automatically by Enstratius when the server stops beings assoiated to the service, for instance when the deployment or server is terminated.
 
 Dependencies
 ~~~~~~~~~~~~
@@ -40,7 +40,7 @@ Dependencies
 Permission
 ~~~~~~~~~~
 
-It is called by the enStratus user.
+It is called by the Enstratius user.
 
 Overrides
 ~~~~~~~~~

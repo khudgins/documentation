@@ -14,7 +14,7 @@ setupEncryption RAW_DEVICE ENCRYPTED_DEVICE KEY_FILE
 DESCRIPTION
 ~~~~~~~~~~~
 
-Initialises LUKS (Linux Unified Key Setup) encryption for the selected device using the encryption key provided in KEY_FILE. By default enStratus uses AES SHA256 ESSIV (aes-cbc-essiv:sha256) for encryption.
+Initialises LUKS (Linux Unified Key Setup) encryption for the selected device using the encryption key provided in KEY_FILE. By default Enstratius uses AES SHA256 ESSIV (aes-cbc-essiv:sha256) for encryption.
 
 
 OPTIONS
@@ -32,7 +32,7 @@ KEY_FILE
 INVOCATION
 ~~~~~~~~~~
 
-This script is called by enStratus when starting a server that has been configured to use volume encryption 
+This script is called by Enstratius when starting a server that has been configured to use volume encryption 
 (either stand-alone servers launched from the Machine Image list or servers in a deployment when Use Encryption is selected in the Launch Configuration).
 
 
@@ -46,7 +46,7 @@ DEPENDENCIES
 PERMISSIONS
 ~~~~~~~~~~~
 
-It is launched by the enStratus user and requires sudo authority for initializing the encryption.
+It is launched by the Enstratius user and requires sudo authority for initializing the encryption.
 
 
 OVERRIDES

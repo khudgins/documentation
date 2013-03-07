@@ -12,7 +12,7 @@ Relational Databases
 
 |
 
-enStratus supports cloud-based relational database management services through enStratus
+Enstratius supports cloud-based relational database management services through Enstratius
 Relational Databases (RDBMS). This service allows the end user to operate, scale and
 manage their relational databases in the cloud. Relational database instances give you the
 full capabilities and features you would normally find on a familiar RDBMS.
@@ -20,14 +20,14 @@ full capabilities and features you would normally find on a familiar RDBMS.
 Overview
 ~~~~~~~~
 
-enStratus currently supports cloud based relational database management with Amazon
+Enstratius currently supports cloud based relational database management with Amazon
 Relational Database Service (Amazon RDS). With a relational database instance you get the
 functions of a traditional database, plus scalability and redundancy in the cloud.
 
 Creating a Relational Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To create a new relational database in the enStratus console navigate to Platform >
+To create a new relational database in the Enstratius console navigate to Platform >
 Relational Databases. Click on +Add Database in the right corner of the table.
 
 Under the configuration tab you will see the fields for creating a database.
@@ -81,12 +81,12 @@ After the above fields have been completed proceed to the permissions tab:
 
 The **Admin User** and **Admin Password** fields are required.
 
-**Budget Code** and **User Group** are the billing code and user group attributes that enStratus
+**Budget Code** and **User Group** are the billing code and user group attributes that Enstratius
 will use to track billing charges and access rights tied to the user management and
-billing code offerings of enStratus.
+billing code offerings of Enstratius.
 
 Upon save the RDBMS is launched and could take up to 15 minutes to show up in the
-enStratus console.
+Enstratius console.
 
 Connecting to a Relational Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

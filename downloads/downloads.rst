@@ -36,8 +36,8 @@ API Documentation
    :header: "Release Date", "SHA256"
    :widths: 10, 10
 
-   `2012-06-15 <http://es-content.s3.amazonaws.com/enStratus_API_2012-06-15>`_,963045055b89a7eecb9dbcb2109bd9b6ea3c1b6a3f933f92e6e9e1a5bfce0524
-   `2012-04-12 <http://es-content.s3.amazonaws.com/enStratus_API_2012-04-12>`_,5103943684aae8955bc97aae14dce6a9224de8b18958c5266ba58d35fe2b713f
+   `2012-06-15 <http://es-content.s3.amazonaws.com/Enstratius_API_2012-06-15>`_,963045055b89a7eecb9dbcb2109bd9b6ea3c1b6a3f933f92e6e9e1a5bfce0524
+   `2012-04-12 <http://es-content.s3.amazonaws.com/Enstratius_API_2012-04-12>`_,5103943684aae8955bc97aae14dce6a9224de8b18958c5266ba58d35fe2b713f
 
 Whitepapers
 ~~~~~~~~~~~

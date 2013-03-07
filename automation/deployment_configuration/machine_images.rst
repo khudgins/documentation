@@ -2,22 +2,22 @@ Machine Images/Templates
 ------------------------
 
 .. note:: Creating "golden" or "master" images is common practice. Best practice is to
-  utilize tools that are specially suited the task of configuration management. enStratus
-  can leverage the power of both Chef and/or Puppet. enStratus also offers its own
+  utilize tools that are specially suited the task of configuration management. Enstratius
+  can leverage the power of both Chef and/or Puppet. Enstratius also offers its own
   configuration management engine that is a good introduction to the concept.
 
 A machine image is a template from which servers are started. This document assumes a high
 degree of familiarity with the process of image creation and maintenance. Methods for
 maintaining machines with respect to versioning will be addressed. In an automated
-environment, the enStratus agent *must* be installed on a template prior to configuring a
+environment, the Enstratius agent *must* be installed on a template prior to configuring a
 deployment.
 
 Versioning
 ~~~~~~~~~~
 
-If you are operating in a deployment, enStratus can help you manage the version of machine
+If you are operating in a deployment, Enstratius can help you manage the version of machine
 image you are using in your launch configurations. This concept is addressed as part of
-the auto-rollout feature of enStratus.
+the auto-rollout feature of Enstratius.
 
 In short, you should patch servers running in your deployment as you see fit, and ensure
 you maintain an equally patched version of the AMI defined in your launch configuration so
@@ -27,7 +27,7 @@ version for the newly created servers.
 Dependencies
 ~~~~~~~~~~~~
 
-enStratus has very few true dependencies. It depends on Java, so ensure you have the
+Enstratius has very few true dependencies. It depends on Java, so ensure you have the
 latest JDK installed to support the Agent. Additionally, when you are operating in an
 automated deployment environment, we recommend installing the following software:
 

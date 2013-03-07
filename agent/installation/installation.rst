@@ -3,7 +3,7 @@
 Installation
 ------------
 
-Installing and using the enStratus agent is easier than ever. Use this quick start
+Installing and using the Enstratius agent is easier than ever. Use this quick start
 information to hit the ground running.
 
 Linux - Quick Start

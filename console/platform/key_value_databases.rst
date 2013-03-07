@@ -10,7 +10,7 @@ Key Value Databases
    :alt: KV Databases
    :align: center
 
-enStratus Key/Value Databases (KV Databases or KVDB) are a simple solution for storing
+Enstratius Key/Value Databases (KV Databases or KVDB) are a simple solution for storing
 your data for high availability and scalability. With a KV database you get only what you
 need. You can simply query your data and return the results without having to manage
 different schemas for your stored data sets. You do not need to worry when storing new
@@ -19,7 +19,7 @@ data because it is automatically indexed for you.
 Overview
 ~~~~~~~~
 
-enStratus currently supports the creation and termination of Amazon SimpleDB domains. See
+Enstratius currently supports the creation and termination of Amazon SimpleDB domains. See
 `Amazon SimpleDB <http://aws.amazon.com/simpledb>`_ for more information and current pricing.
 
 KV databases are large collections of data organized into separate domains. The data is
@@ -29,7 +29,7 @@ attributes that can be searched in lexicographical queries.
 Creating a Key/Value Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To launch a new KV database in the enStratus console select Platform > Key/Value
+To launch a new KV database in the Enstratius console select Platform > Key/Value
 Databases. Then click  +Add Key/Value Database.
 
 .. figure:: ./images/addKVDB.png
@@ -45,12 +45,12 @@ The **Description** field can be a custom description for your database.
 
 The **Label** field helps you organize your KVDB instances by providing a unique color label.
 
-**Budget Code** and **User Group** are the budget code and user group attributes that enStratus
+**Budget Code** and **User Group** are the budget code and user group attributes that Enstratius
 will use to track billing charges and access rights tied to the user management and
-budget code offerings of enStratus.
+budget code offerings of Enstratius.
 
 Upon save the KV database is launched. It can take up to 15 minutes to appear in the
-enStratus console.
+Enstratius console.
 
 Terminating Key/Value Databases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

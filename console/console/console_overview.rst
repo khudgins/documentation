@@ -3,7 +3,7 @@
 Console
 -------
 
-This section covers the individual components of the enStratus console at a high level:
+This section covers the individual components of the Enstratius console at a high level:
 
 .. figure:: ./images/newconsole.png
    :height: 734 px
@@ -14,7 +14,7 @@ This section covers the individual components of the enStratus console at a high
 
 1. Custom Logo
 ~~~~~~~~~~~~~~
-This logo can be customized for your enStratus installation.
+This logo can be customized for your Enstratius installation.
 
 2. User Profile
 ~~~~~~~~~~~~~~~
@@ -25,7 +25,7 @@ This logo can be customized for your enStratus installation.
    :alt: User Profile
    :align: center
 
-Clicking on the name of the person logged in to the enStratus console provides
+Clicking on the name of the person logged in to the Enstratius console provides
 functionality for editing user profile information (:ref:`including setting notification
 targets <notification_targets>`), provides functionality for :ref:`editing user profile
 information <edit_profile>` (:ref:`including setting notification targets
@@ -44,12 +44,12 @@ information <edit_profile>` (:ref:`including setting notification targets
 
 
 
-enStratus can access many accounts in one cloud provider or accounts in separate clouds
+Enstratius can access many accounts in one cloud provider or accounts in separate clouds
 simultaneously. Clicking on the account will activate a drop-down menu for selecting an account. 
 
 If the underlying cloud provider has the concept of regions, those regions will be
 displayed and be selectable from here as well. When you enter your cloud credentials for the first time, these
-regions will auto-populate as enStratus begins to discover the attributes of the cloud
+regions will auto-populate as Enstratius begins to discover the attributes of the cloud
 provider.
 
 4. Cloud
@@ -87,12 +87,12 @@ The actions menu is activated by clicking on one of the "actions" links to the r
 Options in this menu depend on the selected resource.
 
 The action menu shown here is for a cloud server. Note: Some options shown in this
-image are only available after the enStratus agent has been installed on the virtual
+image are only available after the Enstratius agent has been installed on the virtual
 machine.
 
 If the cloud administrator for your account has implemented groups and roles, the action
 link may or may not be present. Presenting or hiding this link
-is one method enStratus uses to enforce role-based access controls for cloud
+is one method Enstratius uses to enforce role-based access controls for cloud
 infrastructure.
 
 9. Notification/Alert/Support Menu
@@ -111,6 +111,6 @@ list of alerts. Options for interacting with notifications and alerts include cl
 deleting them.
 
 The support link provided at the bottom of the console provides an integration point for
-external help desk functionality, such as Zendesk. In the SaaS offering for enStratus,
+external help desk functionality, such as Zendesk. In the SaaS offering for Enstratius,
 clicking the support link will activate a dialog window for sending a support request to
-the enStratus team.
+the Enstratius team.

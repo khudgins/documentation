@@ -17,7 +17,7 @@ DESCRIPTION
 For servers in a tier configured to use Custom scaling rules, the scaleCheck script 
 reports the current server's vote to trigger an scaling event.
 By default scaleCheck is a place-holder that needs to be tailored according to the
-scaling rules to be implemented. enStratus will use the return code of the script 
+scaling rules to be implemented. Enstratius will use the return code of the script 
 to determine the need for a scale up or down event:
 
 * 1 : The tier should scale up
@@ -34,7 +34,7 @@ None.
 INVOCATION
 ~~~~~~~~~~
 
-This script is called periodically by enStratus in servers within a tier set to use Custom scaling rules.
+This script is called periodically by Enstratius in servers within a tier set to use Custom scaling rules.
 
 
 DEPENDENCIES
@@ -45,7 +45,7 @@ None
 PERMISSIONS
 ~~~~~~~~~~~
 
-It is launched by the enStratus user.
+It is launched by the Enstratius user.
 
 
 OVERRIDES

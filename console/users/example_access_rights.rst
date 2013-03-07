@@ -161,7 +161,7 @@ Image
 +-------------------------+-----------------------------------------------------------------------------------------+
 | Configure               | Allows you to edit image names and color labels.                                        |
 +-------------------------+-----------------------------------------------------------------------------------------+
-| ShareLocal              | Allows sharing of images to other enStratus accounts.                                   |
+| ShareLocal              | Allows sharing of images to other Enstratius accounts.                                  |
 +-------------------------+-----------------------------------------------------------------------------------------+
 | SharePublic             | Allows images to be made public.                                                        |
 +-------------------------+-----------------------------------------------------------------------------------------+
@@ -320,7 +320,7 @@ Snapshot
 | Delete         | Allows you to delete snapshots using the delete action on the Infrastructure > Snapshots|
 |                | page and the remove action on the Automation > Backups page.                            |
 +----------------+-----------------------------------------------------------------------------------------+
-| ShareLocal     | Allows you to make a snapshot private or share the snapshot with another enStratus      |
+| ShareLocal     | Allows you to make a snapshot private or share the snapshot with another Enstratius     |
 |                | account from the Infrastructure > Snapshots and Automation > Backups pages.             |
 +----------------+-----------------------------------------------------------------------------------------+
 | SharePublic    | Allows you to make a snapshot public from the Infrastructure > Snapshots and Automation |

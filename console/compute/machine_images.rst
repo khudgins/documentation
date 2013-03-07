@@ -16,23 +16,23 @@ Overview
 
 A machine image is a saved template of a server. Running servers are started from machine images.
 
-If you are going to be utilizing enStratus images to begin your cloud work, please follow this workflow:
+If you are going to be utilizing Enstratius images to begin your cloud work, please follow this workflow:
 
-1. Start a server from one of the provided enStratus templates (machine images). 
+1. Start a server from one of the provided Enstratius templates (machine images). 
 2. Next, create a machine image from the server you have started.
 
-3. Use the resulting image in your work, not the provided enStratus image.
+3. Use the resulting image in your work, not the provided Enstratius image.
 
 *Why?*
 
-We update the available enStratus images periodically, and when we do, we delete the old
+We update the available Enstratius images periodically, and when we do, we delete the old
 images to be good stewards of cloud resources. If the backing image of a running server is
 deleted, it can lead to imaging problems going forward. It will not affect the running
 server.
 
 The functionality included with machine images varies depending on the underlying cloud
 provider. Some cloud providers allow access to a public database of images from which
-private servers can be started. enStratus allows searching and starting of any publicly
+private servers can be started. Enstratius allows searching and starting of any publicly
 available machine images.
 
 Renaming and Re-labeling
@@ -93,14 +93,14 @@ A dialog box will appear.
 
 Security parameters in the form of a firewall can be chosen at the time
 of server launch or specified later. (See :ref:`Firewalls <saas_firewalls>` 
-for more about using firewalls in enStratus).
+for more about using firewalls in Enstratius).
 
-enStratus layers additional functionality in the form of groups and budget codes into
+Enstratius layers additional functionality in the form of groups and budget codes into
 server launch for all cloud providers; these are also selected on the General tab.
 
 **Key Pair**
 
-Some cloud providers allow servers to be started with a root keypair. enStratus provides
+Some cloud providers allow servers to be started with a root keypair. Enstratius provides
 for this functionality by allowing the user to choose from a set of existing keypairs or
 to create a new keypair at launch.
 
@@ -159,16 +159,16 @@ Sharing
    :align: center
 
 
-Sharing images in enStratus is accomplished by selecting the image to
+Sharing images in Enstratius is accomplished by selecting the image to
 share and selecting action > sharing.
 
 A dialog box with two primary options is presented. The first share type is Private.
-Private sharing enables an enStratus user who is a part of several accounts to share
+Private sharing enables an Enstratius user who is a part of several accounts to share
 images between those accounts. The accounts of which the user is a part will populate a
 dropdown window. Once the image is shared, the image will appear in the other
 account.
 
-The second share type is Public. Public sharing enables an enStratus user to add a
+The second share type is Public. Public sharing enables an Enstratius user to add a
 image to the publicly available pool of images. This is an option that carries the 
 risk of making publicly available private data, so this action should be restricted using
-enStratus groups and roles.
+Enstratius groups and roles.

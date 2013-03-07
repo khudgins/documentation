@@ -1,15 +1,15 @@
 .. _site_root:
 
-.. enStratus documentation master file, created by
+.. Enstratius documentation master file, created by
    sphinx-quickstart on Mon Mar 12 21:46:44 2012.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 
-enStratus Documentation
-=======================
+Enstratius Documentation
+========================
 
-Welcome to the enStratus documentation portal. 
+Welcome to the Enstratius documentation portal. 
 
 Documentation is divided into six sections, also linked above. 
 

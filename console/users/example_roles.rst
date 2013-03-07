@@ -3,8 +3,8 @@
 Example Roles
 -------------
 
-The following four roles are examples you can implement in your enStratus account. The Admin role is created in 
-every enStratus account by default. You can customize these roles or create your own.
+The following four roles are examples you can implement in your Enstratius account. The Admin role is created in 
+every Enstratius account by default. You can customize these roles or create your own.
 
 
 **Admin** - Has full access over the entire system.

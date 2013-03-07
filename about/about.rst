@@ -7,7 +7,7 @@ This site is built using the `Sphinx Documentation Engine <http://sphinx-doc.org
 
 The contents of the site are hosted in a publicly available github repository:
 
-``git@github.com:enStratus/documentation.git``
+``git@github.com:Enstratius/documentation.git``
 
 You are welcome to clone the contents and build your own local copy.
 
@@ -96,8 +96,8 @@ Sample Output
    
    <as the compilation occurs>
    
-   Output written on enStratus-SaaS.pdf (306 pages, 10405823 bytes).
-   Transcript written on enStratus-SaaS.log.
+   Output written on Enstratius-SaaS.pdf (306 pages, 10405823 bytes).
+   Transcript written on Enstratius-SaaS.log.
    pdflatex finished; the PDF files are in _build/latex.
 
-The resulting PDF will be located in ``_build/latex/enStratus-SaaS.pdf``
+The resulting PDF will be located in ``_build/latex/Enstratius-SaaS.pdf``

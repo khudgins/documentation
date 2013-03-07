@@ -49,7 +49,7 @@ Edit the MySQL service properties and set the Scaling Model to Replicated.
 Also in the MySQL service add a new set of credentials, as :ref:`we did for the MySQL root
 user <add_db_credentials>`, but this time for the user that will be used to establish the
 replication. The name field must be **replication**. The Public and Private key fields
-will contain the actual name of the user and its password. enStratus and the MySQL service
+will contain the actual name of the user and its password. Enstratius and the MySQL service
 scripts will take care of the rest!
 
 .. figure:: ./images/replication3.png

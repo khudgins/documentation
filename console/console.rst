@@ -3,7 +3,7 @@
 Console
 =======
 
-This section describes the enStratus web front end, referred to as the enStratus console. 
+This section describes the Enstratius web front end, referred to as the Enstratius console. 
 
 .. figure:: ./images/consoleSplash.png
    :width: 1178 px

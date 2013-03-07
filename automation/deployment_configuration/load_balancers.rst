@@ -1,7 +1,7 @@
 Load Balancers
 --------------
 
-A load balancer balances traffic typically to multiple application servers. enStratus
+A load balancer balances traffic typically to multiple application servers. Enstratius
 supports multiple types of load balancers through different mechanisms.
 
 .. figure:: ./images/loadBalancer.png
@@ -28,14 +28,14 @@ Virtual (Example: ELB)
 Some cloud providers support service-based load balancing in the from of a virtual load
 balancer. In AWS, this is called an Elastic Load Balancer (ELB). In cloudstack (cloud.com)
 clouds, sometimes this is called a Router Virtual Machine (RVM). If your cloud provider
-has this concept with API support, enStratus can support it.
+has this concept with API support, Enstratius can support it.
 
 If a service is tied to a virtual load balancer, the server upon which that service runs
 will be added to and dropped from the load balancer via api calls. Furthermore, if the
-load balancer is set to balance traffic to a specific zone or zones, enStratus will ensure
+load balancer is set to balance traffic to a specific zone or zones, Enstratius will ensure
 that your application servers only start in those zones.
 
-Load balancing is connected to the deployment at the *service* level with enStratus. An
+Load balancing is connected to the deployment at the *service* level with Enstratius. An
 important point which will be illustrated shortly.
 
 .. note:: It is possible to associate multiple load balancers with a deployment. This
@@ -87,7 +87,7 @@ Load balancer configuration options are:
     data centers (zones) can be specified prior to launch. This setting is non-sensical for
     VM-based load balancing where no such option exists.
 
-There are three types load balancer that can be provisioned within enStratus:
+There are three types load balancer that can be provisioned within Enstratius:
 
 #. **Cloud**
 
@@ -101,7 +101,7 @@ There are three types load balancer that can be provisioned within enStratus:
 #. **VM Dynamic** 
 
    A VM Dynamic load balancer means that at the time of deployment start,
-   enStratus will provision a virtual server from the specified template with the appropriate
+   Enstratius will provision a virtual server from the specified template with the appropriate
    resources, and launch it into the specified fireall. If a VM Dynamic load balancer is
    provisioned, it will benefit from auto-recovery.
 

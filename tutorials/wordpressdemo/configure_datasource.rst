@@ -5,7 +5,7 @@ The Datasource options in actions menu for services allows the application desig
 associate a starting datasource with a database service. On the MySQL service, associate
 the datasource uploaded earlier as shown:
 
-The MySQL service is special, enStratus will execute a routine to install a datasource
+The MySQL service is special, Enstratius will execute a routine to install a datasource
 once the mysql service is configured. On the MySQL service, choose actions > Data Sources
 
 .. figure:: ./images/addDataSource0.png

@@ -3,10 +3,10 @@
 Installation
 ------------
 
-enStratus engineers are working hard to simplify the enStratus cloud management software
+Enstratius engineers are working hard to simplify the Enstratius cloud management software
 process for proof-of-concept environments.
 
-Here is reference material for installing enStratus in a vagrant instance and in single-
+Here is reference material for installing Enstratius in a vagrant instance and in single-
 and two-node configurations.
 
 .. warning:: Installation in a multi-node environment cannot automatically resolve "external" issues

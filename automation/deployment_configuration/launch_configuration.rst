@@ -3,7 +3,7 @@ Launch Configuration
 
 A launch configuration is a definition that governs the resources provisioned to support a
 virtual machine. At one level, this is roughly analogous to the size definitions provided
-for by some clouds, such as in Amazon AWS small, medium, large, etc.  For enStratus a
+for by some clouds, such as in Amazon AWS small, medium, large, etc.  For Enstratius a
 launch configuration includes this definition, but goes beyond to include attaching,
 raiding, and encrypting volumes as well as the firewall into which the server is started.
 
@@ -61,7 +61,7 @@ Manage Launch Configuration, General Information
 
 #. **Recovery Point**
 
-   The recovery point parameter sets the amount of time enStratus will wait to begin a
+   The recovery point parameter sets the amount of time Enstratius will wait to begin a
    recovery event of a failed server. A server is assumed to have failed if the agent is
    unreachable, and the server is un-ping-able, or the server has stopped altogether and is
    no longer being counted in the min/max.
@@ -88,9 +88,9 @@ Manage Launch Configuration, General Information
 
 #. **Snapshot Frequency**
 
-   This parameter sets the frequency with which enStratus automatically performs snapshots of
+   This parameter sets the frequency with which Enstratius automatically performs snapshots of
    the attached volume. It is important to note that although there may be multiple servers
-   running as part of a tier, each with its own volume attached, enStratus will only snapshot
+   running as part of a tier, each with its own volume attached, Enstratius will only snapshot
    one of the volumes.
    
    This highlights an important architectural consideration. Each server running in a tier
@@ -118,7 +118,7 @@ Machine Images
 
 #. **Primary Machine Image**
 
-   The primary machine image specifies the machine image that enStratus will use to start
+   The primary machine image specifies the machine image that Enstratius will use to start
    servers in the tier.
 
 
@@ -131,10 +131,10 @@ Machine Images
 #. **Secondary Machine Image**
 
    The secondary machine image is a machine image of an optionally unique definition that 
-   enStratus will use to launch subsequent servers from the secondary machine image definition.
+   Enstratius will use to launch subsequent servers from the secondary machine image definition.
    
    The most logical implementation for using a secondary machine image is in the case of
-   replicated databases. The primary machine image would be used by enStratus to launch the
+   replicated databases. The primary machine image would be used by Enstratius to launch the
    master database and all subsequent servers would function as slaves using the secondary
    machine image.
 

@@ -49,7 +49,7 @@ Manage Tier, Shell Access
 
 When servers are started as part of ongoing tier operations, Users designated for shell
 access will be granted shell access shortly after the server has registered with the
-enStratus provisioning server.
+Enstratius provisioning server.
 
 The same requirements for shell access in individual servers apply, namely that the
 firewall must be open on the port where SSH is running, and the user must have a public
@@ -78,7 +78,7 @@ Scaling rules are where the parameters that govern the scaling of tier resources
 #. **Maximum Servers**
 
    The maximum servers specification sets the maximum allowable number of servers for a tier.
-   If the demand on the tier is such that additional server resources are required, enStratus
+   If the demand on the tier is such that additional server resources are required, Enstratius
    will scale up to, but not exceed, this value.
 
 .. _scaling_methods:
@@ -87,12 +87,12 @@ Scaling rules are where the parameters that govern the scaling of tier resources
 
 There are three options for scaling rules:
 
-   1. **enStratus** 
+   1. **Enstratius** 
 
-      enStratus scaling options are the ones shown by default. Scaling behavior is
+      Enstratius scaling options are the ones shown by default. Scaling behavior is
       governed by certain "hardware" parameters described here.
    
-      enStratus can govern scaling events by monitoring the CPU load of the servers. The CPU
+      Enstratius can govern scaling events by monitoring the CPU load of the servers. The CPU
       load is equal to: 15-minute load average/# of CPU. For example, if the system has 2 CPU
       and the load average is 0.89, the CPU threshold reading is 0.445*100 = 44.5.
    
@@ -121,8 +121,8 @@ There are three options for scaling rules:
    
    2. **Cloud**
    
-      enStratus can also trigger scaling events based on the properties of the cloud provider.
-      If your cloud provider has mechanisms in place to govern scaling, enStratus will defer to
+      Enstratius can also trigger scaling events based on the properties of the cloud provider.
+      If your cloud provider has mechanisms in place to govern scaling, Enstratius will defer to
       them if the cloud option is selected.
    
    3. **Custom**
@@ -132,12 +132,12 @@ There are three options for scaling rules:
       that meaningful of a concept when working in a multi-tenant cloud environment where actual
       CPU are load shared.
    
-      In short, custom scaling with enStratus means that on an interval of about 30s, enStratus
+      In short, custom scaling with Enstratius means that on an interval of about 30s, Enstratius
       will read the output of a script called /enstratus/bin/scaleCheck. The scaleCheck script
-      that controls scaling behavior signals enStratus to scale up, do nothing, or scale down by
+      that controls scaling behavior signals Enstratius to scale up, do nothing, or scale down by
       returning 1, 0, or -1, respectively.
    
-      A voting mechanism is used by enStratus to determine whether or not to scale the number of
+      A voting mechanism is used by Enstratius to determine whether or not to scale the number of
       servers in a group. Essentially, if the majority of servers in a server group
       "vote" to scale up by returning 1, a new server will be started. If the majority
       of servers in a server group vote to scale down by returning -1, a random server in that
@@ -146,9 +146,9 @@ There are three options for scaling rules:
       Here is an example of a scaleCheck script that was written to provide a mechanism for
       applying a normalization factor to "small" servers running in EC2.
 
-.. note:: In all cases, enStratus manages the actions of initiating the scale. Each
+.. note:: In all cases, Enstratius manages the actions of initiating the scale. Each
    scaling event is a server launch, and all of the orchestration/automation around that
-   launch is controlled using the parameters set in enStratus 
+   launch is controlled using the parameters set in Enstratius 
 
 .. literalinclude:: ./files/scaleCheck
    :language: bash
@@ -169,16 +169,16 @@ Scaling Sensitivity
 
 #. **Breach Increment**
 
-   The breach increment controls the size of the "step" enStratus uses to scale up or
+   The breach increment controls the size of the "step" Enstratius uses to scale up or
    down. If the minimum and maximum number of servers specification is such that there is
-   room to scale, enStratus will do so by the number of servers specified in the breach
+   room to scale, Enstratius will do so by the number of servers specified in the breach
    increment.
 
    For example if the minimum and maximum values are 2 and 10, respectively, and the breach
    increment is 2, if demand requires extra resources, the first scaling action will result
    in 4 servers. The same principle applies to scaling down as it does when scaling up.
 
-.. note:: If enStratus scaling rules are in place, enStratus reads the values presented to it
+.. note:: If Enstratius scaling rules are in place, Enstratius reads the values presented to it
   via a file called /mnt/tmp/stats.properties, that is a product of the
   /enstratus/bin/calculateAgentData script.
 
@@ -260,7 +260,7 @@ Launch
 ~~~~~~
 
    Launch is an option that is reserved for starting services on an already running
-   deployment. On the service, enStratus will call the script called
+   deployment. On the service, Enstratius will call the script called
    /mnt/services/$serviceID/bin/enstratus-start.
 
 .. note::  If the deployment is not running, this action is meaningless.
@@ -278,14 +278,14 @@ Edit
    Service, Edit
 
 Editing a service presents several options. The options presented here control how
-enStratus treats your service and what information is passed to your service when changes
+Enstratius treats your service and what information is passed to your service when changes
 occur.
 
 1. **Backup Frequency**
 
-   The backup frequency setting controls the frequency with which enStratus calls any custom
+   The backup frequency setting controls the frequency with which Enstratius calls any custom
    backup script located in /mnt/services/$serviceID/enstratus/bin/enstratus-backupService.
-   This is a service level backup and enStratus will store the resulting backup file in
+   This is a service level backup and Enstratius will store the resulting backup file in
    cloud storage.
 
 2. **Configuration**
@@ -298,7 +298,7 @@ occur.
 
 3. Run as User
 
-   The run as user controls the user enStratus will use to start the service.
+   The run as user controls the user Enstratius will use to start the service.
 
 4. Service Image
 
@@ -316,23 +316,23 @@ occur.
 
       2. **Load Balanced** 
 
-         This option tells enStratus to notify a load balancer when a scaling
+         This option tells Enstratius to notify a load balancer when a scaling
          event occurs that affects this service.
 
       3. **Replicated Database** 
 
-         This option tells enStratus to treat the first server started in a tier as a master
+         This option tells Enstratius to treat the first server started in a tier as a master
          and all subsequent servers as slaves. Please refer to the MySQL service image for
          more information about this process.
 
       4. **Clustered Database** 
 
-         This option tells enStratus to treat all database servers as peers with no
+         This option tells Enstratius to treat all database servers as peers with no
          master/slave relationship.
 
 6. SSL Certificate
 
-   SSL Certificates may be uploaded to enStratus via the interface at Infrastructure > SSL.
+   SSL Certificates may be uploaded to Enstratius via the interface at Infrastructure > SSL.
 
 .. figure:: ./images/sslCertificate.png
    :height: 600px
@@ -343,7 +343,7 @@ occur.
 
    SSL, Add
 
-If a certificate has been uploaded to enStratus, it will be present as an option and
+If a certificate has been uploaded to Enstratius, it will be present as an option and
 securely passed in to the servers at launch via the /enstratus/bin/configureService script
 and ultimately to the user-defined /mnt/services/$serviceID/bin/enstratus-configure script
 for use in configuring the service.
@@ -380,18 +380,18 @@ Ports
 
    Service, Ports
 
-Adding a service port to a service will configure enStratus to pass in the relevant port
+Adding a service port to a service will configure Enstratius to pass in the relevant port
 information to the service via the enstratus.cfg file. If there is a load balancer
 connected to the deployment, it will appear in the Load Balancers selection window. If a
-load balancer is selected, enStratus will ensure that servers that have this service
+load balancer is selected, Enstratius will ensure that servers that have this service
 installed upon them are connected to the load balancer upon start.
 
 More specifically, if you have virtual machine-based load balancer specified, and an
 application server has a service installed that is connected to the load balancer,
-enStratus will call /enstratus/bin/startProxy on the load balancer after the service is
+Enstratius will call /enstratus/bin/startProxy on the load balancer after the service is
 configured on the application server.
 
-If a cloud based load balancer such as an elastic load balancer (ELB), enStratus will call
+If a cloud based load balancer such as an elastic load balancer (ELB), Enstratius will call
 the correct API command to connect that server to the ELB. The cloud based load balancer
 must be configured beforehand to pass traffic on the correct ports and protocols.
 
@@ -452,7 +452,7 @@ Data Sources
    Data Source, Edit
 
 A data source is tied only to database services. Data sources are database backup files
-such as a datasource.sql file that have been uploaded to enStratus for use in deployments
+such as a datasource.sql file that have been uploaded to Enstratius for use in deployments
 via Automation > Data Sources.
 
 The figure above displays the data source configuration for a MySQL service. The available
@@ -460,7 +460,7 @@ configuration options for data sources and their functions are described here:
 
 #. **Name**
 
-   The name is a logical name for the data source as it will appear in the enStratus console.
+   The name is a logical name for the data source as it will appear in the Enstratius console.
 
 #. **Name in Database**
 
@@ -473,7 +473,7 @@ configuration options for data sources and their functions are described here:
 
 #. **Label**
 
-   An optional color code that will be applied to the service in the enStratus console.
+   An optional color code that will be applied to the service in the Enstratius console.
 
 #. **Service User**
 
@@ -481,10 +481,10 @@ configuration options for data sources and their functions are described here:
 
 #. **Backup Frequency**
 
-   This configuration option specifies the frequency with which enStratus calls the agent
+   This configuration option specifies the frequency with which Enstratius calls the agent
    script called /enstratus/bin/backupService. The function of this script is to call a
    user-configured script called /mnt/services/$serviceID/bin/enstratus-backupDataSource. If
-   this script exists, enStratus will execute it and place the resulting file into cloud
+   this script exists, Enstratius will execute it and place the resulting file into cloud
    storage. If not, this is a nonoperational event.
 
 #. **Service Password**
@@ -526,14 +526,14 @@ source.
 
 Operationally, if there exists a dependency between two services, when there are changes
 that affect either service such as an auto-recovery or an auto-scaling event, the other
-service is notified by enStratus of this environmental change.
+service is notified by Enstratius of this environmental change.
 
 This notification process is conducted using the enstratus.cfg file which is passed to all
 affected services in a tier.
 
 In the figure above, an application service has a dependency on a data source installed on
 a database service. If there is an auto-recovery event on a database server housing the
-data source, the application services that depend on it will be notified when enStratus
+data source, the application services that depend on it will be notified when Enstratius
 passes in a new enstratus.cfg file to each of them.
 
 Similarly, when changes such as an auto-recovery or an auto-scaling event occur on servers
@@ -558,7 +558,7 @@ be acceptable to rely on this mechanism for maintaing the most recent software. 
 your services on the running volumes, and the updates will persist once the next snapshot
 is taken.
 
-This approach is dependent upon the enStratus auto-recovery and scaling procedures. It is
+This approach is dependent upon the Enstratius auto-recovery and scaling procedures. It is
 advisable to also update the service images that are defined for each service in a tier by
 uploading a new service image via Infrastructure > Service Images and then pointing the
 service definition to the newest version.

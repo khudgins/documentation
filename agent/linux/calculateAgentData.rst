@@ -11,7 +11,7 @@ calculateAgentData PROPSFILE
 
 Description
 ~~~~~~~~~~~
-enStratus calls this script periodically to recalculate resource usage on the server. The
+Enstratius calls this script periodically to recalculate resource usage on the server. The
 script prints out a file in the form: property=value
 
 It is expected to output the following properties:
