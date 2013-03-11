@@ -9,6 +9,9 @@
 Enstratius Documentation
 ========================
 
+.. warning:: We're in the process of changing the company name to Enstratius. Path names,
+   screenshots, and other items will be updated incrementally. Thanks for your patience.
+
 Welcome to the Enstratius documentation portal. 
 
 Documentation is divided into six sections, also linked above. 
