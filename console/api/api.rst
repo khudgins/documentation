@@ -10,7 +10,7 @@ authenticated calls against Enstratius from existing applications or third-party
 
 To learn more about the Enstratius API, please :ref:`download <api_downloads>` the API Specifications document.
 
-If you have any questions about our API, please feel free to `contact us. <http://www.enstratius.com/page/1/contact-us.jsp>`_
+If you have any questions about our API, please feel free to `contact us. <http://www.enstratus.com/page/1/contact-us.jsp>`_
 
 .. toctree::
    :maxdepth: 1

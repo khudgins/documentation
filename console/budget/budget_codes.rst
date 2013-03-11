@@ -77,11 +77,11 @@ Soft Quota Exceeded
 
   If you need assistance understanding this message or if you believe this message is the
   result of an issue with Enstratius, please visit our support site at
-  https://support.enstratius.com and login with your standard Enstratius login credentials.
+  https://support.enstratus.com and login with your standard Enstratius login credentials.
 
-  To check on the status of Enstratius itself, visit: http://status.enstratius.com
+  To check on the status of Enstratius itself, visit: http://status.enstratus.com
 
-  Subscribe to live status updates via RSS at http://status.enstratius.com/status.xml or via
+  Subscribe to live status updates via RSS at http://status.enstratus.com/status.xml or via
   Twitter at http://www.twitter.com/EnstratiusStatus.
   An example of the email message that is sent when the hard quota is exceeded is shown
   below:
@@ -102,11 +102,11 @@ Hard Quota Exceeded
 
   If you need assistance understanding this message or if you believe this message is the
   result of an issue with Enstratius, please visit our support site at
-  https://support.enstratius.com and login with your standard Enstratius login credentials.
+  https://support.enstratus.com and login with your standard Enstratius login credentials.
 
-  To check on the status of Enstratius itself, visit: http://status.enstratius.com
+  To check on the status of Enstratius itself, visit: http://status.enstratus.com
 
-  Subscribe to live status updates via RSS at http://status.enstratius.com/status.xml or via
+  Subscribe to live status updates via RSS at http://status.enstratus.com/status.xml or via
   Twitter at http://www.twitter.com/EnstratiusStatus.
   It is important to note that if the hard quota has been breached, Enstratius will not take
   any drastic actions such as deleting infrastructure to bring the run rate below the quota.

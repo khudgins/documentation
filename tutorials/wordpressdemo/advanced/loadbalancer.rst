@@ -4,7 +4,7 @@ Load Balancer
 Load balancers provide a single point of access to applications, in the form of a single DNS name associated to one or multiple IP addresses. The load balancer will distribute incoming requests to active nodes in the Application tier. Enstratius will manage the addition/deletion of nodes to the LB after the start or termination of nodes in that tier.
 
 .. note::
-    Before going further you may want to learn more about `Load Balancer suport in Enstratius <http://docs.enstratius.com/network/load_balancers.html>`_
+    Before going further you may want to learn more about `Load Balancer suport in Enstratius <http://docs.enstratus.com/network/load_balancers.html>`_
 
 Enstratius supports 3 types of Load balancer:
 
@@ -61,7 +61,7 @@ Select the Account/Region and the Cloud type, then pick your newly created LB fr
 
    Add cloud load balancer
    
-Let's go back and review the configuration of the port 80 for the **Wordpress tier** . Remember when we `added the port <http://tutorials.enstratius.com/wordpressdemo/configure_ports.html>`_?. This time our LB will appear in the LB text area, so click on it to select it.
+Let's go back and review the configuration of the port 80 for the **Wordpress tier** . Remember when we `added the port <http://tutorials.enstratus.com/wordpressdemo/configure_ports.html>`_?. This time our LB will appear in the LB text area, so click on it to select it.
 
 .. figure:: ./images/loadbalancer3.png
    :height: 315px

@@ -232,7 +232,7 @@ An example of how to run a backup of databases is shown in this script:
        NOW=$(date +%Y%m%d-%H%M%S)
        echo -n "        Backing up: ${db} at ${NOW}... " >> ${LOGFILE}
        FILE=${DIR}/${db}-${DA}.sql.gpg.gz
-       $MYSQLDUMP --defaults-file=${CONFIG} --single-transaction -u${USER} -p${PASSWORD} $db | $PGP -r enstratusBackup@enstratius.com -e | $GZIP -9 > ${FILE}
+       $MYSQLDUMP --defaults-file=${CONFIG} --single-transaction -u${USER} -p${PASSWORD} $db | $PGP -r enstratusBackup@enstratus.com -e | $GZIP -9 > ${FILE}
        chown enstratus ${FILE}
        chmod 700 ${FILE}
        NOW=$(date +%Y%m%d-%H%M%S)
