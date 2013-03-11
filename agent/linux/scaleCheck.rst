@@ -24,7 +24,7 @@ to determine the need for a scale up or down event:
 * -1 : The tier should scale down
 * 0 : No scaling necessary.
 
-For a lengthier explanation on the auto scaling mechanism in deployment check http://docs.enstratus.com/automation/deployment_configuration/tier.html .
+For a lengthier explanation on the auto scaling mechanism in deployment check http://docs.enstratius.com/automation/deployment_configuration/tier.html .
 
 OPTIONS
 ~~~~~~~

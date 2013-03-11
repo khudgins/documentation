@@ -33,7 +33,7 @@ Example
 ^^^^^^^
 Let's assume that the Enstratius installation is using a 4-server model. The worker and
 dispatcher servers and their associated services can be moved as necessary to a separate network provided the
-communication paths between remain. This principle holds for any of the enstratus components.
+communication paths between remain. This principle holds for any of the enstratius.components.
 
 Enstratius has a very flexible architecture. If you are an administrator of the Enstratius software, you should
 feel free to move components and architect the most appropriate solution for your cloud environment.

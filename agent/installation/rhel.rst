@@ -102,7 +102,7 @@ Where <CLOUD PROVIDER> is a cloud provider of the list below:
 
 Where <ENVIRONMENT> is either:
 
-1. **production** - should be used by SaaS (cloud.enstratus.com) customers
+1. **production** - should be used by SaaS (cloud.enstratius.com) customers
 2. **staging** - should be used by on-premise customers using self-signed_certificates
 
 Verifying Agent Connectivity

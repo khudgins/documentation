@@ -24,9 +24,9 @@ To view the settings for your current endpoint, issue the following commands:
   +------------+-------------------------+
   | address_id | address                 |
   +------------+-------------------------+
-  |          4 | cms.cloud.enstratus.com |
+  |          4 | cms.cloud.enstratius.com|
   |          1 | iaas.endpoint.com       |
-  |          3 | dev.cloud.enstratus.com |
+  |          3 | dev.cloud.enstratius.com|
   +------------+-------------------------+
 
 Unless you know what you are doing, leave the cookie domain for your endpoint as NULL.
@@ -57,9 +57,9 @@ commands:
   +------------+-----------------------------+----------------+
   | address_id | address                     | cookie_domain  |
   +------------+-----------------------------+----------------+
-  |          4 | cms.cloud.enstratus.com     | NULL           |
+  |          4 | cms.cloud.enstratius.com     | NULL          |
   |          1 | cloud.supercorp.com         | NULL           |
-  |          3 | dev.cloud.enstratus.com     | NULL           |
+  |          3 | dev.cloud.enstratius.com     | NULL          |
   +------------+-----------------------------+----------------+
 
 Update enstratus-console.cfg

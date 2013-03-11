@@ -17,7 +17,7 @@ List Cloud Accounts
   public class APIHelper {
     private static final String ACCESS_KEY="<your Access Key>";
     private static final String SECRET_KEY="<your Secret Key>";
-    private static final String API_ENDPOINT="http://api.enstratus.com";
+    private static final String API_ENDPOINT="http://api.enstratius.com";
 
     private static final String DEFAULT_USER_AGENT="testJava"; 
     

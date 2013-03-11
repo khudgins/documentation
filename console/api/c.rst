@@ -28,7 +28,7 @@ C# Examples
 
 
               String urlStub = "/api/enstratus/2011-07-15/";
-              String url = "http://api.enstratus.com"+urlStub+command;
+              String url = "http://api.enstratius.com"+urlStub+command;
 
               String toSign = accessKey + ":GET:" + urlStub + command + ":" + timestamp + ":" + userAgent;
               //Console.WriteLine(toSign);

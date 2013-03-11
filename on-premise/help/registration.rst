@@ -8,7 +8,7 @@ to the url you specified as part of the installation process. For example:
 
 .. code-block:: bash
 
-   https://build.enstratus.com/page/1/register.jsp
+   https://build.enstratius.com/page/1/register.jsp
 
 .. figure:: ./images/register.png
    :height: 700px

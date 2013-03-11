@@ -168,7 +168,7 @@ JDK from Oracle's website. The Enstratius Agent for Windows is dependent on Orac
    :widths: 20 120
 
    * - production
-     - should be used by SaaS (cloud.enstratus.com) customers
+     - should be used by SaaS (cloud.enstratius.com) customers
    * - staging
      - should be used by on-premise customers using self-signed_certificates
 
