@@ -1,4 +1,4 @@
-.. enStratus documentation master file, created by
+.. Enstratius documentation master file, created by
    sphinx-quickstart on Mon Mar 12 21:46:44 2012.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -7,8 +7,8 @@
 On-Premise
 ==========
 
-On-Premise installations of enStratus make sense for many reasons, and, due to the
-flexibility of the enStratus architecture, you can deploy enStratus as a single-node
+On-Premise installations of Enstratius make sense for many reasons, and, due to the
+flexibility of the Enstratius architecture, you can deploy Enstratius as a single-node
 personal development environment, two-node POC, or a fully scaled high-availability cloud
 management solution.
 
@@ -23,9 +23,9 @@ Developers
    :alt: Developers
    :align: center
 
-Setting up a development enStratus environment or a single-node enStratus environment for
+Setting up a development Enstratius environment or a single-node Enstratius environment for
 sales/demonstration purposes just got a whole lot simpler. By leveraging vagrant, you can
-install the full enStratus cloud management software stack in less than 15 minutes,
+install the full Enstratius cloud management software stack in less than 15 minutes,
 depending on your network speed.
 
 
@@ -39,10 +39,10 @@ POC
    :alt: Customers
    :align: center
 
-Installing enStratus cloud management software as part of a POC can be done by leveraging
+Installing Enstratius cloud management software as part of a POC can be done by leveraging
 a configuration management engine like Chef from Opscode.
 
-We'll show you how to install enStratus in a 1 or 2-node architecture.
+We'll show you how to install Enstratius in a 1 or 2-node architecture.
 
 Production
 ----------
@@ -51,10 +51,10 @@ Production
    :height: 588 px
    :width: 931 px
    :scale: 85 %
-   :alt: High-Availability enStratus Architecture
+   :alt: High-Availability Enstratius Architecture
    :align: center
 
-enStratus can also be deployed in a High-Availability production architecture to support
+Enstratius can also be deployed in a High-Availability production architecture to support
 hundreds of users and cloud accounts. 
 
 .. toctree::

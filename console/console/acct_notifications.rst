@@ -25,7 +25,7 @@ You can choose the minimum severity of the alerts you receive and how you want t
 Notification Preferences
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-enStratus allows granular control when it comes to notifications triggered by state change events. You choose a resource type (Any Resource, Server, Firewall, IP Address), a state change type (Create, Update, Delete), and the delivery method(s).
+Enstratius allows granular control when it comes to notifications triggered by state change events. You choose a resource type (Any Resource, Server, Firewall, IP Address), a state change type (Create, Update, Delete), and the delivery method(s).
 
 .. figure:: ./images/notifications_4.png
    :alt: Notification Preferences

@@ -7,10 +7,10 @@ Single Node
    :height: 400px
    :width: 500 px
    :scale: 95 %
-   :alt: enStratus Single Node Architecture
+   :alt: Enstratius Single Node Architecture
    :align: center
 
-   enStratus Single Node Architecture
+   Enstratius Single Node Architecture
 
-In a single node installation, all of the enStratus components shown in the HA
+In a single node installation, all of the Enstratius components shown in the HA
 architecture are combined into a single node.

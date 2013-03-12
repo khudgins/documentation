@@ -3,8 +3,8 @@ Init Scripts
 
 Each service should have installed an associated init script, located in /etc/init.d/
 
-enStratus Init Scripts
-~~~~~~~~~~~~~~~~~~~~~~
+Enstratius Init Scripts
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. tabularcolumns:: |l|l|l|
 

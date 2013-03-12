@@ -44,7 +44,7 @@ DEPENDENCIES
 PERMISSIONS
 ~~~~~~~~~~~
 
-It is launched by the enStratus user. It uses sudo to edit the /etc/default/haproxy configuration file.
+It is launched by the Enstratius user. It uses sudo to edit the /etc/default/haproxy configuration file.
 
 OVERRIDES
 ~~~~~~~~~

@@ -2,7 +2,7 @@ Upload DataSource
 -----------------
 
 Using Automation > Datasource, upload wordpresscontent.tar.gz as datasource files.
-enStratus stores datasource files in cloud files storage and will initiate a download of
+Enstratius stores datasource files in cloud files storage and will initiate a download of
 this file to services that are configured to have datasources.
 
 .. figure:: ./images/dataSourceUpload0.png

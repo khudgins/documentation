@@ -13,11 +13,11 @@ Riak
 Overview
 --------
 
-enStratus depends on the Riak database software and will be transitioning to using Riak
-exclusively for all of the database needs for the enStratus cloud management software.
+Enstratius depends on the Riak database software and will be transitioning to using Riak
+exclusively for all of the database needs for the Enstratius cloud management software.
 
 A discussion of each database is handled in the services sections. The purpose of this
-document is to describe best practices when administering Riak in support of enStratus.
+document is to describe best practices when administering Riak in support of Enstratius.
 
 What is Riak? For more information about Riak, please see:
 
@@ -27,13 +27,13 @@ Installation
 ------------
 
 The best method for installing Riak is to leverage the strengths of the Chef or Puppet
-configuration management platforms. If you're installing enStratus using packages provided
-to you by an enStratus engineer, you're probably using Chef.
+configuration management platforms. If you're installing Enstratius using packages provided
+to you by an Enstratius engineer, you're probably using Chef.
 
 Software Requirements
 ---------------------
 
-Operating system: Any, although enStratus has only been deployed and tested on the Linux
+Operating system: Any, although Enstratius has only been deployed and tested on the Linux
 operating system.
 
 Architecture: x86_64
@@ -49,21 +49,21 @@ HA-Proxy
 ~~~~~~~~
 
 When deploying Riak in a production environment with 3 nodes, it's best practice to place
-the nodes behind a load balancer. enStratus recommends HA-Proxy for ease of deployment and
+the nodes behind a load balancer. Enstratius recommends HA-Proxy for ease of deployment and
 configuration.
 
 Incoming Connections
 --------------------
 
-The Riak service use to support the enStratus cloud management software should allow for
+The Riak service use to support the Enstratius cloud management software should allow for
 connections from the km, dispatcher, monitor, worker, console, API, and cwrkr services.
 
-.. note:: Depending on the version of enStratus deployed, this may not yet be a hard
+.. note:: Depending on the version of Enstratius deployed, this may not yet be a hard
    requirement for you, although for planning purposes and upgrade-ability, please consider
    doing this now.
 
 The networking implications of such a requirement depends on the architecture of your
-enStratus environment the architecture of Riak. 
+Enstratius environment the architecture of Riak. 
 
 Outgoing Connections
 --------------------
@@ -235,8 +235,8 @@ An HA deployment of Riak should be load balanced.
 Installation
 ~~~~~~~~~~~~
 
-enStratus talks to Riak over the HTTP port, however enStratus is not aware of the cluster
-topology. enStratus only talks to a single IP address. For this reason, you should put
+Enstratius talks to Riak over the HTTP port, however Enstratius is not aware of the cluster
+topology. Enstratius only talks to a single IP address. For this reason, you should put
 Riak behind an haproxy loadbalancer. This load balancer can live on a separate server OR
 it can live on EACH host that needs to talk to Riak. The latter option is actually much
 more scalable as it eliminates a single point of failure. The downside is that when you
@@ -325,7 +325,7 @@ The following notes are taken directly from:
 LevelDB Backups
 ~~~~~~~~~~~~~~~
 
-enStratus leverages LevelDB with Riak.
+Enstratius leverages LevelDB with Riak.
 
 LevelDB uses a log-structured file format and can be backed up using a variety of methods
 to facilitate backups. A copy of the leveldb data directory will be all that is needed to

@@ -13,8 +13,8 @@ MySQL
 Overview
 --------
 
-enStratus depends on the MySQL database software. MySQL variants such as percona are also
-acceptable. There are 5 total databases associated with the enStratus cloud management
+Enstratius depends on the MySQL database software. MySQL variants such as percona are also
+acceptable. There are 5 total databases associated with the Enstratius cloud management
 software:
 
 #. credentials
@@ -24,34 +24,34 @@ software:
 #. enstratus_console
 
 A discussion of each database is handled in the services sections. The purpose of this
-document is to describe best practices when administering MySQL in support of enStratus.
+document is to describe best practices when administering MySQL in support of Enstratius.
 
 Installation
 ------------
 
 The best method for installing MySQL is to leverage the strengths of the Chef or Puppet
-configuration management platforms. If you're installing enStratus using packages provided
-to you by an enStratus engineer, you're probably using Chef.
+configuration management platforms. If you're installing Enstratius using packages provided
+to you by an Enstratius engineer, you're probably using Chef.
 
 Software Requirements
 ---------------------
 
-Operating system: Any, although enStratus has only been deployed and tested on the Linux
+Operating system: Any, although Enstratius has only been deployed and tested on the Linux
 operating system.
 
 Architecture: x86_64
 
-Use the latest MySQL packages provided in your repositories. enStratus recommends MySQL
+Use the latest MySQL packages provided in your repositories. Enstratius recommends MySQL
 5.5.
 
 Incoming Connections
 --------------------
 
-The MySQL service use to support the enStratus cloud management software should allow for
+The MySQL service use to support the Enstratius cloud management software should allow for
 connections from the km, dispatcher, monitor, worker, console, API, and cwrkr services.
 The networking implications of such a requirement depends on the architecture of your
-enStratus environment the architecture of MySQL. A summary of the databases and their
-dependent enStratus services is shown here:
+Enstratius environment the architecture of MySQL. A summary of the databases and their
+dependent Enstratius services is shown here:
 
 +-------------------+------------------------------+
 | Database          | Service(s)                   |
@@ -76,7 +76,7 @@ Configuration
 -------------
 
 A default my.cnf file is provided at the time of installation. Additional tuning to MySQL
-can be done at the discretion of the database administrators. enStratus MySQL will benefit
+can be done at the discretion of the database administrators. Enstratius MySQL will benefit
 from using a dedicated MySQL server. Some recommended tuning to the MySQL engine are shown
 here:
 
@@ -118,20 +118,20 @@ Replication
 
 In a high-availability environment, setting my MySQL should be deployed in a master-slave
 configuration. The method for configuring a master-slave environment is beyond the scope
-of this document, but enStratus uses no special tuning parameters in this regard.
+of this document, but Enstratius uses no special tuning parameters in this regard.
 
 Monitoring
 ----------
 
 Monitoring of MySQL can be done via various methods and can integrate into many enterprise
-monitoring systems such as nagios. Production enStratus environments will benefit from
+monitoring systems such as nagios. Production Enstratius environments will benefit from
 utilizing some nagios plugins to monitor connections, slow queries, slave operation,
 master operation, and basic health checks.
 
 Backups
 -------
 
-Methods for running backups on an enStratus MySQL system should not differ greatly from
+Methods for running backups on an Enstratius MySQL system should not differ greatly from
 running backups on any other MySQL system. If a master-slave architecture is used and the
 slave is having no difficulty keeping up with the master, consider running the backups
 against the slave.

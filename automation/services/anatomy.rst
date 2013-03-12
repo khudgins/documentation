@@ -3,7 +3,7 @@ Anatomy
 The anatomy of a service is very free-form. This allows for great flexibility in designing
 or adapting an application for use in a multi-cloud environment.
 
-An enStratus service should have the following structure:
+An Enstratius service should have the following structure:
 
 bin
 ~~~
@@ -14,12 +14,12 @@ Inside the bin/ directory, minimally 3 files:
 #. enstratus-configure
 
 The bin/ directory provides a known path for leveraging the enstratus orchestration and
-automation sections. When a service is deployed enStratus will, using the enStratus agent,
+automation sections. When a service is deployed Enstratius will, using the Enstratius agent,
 trigger events to configure each service in the appropriate order.
 
 cfg
 ~~~
-The cfg directory is a directory where enStratus writes configuration files generated at
+The cfg directory is a directory where Enstratius writes configuration files generated at
 run time with information the application will need to operate in the cloud. This
 directory is a good place for putting configuration file "templates".
 
@@ -30,7 +30,7 @@ directory is a good place for putting configuration file "templates".
 
 And...that's it. Questions? :)
 
-The bin/ and the cfg/ directories are the two primary directories used by the enStratus
+The bin/ and the cfg/ directories are the two primary directories used by the Enstratius
 management system. Beyond that, additional directories can be added to suit the
 application. For example, a third directory might be:
 

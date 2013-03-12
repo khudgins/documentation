@@ -4,25 +4,25 @@ Four Node
 =========
 
 Taking the information provided in the n-node document, we can now begin to describe
-almost any enStratus architecture and craft configuration files to support a configuration
+almost any Enstratius architecture and craft configuration files to support a configuration
 management engine automated installation.
 
-To illustrate, let's construct a four-node installation of enStratus as shown in the
+To illustrate, let's construct a four-node installation of Enstratius as shown in the
 diagram below.
 
 .. figure:: ./images/four_node.png
    :height: 400px
    :width: 600 px
    :scale: 75 %
-   :alt: enStratus Four Node Architecture
+   :alt: Enstratius Four Node Architecture
    :align: center
 
-   enStratus Four Node Architecture
+   Enstratius Four Node Architecture
 
 
 #. Database Node
 
-   The database node will only run the database services required by enStratus, MySQL and
+   The database node will only run the database services required by Enstratius, MySQL and
    Riak.
 
 #. Console Node

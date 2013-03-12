@@ -7,12 +7,12 @@ Two Node
    :height: 335 px
    :width: 555 px
    :scale: 85 %
-   :alt: enStratus Two Node Architecture
+   :alt: Enstratius Two Node Architecture
    :align: center
 
-   enStratus Two Node Architecture
+   Enstratius Two Node Architecture
 
-The two-node enStratus deployment separates the software into so-called backend and
+The two-node Enstratius deployment separates the software into so-called backend and
 frontend components.
 
 +-------------------------------+------------------------------------+
@@ -22,7 +22,7 @@ frontend components.
 +-------------------------------+------------------------------------+
 | Provisioning Database (MySQL) | Console Database (MySQL)           |
 +-------------------------------+------------------------------------+
-| Analytics Database (MySQL)    | enStratus Console Database (MySQL) |
+| Analytics Database (MySQL)    | Enstratius Console Database (MySQL)|
 +-------------------------------+------------------------------------+
 | Workers                       | API                                |
 +-------------------------------+------------------------------------+
@@ -41,7 +41,7 @@ Installation Overview
 ~~~~~~~~~~~~~~~~~~~~~
 
 A chef-solo cookbook wrapped in a command-line utility is provided to facilitate the
-installation of software prerequisites along with installing the enStratus software.
+installation of software prerequisites along with installing the Enstratius software.
 
 Quick Start
 ~~~~~~~~~~~
@@ -49,9 +49,9 @@ Quick Start
 Requirements
 ^^^^^^^^^^^^
 
-#. enStratus license key
-#. enStratus download password
-#. enStratus bootstrap tool
+#. Enstratius license key
+#. Enstratius download password
+#. Enstratius bootstrap tool
 #. A domain name for the installation
 #. IP addresses of both servers
 

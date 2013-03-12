@@ -3,12 +3,12 @@
 Windows
 -------
 
-To install the enStratus agent on a Windows instance, follow the steps below:
+To install the Enstratius agent on a Windows instance, follow the steps below:
 
 Launch an Instance
 ~~~~~~~~~~~~~~~~~~
 
-In the enStratus console, go to Compute > Machine Images. Once you have located the image
+In the Enstratius console, go to Compute > Machine Images. Once you have located the image
 you wish to launch, select Launch from the actions menu.
 
 .. figure:: ./images/2008_1.png
@@ -124,7 +124,7 @@ Install the Agent
 
 
 2. If you don't have JDK installed on the server instance, the installer will show the Prerequisites Wizard to guide you to install 
-JDK from Oracle's website. The enStratus Agent for Windows is dependent on Oracle JDK 7. Please download the suitable version of the JDK and install it.
+JDK from Oracle's website. The Enstratius Agent for Windows is dependent on Oracle JDK 7. Please download the suitable version of the JDK and install it.
 
 .. figure:: ./images/prerequisite_wizard.png
    :height: 429 px
@@ -174,7 +174,7 @@ JDK from Oracle's website. The enStratus Agent for Windows is dependent on Oracl
 
 5. The installer will also check whether you have prerequisite programs such as Powershell community extensions on the server and install them automatically.
 
-6. You will see the agent icon in the enStratus console after completing the installation.
+6. You will see the agent icon in the Enstratius console after completing the installation.
 
 .. figure:: ./images/agentAppears.png
    :height: 223 px
@@ -183,12 +183,12 @@ JDK from Oracle's website. The enStratus Agent for Windows is dependent on Oracl
    :alt: Agent in Console
    :align: center
 
-.. note:: It will take a few minutes for the agent to appear in the enStratus console.
+.. note:: It will take a few minutes for the agent to appear in the Enstratius console.
 
 Confirming the Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Go to your enStratus web console, and open up the Compute > Servers page.
+Go to your Enstratius web console, and open up the Compute > Servers page.
 
 You should now see the _remote access option if the agent has installed properly. Click on it.
 
@@ -210,4 +210,4 @@ Select your account and click save. After a few seconds, the account will show u
    :align: center
 
 
-You can now RDP into the server. The enStratus agent is installed and working normally.
+You can now RDP into the server. The Enstratius agent is installed and working normally.

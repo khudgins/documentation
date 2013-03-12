@@ -13,7 +13,7 @@ Snapshots
 
 Snapshots are the reciprocal of volumes. When a snapshot of a volume is created, a
 differential backup of the devices is created and stored in S3. From this snapshot, a
-clone of the original volume can be created. enStratus leverages this property of
+clone of the original volume can be created. Enstratius leverages this property of
 snapshots when automating application deployments. At the time of this writing, snapshot
 creation is only supported by the Amazon EC2 cloud.
 
@@ -28,7 +28,7 @@ The volume created from the snapshot must be at least the size of the original v
 
 To create a volume from a snapshot, navigate to Infrastructure > Snaphots and select a
 snapshot. Click on the appropriate actions button and choose create_volume. The resulting
-dialog box allows for the customization of several options, including standard enStratus
+dialog box allows for the customization of several options, including standard Enstratius
 options of name, group, and billing code.
 
 The size field will automatically be populated with the size of the original volume, but
@@ -51,19 +51,19 @@ Sharing Snapshots
 ~~~~~~~~~~~~~~~~~
 
 Sometimes it is advantageous to share snapshots to another account for ease of data
-transfer. Sharing snapshots in enStratus is accomplished by selecting the snapshot to
+transfer. Sharing snapshots in Enstratius is accomplished by selecting the snapshot to
 share and clicking on the action button choosing sharing.
 
 A dialog box with two primary options is presented. The first share type is Private.
-Private sharing enables an enStratus user who is a part of several accounts to share
+Private sharing enables an Enstratius user who is a part of several accounts to share
 snapshots between those accounts. The accounts of which the user is a part will populate a
 dropdown window. Once the snapshot is shared, the snapshot will appear in the other
 account.
 
-The second share type is Public. Public sharing enables an enStratus user to add a
+The second share type is Public. Public sharing enables an Enstratius user to add a
 snapshot to the publicly available pool of snapshots. This is an option that carries the
 risk of making publicly available private data, so this action should be restricted using
-enStratus groups and roles.
+Enstratius groups and roles.
 
 Snapshot Strategies
 ~~~~~~~~~~~~~~~~~~~
@@ -72,5 +72,5 @@ Because snapshots are differential backups, the time snapshots take to create va
 on the amount of changed information since the last snapshot was taken. Frequent snapshots
 will generally be created more quickly than infrequent ones.
 
-In an automated environment with enStratus, it is possible to have enStratus automate both
+In an automated environment with Enstratius, it is possible to have Enstratius automate both
 the creation of snapshots and recovery volumes according to a customizable schedule.

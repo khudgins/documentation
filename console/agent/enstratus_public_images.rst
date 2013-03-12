@@ -1,19 +1,19 @@
 .. _enstratus_public_images:
 
-enStratus Public Images
------------------------
+Enstratius Public Images
+------------------------
 
 Below is the list of currently available public images by cloud provider where
 appropriate. Not all cloud providers have public image sharing.
 
-Public images can be searched for within enStratus under the `Compute > Machine Images` menu
+Public images can be searched for within Enstratius under the `Compute > Machine Images` menu
 option.
 
 Using a public image in automation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: Images must be "registered" with the enStratus cloud management platform before
-   they can be used for automation. A registered image will show the enStratus logo in the
+.. note:: Images must be "registered" with the Enstratius cloud management platform before
+   they can be used for automation. A registered image will show the Enstratius logo in the
    Registered column on Compute > Machine Images.
 
    Registration of images is part of a safety mechanism to ensure the agent is installed
@@ -21,14 +21,14 @@ Using a public image in automation
 
    The server should first be launched from the public image first. This behavior will add
    the image to your private `Machine Images` list. Once this is done, you have the option of
-   imaging the server WITHIN enStratus or contacting us to make it registered in your
+   imaging the server WITHIN Enstratius or contacting us to make it registered in your
    account.
 
 If you would like us to add any of our public images to your account, please do the following:
 
-* Launch one of the listed images below from within enStratus
+* Launch one of the listed images below from within Enstratius
 * Once the instance is launched, you may terminate it. Make note of EBS vs. S3 instance store images in AWS.
-* From the `Machine Images` list, open a support ticket with enStratus and provide the following information from the list:
+* From the `Machine Images` list, open a support ticket with Enstratius and provide the following information from the list:
 
   * Name
   * ID
@@ -40,7 +40,7 @@ any delays this causes you in getting started as quickly as possible.
 
 AWS Public Images
 ``````````````````
-All enStratus public images are owned by account `672283631203`. enStratus only provides x86_64/amd64 images.
+All Enstratius public images are owned by account `672283631203`. Enstratius only provides x86_64/amd64 images.
 
 +-----------------+--------------------------------------------------------------------------------+--------------+---------------+-----------------+
 | Region          | Name                                                                           | AMI Id       | OS            | Storage type    |

@@ -12,8 +12,8 @@ simultaneously.
 
 Storage
 ~~~~~~~
-enStratus considers two types of cloud storage: Block and File. File storage is also known
-as object storage. enStratus automation depends heavily on cloud files storage. 
+Enstratius considers two types of cloud storage: Block and File. File storage is also known
+as object storage. Enstratius automation depends heavily on cloud files storage. 
 
 Block storage is sometimes referred to as a "data" disk offering. This type of storage can
 also be quite useful during automation, although it is not required.
@@ -31,11 +31,11 @@ Best Practices
 
 #. IP Addresses. Often, IP addresses change with every newly provisioned instance. A cloudy application will be able to leverage this for scalability.
 #. Storage. Storing data on ephemeral storage is risky, putting application/database data on more persistent data storage is preferable.
-#. Backups. enStratus considers two types of backups: Snapshots and Service. Used in combination, these backups provide a very reliable and customizable solution.
+#. Backups. Enstratius considers two types of backups: Snapshots and Service. Used in combination, these backups provide a very reliable and customizable solution.
 
   * Snapshots: Backups accomplished by taking a snapshot of a data volume. The result of this operation is a snapshot.
   * Services: Backups accomplished by calling a user defined script. The result of this operation is a file, which can be stored in cloud files storage.
 
-#. Disaster Recovery. Disaster recovery for enStratus means storing the files resulting
+#. Disaster Recovery. Disaster recovery for Enstratius means storing the files resulting
    from service backups in a geographically distinct cloud region (EC2 East, West, etc...) or
    a separate cloud altogether. 

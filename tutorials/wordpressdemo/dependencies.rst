@@ -1,12 +1,12 @@
 Set Dependencies
 ----------------
 
-This step is critical. Dependencies let enStratus know how to *orchestrate* the deployment
+This step is critical. Dependencies let Enstratius know how to *orchestrate* the deployment
 launch and service configuration.
 
 For this tutorial, we're going to set a dependency for the wordpress service. It's going
 to depend on the *data source* installed as part of the MySQL service. What this means is
-that at run time, enStratus will ensure:
+that at run time, Enstratius will ensure:
 
 1. The MySQL service is installed and successfully configured
 2. The datasource is successfully installed on the MySQL service.

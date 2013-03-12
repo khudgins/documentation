@@ -3,7 +3,7 @@
 Requirements
 ============
 
-The following sections outline the requirements for installing enStratus cloud management
+The following sections outline the requirements for installing Enstratius cloud management
 software.
 
 .. toctree::

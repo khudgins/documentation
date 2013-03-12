@@ -9,57 +9,57 @@ Prerequisites
 -------------
 
 There are a few prerequisites required for end-to-end automation using Puppet with
-enStratus:
+Enstratius:
 
 * A working PE2.5 Server
-* The enStratus ``espm`` agent installed on the SAME server as PE2.5
+* The Enstratius ``espm`` agent installed on the SAME server as PE2.5
 * Python 2.6 on the PE2.5 server (for ``espm``)
-* A registered image in the cloud with enStratus agent v17 or higher
+* A registered image in the cloud with Enstratius agent v17 or higher
 
 .. _saas_puppet_espm:
 
 ESPM
 ----
 
-Before enStratus can be used with a Puppet Enterprise 2.5 server, it is necessary to have
+Before Enstratius can be used with a Puppet Enterprise 2.5 server, it is necessary to have
 a small agent running on the server.
 
 Why an agent?
 ~~~~~~~~~~~~~
 
 To understand why an agent is needed, it's important to understand a bit about how
-enStratus chooses to interact with CM systems.  One of the primary goals when initially
-adding support for third-party CM systems to enStratus was that enStratus allowed you to
-use your CM system as the "source of truth" about a system's configuration. enStratus is
+Enstratius chooses to interact with CM systems.  One of the primary goals when initially
+adding support for third-party CM systems to Enstratius was that Enstratius allowed you to
+use your CM system as the "source of truth" about a system's configuration. Enstratius is
 largely unopinionated in the matter. While we have our own CM system (ObjectStore), we
 understand that it cannot meet the needs of all users and that asking users to switch to
 OUR configuration management system would be wrong.
 
-Another goal is that you would not be forced to use enStratus to interact with your CM
-system. You should not need to do anything special for enStratus to use your CM system and
-you shouldn't have to jump through hoops to disconnect enStratus from your CM system. The
+Another goal is that you would not be forced to use Enstratius to interact with your CM
+system. You should not need to do anything special for Enstratius to use your CM system and
+you shouldn't have to jump through hoops to disconnect Enstratius from your CM system. The
 nature of CM systems is that they likely aren't just being used for cloud resources via
-enStratus.
+Enstratius.
 
 The final goal is that you should be able to manage the configuration of your systems
 using the tools provided by your CM product.
 
-When we looked at the various approaches for integrating enStratus with Puppet, we had
+When we looked at the various approaches for integrating Enstratius with Puppet, we had
 several choices in front of us:
 
-- Force you to use enStratus as an ENC
-- Integrate enStratus with Hiera
+- Force you to use Enstratius as an ENC
+- Integrate Enstratius with Hiera
 - Use the unstable puppet-dashboard REST API
-- Use the enStratus agent
+- Use the Enstratius agent
 
 The first option was eliminated quickly as it violated all of the goals above. The second
 option would only provide limited integration.  The third option was appealing but due to
 the volatility of the puppet-dashboard HTTP API (and lack of certain functionality), it
 was ruled out.
 
-That leaves us with using the enStratus agent. The problem here is that the enStratus
+That leaves us with using the Enstratius agent. The problem here is that the Enstratius
 agent is designed to work specifically with cloud instances. It is highly likely that
-users would not even have the Puppet Master managed by enStratus. The only remaining
+users would not even have the Puppet Master managed by Enstratius. The only remaining
 option, and one that has been suggested by Puppet Labs, was to create a custom agent with
 very specific set of functionality. That's what ``espm`` is.
 
@@ -95,7 +95,7 @@ CentOS5
 * python26-distribute
 
 
-``espm`` exposes an HTTP interface that enStratus uses to perform the following tasks:
+``espm`` exposes an HTTP interface that Enstratius uses to perform the following tasks:
 
 * List groups and classes
 * Add nodes to the PE2.5 ENC
@@ -105,16 +105,16 @@ CentOS5
 
 ``espm`` will never touch any existing node and you cannot use it to create new classes or
 groups. It can't even list existing nodes. The functionality isn't exposed. The only
-reason ``espm`` exists is so that you can perform automation within enStratus and use
+reason ``espm`` exists is so that you can perform automation within Enstratius and use
 Puppet to configure the systems in the same automated fashion.
 
 ``ESPM`` Installation
 ~~~~~~~~~~~~~~~~~~~~~
 
-Currently ``espm`` is made available on request to enStratus customers. The reason for
+Currently ``espm`` is made available on request to Enstratius customers. The reason for
 this is so that we want to be aware so we can ensure that we provide the best support
 possible during the integration. Requesting ``espm`` is simply a matter of opening a
-support ticket within enStratus.
+support ticket within Enstratius.
 
 Assuming you have the prerequisites for your distro above installed and have extracted
 ``espm`` to ``/usr/src/espm``, you would run:
@@ -136,7 +136,7 @@ Two commands will now be available to you:
 ``espm_setup`` has full help output but the primary options you'll need to worry about are:
 
 * ``-d <some directory>`` This is where the configuration file will be stored
-* ``-c <cert directory`` This is where certificates used by ``espm`` and enStratus will be written
+* ``-c <cert directory`` This is where certificates used by ``espm`` and Enstratius will be written
 
 By default, setup will write a configuration file to ``/opt/espm/etc``, create
 certificates in ``/opt/espm/etc/certs`` and will listen on port 8443. These directories
@@ -179,17 +179,17 @@ will result in:
 
 
 	Please use these values in the appropriate form fields
-	when adding your Puppet account to enStratus
+	when adding your Puppet account to Enstratius
 	        
 	Writing config to: /opt/espm/etc/espm.ini
 
 
-Make note of the PSK and the certificate, you will need to provide these to enStratus. 
+Make note of the PSK and the certificate, you will need to provide these to Enstratius. 
 
 .. warning:: ``espm`` will refuse to overwrite any existing settings or certificates. The
    generated PSK and certificate are unique to each run of ``espm_setup``. If you change
-   these or regenerate them, enStratus will no longer be able to communicate with the agent.
-   You will have to delete and recreate the account in enStratus with the new values.
+   these or regenerate them, Enstratius will no longer be able to communicate with the agent.
+   You will have to delete and recreate the account in Enstratius with the new values.
 
 Starting up
 ~~~~~~~~~~~
@@ -213,7 +213,7 @@ which starts ``espm`` in the foreground
 
 
 We do not provide any sort of init script and logging is done to STDOUT. You are free to
-wrap ``espm`` in the process monitor/init system of your choosing. enStratus will be happy,
+wrap ``espm`` in the process monitor/init system of your choosing. Enstratius will be happy,
 however, to work with you on getting it running with your init system.
 
 Security
@@ -223,21 +223,21 @@ Every attempt has been made to ensure that ``espm`` does not contain any securit
 This is especially important since it has to run as root to interact with the PE2.5 rake
 tasks and puppet commands.
 
-However the only thing that needs to communicate with ``espm`` is enStratus. You are
-welcome to firewall off access to ``espm`` except from the enStratus provisioning system.
+However the only thing that needs to communicate with ``espm`` is Enstratius. You are
+welcome to firewall off access to ``espm`` except from the Enstratius provisioning system.
 We can provide you those IP addresses on request.
 
-The PSK exists to authenticate enStratus to the agent. The certificate exists to ensure
-that enStratus is talking to the correct agent.
+The PSK exists to authenticate Enstratius to the agent. The certificate exists to ensure
+that Enstratius is talking to the correct agent.
 
 
 .. _saas_puppet_console_account:
 
-Adding to enStratus
--------------------
+Adding to Enstratius
+--------------------
 
 Once you've installed ``espm`` and generated the appropriate credentials, you can add that
-to the enStratus console:
+to the Enstratius console:
 
 * Navigate to Configuration Management > Accounts
 
@@ -253,7 +253,7 @@ to the enStratus console:
 
 * Select "Puppet" from the "Configuration Management System" drop-down menu
 * Fill in the fields as described.
-	Note that specifically to enStratus, the following fields are required:
+	Note that specifically to Enstratius, the following fields are required:
    
 	* Budget Codes
 	* Name
@@ -269,14 +269,14 @@ to the enStratus console:
 
 * Click "Save"
  
-At this point, enStratus will now begin discovery of your ``groups`` and ``classes``.
+At this point, Enstratius will now begin discovery of your ``groups`` and ``classes``.
 
 .. _saas_puppet_console_discovery:
 
 Checking the status of discovery
 --------------------------------
 
-Once you've registered your account with enStratus, a background thread will undertake the
+Once you've registered your account with Enstratius, a background thread will undertake the
 task of enumerating the following information from your Puppet server:
 
 * groups
@@ -315,17 +315,17 @@ Asynchronous Discovery
    you expect to see.  As the page says, changes on the Puppet server may not be immediately
    reflected.  Currently there is no way to force a refresh of the discovery process.
 
-Note that the asynchronous nature ONLY affects the ability of enStratus to know what
-objects are available for assignment when launching a server.  enStratus discovers names of groups and classes but not the actual content. If you make a change to the content of an existing group or class that enStratus has discovered, you do not need to wait for enStratus to rediscover that group or class. However if you add a new group or class, it will not be immediately visible in enStratus. The same applies for deleting groups and roles from Puppet.
+Note that the asynchronous nature ONLY affects the ability of Enstratius to know what
+objects are available for assignment when launching a server.  Enstratius discovers names of groups and classes but not the actual content. If you make a change to the content of an existing group or class that Enstratius has discovered, you do not need to wait for Enstratius to rediscover that group or class. However if you add a new group or class, it will not be immediately visible in Enstratius. The same applies for deleting groups and roles from Puppet.
 
 This will become clearer when you launch a server the first time.
 
 .. tip:: When making frequent changes to your modules, it can be difficult to test those
-   especially when creating new groups and they have yet to be discovered by enStratus (and
+   especially when creating new groups and they have yet to be discovered by Enstratius (and
    thus are not visible in the ``Launch`` dialog for new instances). To work around this
    limitation, you can create a few empty test groups with no classes or parameters in them
-   before registering the account with enStratus. Now you can change the contents of those
-   groups at will on the dashboard without enStratus needing to know anything more than they
+   before registering the account with Enstratius. Now you can change the contents of those
+   groups at will on the dashboard without Enstratius needing to know anything more than they
    exist.
 
 
@@ -337,11 +337,11 @@ Prepping an image
 To be able to launch an instance with Puppet (or any CM for that matter), you must meet
 the following criteria:
 
-* Your image has v17 of the enStratus agent
-* Your image shows as "registered" in the enStratus Console under "Machine Images" (has the enStratus logo)
+* Your image has v17 of the Enstratius agent
+* Your image shows as "registered" in the Enstratius Console under "Machine Images" (has the Enstratius logo)
 * Your image has PE2.5 client installed with the appropriate template configuration files
 
-Depending on your cloud provider and other factors (such as region), enStratus may have
+Depending on your cloud provider and other factors (such as region), Enstratius may have
 already made an image publicly available with the agent installed.
 
 .. note:: There is an entire guide dedicated to the enStatus agent, however there are a few bits
@@ -350,24 +350,24 @@ already made an image publicly available with the agent installed.
 Differences from manual provisioning
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Simply put, enStratus does not use SSH to interact with servers. All communication
-(outside of the initial 'phone-home') is driven from enStratus to launched instances via
-the enStratus agent.
+Simply put, Enstratius does not use SSH to interact with servers. All communication
+(outside of the initial 'phone-home') is driven from Enstratius to launched instances via
+the Enstratius agent.
 
-The enStratus agent is a Java application that is built around a series of extensible
+The Enstratius agent is a Java application that is built around a series of extensible
 shell scripts. This has its benefits in that what the agent does, can be customized by the
 user.
 
 In the case of a freshly launched instance, once it has sent its "alive" packet back to
-enStratus provisioning, enStratus will, via the agent, run the following script:
+Enstratius provisioning, Enstratius will, via the agent, run the following script:
 
 ``/enstratus/bin/runConfigurationManagement-PUPPET``
 
-This script will get information passed to it via the enStratus agent about your Puppet
+This script will get information passed to it via the Enstratius agent about your Puppet
 account as well as your pregenerated and signed client certificates. By default, this
 script will perform the following actions:
 
-* Inspect the data passed down from enStratus about the Puppet master. If the value is an
+* Inspect the data passed down from Enstratius about the Puppet master. If the value is an
   IP address, a hosts file entry will be created pointing the names ``puppet`` and
   ``puppetmaster`` to that IP address. This is beneficial when you don't yet have a DNS
   entry pointing to your Puppet server.
@@ -402,7 +402,7 @@ It expects the puppet.conf file to look like so:
        pluginsync = true
 
 Technically the only critical values are the templates for ``ES_NODE_NAME`` and
-``ES_PUPPET_MASTER``. Those will be replaced with the name assigned in the enStratus
+``ES_PUPPET_MASTER``. Those will be replaced with the name assigned in the Enstratius
 console and the host portion of the value you entered for the Puppet URL when adding the
 configuration account. If the host portion was an IP address, this will be set to
 ``puppet`` and, as mentioned previously, a hosts file entry will be created to support
@@ -416,47 +416,47 @@ Finally the puppet client will be run with the following invocation:
 ``sudo puppet agent --onetime --no-daemonize --detailed-exitcodes --logdest=/mnt/tmp/es-puppet-firstrun.log``
 
 .. note:: Detailed exit codes are used due to the fact that the launched instance may be
-   part of an enStratus deployment. The assumption is that if any part of the catalog fails
+   part of an Enstratius deployment. The assumption is that if any part of the catalog fails
    to apply, the system is likely not in a state to serve its purpose. For that reason, any
    exit code of ``4``, ``6`` or ``1`` will be considered a failure to configure.
 
-.. note:: enStratus does not set up any cron jobs or run ``puppet agent`` in daemon mode.
-   This is a site-specific setting and should be managed in your Puppet modules. enStratus is
-   only concerned about the initial bootstrap at this point. enStratus does not currently initiate any
+.. note:: Enstratius does not set up any cron jobs or run ``puppet agent`` in daemon mode.
+   This is a site-specific setting and should be managed in your Puppet modules. Enstratius is
+   only concerned about the initial bootstrap at this point. Enstratius does not currently initiate any
    puppet runs outside of this initial bootstrap except when used in Deployments.
 
-It's worth noting here that enStratus has removed the certificate signing step entirely.
+It's worth noting here that Enstratius has removed the certificate signing step entirely.
 Since we generate and sign the certificates BEFORE we launch the instance, the initial run
 will not be blocked waiting on someone to sign the certificates nor will you have to turn
 on auto-signing or use wildcards.
 
-When terminating a server in enStratus, it will also make a call back to the ``espm``
+When terminating a server in Enstratius, it will also make a call back to the ``espm``
 agent to delete the node from the ENC as well as revoke its certificates.
 
 Customizing the bootstrap
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can customize the ``/enstratus/bin/runConfigurationManagement-PUPPET`` script as
-needed. enStratus ships "opinionated" scripts but you can customize them as you see fit.
-enStratus only tests with the shipped scripts.
+needed. Enstratius ships "opinionated" scripts but you can customize them as you see fit.
+Enstratius only tests with the shipped scripts.
 
 Making an Image available
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As stated, all interaction with instances from enStratus is via the agent. Because of
-this, enStratus needs guarantees that the image can be trusted to have the Agent
+As stated, all interaction with instances from Enstratius is via the agent. Because of
+this, Enstratius needs guarantees that the image can be trusted to have the Agent
 installed.  To this end, there's a process that must be used:
 
-Launch any public or enStratus public machine image
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Launch any public or Enstratius public machine image
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As stated, enStratus has been making updated images available with v17 of the agent
+As stated, Enstratius has been making updated images available with v17 of the agent
 installed. You are also free to install the agent yourself.
 
 Regardless of which image you launch (public, enstratus or preexisting), the image will be
 untrusted. To create a "registered" image, you must image a running server from within
-enStratus. Depending on the cloud provider and the type of imaging (i.e. EBS root vs.
-instance storage), enStratus will perform the imaging process on any running instance that
+Enstratius. Depending on the cloud provider and the type of imaging (i.e. EBS root vs.
+instance storage), Enstratius will perform the imaging process on any running instance that
 it believes has the agent installed. Let's use the following screen shots as a guide:
 
 * Navigate to "Compute" and "Machine Images" from the menu and search for public images
@@ -467,7 +467,7 @@ it believes has the agent installed. Let's use the following screen shots as a g
    :align: center
 
 The image we'll be using for this document is ``ami-bd3c8ad4`` in AWS US-East and is
-called ``enStratus17-Ubuntu1004-64-2012090502``. It is an Ubuntu 10.04 64-bit image. It
+called ``Enstratius17-Ubuntu1004-64-2012090502``. It is an Ubuntu 10.04 64-bit image. It
 also has Chef 0.10 installed from the Opscode "omnibus" installer.
 
 * Launch the image
@@ -520,7 +520,7 @@ As this is an instance store instance, the appropriate ``ec2-bundle-*`` and
 the instance would be paused and the root EBS volume snapshotted.
 
 Once the image process is complete, the image will be eventually available under "Compute"
--> "Machine Images" with the enStratus logo visible next to it:
+-> "Machine Images" with the Enstratius logo visible next to it:
 
 .. figure:: ./images/registered-image.png
    :height: 100 px
@@ -529,7 +529,7 @@ Once the image process is complete, the image will be eventually available under
    :align: center
    :scale: 25%
 
-.. note:: enStratus will add any public image you launch to your own list of machine images.
+.. note:: Enstratius will add any public image you launch to your own list of machine images.
 
 
 .. _saas_puppet_launch:
@@ -544,12 +544,12 @@ Launching an image
 ~~~~~~~~~~~~~~~~~~~
 
 From the Machine Images screen, we're going to launch the image that we just registered
-with enStratus. The steps are similar to the previous launch except that now options are
+with Enstratius. The steps are similar to the previous launch except that now options are
 going to be set on the "Configuration Management" tab.
 
-.. warning:: Please ensure that the image you are launching contains the enStratus logo in
+.. warning:: Please ensure that the image you are launching contains the Enstratius logo in
    the list. Configuration Management (and also advanced automation with Deployments) will
-   **NOT** work without the enStratus agent installed.
+   **NOT** work without the Enstratius agent installed.
 
 You can set any options you'd like but we're going to focus on the "Configuration Management" tab here:
 
@@ -562,18 +562,18 @@ You can see from this screen that the server has been assigned the group (``comp
 * the classes ``motd`` and ``wordpress``
 * some parameters to be used for the wordpress module
 
-This process is no different than what you would normally do with PE 2.5 console. The **ONLY** difference is that the initial agent run is being initiated via the enStratus agent instead of via SSH.
+This process is no different than what you would normally do with PE 2.5 console. The **ONLY** difference is that the initial agent run is being initiated via the Enstratius agent instead of via SSH.
 
-Once you click the "Launch Server" button, enStratus will do the following:
+Once you click the "Launch Server" button, Enstratius will do the following:
 
 * contact the ``espm`` agent and attempt to create the node based on the name you gave it
 * assign the groups, classes and parameters you've selected
 * generate and sign the client certificates
 
-Once this is complete, enStratus will begin the process of making API calls to the cloud provider and then waiting for the instance to "phone home".
-Once the server "phones home", enStratus will make a call back to the agent to begin the configuration process. 
+Once this is complete, Enstratius will begin the process of making API calls to the cloud provider and then waiting for the instance to "phone home".
+Once the server "phones home", Enstratius will make a call back to the agent to begin the configuration process. 
 
-.. tip:: If enStratus gets a conflict on creation of the node, due to its name it will
+.. tip:: If Enstratius gets a conflict on creation of the node, due to its name it will
    take the existing name you specified and append a millisecond timestamp to the name. It
    will then attempt the registration process again.
 
@@ -589,7 +589,7 @@ You can track the progress of this via the "Logs" menu option:
    :alt: Initial logging
    :align: center
 
-As you can see, enStratus is populating the hosts file and copying some other things around that were passed down via the agent.
+As you can see, Enstratius is populating the hosts file and copying some other things around that were passed down via the agent.
 
 This process will take some time depending on the length of your bootstraps. You can use the "Tail" option to watch the agent log.
 When the Puppet run is complete, it will send the full log of the run back to the agent. This is very helpful for debugging any issues in bootstrap:

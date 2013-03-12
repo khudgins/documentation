@@ -15,33 +15,33 @@ Workers
 Overview
 --------
 
-The enStratus worker service consists of two components, a publisher and a subscriber. At a very high level,
+The Enstratius worker service consists of two components, a publisher and a subscriber. At a very high level,
 these components:
 
 1. Publisher
 
-  - The publisher is responsible for pushing actions onto the enStratus message queue.
+  - The publisher is responsible for pushing actions onto the Enstratius message queue.
 
 2. Subscriber
 
   - The subscriber is responsible for taking actions off of the queue and acting accordingly.
 
-The enStratus workers service will eventually assume all of the responsibilities of the
-enStratus monitor service, which will then be deprecated.
+The Enstratius workers service will eventually assume all of the responsibilities of the
+Enstratius monitor service, which will then be deprecated.
 
 This transition is underway, and the workers already are responsible for handling
-several processes that allow the automation and orchestration features of enStratus.
+several processes that allow the automation and orchestration features of Enstratius.
 
-During automated server launches, the enStratus workers service is responsible for
+During automated server launches, the Enstratius workers service is responsible for
 initiating the API call to the cloud provider API for server launch. During standalone
-server launches, this activity is handled by the enStratus dispatcher service.
+server launches, this activity is handled by the Enstratius dispatcher service.
 
 The workers service does not listen for incoming connections.
 
 Installation
 ------------
 
-Installation of the enStratus worker service is best handled by using a configuration
+Installation of the Enstratius worker service is best handled by using a configuration
 management system such as Chef or Puppet.
 
 Software Requirements
@@ -69,10 +69,10 @@ Outgoing Connections
 #. Riak and MySQL
 
    The worker service connects to the Riak and MySQL databases for the purposes of pushing
-   state information. enStratus workers also connect directly to the cloud provider API and
+   state information. Enstratius workers also connect directly to the cloud provider API and
    poll to discover changes. 
    
-   The polling interval for each enStratus worker varies depending on the cloud service
+   The polling interval for each Enstratius worker varies depending on the cloud service
    being monitored. Cloud resources that require up-to-the-minute monitoring, for example
    when firewall changes occur, will be polled more rapidly than less critical resources such as
    changes to budget state.
@@ -116,7 +116,7 @@ Backups
 Service
 ~~~~~~~
 
-The enStratus worker service files should be backed up before and after any changes, and
+The Enstratius worker service files should be backed up before and after any changes, and
 once/day during steady-state operations. Backups should be performed on
 /services/worker.
 
@@ -147,13 +147,13 @@ log directory.
 Databases
 ~~~~~~~~~
 
-The enStratus monitor service depends on the provisioning and analytics databases along
-with the enStratus dispatcher service. Backups of these database are discussed in the
+The Enstratius monitor service depends on the provisioning and analytics databases along
+with the Enstratius dispatcher service. Backups of these database are discussed in the
 
 Configuration Files
 -------------------
 
-The enStratus workers service has 9 configuration files in /services/worker/
+The Enstratius workers service has 9 configuration files in /services/worker/
 
 .. hlist::
    :columns: 3
@@ -181,7 +181,7 @@ Path:
 
   ``/services/worker/resources/dasein-persistence.properties``
 
-This file defines the connection to the dasein persistence layer of enStratus. It also
+This file defines the connection to the dasein persistence layer of Enstratius. It also
 specifies the connection point to the Riak database service.
 
 enstratus-km-client.cfg
@@ -202,7 +202,7 @@ Path:
 
 This file is a general control point for several items, the most important of which is the
 encryption key for encrypting connections to the KM service. This is also where a setting
-called SOURCE_CIDR is made, which specifies IP addresses from which enStratus will make
+called SOURCE_CIDR is made, which specifies IP addresses from which Enstratius will make
 connections to guest VM.
 
 worker.properties

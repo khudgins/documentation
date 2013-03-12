@@ -1,12 +1,12 @@
 User Interface
 --------------
 
-The enStratus automation interface is designed to be intuitive and easy to operate. There
-are several sections of the enStratus console that are relevant to interacting with and
+The Enstratius automation interface is designed to be intuitive and easy to operate. There
+are several sections of the Enstratius console that are relevant to interacting with and
 configuring automation.
 
 The deployment designer interface allows the user to build an application architecture
-using the enStratus web console. 
+using the Enstratius web console. 
 
 Diagram
 ~~~~~~~

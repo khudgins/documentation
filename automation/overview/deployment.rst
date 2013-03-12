@@ -5,12 +5,12 @@ The Deployment
    :height: 600px
    :width: 600 px
    :scale: 75 %
-   :alt: enStratus Deployment
+   :alt: Enstratius Deployment
    :align: center
 
-   enStratus Deployment
+   Enstratius Deployment
 
-An enStratus deployment is a container enStratus uses to manage all of moving parts of an
+An Enstratius deployment is a container Enstratius uses to manage all of moving parts of an
 aribtrarily complex application. The resources running in the deployment are subject to
 the constraints the deployment architect places on it, such as when to scale, when backups
 are run, and what relationships exist between deployment components.

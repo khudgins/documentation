@@ -14,17 +14,17 @@ addUser CUST_ID USER_ID FIRST_NAME LAST_NAME ADMINISTRATOR
 DESCRIPTION
 ~~~~~~~~~~~
 
-It creates a system user for Linux/Unix servers. It can be created as a regular non-privileged user or as an administrative one that can use sudo to gain root privileges . Additionally enStratus copies user's public key to ~/.ssh/authorized_keys to allow secure passwordless authentication.
+It creates a system user for Linux/Unix servers. It can be created as a regular non-privileged user or as an administrative one that can use sudo to gain root privileges . Additionally Enstratius copies user's public key to ~/.ssh/authorized_keys to allow secure passwordless authentication.
 
 
 OPTIONS
 ~~~~~~~
 
 CUST_ID
-	Customer id within enStratus. It is used as the Linux primary group for the new the user.
+	Customer id within Enstratius. It is used as the Linux primary group for the new the user.
 
 USER_ID
-	User name to be created. User Ids in enStratus follow the pattern pXXX, where XXX is a numeric sequence.
+	User name to be created. User Ids in Enstratius follow the pattern pXXX, where XXX is a numeric sequence.
 
 FIRST_NAME
 	First name of the user according to his/her profile
@@ -51,7 +51,7 @@ DEPENDENCIES
 PERMISSIONS
 ~~~~~~~~~~~
 
-It is launched by the enStratus user. It needs sudo authority for creating the user.
+It is launched by the Enstratius user. It needs sudo authority for creating the user.
 
 
 OVERRIDES

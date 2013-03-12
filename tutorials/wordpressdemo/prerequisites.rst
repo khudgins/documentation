@@ -3,7 +3,7 @@ Prerequisites
 
 Users seeking to successfully complete this tutorial must have the following items/skills.
 
-#. A cloud account or cloud accounts connected to enStratus. EC2 is the cloud I will cover
+#. A cloud account or cloud accounts connected to Enstratius. EC2 is the cloud I will cover
    here.
 #. Cloud files (object) storage
 #. Familiarity with SSH.

@@ -45,7 +45,7 @@ DEPENDENCIES
 PERMISSIONS
 ~~~~~~~~~~~
 
-It is launched by the enStratus user. It needs sudo authority for invoking the ec2-upload-bundle command.
+It is launched by the Enstratius user. It needs sudo authority for invoking the ec2-upload-bundle command.
 
 
 OVERRIDES

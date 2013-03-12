@@ -3,12 +3,12 @@
 RHEL / CentOS
 -------------
 
-To install the enStratus agent on a RHEL / CentOS instance, use the following steps:
+To install the Enstratius agent on a RHEL / CentOS instance, use the following steps:
 
 Launch an Instance
 ~~~~~~~~~~~~~~~~~~
 
-In the enStratus console, go to Compute > Machine Images. Once you have located the image you wish to launch, select Launch from the actions menu.
+In the Enstratius console, go to Compute > Machine Images. Once you have located the image you wish to launch, select Launch from the actions menu.
 
 .. figure:: ./images/centos_agent1.png
    :height: 372 px
@@ -65,7 +65,7 @@ Step 2:  Install the agent
 
 The install script allows you to pass the Cloud/Platform to the agent from the command line. 
 
-Example:  If you were going to connect an Amazon VM to the enStratus SaaS, you would use:
+Example:  If you were going to connect an Amazon VM to the Enstratius SaaS, you would use:
 
 .. code-block:: bash
 
@@ -114,7 +114,7 @@ Agent Log:  /enstratus/ws/tomcat/logs/catalina.out
 
 On-premise Logs:  /services/dispatcher/tomcat/logs/catalina.out
 
-The next place is to verify that an icon appears within the enStratus console that shows connectivity.  Then by clicking actions -> logs to verify that the LOGGER functionality is successfully being sent from the VM to the agent and then to the console.
+The next place is to verify that an icon appears within the Enstratius console that shows connectivity.  Then by clicking actions -> logs to verify that the LOGGER functionality is successfully being sent from the VM to the agent and then to the console.
 
 .. figure:: ./images/centos_agent2.png
    :width: 1854 px

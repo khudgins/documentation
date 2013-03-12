@@ -12,10 +12,10 @@ able to download service images from the swift storage endpoint.
    :height: 500px
    :width: 600 px
    :scale: 95 %
-   :alt: Hybrid Storage Using enStratus
+   :alt: Hybrid Storage Using Enstratius
    :align: center
 
-   Hybrid Storage Using enStratus
+   Hybrid Storage Using Enstratius
 
 Assumptions
 ~~~~~~~~~~~
@@ -88,7 +88,7 @@ properly configured swift endpoint looks like this:
 
 Step 2
 ~~~~~~
-Restart the dispatcher service so the enStratus installation knows about this new cloud.
+Restart the dispatcher service so the Enstratius installation knows about this new cloud.
 Create a new account and authenticate to it using the swift credentials.
 
 .. note:: The only capability of this cloud will be "blob_store".
@@ -202,11 +202,11 @@ provisioning.cloud_account table entry for the **swift** cloud account.
 
 Testing
 ~~~~~~~
-Once these steps are completed, the enStratus console should be populated with a
+Once these steps are completed, the Enstratius console should be populated with a
 heretofore absent option in the primary navigation menu called "Platform". Under this menu
 will be one option: files. 
 
-Navigate to Platform > Files in the enStratus console and attempt to provision a storage
+Navigate to Platform > Files in the Enstratius console and attempt to provision a storage
 resource (swift calls them containers, walrus calls the buckets). If the bucket is created
 successfully, you have been successful.
 

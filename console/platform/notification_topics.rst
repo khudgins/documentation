@@ -12,14 +12,14 @@ Notification Topics
 
 |
 
-enStratus supports management of cloud based notification topic web services through the
-enStratus console. Notification topics are often applied to an application and can be used
+Enstratius supports management of cloud based notification topic web services through the
+Enstratius console. Notification topics are often applied to an application and can be used
 to automatically send messages to subscribers or other applications.
 
 Overview
 ~~~~~~~~
 
-enStratus currently supports the creation and management of Amazon Simple Notification
+Enstratius currently supports the creation and management of Amazon Simple Notification
 Service (Amazon SNS). See `Amazon SNS <http://aws.amazon.com/sns>`_ for more information and current pricing.
 
 
@@ -48,9 +48,9 @@ The **Description** field can be a custom description for your topic.
 
 The **Label** field helps you organize your topics by providing a unique color label.
 
-**Budget Code** and **User Group** are the budget code and user group attributes that enStratus
+**Budget Code** and **User Group** are the budget code and user group attributes that Enstratius
 will use to track billing charges and access rights tied to the user management and
-budget code offerings of enStratus.
+budget code offerings of Enstratius.
 
 Upon save your topic will be created and will appear shortly.
 

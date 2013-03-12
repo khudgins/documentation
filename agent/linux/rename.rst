@@ -25,7 +25,7 @@ LOCAL_IP
 INVOCATION
 ~~~~~~~~~~
 
-This script is called automatically on server start to set the hostname, or manually when the server is renamed from the Server List in the enStratus console.
+This script is called automatically on server start to set the hostname, or manually when the server is renamed from the Server List in the Enstratius console.
 
 
 DEPENDENCIES
@@ -36,7 +36,7 @@ sudo
 PERMISSIONS
 ~~~~~~~~~~~
 
-Launched by the enStratus user. Needs sudo authority for updating the hostname.
+Launched by the Enstratius user. Needs sudo authority for updating the hostname.
 
 
 OVERRIDES

@@ -21,11 +21,11 @@ Options
 ~~~~~~~~
 
 SERVICE_ID
-  ID of the service to be installed. It's provided by enStratus. Service images are stored
+  ID of the service to be installed. It's provided by Enstratius. Service images are stored
   in /mnt/services/$SERVICE_ID
 
 CONFIG_FILE
-  Configuration file provided by enStratus. It contains information required to perform 
+  Configuration file provided by Enstratius. It contains information required to perform 
   the installation, such as credentials.
 
 IMAGE_FILE
@@ -40,7 +40,7 @@ installDataSource a123 /mnt/services/a123/cfg/enstratus.cfg /mnt/tmp/123~testds~
 Invocation
 ~~~~~~~~~~
 
-This script is called automatically by enStratus during a deployment start for services with a data source.
+This script is called automatically by Enstratius during a deployment start for services with a data source.
 
 
 Dependencies

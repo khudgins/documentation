@@ -1,16 +1,16 @@
 Load Balancer
 -------------
 
-Load balancers provide a single point of access to applications, in the form of a single DNS name associated to one or multiple IP addresses. The load balancer will distribute incoming requests to active nodes in the Application tier. enStratus will manage the addition/deletion of nodes to the LB after the start or termination of nodes in that tier.
+Load balancers provide a single point of access to applications, in the form of a single DNS name associated to one or multiple IP addresses. The load balancer will distribute incoming requests to active nodes in the Application tier. Enstratius will manage the addition/deletion of nodes to the LB after the start or termination of nodes in that tier.
 
 .. note::
-    Before going further you may want to learn more about `Load Balancer suport in enStratus <http://docs.enstratus.com/network/load_balancers.html>`_
+    Before going further you may want to learn more about `Load Balancer suport in Enstratius <http://docs.enstratus.com/network/load_balancers.html>`_
 
-enStratus supports 3 types of Load balancer:
+Enstratius supports 3 types of Load balancer:
 
 * Cloud load balancers, for those cloud providers that offer a Load Balancer resource, such as AWS ELB
-* Static load balancers, that is, a running server with the enStratus agent and the specialized LB software installed
-* Dynamic load balancers. In this case enStratus will provision a node from a server image when the deployment is started to act as a LB.
+* Static load balancers, that is, a running server with the Enstratius agent and the specialized LB software installed
+* Dynamic load balancers. In this case Enstratius will provision a node from a server image when the deployment is started to act as a LB.
 
 For the sake of simplicity we'll explore the first option, by using an Elastic Load Balancer in the AWS cloud.
 
@@ -72,7 +72,7 @@ Let's go back and review the configuration of the port 80 for the **Wordpress ti
 
    Selecting the LB in the Ports form
 
-You can launch the deployment now or move over the  :doc:`Database replication setup <DBreplication>` first. Once the server(s) in the application tier has been configured enStratus (i.e. the Wordpress service image has been downloaded and the proper configuration files generated) enStratus  will add the node(s) to the Elastic Load Balancer. We can verify it by clicking on the Manage Servers action 
+You can launch the deployment now or move over the  :doc:`Database replication setup <DBreplication>` first. Once the server(s) in the application tier has been configured Enstratius (i.e. the Wordpress service image has been downloaded and the proper configuration files generated) Enstratius  will add the node(s) to the Elastic Load Balancer. We can verify it by clicking on the Manage Servers action 
 
 .. figure:: ./images/loadbalancer4.png
    :height: 329px

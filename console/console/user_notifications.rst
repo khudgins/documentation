@@ -10,7 +10,7 @@ Users can set their notification and alert preferences by selecting My Notificat
    :align: center
 
 
-.. note:: Users have an additional “Screen” delivery mechanism for both their alerts and notifications. The endpoint for Screen notifications is the enStratus console - that is to say, alerts and notifications with the Screen preference ticked will be delivered to the footer of the enStratus console and the Console > Alerts page. See Screen Notifications below for more information.
+.. note:: Users have an additional “Screen” delivery mechanism for both their alerts and notifications. The endpoint for Screen notifications is the Enstratius console - that is to say, alerts and notifications with the Screen preference ticked will be delivered to the footer of the Enstratius console and the Console > Alerts page. See Screen Notifications below for more information.
 
 In the following example, any event on any resource (ANY.ANY) will trigger a Screen notification. FIREWALL.CREATE will trigger an Email notification, SERVER.CREATE will trigger a Topic notification, and FIREWALL.UPDATE, FIREWALL.DELETE, and SERVER.DELETE will trigger SMS notifications.
 
@@ -23,7 +23,7 @@ In the following example, any event on any resource (ANY.ANY) will trigger a Scr
 Screen Notifications
 ~~~~~~~~~~~~~~~~~~~~
 
-Users will see Screen notifications in two places in the enStratus console: in the lower left-hand footer on every page, and at Console > Alerts.
+Users will see Screen notifications in two places in the Enstratius console: in the lower left-hand footer on every page, and at Console > Alerts.
 
 .. figure:: ./images/notifications_8.png
    :alt: Screen Notifications

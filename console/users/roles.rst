@@ -18,17 +18,17 @@ to their group(s). Roles have very granular access control definitions
 which are useful when defining the type and level of access users in a group should have.
 
 Each role contains a customizable collection of access rights. Each access right provides 
-some level of access to a certain element of the enStratus console.
+some level of access to a certain element of the Enstratius console.
 
-The enforcement of these access controls is done through the enStratus console. A user may see a
+The enforcement of these access controls is done through the Enstratius console. A user may see a
 limited set of options when clicking on the actions link for a cloud resource.
 
-In the SaaS version of enStratus this is the method by which enStratus enforces access
+In the SaaS version of Enstratius this is the method by which Enstratius enforces access
 controls.
 
 In an on-premise deployment, customers may choose the option to completely hide cloud
 resources to which a user has no access. Again, this enforcement is done through the 
-enStratus console, except in this case if a user has no access to a cloud resource, the 
+Enstratius console, except in this case if a user has no access to a cloud resource, the 
 resource is not presented to the user.
 
 Adding and Editing Roles
@@ -41,7 +41,7 @@ Adding and Editing Roles
    :alt: Adding a New Role
    :align: center
 
-Creating a new role in enStratus is straight-forward: select the +Add Role link in the upper-right
+Creating a new role in Enstratius is straight-forward: select the +Add Role link in the upper-right
 of the Role List pane; add a logical name and description.
 
 Editing roles is also simple: select actions > Edit and you can change the role's name and
@@ -50,7 +50,7 @@ description.
 Access Rights
 ~~~~~~~~~~~~~
 
-The real power of the enStratus user security approach is unlocked when working with
+The real power of the Enstratius user security approach is unlocked when working with
 Roles' Access Rights.
 
 Select actions > Access Rights to add or edit the access rights for a role:
@@ -64,11 +64,11 @@ Select actions > Access Rights to add or edit the access rights for a role:
 
 |
 
-Definitions of terms used in the enStratus Access Rights dialogue:
+Definitions of terms used in the Enstratius Access Rights dialogue:
 
 **RESOURCE:** 
 
-Every page, link and action in the enStratus console is controlled by at
+Every page, link and action in the Enstratius console is controlled by at
 least one resource. In most cases, resources correspond to pages. For example, access to
 the actions available on the Compute > Machine Images page is controlled by the IMAGE resource and
 access to the actions available on the Compute > Servers page is controlled by the SERVER resource.

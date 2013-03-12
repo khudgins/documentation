@@ -7,8 +7,8 @@ What's in, and what is, a service?
 A service is a file stored in cloud file storage. Services can be tied to tiers and
 connected to each other by a special relationship called a dependency. 
 
-Using enStratus automation, services are downloaded to servers when servers reach a
-running state. The enStratus agent downloads, extracts, and executes a service
+Using Enstratius automation, services are downloaded to servers when servers reach a
+running state. The Enstratius agent downloads, extracts, and executes a service
 configuration routine written by the application designer.
 
 Readers familiar with configuration management services such as Chef should approach
@@ -18,7 +18,7 @@ are configured accoring to their launch configuration.
 Services: Logically
 ~~~~~~~~~~~~~~~~~~~
 
-enStratus makes a logical connection between tiers and services. Services are tied to
+Enstratius makes a logical connection between tiers and services. Services are tied to
 tiers because tiers are able to span across cloud regions, for example a tier that spans
 AWS region US-East and AWS region US-West.
 

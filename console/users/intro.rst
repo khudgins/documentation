@@ -3,11 +3,11 @@
 Introduction
 ------------
 
-User management in enStratus is tightly integrated with enStratus accounts, groups,
+User management in Enstratius is tightly integrated with Enstratius accounts, groups,
 roles, and budget codes. Let's define those terms to provide context for understanding 
 how users work.
 
-#. A **company** is a logical entity in enStratus that contains one or more accounts.
+#. A **company** is a logical entity in Enstratius that contains one or more accounts.
    When the first account is created, a company name is required.
 #. An **account** has a one-to-one relationship with a set of cloud credentials tied
    to a cloud provider.
@@ -33,7 +33,7 @@ rights from the role (or roles) associated with their group (or groups).
 
    Companies and Accounts
 
-In the above example, we have two companies being managed through enStratus and tied to one
+In the above example, we have two companies being managed through Enstratius and tied to one
 or more cloud accounts. Let's take a closer look at each company.
 
 

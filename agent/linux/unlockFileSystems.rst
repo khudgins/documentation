@@ -38,7 +38,7 @@ Dependencies
 Permission
 ~~~~~~~~~~
 
-Run by the enStratus user. It needs sudo to run the xfs_freeze command.
+Run by the Enstratius user. It needs sudo to run the xfs_freeze command.
 
 Overrides
 ~~~~~~~~~

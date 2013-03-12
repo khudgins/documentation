@@ -20,11 +20,11 @@ Options
 ~~~~~~~~
 
 SERVICE_ID
-  ID of the service to be installed. It's provided by enStratus. Service images are stored
+  ID of the service to be installed. It's provided by Enstratius. Service images are stored
   in /mnt/services/$SERVICE_ID
 
 CUST_ID
-	Customer id within enStratus.
+	Customer id within Enstratius.
 
 USER_ID
 	User name that will own service image files.
@@ -41,7 +41,7 @@ installService a123 c100 c200 /mnt/tmp/service-YYYYMMDD~ID.zip
 Invocation
 ~~~~~~~~~~
 
-This script is called automatically by enStratus during the deployment start for services with a service image.
+This script is called automatically by Enstratius during the deployment start for services with a service image.
 
 
 Dependencies

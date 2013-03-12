@@ -10,7 +10,7 @@ Groups
    :alt: Groups
    :align: center
 
-Working with groups in enStratus is straight-forward: create new groups by selecting +Add User Group from the upper right of the Users > Groups pane.
+Working with groups in Enstratius is straight-forward: create new groups by selecting +Add User Group from the upper right of the Users > Groups pane.
 From there you will be prompted for a name and a description, which can both be altered later through the actions > Edit menu. Selecting
 actions > Delete allows you to remove any unwanted groups.
 

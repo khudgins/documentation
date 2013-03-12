@@ -1,7 +1,7 @@
 .. _overview:
 
-enStratus Deployment Overview
-=============================
+Enstratius Deployment Overview
+==============================
 
 .. toctree::
    :maxdepth: 1
@@ -19,6 +19,6 @@ enStratus Deployment Overview
    second_region
    configuration_management
 
-Before embarking on cloud automation using enStratus, let's cover some terminology and
-concepts enStratus uses to automate and orchestrate cloud operations. The purpose of this
-section is to introduce at an academic level the components of an enStratus deployment.
+Before embarking on cloud automation using Enstratius, let's cover some terminology and
+concepts Enstratius uses to automate and orchestrate cloud operations. The purpose of this
+section is to introduce at an academic level the components of an Enstratius deployment.

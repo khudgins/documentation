@@ -4,7 +4,7 @@ terminate
 NAME
 ~~~~
 
-terminate - Stops enStratus agent and installed services.
+terminate - Stops Enstratius agent and installed services.
 
 SYNOPSIS
 ~~~~~~~~
@@ -14,7 +14,7 @@ terminate
 DESCRIPTION
 ~~~~~~~~~~~
 
-Triggers orderly termination of existing services in /mnt/services and the enStratus agent.
+Triggers orderly termination of existing services in /mnt/services and the Enstratius agent.
 
 OPTIONS
 ~~~~~~~
@@ -24,7 +24,7 @@ None.
 INVOCATION
 ~~~~~~~~~~
 
-This script is called when by enStratus before shutting down a server.
+This script is called when by Enstratius before shutting down a server.
 
 
 DEPENDENCIES
@@ -35,7 +35,7 @@ DEPENDENCIES
 PERMISSIONS
 ~~~~~~~~~~~
 
-Launched by the enStratus user. It needs sudo authority for creating the user.
+Launched by the Enstratius user. It needs sudo authority for creating the user.
 
 
 OVERRIDES

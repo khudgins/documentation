@@ -10,14 +10,14 @@ Files
    :alt: Files
    :align: center
 
-enStratus supports cloud file storage via the enStratus console. File storage allows users
+Enstratius supports cloud file storage via the Enstratius console. File storage allows users
 to store and retrieve important data for easy and reliable access.
 
-enStratus supports cloud file storage in Amazon Simple Storage Service (Amazon S3),
+Enstratius supports cloud file storage in Amazon Simple Storage Service (Amazon S3),
 Windows Azure Storage Services, Google Storage, Eucalyptus Walrus, AT&T Synaptic Storage,
 OpenStack Object Storage (Swift), and Rackspace Cloud Files.
 
-To create a new bucket through the enStratus console click on Platform > Files, then click
+To create a new bucket through the Enstratius console click on Platform > Files, then click
 on +Create Root Level Directory.
 
 .. figure:: ./images/createRootDir.png
@@ -35,9 +35,9 @@ The **Name** field is for a custom name to associate with your directory.
 
 The **Label** field helps you organize your directories by providing a unique color label.
 
-**Budget Code** and **User Group** are the budget code and user group attributes that enStratus
+**Budget Code** and **User Group** are the budget code and user group attributes that Enstratius
 will use to track billing charges and access rights tied to the user management and
-budget code offerings of enStratus.
+budget code offerings of Enstratius.
 
 Once the directory is created you can create a hierarchy of directories within the
 root-level directory. Clicking on the actions tab next to the root-level directory will

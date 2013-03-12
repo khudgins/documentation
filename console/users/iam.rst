@@ -3,22 +3,22 @@
 IAM
 ---
 
-enStratus supports the Identity & Access Management (IAM) feature for Amazon and Eucalyptus cloud environments.
-enStratus acts as a nexus through which authoritative user management is coordinated with
-the cloud provider. The integrated IAM feature in enStratus allows an administrator user
+Enstratius supports the Identity & Access Management (IAM) feature for Amazon and Eucalyptus cloud environments.
+Enstratius acts as a nexus through which authoritative user management is coordinated with
+the cloud provider. The integrated IAM feature in Enstratius allows an administrator user
 of an account to securely control access to cloud console and api services and resources
 for users in that particular account. 
 
-Providing Cloud Console Access for enStratus Users
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Providing Cloud Console Access for Enstratius Users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are two kinds of cloud console access an admin enStratus user can grant to users:
+There are two kinds of cloud console access an admin Enstratius user can grant to users:
 
 #. Cloud Console Access (Console Access using password)
 #. API Console Access  (API Access using API keys)
 
 
-.. note:: enStratus does not automatically generate Cloud Console Access and API Console
+.. note:: Enstratius does not automatically generate Cloud Console Access and API Console
    Access when the user is created. In order to provide access, an admin user must manually
    grant access to the user from the user list page. 
 
@@ -46,7 +46,7 @@ user’s access to the cloud provider’s console.
 Cloud Console Access
 ~~~~~~~~~~~~~~~~~~~~
 
-When only Cloud Console Access is checked and the user is saved, enStratus will generate a
+When only Cloud Console Access is checked and the user is saved, Enstratius will generate a
 login password which can be used by that user to login to the cloud provider (e.g. AWS)
 console. 
 
@@ -59,7 +59,7 @@ console.
 
 |
 
-An enStratus user who has been granted Cloud Console Access can check their Cloud Console
+An Enstratius user who has been granted Cloud Console Access can check their Cloud Console
 Password under the ‘Edit My Profile’ page.
 
 .. figure:: ./images/image02.png
@@ -86,20 +86,20 @@ The account administrator should also provide the user with the url shown during
 (The url will take the following form:
  
 https://<12-digit-number>.signin.aws.amazon.com/console/ec2 
-where the 12-digit AWS Account Number can be found in the enStratus console at Account Settings > Amazon Web Services Provider Settings.)
+where the 12-digit AWS Account Number can be found in the Enstratius console at Account Settings > Amazon Web Services Provider Settings.)
 
 For more AWS-specific information, see: 
 
 http://aws.amazon.com/iam/faqs/#How_do_i_know_what_the_link_is
 
-Then the enStratus user will have to provide the proper username,  which is the User ID
-from the User List table in the enStratus console, and the Cloud Console Password, which
-is displayed in the ‘Edit My Profile’ page of the enStratus Console. 
+Then the Enstratius user will have to provide the proper username,  which is the User ID
+from the User List table in the Enstratius console, and the Cloud Console Password, which
+is displayed in the ‘Edit My Profile’ page of the Enstratius Console. 
 
 API Console Access
 ~~~~~~~~~~~~~~~~~~
 
-Similarly when only the API Console Access is checked and the user is saved, enStratus
+Similarly when only the API Console Access is checked and the user is saved, Enstratius
 will generate API keys with the underlying cloud provider. 
 
 .. figure:: ./images/image01.png
@@ -111,7 +111,7 @@ will generate API keys with the underlying cloud provider.
 
 |
 
-An enStratus user who has been granted API Console Access can now find their API access
+An Enstratius user who has been granted API Console Access can now find their API access
 keys under ‘Edit My Profile’ page.
 
 .. figure:: ./images/image00.png
@@ -123,7 +123,7 @@ keys under ‘Edit My Profile’ page.
 
 |
 
-The enStratus user can use these keys to make API calls to the cloud provider.
+The Enstratius user can use these keys to make API calls to the cloud provider.
 
 If both of the boxes in the Edit Cloud Access form are checked, then the user is provided
 with both Cloud API keys and a Cloud Console password, and they are both displayed under
@@ -131,8 +131,8 @@ the ‘Edit My Profile’ page. If both the boxes are unchecked while editing a 
 access then both kinds of access are revoked and credentials are removed from the ‘Edit My
 Profile’ page.
 
-.. note:: Generating a cloud console access password or API access keys for an enStratus user
-   for the first time creates an IAM user with the enStratus User Id as their username in the
+.. note:: Generating a cloud console access password or API access keys for an Enstratius user
+   for the first time creates an IAM user with the Enstratius User Id as their username in the
    cloud provider’s console **but does not attach a user policy to the user**. The user will not
    have any set of permissions associated with it which prevents the user from performing any
    actions in the cloud provider’s console. 
@@ -140,7 +140,7 @@ Profile’ page.
 Adding User Policies
 ~~~~~~~~~~~~~~~~~~~~
 
-In order to provide an IAM user with proper access rights, the admin enStratus user must
+In order to provide an IAM user with proper access rights, the admin Enstratius user must
 log into the cloud provider’s console and manually attach the proper user policy to the
 IAM user.  
 

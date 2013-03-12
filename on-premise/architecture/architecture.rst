@@ -12,11 +12,11 @@ Architecture
 
    Example Architecture
 
-enStratus has a very flexible deployment model. In a high-availability environment,
-enStratus can be deployed on a very scalable and resilient architecture.
-The high-availability architecture is suitable for production deployments of enStratus.
+Enstratius has a very flexible deployment model. In a high-availability environment,
+Enstratius can be deployed on a very scalable and resilient architecture.
+The high-availability architecture is suitable for production deployments of Enstratius.
 
-enStratus software can also be deployed on a single server or in a two-node configuration
+Enstratius software can also be deployed on a single server or in a two-node configuration
 for the purposes of a proof-of-concept environment.
 
 .. toctree::

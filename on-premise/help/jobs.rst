@@ -1,9 +1,9 @@
 .. _enstratus_jobs:
 
-enStratus Jobs
---------------
+Enstratius Jobs
+---------------
 
-enStratus spawns many jobs, the server jobs will sometimes run interminably, here's how to
+Enstratius spawns many jobs, the server jobs will sometimes run interminably, here's how to
 fix that:
 
 You can mark any job as complete (or, more likely, just delete them outright) from the

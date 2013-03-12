@@ -3,7 +3,7 @@
 Console
 =======
 
-This section describes the enStratus web front end, referred to as the enStratus console. 
+This section describes the Enstratius web front end, referred to as the Enstratius console. 
 
 .. figure:: ./images/consoleSplash.png
    :width: 1178 px
@@ -12,8 +12,8 @@ This section describes the enStratus web front end, referred to as the enStratus
    :align: center
 
 .. cut out the following from Purpose:
-.. The purpose of this section is to familiarize the user with the enStratus web front end,
-.. referred to as the enStratus console. Upon completing this objective, the user should be
+.. The purpose of this section is to familiarize the user with the Enstratius web front end,
+.. referred to as the Enstratius console. Upon completing this objective, the user should be
 .. able to identify the major components of the console, as well as feel comfortable
 .. navigating and accomplishing small tasks.
 

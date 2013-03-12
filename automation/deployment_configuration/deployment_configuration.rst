@@ -20,20 +20,20 @@ Deployment Configuration
    difference in all cases should be cosmetic and not affect operations.
 
 The purpose of this section is to walk through the deployment configuration options in
-enStratus. 
+Enstratius. 
 
 In the :ref:`Overview <overview>` section, we covered the concepts
-involved with creating an enStratus deployment.
+involved with creating an Enstratius deployment.
 
 .. note:: 
   Before approaching deployment configuration, you should have in hand the
   following components:
 
-  #. Working machine images/templates with the enStratus agent installed and tested.
+  #. Working machine images/templates with the Enstratius agent installed and tested.
   #. Service images for each application/database to be installed.
 
-enStratus knows about is the environment in which your application/database runs and it
+Enstratius knows about is the environment in which your application/database runs and it
 will inform your services about that environment. 
 
-enStratus gives you all the tools to deploy and manage a fully automated environment.
+Enstratius gives you all the tools to deploy and manage a fully automated environment.
 

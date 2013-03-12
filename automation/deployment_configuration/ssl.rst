@@ -1,7 +1,7 @@
 SSL
 ---
 
-SSL certificates may be uploaded to enStratus where they will be protected via the same
+SSL certificates may be uploaded to Enstratius where they will be protected via the same
 encryption methods as any credentials for the customer account. SSL certificates should
 not be imaged onto servers, rather, they should be installed in an automated on-demand
 fashion at the time of server start.
@@ -9,7 +9,7 @@ fashion at the time of server start.
 Creating
 ~~~~~~~~
 
-Create SSL certificates by any method you desire. enStratus will inform the administrator
+Create SSL certificates by any method you desire. Enstratius will inform the administrator
 via an alert when the SSL cerfiticate is set to expire via a message of the form:
 
 .. literalinclude:: ./files/sslExpire
@@ -17,7 +17,7 @@ via an alert when the SSL cerfiticate is set to expire via a message of the form
 Uploading
 ~~~~~~~~~
 
-To upload your certificate to enStratus, navigate to Infrastructure > SSL Certificates as
+To upload your certificate to Enstratius, navigate to Infrastructure > SSL Certificates as
 shown:
 
 .. figure:: ./images/sslCertificate.png

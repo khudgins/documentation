@@ -1,14 +1,14 @@
 Changing Install URL
 --------------------
 
-To change the root url of your enStratus cloud endpoint, go to the host where the console
+To change the root url of your Enstratius cloud endpoint, go to the host where the console
 databases are installed.
 
 To view the settings for your current endpoint, issue the following commands:
 
 .. code-block:: mysql
 
-  mysql> select application id, main address from application;
+  mysql> select application_id, main_address from application;
 
   +------------------+-------------------+
   | application_id   | main_address      |
@@ -19,7 +19,7 @@ To view the settings for your current endpoint, issue the following commands:
 
 .. code-block:: mysql
 
-  mysql> select address id, address from web address;
+  mysql> select address_id, address from web_address;
 
   +------------+-------------------------+
   | address_id | address                 |
@@ -36,9 +36,11 @@ commands:
 
 .. code-block:: mysql
 
-  mysql> update web address set address='cloud.supercorp.com' where address id=1;
+  mysql> update web_address set address='cloud.supercorp.com' where address id=1;
 
-  mysql> select application id, main address from application;
+  mysql> update application set main_address='cloud.supercorp.com' where application_id=1;
+
+  mysql> select application_id, main_address from application;
 
   +------------------+---------------------+
   | application_id   | main_address        |
@@ -50,7 +52,7 @@ commands:
 
 .. code-block:: mysql
 
-  mysql> select address id, address, cookie domain from web address;
+  mysql> select address_id, address, cookie_domain from web address;
 
   +------------+-----------------------------+----------------+
   | address_id | address                     | cookie_domain  |

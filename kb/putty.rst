@@ -14,7 +14,7 @@ For more information about SSH keypairs, please see the `OpenSSH Documentation <
 Summary
 ~~~~~~~
 
-#. Upload your open-ssh formatted public key into enStratus. 
+#. Upload your open-ssh formatted public key into Enstratius. 
 #. Use your Putty formatted private key in putty.
 
 Using PuTTY to generate keys
@@ -43,7 +43,7 @@ This will take a short amount of time. Once complete, you will see the following
    :align: center
 
 Copy the text shown in the window labeled Public key for pasting into OpenSSH
-authorized_keys file. enStratus will add this key into your authorized_keys file when you
+authorized_keys file. Enstratius will add this key into your authorized_keys file when you
 upload it, which is what we’ll do next.
 
 First, create a text file and paste the key text into it:
@@ -57,16 +57,16 @@ Also, ensure there are no strange line breaks or other strange characters in the
 
 Save the file.
 
-Next, go to the enStratus console and upload your key.
+Next, go to the Enstratius console and upload your key.
 
 .. image:: ./images/putty5.png
    :align: center
 
 Click Save profile. Your key has been uploaded. Next give yourself shell access to the
-instance through enStratus.
+instance through Enstratius.
 
 If you had already upload another key, you will first have to remove your ssh access to
-the instance and then re-enable your access. This is due to the way enStratus handles
+the instance and then re-enable your access. This is due to the way Enstratius handles
 adding users.
 
 Convert existing keypair

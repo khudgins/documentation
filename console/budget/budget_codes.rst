@@ -2,11 +2,11 @@
 
 Budget Codes
 ------------
-enStratus tracks infrastructure costs based on the costs reported by the cloud provider or
-in the case of an on-premise installation of enStratus, against a customizable set of
+Enstratius tracks infrastructure costs based on the costs reported by the cloud provider or
+in the case of an on-premise installation of Enstratius, against a customizable set of
 values.
 
-enStratus calculates costs based on the hourly run rate for usage. Servers, storage, load
+Enstratius calculates costs based on the hourly run rate for usage. Servers, storage, load
 balancers, databases, and IP Addresses are all examples of items that have an associated
 cost in many of the public clouds. The values for each of these items is used to calculate
 a run rate and project costs.
@@ -76,13 +76,13 @@ Soft Quota Exceeded
   the alloted soft run rate for this budget.
 
   If you need assistance understanding this message or if you believe this message is the
-  result of an issue with enStratus, please visit our support site at
-  https://support.enstratus.com and login with your standard enStratus login credentials.
+  result of an issue with Enstratius, please visit our support site at
+  https://support.enstratus.com and login with your standard Enstratius login credentials.
 
-  To check on the status of enStratus itself, visit: http://status.enstratus.com
+  To check on the status of Enstratius itself, visit: http://status.enstratus.com
 
   Subscribe to live status updates via RSS at http://status.enstratus.com/status.xml or via
-  Twitter at http://www.twitter.com/enStratusStatus.
+  Twitter at http://www.twitter.com/EnstratiusStatus.
   An example of the email message that is sent when the hard quota is exceeded is shown
   below:
 
@@ -101,14 +101,14 @@ Hard Quota Exceeded
   spend against the budget.
 
   If you need assistance understanding this message or if you believe this message is the
-  result of an issue with enStratus, please visit our support site at
-  https://support.enstratus.com and login with your standard enStratus login credentials.
+  result of an issue with Enstratius, please visit our support site at
+  https://support.enstratus.com and login with your standard Enstratius login credentials.
 
-  To check on the status of enStratus itself, visit: http://status.enstratus.com
+  To check on the status of Enstratius itself, visit: http://status.enstratus.com
 
   Subscribe to live status updates via RSS at http://status.enstratus.com/status.xml or via
-  Twitter at http://www.twitter.com/enStratusStatus.
-  It is important to note that if the hard quota has been breached, enStratus will not take
+  Twitter at http://www.twitter.com/EnstratiusStatus.
+  It is important to note that if the hard quota has been breached, Enstratius will not take
   any drastic actions such as deleting infrastructure to bring the run rate below the quota.
 
 Users
@@ -146,8 +146,8 @@ and examine the budget code options presented.
    Launch Machine w/Billing Code
 
 
-enStratus hides budget codes that have exceeded their hard quota from use in the
-enStratus console. If a user is only a part of one budget code *and* that code has
+Enstratius hides budget codes that have exceeded their hard quota from use in the
+Enstratius console. If a user is only a part of one budget code *and* that code has
 exceeded its hard quota, that user will be unable to provision any resources.
 
 Creating and Editing Budget Codes

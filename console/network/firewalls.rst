@@ -11,9 +11,9 @@ Firewalls
    :align: center
 
 
-Firewalls in enStratus control access to running servers. Each
+Firewalls in Enstratius control access to running servers. Each
 account has a firewall called 'default' that is the default firewall into which all
-servers are launched. This default configuration includes rules that allow the enStratus monitoring service to 
+servers are launched. This default configuration includes rules that allow the Enstratius monitoring service to 
 connect to running servers.
 
 .. note:: Some cloud providers use the term "security group" to describe this kind of firewall.
@@ -21,7 +21,7 @@ connect to running servers.
 Generally, the process for managing firewalls is to first create the firewall and
 then choose a firewall for new servers to use at launch.
 
-To access firewalls in the enStratus console, navigate to Network > Firewalls. A
+To access firewalls in the Enstratius console, navigate to Network > Firewalls. A
 listing of the active firewalls will be shown. To add a new firewall, click on
 +Create Firewall. Only two pieces of information are required to create a firewall: 
 Name and Budget Code; Network, Label Color, and User Group are all optional fields.
@@ -95,7 +95,7 @@ The following dialogue will appear:
 Network Addresses
 ~~~~~~~~~~~~~~~~~
 
-In enStratus, a Network Address is a user-defined, commonly used network that can be quickly added to a firewall using a
+In Enstratius, a Network Address is a user-defined, commonly used network that can be quickly added to a firewall using a
 common name that maps to the IP address specified. This functionality 
 makes it easy to identify, add, and remove specific firewall rules among
 what may be a long list of rules.
@@ -149,5 +149,5 @@ applied to the resulting server. All of the rules comprising the firewall will b
 applied to the server.
 
 See :ref:`Machine Images <saas_machine_images>` 
-for more about starting images in enStratus).
+for more about starting images in Enstratius).
 

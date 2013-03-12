@@ -3,7 +3,7 @@
 Monitors
 ========
 
-The enStratus monitor service is a Java service installed to /services/monitor. It is
+The Enstratius monitor service is a Java service installed to /services/monitor. It is
 composed of two components: assign and control.
 
 .. figure:: ./images/monitorWorker.png
@@ -18,24 +18,24 @@ composed of two components: assign and control.
 Overview
 --------
 
-The enStratus monitors service is responsible for maintaining an accurate representation
+The Enstratius monitors service is responsible for maintaining an accurate representation
 of cloud state, checking on the completion of jobs initiated by the dispatcher service,
 orchestrating server launches and service installations.
 
-The relationship of the enStratus monitors to the rest of the enStratus cloud management
+The relationship of the Enstratius monitors to the rest of the Enstratius cloud management
 system is shown in the above diagram.
 
 The monitors service does not listen for incoming connections.
 
-The purpose of the monitor system of enStratus is to, well, monitor cloud state and
-accommodate changes that happen both inside of the enStratus cloud management system and
-discover changes that happen outside of enStratus, for example when a user initiates an
+The purpose of the monitor system of Enstratius is to, well, monitor cloud state and
+accommodate changes that happen both inside of the Enstratius cloud management system and
+discover changes that happen outside of Enstratius, for example when a user initiates an
 action in the cloud provider console.
 
 Installation
 ------------
 
-Installation of the enStratus monitor service is best handled by using a configuration
+Installation of the Enstratius monitor service is best handled by using a configuration
 management system such as Chef or Puppet.
 
 Software Requirements
@@ -60,10 +60,10 @@ Outgoing Connections
 #. Riak and MySQL
 
    The monitor service connects to the Riak and MySQL databases for the purposes of pushing
-   state information. enStratus monitors also connect directly to the cloud provider API and
+   state information. Enstratius monitors also connect directly to the cloud provider API and
    poll to discover changes. 
    
-   The polling interval for each enStratus monitor varies depending on the cloud service
+   The polling interval for each Enstratius monitor varies depending on the cloud service
    being monitored. Cloud resources that require up-to-the-minute monitoring, for example
    when servers are started, will be polled more rapidly than less critical resources such as
    the creation of a snapshot, or the deletion of a volume.
@@ -98,7 +98,7 @@ is limited, it is possible to split up the monitors that run on any given machin
 example, you may want to run high-activity monitors like the server or image monitor on a
 separate machine.
 
-The downside of doing this is that it introduces unique server in your deployed enStratus
+The downside of doing this is that it introduces unique server in your deployed Enstratius
 environment and can add management complexity.
 
 It's also possible to run multiple monitor processes on the same server or on multiple
@@ -108,11 +108,11 @@ done for any of the monitor services.
 To adjust what monitors start/stop, simply edit the file
 ``/services/monitor/resources/monitors.cfg`` and remove any monitors that aren't
 appropriate or are perhaps running on another host. For example, if the cloud providers
-you are managing with enStratus do not have a concept of block storage devices, you may
+you are managing with Enstratius do not have a concept of block storage devices, you may
 want to disable the unnecessary volume and snapshot monitors.
 
 Individual monitor processes are not in and of themselves critical. Not having a monitor
-running will result in changes not being picked up and displayed in the enStratus console.
+running will result in changes not being picked up and displayed in the Enstratius console.
 Starting the monitor will cause the monitor to poll and discover any changes that have
 occurred. The monitors are stateless, and can be stopped and started at any time.
 
@@ -134,7 +134,7 @@ Backups
 Service
 ~~~~~~~
 
-The enStratus monitor service files should be backed up before and after any changes, and
+The Enstratius monitor service files should be backed up before and after any changes, and
 once/day during steady-state operations. Backups should be performed on
 /services/monitor.
 
@@ -163,14 +163,14 @@ log directory.
 Databases
 ~~~~~~~~~
 
-The enStratus monitor service depends on the provisioning and analytics databases along
-with the enStratus dispatcher service. Backups of these database are discussed in the
+The Enstratius monitor service depends on the provisioning and analytics databases along
+with the Enstratius dispatcher service. Backups of these database are discussed in the
 dispatcher service section.
 
 Configuration Files
 -------------------
 
-The enStratus monitors service has 7 configuration files in /services/monitor/
+The Enstratius monitors service has 7 configuration files in /services/monitor/
 
 .. hlist::
    :columns: 2
@@ -209,7 +209,7 @@ Path:
 
   ``/services/monitor/resources/dasein-persistence.properties``
 
-This file defines the connection to the dasein persistence layer of enStratus. It also
+This file defines the connection to the dasein persistence layer of Enstratius. It also
 specifies the connection point to the Riak database service.
 
 enstratus-km-client.cfg
@@ -230,7 +230,7 @@ Path:
 
 This file is a general control point for several items, the most important of which is the
 encryption key for encrypting connections to the KM service. This is also where a setting
-called SOURCE_CIDR is made, which specifies IP addresses from which enStratus will make
+called SOURCE_CIDR is made, which specifies IP addresses from which Enstratius will make
 connections to guest VM.
 
 mq.cfg
@@ -249,5 +249,5 @@ Path:
 
   ``/services/monitor/resources/monitors.cfg``
 
-The is file is used to specify which of the enStratus monitors are started during the
+The is file is used to specify which of the Enstratius monitors are started during the
 start process. This file is read by the assign process.

@@ -20,7 +20,7 @@ Creating Volumes
 ~~~~~~~~~~~~~~~~
 
 To create a new volume, navigate to Compute > Volumes. If volumes have been
-previously created either within enStratus or via the cloud provider, they will be listed
+previously created either within Enstratius or via the cloud provider, they will be listed
 in the volumes table. Select +Create Volue and the following dialogue appears:
 
 .. figure:: ./images/createVolume.png
@@ -32,7 +32,7 @@ in the volumes table. Select +Create Volue and the following dialogue appears:
 
 |
 
-The name of the volume will be used within enStratus to reference
+The name of the volume will be used within Enstratius to reference
 the volume. The size of the volume is should be between 1 and 1000 gigabytes (1 Tb).
 
 .. note:: The Zone in which a volume is created is important because volumes may only be attached to servers in the same zone. 
@@ -57,7 +57,7 @@ Attaching Volumes
 
 Volumes and servers must share an availability zone for volume attachment to succeed.
 Volumes are attached as block storage devices and are neither partitioned nor formatted
-when attached. enStratus allows for automated attachment, formatting, and mounting of new
+when attached. Enstratius allows for automated attachment, formatting, and mounting of new
 volumes only when starting a new server.
 
 To attach a volume to a server, select actions > Attach.
@@ -122,4 +122,4 @@ To delete a volume, select actions > Delete in the far-right column of the volum
 A dialog box will prompt you to confirm the action and the volume will be removed
 from the volumes list.
 
-.. note:: Volume storage is often persistent beyond the life of the server to which it was attached. This makes volumes a very useful item for managing data storage in the cloud. In a high-availability failure-tolerant automated environment, enStratus leverages volumes to restore applications to an operational state without data loss.
+.. note:: Volume storage is often persistent beyond the life of the server to which it was attached. This makes volumes a very useful item for managing data storage in the cloud. In a high-availability failure-tolerant automated environment, Enstratius leverages volumes to restore applications to an operational state without data loss.

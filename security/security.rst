@@ -6,7 +6,7 @@ Security
 Cloud Credentials
 -----------------
 
-When the user enters cloud credentials into the enStratus console, those
+When the user enters cloud credentials into the Enstratius console, those
 credentials are passed to the dispatcher via a webservices call. The
 console authenticates this call to the dispatcher using the encryption
 keys generated as part of the installation process. The communication
@@ -43,7 +43,7 @@ The agent then decrypts the credential (again only in memory), uses the
 credential as necessary and then securely deletes the credentials from 
 memory. 
 
-With one exception, enStratus never writes the credentials to disk in clear 
+With one exception, Enstratius never writes the credentials to disk in clear 
 text. In the case of AWS and similar services that require credentials on disk
 to create images (such as non-EBS root instances) the credentials are written
 to disk just long enough for the image to be created.
@@ -51,11 +51,11 @@ to disk just long enough for the image to be created.
 Supported Credentials
 ~~~~~~~~~~~~~~~~~~~~~
 
-In addition to supporting traditional passwords and encryption keys, enStratus
+In addition to supporting traditional passwords and encryption keys, Enstratius
 is also application aware. As such it can securely store configuration files
 for applications such as MySQL, tomcat and apache that can have clear-text
 credentials stored in them. The process is that same as described above
-but instead of passing a password or API key, enStratus decrypts, encrypts 
+but instead of passing a password or API key, Enstratius decrypts, encrypts 
 the entire configuration file, which is then uses to start the appropriate 
-service. This is also how enStratus handles credentials for disk encryption
+service. This is also how Enstratius handles credentials for disk encryption
 or backup encryption.

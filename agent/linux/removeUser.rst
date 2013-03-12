@@ -21,7 +21,7 @@ Options
 ~~~~~~~
 
 USER_ID
-	User name to be removed. User IDs in enStratus follow the pattern pXXX, where XXX is a numeric sequence.
+	User name to be removed. User IDs in Enstratius follow the pattern pXXX, where XXX is a numeric sequence.
 
 
 Invocation
@@ -39,7 +39,7 @@ Dependencies
 Permissions
 ~~~~~~~~~~~
 
-It is called by the enStratus user. It needs sudo authority for deleting the user.
+It is called by the Enstratius user. It needs sudo authority for deleting the user.
 
 
 Overrides

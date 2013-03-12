@@ -14,7 +14,7 @@ backupService SERVICE_ID FILE_PATH
 Description
 ~~~~~~~~~~~
 
-enStratus invokes the script /mnt/services/$SERVICE_ID/bin/enstratus~backupService, if it
+Enstratius invokes the script /mnt/services/$SERVICE_ID/bin/enstratus~backupService, if it
 exists, to backup a service. enstratus-backupService is usually an ad-hoc script meant to
 backup an specific kind of service.
 

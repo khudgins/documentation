@@ -3,7 +3,7 @@ Customizing Cloud Costs
 
 Overview
 ~~~~~~~~
-enStratus allows you to enter customized cost-tracking information for any cloud. To
+Enstratius allows you to enter customized cost-tracking information for any cloud. To
 accomplish this, you will need the following information:
 
 #. The product offerings list of your cloud. This is the list of products that your cloud provider offers. For example: m1.small in a eucalyptus environment.
@@ -23,7 +23,7 @@ Cost Granularity
 | Storage (files) | provisioning.storage_product | hour      |
 +-----------------+------------------------------+-----------+
 
-For server/instance resources, enStratus tracks costs by matching a product offering
+For server/instance resources, Enstratius tracks costs by matching a product offering
 identifier located in the server_product table to a product offering made by a dynamic
 call to the cloud provider.
 
@@ -55,7 +55,7 @@ Adding Server Product Costs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The general form of a server_product table is shown here:
 
-The big picture here is that enStratus is looking for a match to the provisioned server in
+The big picture here is that Enstratius is looking for a match to the provisioned server in
 the product offerings given to us by the cloud provider.
 
 So, for example, if you start an M1 medium server, enstratus will check to see if there is
@@ -125,7 +125,7 @@ Repeat this process for every cloud product offering.
 
 **Notes**
 
-1. To get your cloud_id, first, navigate inside the console to Account Settings > $YOUR_CLOUD Provider Settings. $YOUR_CLOUD is your cloud name, we're going to use that to find the cloud_id. In the figure below, the cloud name is enStratus Production Cloud.
+1. To get your cloud_id, first, navigate inside the console to Account Settings > $YOUR_CLOUD Provider Settings. $YOUR_CLOUD is your cloud name, we're going to use that to find the cloud_id. In the figure below, the cloud name is Enstratius Production Cloud.
 
 .. figure:: ./images/providerSettings.png
    :height: 500px
@@ -140,7 +140,7 @@ With this information, you can issue the following query against the provisionin
 
 .. code-block:: mysql
   
-  select cloud_id from cloud where name like 'enStratus Production Cloud%';
+  select cloud_id from cloud where name like 'Enstratius Production Cloud%';
 
   +----------+
   | cloud_id |
@@ -174,7 +174,7 @@ Repeat this process for every cloud product offering.
 
 Adding Volume Product Costs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The process for adding volume costs is less involved. enStratus tracks volume costs via the volume_product table in the provisioning database.
+The process for adding volume costs is less involved. Enstratius tracks volume costs via the volume_product table in the provisioning database.
 
 .. code-block:: none
 
@@ -201,11 +201,11 @@ As an insert statement (example from Amazon)
 
 Other Currencies
 ~~~~~~~~~~~~~~~~
-One of the strengths of enStratus customized cost tracking is that it can track costs in
+One of the strengths of Enstratius customized cost tracking is that it can track costs in
 many currencies. For example, to track the costs of server product against the Indian
 Rupee, use INR as the value for standard pricing currency.  
 
-If you choose to track in a currency other than USD, enStratus will try to reach out to
+If you choose to track in a currency other than USD, Enstratius will try to reach out to
 the Internet to pull exchange rates. This is not always feasible. To override this, set
 your own exchange rate in the exchange rate table, as shown:
 
@@ -218,8 +218,8 @@ your own exchange rate in the exchange rate table, as shown:
   | 200:USD            | 200      | USD      | 0.01927 |
   +--------------------+----------+----------+---------+
 
-Where 200 is your enStratus customer ID. If tracking costs in a currency other than USD is
-a priority, please contact an enStratus engineer for assistance finding your customer ID.
+Where 200 is your Enstratius customer ID. If tracking costs in a currency other than USD is
+a priority, please contact an Enstratius engineer for assistance finding your customer ID.
 
 **Checking to see if it worked**
 

@@ -76,7 +76,7 @@ Save the key and chmod it
   region, the above script took 3 minutes and 9 seconds.
 
 During this step, some packages necessary for running a typical LAMP stack application
-will be installed, along with the latest enStratus agent. Depending on your connection and
+will be installed, along with the latest Enstratius agent. Depending on your connection and
 mirror speeds, this may take up to 5-7 minutes.
 
 The purpose of this step is to prepare the image for running PHP and MySQL applications,
@@ -84,10 +84,10 @@ not to install the application itself, that comes later durin the launch and orc
 steps of a deployment launch.
 
 Once this step completes, initiate the build of the machine image from within the
-enStratus console.
+Enstratius console.
 
 .. warning:: If the image is not built using the server actions > Make Image menu option
-  in the enStratus console, it will not be available for use in the deployment. This measure
+  in the Enstratius console, it will not be available for use in the deployment. This measure
   is in place to protect users from attempting to use an image that does not have the agent
   on it for automation.
 
@@ -114,4 +114,4 @@ Once this process completes, select action > Make Image from the server's action
 
    Make Image
 
-While the image builds, it's time to upload the service images for use by enStratus.
+While the image builds, it's time to upload the service images for use by Enstratius.

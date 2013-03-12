@@ -5,7 +5,7 @@ The next and final thing to do is to configure virtual resources to use in the d
 By now, the imaged we prepared earlier should be ready for use in the launch
 configuration.
 
-In these steps, we'll tell enStratus what Image to use when starting servers, along with
+In these steps, we'll tell Enstratius what Image to use when starting servers, along with
 what firewall into which the servers will be started.
 
 .. note:: For this tutorial, we'll be using the same image for both launch configurations.

@@ -3,12 +3,12 @@
 Single Node
 -----------
 
-This is the enStratus on-premise install built using Opscode chef-solo
+This is the Enstratius on-premise install built using Opscode chef-solo
 
 .. warning:: 
 
    By default, this repository will work **OUT OF THE BOX** to install a standalone server
-   hosting all the enStratus components.  This is by design as the initial and primary use
+   hosting all the Enstratius components.  This is by design as the initial and primary use
    case is for testing and POC.
 
    This installer **CAN** be used to install multi-node production installs but it
@@ -20,9 +20,9 @@ Quick Start
 Requirements
 ^^^^^^^^^^^^
 
-#. enStratus license key
-#. enStratus download password
-#. enStratus bootstrap tool
+#. Enstratius license key
+#. Enstratius download password
+#. Enstratius bootstrap tool
 #. A domain name for the installation
 
 For the quick start, let's assume:
@@ -43,7 +43,7 @@ should be able to :ref:`register`
 Components
 ~~~~~~~~~~
 
-enStratus software can be installed on a single server, combining all software components:
+Enstratius software can be installed on a single server, combining all software components:
 
 1. Dispatcher
 
@@ -104,7 +104,7 @@ don't use these utilities on a near daily basis, this installer is probably not 
 Extract Chef-Solo Package
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The installation package will be provided to you by an enStratus engineer.
+The installation package will be provided to you by an Enstratius engineer.
 Extract it.
 
 The contents of the directory will be similar to:
@@ -138,9 +138,9 @@ installation. There is a `setup.sh` script provided that will do configuration f
 you. At a minimum, `setup.sh` needs two settings passed to it:
 
 #. Your license key 
-#. Download password for the enStratus software. 
+#. Download password for the Enstratius software. 
 
-These should have been provided to you by enStratus.
+These should have been provided to you by Enstratius.
 
 Optionally, you can specify a `savedir` where you would like to save your settings.
 
@@ -152,8 +152,8 @@ Help output
    Usage: setup.sh [-h] [-e] -p <download password> -l <license key> [-s savename] [-c <console hostname>] 
    [-n <number of nodes>] [-m <mapping string>] [-a <optional sourceCidr string>]
 
-   -p: The password for downloading enStratus
-   -l: The license key for enStratus
+   -p: The password for downloading Enstratius
+   -l: The license key for Enstratius
    
    For most single node installations, specify the download password and license key.
    
