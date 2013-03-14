@@ -6,6 +6,11 @@ Installation
 Enstratius engineers are working hard to simplify the Enstratius cloud management software
 process for proof-of-concept environments.
 
+We've provided some :ref:`OVA files <on_premise_downloads>` that are the same
+configuration as we test with in our own environment. These images are known to work, but
+you should modify the resource requirements as outlined in the :ref:`Resources
+<onpremise_resources>` section.
+
 Here is reference material for installing Enstratius in a vagrant instance and in single-
 and two-node configurations.
 
