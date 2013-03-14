@@ -12,7 +12,15 @@ Downloads
 
 `Ubuntu 12.04.x LTS <http://es-vm.s3.amazonaws.com/Ubuntu-base.ova>`_
 
+username: enstratius
+
+password: enstratius
+
 `Centos 6.x <http://es-vm.s3.amazonaws.com/CentOS-base.ova>`_
+
+username: root
+
+password: enstratius
 
 :ref:`Vagrant <vagrant_install>`
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
