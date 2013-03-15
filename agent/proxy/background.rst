@@ -3,21 +3,21 @@
 Background
 ----------
 
-Without the ability to interact with an enStratus agent on your cloud resources,
-many automation and security features are not supported. The enStratus agent
+Without the ability to interact with an Enstratius agent on your cloud resources,
+many automation and security features are not supported. The Enstratius agent
 proxy is a service installed on a node (or set of nodes) running on a cloud or
-on-premises network that allows enStratus to contact resources that would
+on-premises network that allows Enstratius to contact resources that would
 otherwise be inaccessible.
 
 There are two classes of problems that agent proxies solve:
 
-* The cloud API endpoint is accessible from enStratus but VMs are not.
+* The cloud API endpoint is accessible from Enstratius but VMs are not.
 * One cloud API, multiple VMs assigned the same local IP address.
 
 There are problems agent proxies cannot solve:
 
-* The cloud API endpoint is inaccessible from enStratus.
-* enStratus is inaccessible from the VM instances even through a dedicated proxy.
+* The cloud API endpoint is inaccessible from Enstratius.
+* Enstratius is inaccessible from the VM instances even through a dedicated proxy.
 
 Agent Interactions
 ~~~~~~~~~~~~~~~~~~
@@ -25,30 +25,30 @@ Agent Interactions
 Before discussing the network problems in detail, a quick review of how
 cloud resources with backups and automation normally work:
 
-1. enStratus starts and monitors a new VM via a cloud API.
+1. Enstratius starts and monitors a new VM via a cloud API.
 2. The agent on the new VM instance starts (normally via the init.d mechanism or equivalent).
 3. The agent initiates the handshake process with the configured URL.
-4. The handshake is negotatied between agent and enStratus.
+4. The handshake is negotatied between agent and Enstratius.
    
    * A part of this handshake is especially important to the problems below: some of the information used to recognize a new VM instance trying to handshake are the IP address and cloud-given instance ID that the agent can assert about its host VM.
 
 5. After the handshake is complete, the agent now listens for instructions
-   asynchronously and also periodically reaches out to enStratus of its own
+   asynchronously and also periodically reaches out to Enstratius of its own
    accord. 
 
 .. figure:: ./images/agent-overview.png
    :align: center
 
-These communications to and from the agent are necessary for enStratus to
+These communications to and from the agent are necessary for Enstratius to
 provide advanced automation, backup, user provisioning, logging, and intrusion
 detection capabilities.
 
 Problem: Cloud accessible, VMs inaccessible
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are situations when enStratus can connect to a cloud API but has no route
-to contact the VM's enStratus agent for automation. An example of this case is
-when you want to use enStratus with a private cloud but there is no route to
+There are situations when Enstratius can connect to a cloud API but has no route
+to contact the VM's Enstratius agent for automation. An example of this case is
+when you want to use Enstratius with a private cloud but there is no route to
 the VMs which are on a private, but NAT'd network. As depicted here:
 
 .. figure:: ./images/proxy-problems1.png
@@ -77,35 +77,35 @@ The following diagram shows an example of two VMs with the same local IP:
 
 Consider this situation. When each agent initializes, they have no problem
 contacting the dispatcher to initiate the handshake (the green arrows back to
-enStratus). Two problems arise at that point though:
+Enstratius). Two problems arise at that point though:
  
 1. For private clouds where the agent cannot reflect and report on its VM
 instance ID, only the reported private IP is sent in the handshake and used by
-enStratus for correlation. Since both communications are seen as coming from the
+Enstratius for correlation. Since both communications are seen as coming from the
 same gateway (5.5.5.5), there is nothing to distinguish the two VMs (except
 perhaps where each VM is in their expected lifecycle but this is tenuous).
  
-2. As in a previous example, enStratus has no direct route back to the VMs here.
-But even if there were some channel open, how would enStratus be able to contact
+2. As in a previous example, Enstratius has no direct route back to the VMs here.
+But even if there were some channel open, how would Enstratius be able to contact
 one 10.0.0.2 and not the other 10.0.0.2 without some supporting, topology-aware
 mechanism?
  
 (Note that this is not unique to the public internet case, the same situations
 can occur in multi-network situations for on-premises installs.)
 
-To further complicate things, enStratus may be working against multiple private
+To further complicate things, Enstratius may be working against multiple private
 clouds that are employing the same private address space.
 
 Agent Proxy
 ~~~~~~~~~~~
 
-An enStratus agent is configured to handshake with a certain service endpoint.
+An Enstratius agent is configured to handshake with a certain service endpoint.
 To employ the agent proxy, one change is necessary: point to a new service
 endpoint.
 
-The agent proxy acts like enStratus to the agent: the service signature is
+The agent proxy acts like Enstratius to the agent: the service signature is
 identical. The agent proxy is stateless, however, and simply forwards the
-traffic "upstream" to enStratus. For the opposite direction, enStratus contacts
+traffic "upstream" to Enstratius. For the opposite direction, Enstratius contacts
 the agent proxy as if it was a regular agent interaction - but with some
 metadata about where it should be routed.
 
@@ -118,9 +118,9 @@ The agent proxy:
 
 * is a service you run on a node nearer to the cloud resources in question.
 * has the same service signature that agents normally talk to: agents can not
-  tell the difference between an agent proxy and enStratus proper.
+  tell the difference between an agent proxy and Enstratius proper.
 * requires network access to the cloud resources in question.
-* requires network access to enStratus, but only one ``ip:port`` firewall
+* requires network access to Enstratius, but only one ``ip:port`` firewall
   rule is required in each direction.
 * can be deployed behind a load balancer for high availability and extreme load.
 * does not require any database: it is completely stateless.
@@ -130,16 +130,16 @@ The agent proxy:
 Handshake Implications
 ~~~~~~~~~~~~~~~~~~~~~~
 
-In the normal handshake process, the initial agent to enStratus SSL connection
+In the normal handshake process, the initial agent to Enstratius SSL connection
 (for the 'handshake' operation) provides a token and an encryption key that
 were generated by the agent. Because the SSL channel is itself encrypted, this
-allows enStratus to be confident it is able to encrypt/sign agent calls using
+allows Enstratius to be confident it is able to encrypt/sign agent calls using
 the provided encryption key and it will only be able to be decrypted by the
 original caller (who may be a spoofer themselves, but this scheme at least
 prevents man in the middle attacks).
 
 In the proxy scheme, the handshake operation traverses multiple SSL sessions,
-and therefore enStratus can only be confident it is able to encrypt/sign agent
+and therefore Enstratius can only be confident it is able to encrypt/sign agent
 calls using the provided encryption key and it will only be able to be decrypted
 by the original caller and any agent proxy in between.
 
@@ -150,11 +150,11 @@ If the networks from the VM instances to the agent proxy are very tightly
 locked down, turning off the agent's SSL certificate validation could be an
 option. Otherwise it is recommended that the agent use certificate validation
 during the initiation of the agent proxy SSL session, just as the same is
-recommended for agent to enStratus connections without proxies.
+recommended for agent to Enstratius connections without proxies.
 
 The reverse, however, is not required. The agent proxy does not need to validate
-the SSL certificate of the agent and enStratus does not need to validate the SSL
-certificate of the agent proxy. The same is true of enStratus initiated
+the SSL certificate of the agent and Enstratius does not need to validate the SSL
+certificate of the agent proxy. The same is true of Enstratius initiated
 connections directly to agents without proxies.
 
 This is because communication initiated in this direction uses SSL for wire

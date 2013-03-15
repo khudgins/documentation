@@ -3,7 +3,7 @@
 Registration
 ------------
 
-After an agent proxy is running, enStratus will not recognize agent traffic
+After an agent proxy is running, Enstratius will not recognize agent traffic
 from it until it has been registered.
 
 This guide shows you how to register (and deregister) agent proxies using the
@@ -13,7 +13,7 @@ documentation, in particular you have installed an agent proxy following the
 
 There are two different ways to register agent proxies:
 
-1. Selecting a server because the agent proxy is running on a node that has been detected or launched by enStratus. See `Registering via managed resource`_ below.
+1. Selecting a server because the agent proxy is running on a node that has been detected or launched by Enstratius. See `Registering via managed resource`_ below.
 2. Entering an arbitrary IP:port to handshake with. See `Registering via external resource`_ below.
 
 At the end of this page is also `Deregistering`_ information.
@@ -22,7 +22,7 @@ Registering via managed resource
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use this method if the agent proxy is running on a node that has been detected
-or launched by enStratus.
+or launched by Enstratius.
 
 Navigate to the ``Agent Proxies`` screen:
 
@@ -41,14 +41,14 @@ server.
 
 When you are ready to proceed, click the ``Begin Registration`` button.
 
-enStratus will now contact the agent proxy service. It will call on a special
-operation for handshaking and then the enStratus UI will display the ID that
+Enstratius will now contact the agent proxy service. It will call on a special
+operation for handshaking and then the Enstratius UI will display the ID that
 the agent proxy was configured with (or give you an error such as "connection
 refused").
 
 If this ID is accurate, click ``Confirm`` and the agent proxy will be registered.
 You will now see a status message ``Agent proxy has been associated``. Traffic
-relayed from this proxy will now be accepted by enStratus.
+relayed from this proxy will now be accepted by Enstratius.
 
 You may need to click the ``Reload`` button on the ``Agent Proxies`` screen before
 the new proxy is listed in the table.
@@ -60,7 +60,7 @@ Registering via external resource
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use this method if the agent proxy is running on a node that has not been
-detected or launched by enStratus. Or if the IP:port coordinates are manually
+detected or launched by Enstratius. Or if the IP:port coordinates are manually
 set up (for example, you have manually created a port forwarding rule to a
 private cloud resource).
 
@@ -81,8 +81,8 @@ look like ``4.3.2.1:1234``.
 
 When you are ready to proceed, click the ``Begin Registration`` button.
 
-enStratus will contact the agent proxy service. It will call on a special
-operation for handshaking and then the enStratus UI will display the ID that
+Enstratius will contact the agent proxy service. It will call on a special
+operation for handshaking and then the Enstratius UI will display the ID that
 the agent proxy was configured with (or give you an error such as "connection
 refused").
 
@@ -94,7 +94,7 @@ If this ID and region/network is all accurate, click ``Confirm`` and the agent
 proxy will be registered.
 
 You will now see a status message ``Agent proxy has been associated``. Traffic
-relayed from this proxy will now be accepted by enStratus.
+relayed from this proxy will now be accepted by Enstratius.
 
 You may need to click the ``Reload`` button on the ``Agent Proxies`` screen before
 the new proxy is listed in the table.
@@ -111,10 +111,10 @@ Navigate to the ``Agent Proxies`` screen:
    :align: center
 
 Find the agent proxy in the list that you wish to deactivate. Proxies are listed
-here with their enStratus numeric ID (the ``ID`` column) and the unique ID that
+here with their Enstratius numeric ID (the ``ID`` column) and the unique ID that
 you configured the agentproxy with (the ``Proxy ID`` column). If you registered
 the proxy using an arbitrary IP:port, that will be listed in the ``Address``
-column. If you registered the proxy using a enStratus-managed server, that
+column. If you registered the proxy using a Enstratius-managed server, that
 server ID will be listed in the ``Server`` column.
 
 Once you have decided which agent proxy to deregister, click on ``actions``

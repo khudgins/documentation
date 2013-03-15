@@ -3,10 +3,10 @@
 Agent Proxy
 -----------
 
-Without the ability to interact with an enStratus agent on your cloud resources,
-many automation and security features are not supported. The enStratus agent
+Without the ability to interact with an Enstratius agent on your cloud resources,
+many automation and security features are not supported. The Enstratius agent
 proxy is a service installed on a node (or set of nodes) running on a cloud or
-on-premises network that allows enStratus to contact resources that would
+on-premises network that allows Enstratius to contact resources that would
 otherwise be inaccessible.
 
 If you are new to the agent proxy, see the :ref:`Background

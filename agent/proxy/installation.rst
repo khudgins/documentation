@@ -3,7 +3,7 @@
 Installation
 ------------
 
-Before letting enStratus know about an agent proxy (:ref:`Registration
+Before letting Enstratius know about an agent proxy (:ref:`Registration
 <agent_proxy_registration>`), you must get it running on a node.
 
 The agent proxy is packaged as a war file with all dependencies included. The
@@ -27,8 +27,8 @@ file which is the application, and ``agent-proxy.sh`` which is what you run.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the ``agentproxy.properties`` file, find ``upstreamHostPort``. This is set to
-``provisioning.enstratus.com:3302`` by default which is the enStratus SaaS
-handshake endpoint. If you are working with an alternate enStratus installation,
+``provisioning.enstratus.com:3302`` by default which is the Enstratius SaaS
+handshake endpoint. If you are working with an alternate Enstratius installation,
 use the host:port combination given to you.
 
 Also in this file is ``agentProxyId``. For this configuration, pick a unique ID
@@ -39,7 +39,7 @@ random string is better.
 Also in this file is ``disableUpstreamValidation``. You will want to change this
 to ``true`` for initial setup and testing. If left with its default value
 ``false``, the agent proxy will expect to validate the SSL chain of the upstream
-enStratus installation when it relays agent handshakes. During setup and
+Enstratius installation when it relays agent handshakes. During setup and
 testing, you should remove this security barrier to make sure everything else is
 working first.
 
@@ -97,17 +97,17 @@ to be in the agent proxy directory for it to run.
 
     ./agent-proxy.sh
 
-5. Register the agent with enStratus
+5. Register the agent with Enstratius
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Instructions to register the agent with enStratus are in the
+Instructions to register the agent with Enstratius are in the
 :ref:`Registration <agent_proxy_registration>` section.
 
 6. Test the agent proxy
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The enStratus :ref:`agent <agent>` now needs to be configured to handshake via
-this server instead of the enStratus installation. To reconfigure it, find this
+The Enstratius :ref:`agent <agent>` now needs to be configured to handshake via
+this server instead of the Enstratius installation. To reconfigure it, find this
 file on the VM:
 
 .. code-block:: text
@@ -126,9 +126,9 @@ not commented out). For example:
 
 Now you will need to make a new machine image. When it is launched, this IP:port
 combination will be used to handshake, not the default address. The agent does
-not realize it is talking to an agent proxy and not enStratus proper.
+not realize it is talking to an agent proxy and not Enstratius proper.
 
 To test that everything is communicating, look at the logging (testing
-communication from the VM to enStratus) and then try to add a user to the VM
+communication from the VM to Enstratius) and then try to add a user to the VM
 (testing the opposite direction).
 

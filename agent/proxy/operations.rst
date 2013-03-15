@@ -17,7 +17,7 @@ Configurations
 
 The agent proxy requires configuration as part of the installation process.
 
-In particular the **upstream enStratus URL**, a **unique ID** string, and
+In particular the **upstream Enstratius URL**, a **unique ID** string, and
 an **SSL certificate** need to be set correctly on a per-deployment basis.
 
 An assistance script is provided for quick creation of self-signed certificates.
@@ -32,8 +32,8 @@ documentation.
 Registration
 ~~~~~~~~~~~~
 
-Once started, the proxy needs to be registered in the enStratus application. If
-the server it is running on is already detected/managed by enStratus, there is a
+Once started, the proxy needs to be registered in the Enstratius application. If
+the server it is running on is already detected/managed by Enstratius, there is a
 simple UI action to register it as a proxy (it assumes port 2002). Otherwise,
 you will need to enter the appropriate host:port into a dialogue to register.
 There is also REST API support for registration (and deregistration).
@@ -44,7 +44,7 @@ Registration requires the proxy to be running, there is an initial handshake
 that occurs. The proxy may be restarted at will after this: if it misses a
 message, there will potentially be some automation slowdown but the message will
 be repeated in time (this is very similar to an agent being out of contact due
-to a cloud network issue - the agent and enStratus are resilient to this).
+to a cloud network issue - the agent and Enstratius are resilient to this).
 
 Load Balancing
 ~~~~~~~~~~~~~~
@@ -60,8 +60,8 @@ Networks/Forwarding
 
 By default, the Agent Proxy accepts traffic on port 2002. The following diagram
 outlines a typical firewall/port-forwarding scheme to enable the agent proxy
-running at a site with an offsite enStratus (for on-premises installations this
-is analogous to enStratus being installed on a separate site network from IaaS,
+running at a site with an offsite Enstratius (for on-premises installations this
+is analogous to Enstratius being installed on a separate site network from IaaS,
 as is common):
 
 .. figure:: ./images/proxy-overview2.png
@@ -80,16 +80,16 @@ forwarding traffic to ``10.1.2.3``, port ``2002``:
    :align: center
 
 In this situation, the VM instances only need to contact ``10.1.2.3``, port
-``2002``, not the enStratus application running on the public internet (in the
+``2002``, not the Enstratius application running on the public internet (in the
 case of an on-premises deployment, this is analagous to whatever custom site
-network enStratus runs on).
+network Enstratius runs on).
 
 The agent proxy needs to be able to contact the VM instances at will (either
 by virtue of being on the same subnet or by the proper routing configurations).
 
-enStratus needs to be able to reach ``4.3.2.1``, port ``2002`` in this example.
+Enstratius needs to be able to reach ``4.3.2.1``, port ``2002`` in this example.
 
-And the agent proxy needs to be able to reach enStratus at ``8.7.6.5``,
+And the agent proxy needs to be able to reach Enstratius at ``8.7.6.5``,
 port ``3302``.
 
 Limiting Access
@@ -100,7 +100,7 @@ traffic from valid source IP ranges**.
 
 For example, using the setup and addresses in the last section, the firewall
 rule that forwards ``4.3.2.1:2002`` to ``10.1.2.3:2002`` should be enhanced to
-only forward traffic from enStratus source IPs.
+only forward traffic from Enstratius source IPs.
 
 The acceptable ranges include any source IPs that dispatcher, monitor, or
 worker traffic appears from. This is especially important in the case where this
