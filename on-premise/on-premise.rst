@@ -12,6 +12,9 @@ flexibility of the Enstratius architecture, you can deploy Enstratius as a singl
 personal development environment, two-node POC, or a fully scaled high-availability cloud
 management solution.
 
+For supported OS/Distributions, please visit the :ref:`Reference Architecture
+<reference_architecture>` page for some examples and recommendations.
+
 
 Developers
 ----------
@@ -67,3 +70,4 @@ hundreds of users and cloud accounts.
    installation/installation
    administration/administration
    help/help
+   downloads

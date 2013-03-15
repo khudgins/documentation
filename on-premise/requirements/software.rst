@@ -13,16 +13,9 @@ management installation service provided by Enstratius.
 Operating System
 ~~~~~~~~~~~~~~~~
 
-Enstratius installation requires the Linux operating system. Supported distributions
-include:
+Enstratius installation requires the Linux operating system. 
 
-* Ubuntu 10.04, 12.04 LTS
-* Centos 6
-* Red Hat Enterprise Linux 6
-
-Recommended distribution is Ubuntu 12.04 LTS. 
-
-Required CPU architecture is x86_64
+See the :ref:`Resources <onpremise_resources>` page for more information.
 
 Riak
 ~~~~
