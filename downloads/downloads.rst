@@ -40,6 +40,15 @@ Tarballs
 
 `Fedora <http://es-download.s3.amazonaws.com/enstratus-agent-fedora-latest.tar.gz>`_
 
+Agent Proxy
+~~~~~~~~~~~
+
+.. csv-table:: 
+   :header: "Download","SHA256"
+   :widths: 10, 10
+
+   `Agent Proxy <http://es-download.s3.amazonaws.com/es-agentproxy.tar.gz>`_,931ef7eafc73ebf2ba83fc19e339da280184af12da7ddeb55ae47585b41c9bac
+
 .. _whitepaper_downloads:
 
 Whitepapers
