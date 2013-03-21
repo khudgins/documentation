@@ -15,6 +15,15 @@ As root:
 
    curl -L http://es-download.s3.amazonaws.com/install.sh | bash
 
+
+If you have problems downloading service images in deployments, please install stable version of the agent.
+
+As root:
+
+.. code-block:: bash
+
+   curl -L http://es-download.s3.amazonaws.com/install-stable.sh | bash
+
 **More Information**
 
 :ref:`Ubuntu/Debian <ubuntu_agent_install>`
