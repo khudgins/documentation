@@ -98,7 +98,7 @@ to be in the agent proxy directory for it to run.
     ./agent-proxy.sh
 
 5. Register the agent with Enstratius
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Instructions to register the agent with Enstratius are in the
 :ref:`Registration <agent_proxy_registration>` section.
