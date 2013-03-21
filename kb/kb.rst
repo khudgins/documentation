@@ -13,3 +13,4 @@ As this site grows, this portion of the documentation will likely be migrated to
    :hidden:
   
    putty
+   msie
