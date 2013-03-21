@@ -18,7 +18,7 @@ introduction of ``runit``.)
 1. Download
 ~~~~~~~~~~~
 
-TODO: link is not public yet (ping timf).
+`Agent Proxy <http://es-download.s3.amazonaws.com/es-agentproxy.tar.gz>`_
 
 In this tarball are some configuration scripts that need some editing, a ".war"
 file which is the application, and ``agent-proxy.sh`` which is what you run.
