@@ -85,7 +85,7 @@ Once the preparation work of creating the configuration files is complete, run a
 
 .. code-block:: bash
 
-   chef-client -j local_settings/my-two-node-cloud/backend.json -c client.rb
+   chef-solo -j local_settings/my-two-node-cloud/backend.json -c solo.rb
 
 Once the installation on the backend has completed, copy the
 ``local_settings/my-two-node-cloud`` directory to the frontend machine, and run the
@@ -93,7 +93,7 @@ as root:
 
 .. code-block:: bash
 
-   chef-client -j local_settings/my-two-node-cloud/frontend.json -c client.rb
+   chef-solo -j local_settings/my-two-node-cloud/frontend.json -c solo.rb
 
 The install will take a few moments to complete, the installation. Once completed, you
 should be able to :ref:`register`
