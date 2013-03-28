@@ -206,16 +206,17 @@ become active.
    :maxdepth: 1
    :hidden:
 
-   km
+   api
+   console
    dispatcher
+   km
    monitors
    workers
-   console
-   api
    cwrkr
    mysql
    riak
    rabbit_mq
    certificates
    init
+   backups
    logging
