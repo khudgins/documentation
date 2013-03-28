@@ -110,6 +110,8 @@ Logging for the workers service is done to:
 Monitoring
 ----------
 
+.. _worker_backups:
+
 Backups
 -------
 

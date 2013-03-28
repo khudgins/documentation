@@ -61,6 +61,8 @@ Logging for the API service is done to:
 Monitoring
 ----------
 
+.. _api_backups:
+
 Backups
 -------
 

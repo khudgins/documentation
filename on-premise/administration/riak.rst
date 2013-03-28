@@ -1,5 +1,7 @@
+.. _riak:
+
 Riak
-====
+----
 
 .. figure:: ./images/riak.png
    :height: 250 px
@@ -11,7 +13,7 @@ Riak
    Riak
 
 Overview
---------
+~~~~~~~~
 
 Enstratius depends on the Riak database software and will be transitioning to using Riak
 exclusively for all of the database needs for the Enstratius cloud management software.
@@ -24,14 +26,14 @@ What is Riak? For more information about Riak, please see:
 `Riak Overview <http://wiki.basho.com/What-is-Riak%3F.html>`_
 
 Installation
-------------
+~~~~~~~~~~~~
 
 The best method for installing Riak is to leverage the strengths of the Chef or Puppet
 configuration management platforms. If you're installing Enstratius using packages provided
 to you by an Enstratius engineer, you're probably using Chef.
 
 Software Requirements
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 Operating system: Any, although Enstratius has only been deployed and tested on the Linux
 operating system.
@@ -41,19 +43,19 @@ Architecture: x86_64
 Use the latest Riak packages provided in your repositories. 
 
 Erlang
-~~~~~~
+^^^^^^
 
 Riak depends on erlang, which can also be installed from major package repositories.
 
 HA-Proxy
-~~~~~~~~
+^^^^^^^^
 
 When deploying Riak in a production environment with 3 nodes, it's best practice to place
 the nodes behind a load balancer. Enstratius recommends HA-Proxy for ease of deployment and
 configuration.
 
 Incoming Connections
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 The Riak service use to support the Enstratius cloud management software should allow for
 connections from the km, dispatcher, monitor, worker, console, API, and cwrkr services.
@@ -66,12 +68,12 @@ The networking implications of such a requirement depends on the architecture of
 Enstratius environment the architecture of Riak. 
 
 Outgoing Connections
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 None
 
 Configuration Files
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 Riak has two primary configuration files:
 
@@ -79,7 +81,7 @@ Riak has two primary configuration files:
 #. /etc/riak/vm.args
 
 /etc/riak/app.config 
-~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^
 
 This file is the core configuration file for Riak. It looks funny because it's erlang
 code. A text editor with Erlang syntax highlighting would be valuable here.
@@ -203,7 +205,7 @@ simply symlink ``/var/lib/riak`` to where ever the customer wants to store the d
 installing Riak.
 
 /etc/riak/vm.args
-~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^
 
 This file controls the arguments passed to the Erlang VM at Riak startup (one argument per
 line)
@@ -227,13 +229,13 @@ The only thing you need to change here is the ip address. This should be the non
 IP address of the system that it can communicate with other nodes in the cluster on.
 
 HA-Proxy
---------
+~~~~~~~~
 
 An HA deployment of Riak should be load balanced.
 
 
 Installation
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 Enstratius talks to Riak over the HTTP port, however Enstratius is not aware of the cluster
 topology. Enstratius only talks to a single IP address. For this reason, you should put
@@ -310,13 +312,15 @@ important stats about the cluster and provides a good page to scrape for monitor
 has a link for exporting the stats as csv so scraping work is minimal.
 
 Monitoring
-----------
+~~~~~~~~~~
 
 Monitoring of Riak can be done via various methods and can integrate into many enterprise
 monitoring systems such as nagios. 
 
+.. _riak_backups:
+
 Backups
--------
+~~~~~~~
 
 The following notes are taken directly from:
 
@@ -363,12 +367,12 @@ need to update them to use the new interface. Once any needed configuration chan
 made you can restore the data and ring directories and start the node.
 
 Interacting with Riak
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 Interacting with Riak is typically done through the curl utility. 
 
 List Buckets
-~~~~~~~~~~~~
+^^^^^^^^^^^^
 
 Listing all buckets is **not** something that should be done in a production environment
 because it places a heavy strain on Riak and is almost never necessary. However, for
@@ -428,7 +432,7 @@ Riak also has an administrative command line interface, here is an example of a 
 command:
 
 Member Status
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 .. code-block:: bash
 

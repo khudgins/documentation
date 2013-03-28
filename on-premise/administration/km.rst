@@ -115,6 +115,8 @@ Logging for the km service is done to:
 Monitoring
 ----------
 
+.. _km_backups:
+
 Backups
 -------
 

@@ -128,6 +128,8 @@ Logging for the monitors is done to:
 Monitoring
 ----------
 
+.. _monitor_backups:
+
 Backups
 -------
 

@@ -120,6 +120,8 @@ Logging for the Console service is done to:
 Monitoring
 ----------
 
+.. _console_backups:
+
 Backups
 -------
 

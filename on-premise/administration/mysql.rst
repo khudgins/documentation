@@ -128,6 +128,8 @@ monitoring systems such as nagios. Production Enstratius environments will benef
 utilizing some nagios plugins to monitor connections, slow queries, slave operation,
 master operation, and basic health checks.
 
+.. _mysql_backups:
+
 Backups
 -------
 
