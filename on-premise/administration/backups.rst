@@ -1,12 +1,14 @@
 .. _backups:
 
 Backups
-============================
+-------
 
-The Enstratius cloud management components should be backed up on a regular basis.  These components are dependent upon databases and service filesystems.  Below are the recommended backup freqencies for each type of backup
+The Enstratius cloud management components should be backed up on a regular basis.  These
+components are dependent upon databases and service file systems.  Below are the
+recommended backup frequencies for each type of backup
 
 +-------------------------------------+----------------------------+
-| ** Component **                     | ** Frequency **            |
+| **Component**                       | **Frequency**              |
 +=====================================+============================+
 | DB: analytics                       | Every 4-6 hours            |
 +-------------------------------------+----------------------------+
@@ -35,4 +37,4 @@ The Enstratius cloud management components should be backed up on a regular basi
 | FS: /services/worker                | Once/day and After changes |
 +-------------------------------------+----------------------------+
 
-** FS (Filesystem) backups will ignore log files
+FS (Filesystem) backups can ignore log files for each service.
