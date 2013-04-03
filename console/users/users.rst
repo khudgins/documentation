@@ -19,6 +19,6 @@ Users
    iam
    groups
    roles
+   acl
    example_roles
    example_access_rights
-
