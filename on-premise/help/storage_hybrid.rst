@@ -56,35 +56,38 @@ properly configured swift endpoint looks like this:
 
 .. code-block:: bash
 
-	+--------------------------+----------------------------------------+
-	| Field                    | Swift Value                            |
-	+--------------------------+----------------------------------------+
-	| cloud_id                 | 1001                                   |
-	| available                | Y                                      |
-	| name                     | Swift Cloud                            |
-	| delegate                 | org.dasein.cloud.openstack.swift.Swift |
-	| supports_addresses       | N                                      |
-	| owner                    | NULL                                   |
-	| endpoint                 | http://10.1.1.3:8080/auth/v1.0         |
-	| provider_name            | Swift                                  |
-	| account_label            | ACCOUNT_ID                             |
-	| api_id_label             | USER_NAME                              |
-	| api_secret_label         | PASSWORD                               |
-	| x509_cert_label          | NULL                                   |
-	| x509_key_label           | NULL                                   |
-	| storage_delegate         | NULL                                   |
-	| storage_endpoint         | NULL                                   |
-	| storage_account_label    | NULL                                   |
-	| storage_api_id_label     | NULL                                   |
-	| storage_api_secret_label | NULL                                   |
-	| storage_x509_cert_label  | NULL                                   |
-	| storage_x509_key_label   | NULL                                   |
-	| key_info_text            | NULL                                   |
-	| provider_logo_url        | /clouds/swift.gif                      |
-	| provider_status_url      | NULL                                   |
-	| provider_web_url         | http://swift.openstack.org             |
-	| cloud_identifier         | 1001                                   |
-	+--------------------------+----------------------------------------+
+	+--------------------------+--------------------------------------------------+
+	| Field                    | Swift Value                                      |
+	+--------------------------+--------------------------------------------------+
+	| cloud_id                 | 1001                                             |
+	| available                | Y                                                |
+	| name                     | Swift Cloud                                      |
+	| delegate                 | org.dasein.cloud.openstack.nova.os.NovaOpenStack |
+	| supports_addresses       | N                                                |
+	| owner                    | NULL                                             |
+	| endpoint                 | http://10.1.1.3:8080/auth/v1.0                   |
+	| provider_name            | Swift                                            |
+	| account_label            | ACCOUNT_ID                                       |
+	| api_id_label             | USER_NAME                                        |
+	| api_secret_label         | PASSWORD                                         |
+	| x509_cert_label          | NULL                                             |
+	| x509_key_label           | NULL                                             |
+	| storage_delegate         | NULL                                             |
+	| storage_endpoint         | NULL                                             |
+	| storage_account_label    | NULL                                             |
+	| storage_api_id_label     | NULL                                             |
+	| storage_api_secret_label | NULL                                             |
+	| storage_x509_cert_label  | NULL                                             |
+	| storage_x509_key_label   | NULL                                             |
+	| key_info_text            | NULL                                             |
+	| provider_logo_url        | /clouds/openstack.png                            |
+	| provider_status_url      | NULL                                             |
+	| provider_web_url         | http://swift.openstack.org                       |
+	| cloud_identifier         | 1001                                             |
+	+--------------------------+--------------------------------------------------+
+
+.. warning :: Enstratius versions prior to March 2013 (i.e. Hobbit Update 2) need to use the delegate *org.dasein.cloud.openstack.swift.Swift* instead.
+
 
 Step 2
 ~~~~~~
@@ -108,7 +111,7 @@ credentials so that there is a definition for storage.
 	| cloud_id                 | 2002                                     |
 	| available                | Y                                        |
 	| name                     | CloudStack Cloud                         |
-	| delegate                 | org.dasein.cloud.cloudstack.Cloudstack22 |
+	| delegate                 | org.dasein.cloud.cloudstack.CSCloud      |
 	| supports_addresses       | Y                                        |
 	| owner                    | NULL                                     |
 	| endpoint                 | http://10.1.1.1:8080/client/api          |
@@ -136,35 +139,35 @@ credentials so that there is a definition for storage.
 
 .. code-block:: bash
 
-	+--------------------------+------------------------------------------+
-	| Field                    | CloudStack Value                         |
-	+--------------------------+------------------------------------------+
-	| cloud_id                 | 2002                                     |
-	| available                | Y                                        |
-	| name                     | CloudStack Cloud                         |
-	| delegate                 | org.dasein.cloud.cloudstack.Cloudstack22 |
-	| supports_addresses       | Y                                        |
-	| owner                    | NULL                                     |
-	| endpoint                 | http://10.1.1.1:8080/client/api          |
-	| provider_name            | CloudStack                               |
-	| account_label            | ACCOUNT_ID                               |
-	| api_id_label             | API_KEY                                  |
-	| api_secret_label         | SECRET_KEY                               |
-	| x509_cert_label          | NULL                                     |
-	| x509_key_label           | NULL                                     |
-	| storage_delegate         | org.dasein.cloud.openstack.swift.Swift   |
-	| storage_endpoint         | http://10.1.1.3:8080/auth/v1.0           |
-	| storage_account_label    | ACCOUNT_ID                               |
-	| storage_api_id_label     | USER_NAME                                |
-	| storage_api_secret_label | PASSWORD                                 |
-	| storage_x509_cert_label  | NULL                                     |
-	| storage_x509_key_label   | NULL                                     |
-	| key_info_text            | NULL                                     |
-	| provider_logo_url        | /clouds/cloudcom.png                     |
-	| provider_status_url      | NULL                                     |
-	| provider_web_url         | NULL                                     |
-	| cloud_identifier         | 2002                                     |
-	+--------------------------+------------------------------------------+
+	+--------------------------+--------------------------------------------------+
+	| Field                    | CloudStack Value                                 |
+	+--------------------------+--------------------------------------------------+
+	| cloud_id                 | 2002                                             |
+	| available                | Y                                                |
+	| name                     | CloudStack Cloud                                 |
+	| delegate                 | org.dasein.cloud.cloudstack.CSCloud              |
+	| supports_addresses       | Y                                                |
+	| owner                    | NULL                                             |
+	| endpoint                 | http://10.1.1.1:8080/client/api                  |
+	| provider_name            | CloudStack                                       |
+	| account_label            | ACCOUNT_ID                                       |
+	| api_id_label             | API_KEY                                          |
+	| api_secret_label         | SECRET_KEY                                       |
+	| x509_cert_label          | NULL                                             |
+	| x509_key_label           | NULL                                             |
+	| storage_delegate         | org.dasein.cloud.openstack.nova.os.NovaOpenStack |
+	| storage_endpoint         | http://10.1.1.3:8080/auth/v1.0                   |
+	| storage_account_label    | ACCOUNT_ID                                       |
+	| storage_api_id_label     | USER_NAME                                        |
+	| storage_api_secret_label | PASSWORD                                         |
+	| storage_x509_cert_label  | NULL                                             |
+	| storage_x509_key_label   | NULL                                             |
+	| key_info_text            | NULL                                             |
+	| provider_logo_url        | /clouds/cloudcom.png                             |
+	| provider_status_url      | NULL                                             |
+	| provider_web_url         | NULL                                             |
+	| cloud_identifier         | 2002                                             |
+	+--------------------------+--------------------------------------------------+
 
 After making these changes, restart the dispatcer service to pick up the modification.
 
