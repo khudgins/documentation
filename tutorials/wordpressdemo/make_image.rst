@@ -1,9 +1,7 @@
 Make Image
 ----------
 
-To make an image, start with a generic EC2 image from `Alestic <http://alestic.com/>`_.
-Eric's team has recently begun publishing only 64-bit images. Any generic ubuntu image
-*should* work, but this tutorial has only been tested with images from Alestic.
+This tutorial has been tested with `Alestic <http://alestic.com/>`_ Ubuntu images, `Bashton <http://www.bashton.com/>`_ CentOS images and `SUSE <https://www.suse.com/>`_ Linux Enterprise Server images. Alestic's Ubuntu server image is highly recommended since this deployment demo has been tested with it for many times.
 
 .. figure:: ./images/ami0.png
    :height: 400px
@@ -14,7 +12,7 @@ Eric's team has recently begun publishing only 64-bit images. Any generic ubuntu
 
    Search for AMI
 
-1. Start the image as a VM, choose a large product size, not t1.micro for best results.
+1. Choose at least m1.small product size. Some services will not work in t1.micro instances.
    Also, generate and use an SSH key during the launch.
 
 .. figure:: ./images/ami1.png
@@ -43,33 +41,37 @@ Save the key and chmod it
 
 2. While the image launches, open the firewall so you can access port 22 from your
    location.
-3. Once the VM is started, copy the wordpress-demo-prep.tar.gz file to the instance.
-   The command to do so will be something of the form:
+
+3. Once the VM is started, ssh onto the running instance, and take root:
 
 .. code-block:: bash
 
-   scp -i demoKey wordpress-demo-prep.tar.gz ubuntu@ip.of.running.instance:~
-
-4. Next, ssh onto the running instance, and take root:
-
-.. code-block:: bash
-
-   ssh -i theKey ubuntu@ip.of.running.instance
+   Ubuntu -> ssh -i demoKey ubuntu@ip.of.running.instance
+   CentOS -> ssh -i demoKey ec2-user@ip.of.running.instance
+   SUSE   -> ssh -i demoKey root@ip.of.running.instance
 
    sudo su
 
-5. Install the chef client and execute the chef-solo run:
+4. Install the chef client.
+
+.. code-block:: bash
+
+   curl -L http://www.opscode.com/chef/install.sh | sudo bash 
+
+5. Download the wordpress demo preparation cookbook and extract files from it.
+
+.. code-block:: bash
+
+   curl -O http://es-download.s3.amazonaws.com/wordpress-demo-prep.tar.gz
+   tar -xvf wordpress-demo-prep.tar.gz > /dev/null 2>&1
+
+6. Execute the chef-solo to run the preparation cookbook.
 
 .. note:: If prompted for the Chef Server URL, just hit enter.  This tutorial does not rely on a chef-server.
 
 .. code-block:: bash
 
-   apt-get update && apt-get -y upgrade 
-   curl -L http://www.opscode.com/chef/install.sh | sudo bash 
-   apt-get -y install libmysqlclient-dev build-essential 
-   /opt/chef/embedded/bin/gem install mysql
-
-   tar -zxf wordpress-demo-prep.tar.gz > /dev/null 2>&1
+   cd wordpress-demo-prep
    chef-solo -j node.json -c solo.rb 
 
 .. note:: For reference, when running this on a m1.large VM in th us-west-2 (Oregon)
@@ -80,7 +82,7 @@ will be installed, along with the latest Enstratius agent. Depending on your con
 mirror speeds, this may take up to 5-7 minutes.
 
 The purpose of this step is to prepare the image for running PHP and MySQL applications,
-not to install the application itself, that comes later durin the launch and orchestration
+not to install the application itself, that comes later during the launch and orchestration
 steps of a deployment launch.
 
 Once this step completes, initiate the build of the machine image from within the

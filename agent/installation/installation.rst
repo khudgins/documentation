@@ -15,8 +15,7 @@ As root:
 
    curl -L http://es-download.s3.amazonaws.com/install.sh | bash
 
-
-If you have problems downloading service images in deployments, please install stable version of the agent.
+If you have problems downloading service images in deployments, please install stable version of the agent. Stable packages are for on-premise pre-H2/H3 releases.
 
 As root:
 
@@ -24,7 +23,8 @@ As root:
 
    curl -L http://es-download.s3.amazonaws.com/install-stable.sh | bash
 
-**More Information**
+
+**Tarball Installation Guide (not recommended)**
 
 :ref:`Ubuntu/Debian <ubuntu_agent_install>`
 
@@ -33,11 +33,11 @@ As root:
 Windows - Quick Start
 ~~~~~~~~~~~~~~~~~~~~~
 
-Windows has an `MSI <http://es-download.s3.amazonaws.com/enstratus-agent-windows-generic.exe>`_ for installing the agent. 
+Windows has an `MSI <http://es-download.s3.amazonaws.com/enstratus-agent-windows-generic.exe>`_ installer for installing the agent. 
 
-**More Information**
+**Windows Agent Installation Guide**
 
-:ref:`Windows <windows_agent_install>`
+:ref:`Windows Server 2003/2008 <windows_agent_install>`
 
 .. toctree::
    :maxdepth: 1

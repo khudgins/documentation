@@ -27,7 +27,7 @@ Agent
    :hidden:
    :glob:
     
-   downloads/downloads
    installation/installation
+   downloads/downloads
    linux/linux
    proxy/proxy

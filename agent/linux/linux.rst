@@ -1,5 +1,5 @@
-Linux Scripts
--------------
+Linux Agent Scripts
+-------------------
 
 .. toctree::
    :maxdepth: 1
