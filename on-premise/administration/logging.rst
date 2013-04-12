@@ -39,7 +39,9 @@ Monitors
 Workers
 -------
 
-``/services/worker/logs/pubsub.log``
+``/services/worker/logs/publisher.log``
+
+``/services/worker/logs/subscriber.log``
 
 Additional Logging
 ------------------
