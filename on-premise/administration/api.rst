@@ -91,30 +91,23 @@ Service
 Configuration Files
 -------------------
 
-The Enstratius api service has 5 configuration files in /services/api
+The Enstratius api service has configuration files in /services/api
 
-.. hlist::
-   :columns: 1
+#. /resources/log4j.xml
+#. /contexts/enstratus-context.xml
+#. /resources/custom/networks.cfg
+#. /resources/dasein-persistence.properties
+#. /resources/enstratus-webservices.cfg
 
-   * /resources/log4j.properties
-   * /contexts/enstratus-context.xml
-   * /resources/custom/networks.cfg
-   * /resources/dasein-persistence.properties
-   * /resources/enstratus-webservices.cfg
+log4j.xml
+~~~~~~~~~
 
-log4j.properties
-~~~~~~~~~~~~~~~~
-
-Path:
-
-  ``/services/api/resources/log4j.properties``
+``/services/api/resources/log4j.xml``
 
 enstratus-context.xml
 ~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/api/contexts/enstratus-context.xml``
+``/services/api/contexts/enstratus-context.xml``
 
 This file controls how the API service connects to its associated databases:
 console and enstratus_console.
@@ -122,9 +115,7 @@ console and enstratus_console.
 enstratus-webservices.cfg
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/api/resources/enstratus-webservices.cfg``
+``/services/api/resources/enstratus-webservices.cfg``
 
 This file defines the webservices endpoints for the API service to connect to the
 Enstratius dispatcher service.
@@ -132,9 +123,7 @@ Enstratius dispatcher service.
 dasein-persistence.properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/api/resources/dasein-persistence.properties``
+``/services/api/resources/dasein-persistence.properties``
 
 This file defines the connection to the dasein persistence layer of Enstratius. It also
 specifies the connection point to the Riak database service.
@@ -142,9 +131,7 @@ specifies the connection point to the Riak database service.
 networks.cfg
 ~~~~~~~~~~~~
 
-Path:
-
-  ``/services/api/resources/custom/networks.cfg``
+``/services/api/resources/custom/networks.cfg``
 
 This file is a general control point for several items, the most important of which is the
 encryption key for encrypting connections to the dispatcher web services.
