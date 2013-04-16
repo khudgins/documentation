@@ -105,7 +105,13 @@ Logging
 
 Logging for the workers service is done to:
 
-``/services/worker/logs/pubsub.log``
+``/services/worker/logs/publisher.log``
+
+``/services/worker/logs/subscriber.log``
+
+``/etc/service/enstratus-publisher/log/main/current``
+
+``/etc/service/enstratus-subscriber/log/main/current``
 
 Monitoring
 ----------
@@ -155,33 +161,26 @@ with the Enstratius dispatcher service. Backups of these database are discussed 
 Configuration Files
 -------------------
 
-The Enstratius workers service has 9 configuration files in /services/worker/
+The Enstratius workers service has configuration files in /services/worker/
 
-.. hlist::
-   :columns: 3
+#. resources/log4j.xml
+#. resources/dasein-persistence.properties
+#. resources/enstratus-km-client.cfg
+#. resources/enstratus-provisioning.cfg
+#. resources/mq.cfg
+#. resources/worker.properties
 
-   * resources/log4j.properties
-   * resources/dasein-persistence.properties
-   * resources/enstratus-km-client.cfg
-   * resources/enstratus-provisioning.cfg
-   * resources/mq.cfg
-   * resources/worker.properties
+log4j.xml
+~~~~~~~~~
 
-log4j.properties
-~~~~~~~~~~~~~~~~
-
-Path:
-
-  ``/services/worker/resources/log4j.properties``
+``/services/worker/resources/log4j.xml``
 
 This file is responsible for controlling the logging behavior for the worker service.
 
 dasein-persistence.properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/worker/resources/dasein-persistence.properties``
+``/services/worker/resources/dasein-persistence.properties``
 
 This file defines the connection to the dasein persistence layer of Enstratius. It also
 specifies the connection point to the Riak database service.
@@ -189,18 +188,14 @@ specifies the connection point to the Riak database service.
 enstratus-km-client.cfg
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/worker/resources/enstratus-km-client.cfg``
+``/services/worker/resources/enstratus-km-client.cfg``
 
 This file controls the connection to the KM service by the workers. 
 
 enstratus-provisioning.cfg
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/worker/resources/enstratus-provisioning.cfg``
+``/services/worker/resources/enstratus-provisioning.cfg``
 
 This file is a general control point for several items, the most important of which is the
 encryption key for encrypting connections to the KM service. This is also where a setting
@@ -210,9 +205,7 @@ connections to guest VM.
 worker.properties
 ~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/worker/resources/worker.properties``
+``/services/worker/resources/worker.properties``
 
 This file is used to define the connection points for the worker processes
 to connect to the provisioning and analytics MySQL databases.
@@ -220,8 +213,6 @@ to connect to the provisioning and analytics MySQL databases.
 mq.cfg
 ~~~~~~
 
-Path:
-
-  ``/services/worker/resources/mq.cfg``
+``/services/worker/resources/mq.cfg``
 
 This file controls how the monitor service connects to the mq service.

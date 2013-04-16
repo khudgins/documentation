@@ -73,22 +73,34 @@ Outgoing Connections
    The monitor service will also poll guest VM running in the cloud for the purpose of
    collecting logs.
 
-Starting Monitor
-----------------
-
-To start the monitor services:
+Starting
+--------
 
 .. code-block:: bash
 
-	/etc/init.d/enstratus-monitor start
+   /etc/init.d/enstratus-monitor start
 
-Stopping Monitor
-----------------
-To stop the monitor services:
+Stopping
+--------
 
 .. code-block:: bash
 
-	/etc/init.d/enstratus-monitor stop
+   /etc/init.d/enstratus-monitor stop
+
+Status
+------
+
+.. code-block:: bash
+
+   sv status enstratus-monitor
+
+Sample output:
+
+.. code-block:: bash
+
+   root@vagrant:/home/vagrant# sv status enstratus-monitor
+  
+   run: enstratus-monitor: (pid 1035) 0s; run: log: (pid 912) 0s
 
 Running Monitors
 ----------------
@@ -182,18 +194,14 @@ The Enstratius monitors service has configuration files in /services/monitor/
 log4j.xml
 ~~~~~~~~~
 
-Path:
-
-  ``/services/monitor/resources/log4j.xml``
+``/services/monitor/resources/log4j.xml``
 
 This file is responsible for controlling the logging behavior for the monitor service.
 
 cloud.properties
 ~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/monitor/resources/cloud.properties``
+``/services/monitor/resources/cloud.properties``
 
 The cloud.properties file is used to define the connection points for the monitor service
 to connect to the provisioning and analytics MySQL databases.
@@ -201,9 +209,7 @@ to connect to the provisioning and analytics MySQL databases.
 dasein-persistence.properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/monitor/resources/dasein-persistence.properties``
+``/services/monitor/resources/dasein-persistence.properties``
 
 This file defines the connection to the dasein persistence layer of Enstratius. It also
 specifies the connection point to the Riak database service.
@@ -211,18 +217,14 @@ specifies the connection point to the Riak database service.
 enstratus-km-client.cfg
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/monitor/resources/enstratus-km-client.cfg``
+``/services/monitor/resources/enstratus-km-client.cfg``
 
 This file controls the connection to the KM service by the monitors. 
 
 enstratus-provisioning.cfg
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/monitor/resources/enstratus-provisioning.cfg``
+``/services/monitor/resources/enstratus-provisioning.cfg``
 
 This file is a general control point for several items, the most important of which is the
 encryption key for encrypting connections to the KM service. This is also where a setting
@@ -232,18 +234,14 @@ connections to guest VM.
 mq.cfg
 ~~~~~~
 
-Path:
-
-  ``/services/monitor/resources/mq.cfg``
+``/services/monitor/resources/mq.cfg``
 
 This file controls how the monitor service connects to the mq service.
 
 monitors.cfg
 ~~~~~~~~~~~~
 
-Path:
-
-  ``/services/monitor/resources/monitors.cfg``
+``/services/monitor/resources/monitors.cfg``
 
 The is file is used to specify which of the Enstratius monitors are started during the
 start process. This file is read by the assign process.

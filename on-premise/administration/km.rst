@@ -216,8 +216,6 @@ The KM service has two configuration files in /services/km/resources/
 enstratus-context.xml
 ~~~~~~~~~~~~~~~~~~~~~
 
-The full path to the context xml configuration file is:
-
 ``/services/km/resources/enstratus-context.xml``
 
 This file is responsible for controlling how the KM service connects to the credentials
@@ -225,8 +223,6 @@ database.
 
 log4j.xml
 ~~~~~~~~~
-
-The full path to the server.xml configuration file is:
 
 ``/services/km/resources/log4j.xml``
 

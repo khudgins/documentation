@@ -330,33 +330,27 @@ the log useful?
 Configuration Files
 -------------------
 
-The dispatcher service has 10 configuration files in /services/dispatcher/
+The dispatcher service has configuration files in /services/dispatcher/
 
-.. hlist::
-   :columns: 2
 
-   * resources/log4j.properties
-   * contexts/enstratus-context.xml
-   * resources/dasein-persistence.properties
-   * resources/enstratus-km-client.cfg
-   * resources/enstratus-provisioning.cfg
-   * resources/mq.cfg
+#. resources/log4j.xml
+#. contexts/enstratus-context.xml
+#. resources/dasein-persistence.properties
+#. resources/enstratus-km-client.cfg
+#. resources/enstratus-provisioning.cfg
+#. resources/mq.cfg
 
-log4j.properties
-~~~~~~~~~~~~~~~~
+log4j.xml
+~~~~~~~~~
 
-Path:
-
-  ``/services/dispatcher/resources/log4j.properties``
+``/services/dispatcher/resources/log4j.xml``
 
 This file is responsible for controlling the logging behavior for the dispatcher service.
 
 enstratus-context.xml
 ~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/dispatcher/contexts/enstratus-context.xml``
+``/services/dispatcher/contexts/enstratus-context.xml``
 
 This file controls how the dispatcher service connects to its associated databases:
 provisioning and analytics.
@@ -364,9 +358,7 @@ provisioning and analytics.
 dasein-persistence.properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/dispatcher/resources/dasein-persistence.properties``
+``/services/dispatcher/resources/dasein-persistence.properties``
 
 This file defines the connection to the dasein persistence layer of Enstratius. It also
 specifies the connection point to the Riak database service.
@@ -374,18 +366,14 @@ specifies the connection point to the Riak database service.
 enstratus-km-client.cfg
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/dispatcher/resources/enstratus-km-client.cfg``
+``/services/dispatcher/resources/enstratus-km-client.cfg``
 
 This file controls the connection to the KM service by the dispatcher.
 
 enstratus-provisioning.cfg
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Path:
-
-  ``/services/dispatcher/resources/enstratus-provisioning.cfg``
+``/services/dispatcher/resources/enstratus-provisioning.cfg``
 
 This file is a general control point for several items, the most important of which is the
 encryption key for encrypting connections to the KM service.
@@ -393,8 +381,6 @@ encryption key for encrypting connections to the KM service.
 mq.cfg
 ~~~~~~
 
-Path:
-
-  ``/services/dispatcher/resources/mq.cfg``
+``/services/dispatcher/resources/mq.cfg``
 
 This file controls how the dispatcher service connects to the mq service.
