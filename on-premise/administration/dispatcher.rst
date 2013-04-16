@@ -206,10 +206,7 @@ Logging for the dispatcher service is done to:
 
 ``/services/dispatcher/logs/dispatcher.log``
 
-Monitoring
-----------
-
-Coming soon...
+``/etc/service/enstratus-dispatcher/log/main/current``
 
 .. _dispatcher_backups:
 
