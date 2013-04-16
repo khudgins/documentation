@@ -78,9 +78,9 @@ Outgoing Connections
    The console service interacts with the dispatcher service via a webservices call
    configured in the file:
 
-  /services/console/jetty/webapps/ROOT/WEB-INF/classes/enstratus-webservices.cfg
+   ``/services/console/jetty/webapps/ROOT/WEB-INF/classes/enstratus-webservices.cfg``
 
-  This communication is encrypted using industry standard AES-256 encryption.
+   This communication is encrypted using industry standard AES-256 encryption.
 
 #. Riak and MySQL
 
@@ -249,24 +249,21 @@ Configuration Files
 
 The Enstratius console service has 8 configuration files /services/console:
 
-.. hlist::
-   :columns: 3
+#. /resources/log4j.xml
+#. /resources/directory.properties
+#. /bin/dirsync
+#. /contexts/enstratus-context.xml
+#. /resources/dasein-persistence.properties
+#. /resources/enstratus-console.cfg
+#. /resources/enstratus-webservices.cfg
+#. /resources/custom/networks.cfg
 
-   * /resources/log4j.properties
-   * /resources/directory.properties
-   * /bin/dirsync
-   * /contexts/enstratus-context.xml
-   * /resources/dasein-persistence.properties
-   * /resources/enstratus-console.cfg
-   * /resources/enstratus-webservices.cfg
-   * /resources/custom/networks.cfg
-
-log4j.properties
+log4j.xml
 ~~~~~~~~~~~~~~~~
 
 Path:
 
-  ``/services/console/resources/log4j.properties``
+  ``/services/console/resources/log4j.xml``
 
 This file is responsible for controlling the logging behavior for the console service.
 
