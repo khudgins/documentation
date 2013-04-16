@@ -125,10 +125,7 @@ Logging for the monitors is done to:
 
 ``/services/monitor/logs/monitor.log``
 
-Monitoring
-----------
-
-.. _monitor_backups:
+``/etc/service/enstratus-monitor/log/main/current``
 
 Backups
 -------
@@ -172,25 +169,22 @@ dispatcher service section.
 Configuration Files
 -------------------
 
-The Enstratius monitors service has 7 configuration files in /services/monitor/
+The Enstratius monitors service has configuration files in /services/monitor/
 
-.. hlist::
-   :columns: 2
+#. resources/log4j.xml
+#. resources/cloud.properties
+#. resources/dasein-persistence.properties
+#. resources/enstratus-km-client.cfg
+#. resources/enstratus-provisioning.cfg
+#. resources/mq.cfg
+#. resources/monitors.cfg
 
-   * resources/log4j.properties
-   * resources/cloud.properties
-   * resources/dasein-persistence.properties
-   * resources/enstratus-km-client.cfg
-   * resources/enstratus-provisioning.cfg
-   * resources/mq.cfg
-   * resources/monitors.cfg
-
-log4j.properties
-~~~~~~~~~~~~~~~~
+log4j.xml
+~~~~~~~~~
 
 Path:
 
-  ``/services/monitor/resources/log4j.properties``
+  ``/services/monitor/resources/log4j.xml``
 
 This file is responsible for controlling the logging behavior for the monitor service.
 

@@ -112,8 +112,7 @@ Logging for the km service is done to:
 
 ``/services/km/logs/km.log``
 
-Monitoring
-----------
+``/etc/service/enstratus-km/log/main/current``
 
 .. _km_backups:
 
@@ -191,13 +190,28 @@ To stop the Key Management service:
 
 	/etc/init.d/enstratus-km stop
 
+Status
+------
+
+.. code-block:: bash
+
+   sv status enstratus-km
+
+Sample output:
+
+.. code-block:: bash
+
+   root@vagrant:/home/vagrant# sv status enstratus-km
+  
+   run: enstratus-km: (pid 1025) 0s; run: log: (pid 906) 0s 
+
 Configuration Files
 -------------------
 
 The KM service has two configuration files in /services/km/resources/
 
 #. enstratus-context.xml
-#. log4j.properties
+#. log4j.xml
 
 enstratus-context.xml
 ~~~~~~~~~~~~~~~~~~~~~
@@ -209,11 +223,11 @@ The full path to the context xml configuration file is:
 This file is responsible for controlling how the KM service connects to the credentials
 database.
 
-log4j.properties
-~~~~~~~~~~~~~~~~
+log4j.xml
+~~~~~~~~~
 
 The full path to the server.xml configuration file is:
 
-``/services/km/resources/log4j.properties``
+``/services/km/resources/log4j.xml``
 
 This file is responsible for controlling the logging behavior for the KM service.
