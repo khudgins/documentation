@@ -1,7 +1,9 @@
 .. _rhel_agent_install:
 
-RHEL / CentOS
--------------
+RHEL (Tarball)
+--------------
+
+.. warning:: Installing from tarball is not recommended. Please use one-line installer.
 
 To install the Enstratius agent on a RHEL / CentOS instance, use the following steps:
 

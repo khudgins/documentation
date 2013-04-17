@@ -1,7 +1,9 @@
 .. _ubuntu_agent_install:
 
-Debian / Ubuntu
----------------
+Ubuntu (Tarball)
+----------------
+
+.. warning:: Installing from tarball is not recommended. Please use one-line installer.
 
 To install the Enstratius agent on a Debian / Ubuntu instance, use the following steps:
 

@@ -6,6 +6,8 @@ Tarball Downloads
 Tarballs
 ^^^^^^^^
 
+.. warning:: Installing from tarball is not recommended. Please use one-line installer.
+
 .. csv-table:: 
    :header: "Operating System/Distribution","SHA256"
    :widths: 10, 10

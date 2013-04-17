@@ -15,7 +15,22 @@ As root:
 
    curl -L http://es-download.s3.amazonaws.com/install.sh | bash
 
-If you have problems downloading service images in deployments, please install stable version of the agent. Stable packages are for on-premise pre-H2/H3 releases.
+.. note::
+
+        * Enstratius agent is not compatible with SELinux. Please make sure to disable SELinux before the installation.
+        * Enstratius agent uses TCP 2003 port for communication with provisioning server. Please make sure to open the port.
+
+After the installation, start the agent service by running the following command. Enstratius agent service will automatically start after reboot.
+
+As root:
+
+.. code-block:: bash
+
+   /etc/init.d/tomcat-enstratus start
+
+If you have problems downloading service images in deployments, please install stable version of the agent.
+
+.. note:: The stable version of the agent is only for on-premise users who use pre-H2/H3 releases.
 
 As root:
 
@@ -23,8 +38,7 @@ As root:
 
    curl -L http://es-download.s3.amazonaws.com/install-stable.sh | bash
 
-
-**Tarball Installation Guide (not recommended)**
+**Tarball Installation Guide (Not Recommended)**
 
 :ref:`Ubuntu/Debian <ubuntu_agent_install>`
 
