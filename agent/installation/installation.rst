@@ -9,34 +9,30 @@ information to hit the ground running.
 Linux - Quick Start
 ~~~~~~~~~~~~~~~~~~~
 
+.. note::
+
+        * Enstratius agent is not compatible with SELinux. Please make sure to disable SELinux before the installation.
+        * Enstratius agent uses TCP 2003 port to communicate with enstratius servers. Please make sure to open the port.
+        * Stable version of the agent is only for pre-H2/H3 on-premise users who have problems on downloading service images in deployment.
+
+**Quick Install using one-line installer**
+
+Run the following command on the target system. It will download and install the latest version of the agent.
+
 As root:
 
 .. code-block:: bash
 
-   curl -L http://es-download.s3.amazonaws.com/install.sh | bash
+   (Latest Agent) curl -L http://es-download.s3.amazonaws.com/install.sh | bash
+   (Stable Agent) curl -L http://es-download.s3.amazonaws.com/install-stable.sh | bash
 
-.. note::
-
-        * Enstratius agent is not compatible with SELinux. Please make sure to disable SELinux before the installation.
-        * Enstratius agent uses TCP 2003 port for communication with provisioning server. Please make sure to open the port.
-
-After the installation, start the agent service by running the following command. Enstratius agent service will automatically start after reboot.
+Enstratius agent service starts automatically after reboot. If you want to start the agent service at once, run the following command. 
 
 As root:
 
 .. code-block:: bash
 
    /etc/init.d/tomcat-enstratus start
-
-If you have problems downloading service images in deployments, please install stable version of the agent.
-
-.. note:: The stable version of the agent is only for on-premise users who use pre-H2/H3 releases.
-
-As root:
-
-.. code-block:: bash
-
-   curl -L http://es-download.s3.amazonaws.com/install-stable.sh | bash
 
 **Tarball Installation Guide (Not Recommended)**
 
@@ -47,9 +43,11 @@ As root:
 Windows - Quick Start
 ~~~~~~~~~~~~~~~~~~~~~
 
-Windows has an `MSI <http://es-download.s3.amazonaws.com/enstratus-agent-windows-generic.exe>`_ installer for installing the agent. 
+**Download**
 
-**Windows Agent Installation Guide**
+`Latest Enstratius Agent for Windows Server <http://es-download.s3.amazonaws.com/enstratus-agent-windows-generic.exe>`_
+
+**Installation Guide**
 
 :ref:`Windows Server 2003/2008 <windows_agent_install>`
 

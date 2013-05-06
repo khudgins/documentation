@@ -15,24 +15,28 @@ API Documentation
    `2012-06-15 <http://es-content.s3.amazonaws.com/Enstratius_API_2012-06-15.pdf>`_,5103943684aae8955bc97aae14dce6a9224de8b18958c5266ba58d35fe2b713f
    `2012-04-12 <http://es-content.s3.amazonaws.com/Enstratius_API_2012-04-12.pdf>`_,963045055b89a7eecb9dbcb2109bd9b6ea3c1b6a3f933f92e6e9e1a5bfce0524
 
-Agent
-~~~~~
+Enstratius Agent
+~~~~~~~~~~~~~~~~
 
-One-Line Install (Linux Only)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Linux Agent
+^^^^^^^^^^^
 
 .. code-block:: bash
 
    curl -L http://es-download.s3.amazonaws.com/install.sh | bash
 
+Windows Agent
+^^^^^^^^^^^^^
+`Windows Server 2003/2008 <http://es-download.s3.amazonaws.com/enstratus-agent-windows-generic.exe>`_
+
 Tarballs
 ^^^^^^^^
+
+Installing from tarball is not recommended.
 
 `Ubuntu <http://es-download.s3.amazonaws.com/enstratus-agent-ubuntu-latest.tar.gz>`_
 
 `CentOS/RHEL <http://es-download.s3.amazonaws.com/enstratus-agent-centos-latest.tar.gz>`_
-
-`Windows 2003/2008 <http://es-download.s3.amazonaws.com/enstratus-agent-windows-generic.exe>`_
 
 `SmartOS <http://es-download.s3.amazonaws.com/enstratus-agent-smartos-latest.tar.gz>`_
 
