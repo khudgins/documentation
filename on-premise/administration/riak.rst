@@ -447,3 +447,20 @@ Member Status
    valid      34.4%      --      'riak@10.1.1.45'
    -------------------------------------------------------------------------------
    Valid:3 / Leaving:0 / Exiting:0 / Joining:0 / Down:0 
+
+Disaster Recovery with Riak
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Establish a replacement cluster configured with the same number of nodes.
+#. Restore the Riak configuration to each of the nodes.
+#. Ensure that Riak is not running on any of the nodes.
+#. Remove any previous Riak data (e.g., from /var/lib/riak) to ensure that the node is not started with no data present.
+#. Restore the backup data to each node's data root (e.g., /var/lib/riak)
+#. If you are restoring in an environment where the new nodes will have new network addresses or will otherwise need to give the nodes new names, you need to execute riak-admin reip to change the network name for every node in the cluster from each node. (e.g., from node1:  riak-admin cluster force-replace riak@<old-node1-ip> riak@<new-node1-ip>)
+#. After renaming the nodes with riak-admin reip if necessary, you should check the vm.args configuration file to ensure that each node has the updated name.
+#. Start the first node and check that its name is correct; one way to do this is to start the node, then attach to the node with riak attach. You should see the node name as part of the prompt as in the example below. Once you've verified the correct node name, exit the console with CTRL-D.
+#. Execute riak-admin member-status on the node and verify that it returns expected output.
+#. Start each of the remaining nodes, verifying the details in the same manner as the first node.
+
+Referenced from:  http://docs.basho.com/riak/1.2.1/cookbooks/Failure-and-Recovery/#Cluster-Recovery-From-Backups
+
